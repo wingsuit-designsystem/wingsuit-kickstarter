@@ -1,0 +1,22 @@
+uuid: 39233110-7f16-4ac9-ad51-4fa2c21a8774
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - wingsuit
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: wingsuit_messages
+theme: wingsuit
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

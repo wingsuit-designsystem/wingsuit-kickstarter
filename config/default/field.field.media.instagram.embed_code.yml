@@ -1,0 +1,21 @@
+uuid: cde39a14-9cdc-4a3b-a38b-0b0936b1668c
+langcode: und
+status: true
+dependencies:
+  config:
+    - field.storage.media.embed_code
+    - media.type.instagram
+_core:
+  default_config_hash: L2i3lZTwf86RXzV6iD5u___bn48PaYgwDqd0W2qxPpw
+id: media.instagram.embed_code
+field_name: embed_code
+entity_type: media
+bundle: instagram
+label: 'Instagram post'
+description: 'Paste media post URL or embed code.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long
