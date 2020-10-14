@@ -8,8 +8,6 @@ services:
       service: web
     depends_on:
       - cli
-    volumes:
-      - ${WINGSUIT_PATH}:/var/www/docroot/themes/custom/wingsuit
 
   # DB
   db:
@@ -28,5 +26,3 @@ services:
       - DOCKSAL=1
       - COMPOSER_MEMORY_LIMIT=-1
       - SYMFONY_DEPRECATIONS_HELPER=weak
-    volumes:
-      - ${WINGSUIT_PATH}:/var/www/docroot/themes/custom/wingsuit
