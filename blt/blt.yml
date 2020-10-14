@@ -6,3 +6,7 @@ cm:
   core:
     install_from_config: true
 
+validate:
+  twig:
+    filters: [asset]
+    functions: [uuid, asset, pattern, pattern_preview]
