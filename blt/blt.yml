@@ -1,2 +1,8 @@
 project:
   machine_name: wingsuit
+  profile:
+    name: lightning
+cm:
+  core:
+    install_from_config: true
+

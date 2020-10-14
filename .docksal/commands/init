@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+
+## Init local docksal.
+## (Copy default local docksal configuration to start pattern container. Install drupal.)
+DOCROOT='docroot'
+DOCROOT_PATH=${PROJECT_ROOT}/${DOCROOT}
+
+set -e
+
+# Copy a settings file.
+# Skips if the destination file already exists.
+# @param $1 source file
+# @param $2 destination file
+copy_settings_file()
+{
+	local source="$1"
+	local dest="$2"
+
+	if [[ ! -f $dest ]]; then
+		echo "Copying settings ${dest}..."
+		cp $source $dest
+		fin restart
+	else
+		echo "${dest} already in place."
+	fi
+}
+
+
+#-------------------------- Helper functions --------------------------------
+# Startup Docksal.
+init_settings ()
+{
+	# Copy from settings templates
+	copy_settings_file "${DOCROOT_PATH}/sites/default/settings/default.local.settings.php" "${DOCROOT_PATH}/sites/default/settings/local.settings.php"
+}
+
+export DOCKSAL_ENVIRONMENT=wingsuit
+
+fin up
+
+init_settings
+
+fin exec composer install
+
+fin blt setup
