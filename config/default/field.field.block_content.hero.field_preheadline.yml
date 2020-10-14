@@ -1,0 +1,19 @@
+uuid: 3d335397-f30c-4f42-b738-e2c9d67547bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero
+    - field.storage.block_content.field_preheadline
+id: block_content.hero.field_preheadline
+field_name: field_preheadline
+entity_type: block_content
+bundle: hero
+label: Preheadline
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

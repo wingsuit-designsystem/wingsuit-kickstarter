@@ -1,0 +1,15 @@
+uuid: f63ee675-425c-4bce-a076-7b950d89e676
+langcode: en
+status: true
+dependencies: {  }
+name: 16x9_004000_320x180
+label: '16x9 - 4 (320x180)'
+effects:
+  cfd4b212-bb35-4ee4-8cfc-2a3beab158b9:
+    uuid: cfd4b212-bb35-4ee4-8cfc-2a3beab158b9
+    id: image_scale_and_crop
+    weight: 0
+    data:
+      width: 320
+      height: 180
+      anchor: center-center

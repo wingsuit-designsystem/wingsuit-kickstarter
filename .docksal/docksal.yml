@@ -9,7 +9,7 @@ services:
     depends_on:
       - cli
     volumes:
-      - /home/cw/projects/wingsuit/wingsuit/packages/wingsuit:/var/www/docroot/themes/custom/wingsuit
+      - ${WINGSUIT_PATH}:/var/www/docroot/themes/custom/wingsuit
 
   # DB
   db:
@@ -29,4 +29,4 @@ services:
       - COMPOSER_MEMORY_LIMIT=-1
       - SYMFONY_DEPRECATIONS_HELPER=weak
     volumes:
-      - /home/cw/projects/wingsuit/wingsuit/packages/wingsuit:/var/www/docroot/themes/custom/wingsuit
+      - ${WINGSUIT_PATH}:/var/www/docroot/themes/custom/wingsuit

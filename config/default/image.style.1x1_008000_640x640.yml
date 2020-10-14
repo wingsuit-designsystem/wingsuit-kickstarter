@@ -1,0 +1,15 @@
+uuid: 4dcccc7a-731e-4543-b911-c8c9c66bb5b0
+langcode: en
+status: true
+dependencies: {  }
+name: 1x1_008000_640x640
+label: '1x1 - 8 (640x640)'
+effects:
+  ea592c3d-49b2-4699-bcce-60c8bc97c44a:
+    uuid: ea592c3d-49b2-4699-bcce-60c8bc97c44a
+    id: image_scale_and_crop
+    weight: 0
+    data:
+      width: 640
+      height: 640
+      anchor: center-center

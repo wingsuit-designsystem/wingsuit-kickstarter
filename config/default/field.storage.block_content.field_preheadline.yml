@@ -1,0 +1,21 @@
+uuid: 8930f3c3-b14d-4da8-b631-7adf710ac056
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.field_preheadline
+field_name: field_preheadline
+entity_type: block_content
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

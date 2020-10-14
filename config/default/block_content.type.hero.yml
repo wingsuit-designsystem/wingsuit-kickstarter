@@ -1,0 +1,8 @@
+uuid: b82e6f66-798d-4dd2-8a75-a45a464a93c0
+langcode: en
+status: true
+dependencies: {  }
+id: hero
+label: Hero
+revision: 0
+description: 'Contains Hero title and Hero Image'

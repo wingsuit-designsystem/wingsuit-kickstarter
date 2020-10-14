@@ -1,0 +1,17 @@
+uuid: 77a2d7ee-ed02-4d30-a60c-0122edd6582f
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.focal_point
+  module:
+    - crop
+name: crop_focal_point
+label: 'Cropped: Focal point'
+effects:
+  19bdf2fa-480f-40a0-a663-b6c2d3ea0f0e:
+    uuid: 19bdf2fa-480f-40a0-a663-b6c2d3ea0f0e
+    id: crop_crop
+    weight: null
+    data:
+      crop_type: focal_point

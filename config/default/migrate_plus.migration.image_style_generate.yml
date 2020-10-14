@@ -1,0 +1,51 @@
+uuid: b28e7d0e-e400-4fca-9772-500521f26b01
+langcode: en
+status: true
+dependencies: {  }
+id: image_style_generate
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags:
+  - image_style_generate
+migration_group: null
+label: 'Image style generate'
+source:
+  plugin: image_style_generate
+  defaults:
+    size_multiplier: 80
+    id_pattern: '{{group_id}}_{{size_padded}}_{{width}}x{{height}}'
+    label_pattern: '{{group_label}} - {{size}} ({{width}}x{{height}})'
+    effects:
+      image_scale_and_crop:
+        width: '{{width}}'
+        height: '{{height}}'
+        anchor: center-center
+    base_sizes:
+      - 4
+      - 8
+      - 12
+    size_scales:
+      - 100
+      - 200
+  style_groups:
+    1x1:
+      label: 1x1
+      aspect_ratio: '1:1'
+    16x9:
+      label: 16x9
+      aspect_ratio: '16:9'
+    3x4:
+      label: 3x4
+      aspect_ratio: '3:4'
+      base_size_dimension: height
+  ids:
+    name:
+      type: string
+process:
+  name: name
+  label: label
+  effects: effects
+destination:
+  plugin: 'entity:image_style'
+migration_dependencies: {  }

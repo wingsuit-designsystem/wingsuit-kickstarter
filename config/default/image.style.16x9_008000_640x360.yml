@@ -1,0 +1,15 @@
+uuid: 77cd769f-7553-4e82-92a4-18072e426427
+langcode: en
+status: true
+dependencies: {  }
+name: 16x9_008000_640x360
+label: '16x9 - 8 (640x360)'
+effects:
+  c8771aa8-9078-4dba-9e4c-80c17fd28b26:
+    uuid: c8771aa8-9078-4dba-9e4c-80c17fd28b26
+    id: image_scale_and_crop
+    weight: 0
+    data:
+      width: 640
+      height: 360
+      anchor: center-center

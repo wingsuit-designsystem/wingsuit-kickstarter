@@ -1,0 +1,6 @@
+threshold: 200
+ratio_distortion: 60
+upscale: 320
+downscale: 3840
+multiplier: 1
+lazy_offset: 100

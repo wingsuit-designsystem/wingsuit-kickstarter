@@ -1,0 +1,15 @@
+uuid: cc1513a9-b44b-4677-97a6-e8080fdeaba7
+langcode: en
+status: true
+dependencies: {  }
+name: 3x4_012000_720x960
+label: '3x4 - 12 (720x960)'
+effects:
+  accd0808-ec76-4312-97a6-9f6ac6f1ea8b:
+    uuid: accd0808-ec76-4312-97a6-9f6ac6f1ea8b
+    id: image_scale_and_crop
+    weight: 0
+    data:
+      width: 720
+      height: 960
+      anchor: center-center

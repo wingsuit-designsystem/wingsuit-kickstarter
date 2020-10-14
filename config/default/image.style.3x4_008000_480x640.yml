@@ -1,0 +1,15 @@
+uuid: 3b80a23e-db23-4032-98fb-a9590de04fa9
+langcode: en
+status: true
+dependencies: {  }
+name: 3x4_008000_480x640
+label: '3x4 - 8 (480x640)'
+effects:
+  5f093330-a0d9-497e-a90e-1d345bc2ff52:
+    uuid: 5f093330-a0d9-497e-a90e-1d345bc2ff52
+    id: image_scale_and_crop
+    weight: 0
+    data:
+      width: 480
+      height: 640
+      anchor: center-center

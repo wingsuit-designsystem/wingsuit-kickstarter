@@ -1,0 +1,15 @@
+uuid: b4c1cd04-2180-4802-86af-f07dfd9c82dc
+langcode: en
+status: true
+dependencies: {  }
+name: 16x9_024000_1920x1080
+label: '16x9 - 24 (1920x1080)'
+effects:
+  91288e3b-6c25-4053-bdec-292617b11057:
+    uuid: 91288e3b-6c25-4053-bdec-292617b11057
+    id: image_scale_and_crop
+    weight: 0
+    data:
+      width: 1920
+      height: 1080
+      anchor: center-center
