@@ -16,13 +16,14 @@ mode: default
 content:
   field_slideshow_items:
     type: media_library_widget
-    weight: 1
-    settings: {  }
+    weight: 0
+    settings:
+      media_types: {  }
     region: content
     third_party_settings: {  }
   info:
     type: string_textfield
-    weight: 0
+    weight: 1
     region: content
     settings:
       size: 60

@@ -1,15 +1,15 @@
-uuid: 211a3a8d-b06e-401e-8b6f-2889229ec71d
+uuid: cab0f93f-7736-4abf-80be-504e85feef07
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.hero
-    - field.field.block_content.hero.body
-    - field.field.block_content.hero.field_link
-    - field.field.block_content.hero.field_media
-    - field.field.block_content.hero.field_preheadline
-    - field.field.block_content.hero.field_title
+    - block_content.type.card
+    - field.field.block_content.card.body
+    - field.field.block_content.card.field_image
+    - field.field.block_content.card.field_preheadline
+    - field.field.block_content.card.field_title
   module:
+    - image
     - layout_builder
     - layout_library
     - text
@@ -21,37 +21,42 @@ third_party_settings:
     enabled: true
     sections:
       -
-        layout_id: pattern_hero
+        layout_id: pattern_card
         layout_settings:
           label: ''
           pattern:
             field_templates: default
             variant: ''
+            settings:
+              alignment: left
+              url:
+                input: ''
         components:
-          d03a5383-2490-4faa-a3a6-a7de5a26b149:
-            uuid: d03a5383-2490-4faa-a3a6-a7de5a26b149
-            region: headline
+          3234c20b-ff28-4dd3-8ab0-3d731e163ddb:
+            uuid: 3234c20b-ff28-4dd3-8ab0-3d731e163ddb
+            region: image
             configuration:
-              id: 'field_block:block_content:hero:field_title'
-              label: Title
+              id: 'field_block:block_content:card:field_image'
+              label: Image
               provider: layout_builder
               label_display: '0'
               formatter:
                 label: hidden
-                type: string
+                type: image
                 settings:
-                  link_to_entity: false
+                  image_style: ''
+                  image_link: ''
                 third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
             weight: 0
-          a4516ecc-e10e-4fd7-b5a2-7ccea16603df:
-            uuid: a4516ecc-e10e-4fd7-b5a2-7ccea16603df
-            region: pre_headline
+          79a98879-82a3-4f0e-bfca-0e43a2f844bc:
+            uuid: 79a98879-82a3-4f0e-bfca-0e43a2f844bc
+            region: preheadline
             configuration:
-              id: 'field_block:block_content:hero:field_preheadline'
+              id: 'field_block:block_content:card:field_preheadline'
               label: Preheadline
               provider: layout_builder
               label_display: '0'
@@ -66,11 +71,30 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 0
-          a0c4eabb-4bf8-4ee7-9ba9-2a5e94678661:
-            uuid: a0c4eabb-4bf8-4ee7-9ba9-2a5e94678661
+          b1c3d00f-ba37-4b54-b81b-22082648df39:
+            uuid: b1c3d00f-ba37-4b54-b81b-22082648df39
+            region: headline
+            configuration:
+              id: 'field_block:block_content:card:field_title'
+              label: Headline
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          ea4bbc40-85ef-4a95-906b-7fb85c9e2d65:
+            uuid: ea4bbc40-85ef-4a95-906b-7fb85c9e2d65
             region: text
             configuration:
-              id: 'field_block:block_content:hero:body'
+              id: 'field_block:block_content:card:body'
               label: Body
               provider: layout_builder
               label_display: '0'
@@ -84,55 +108,12 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 0
-          948a264b-4214-42ab-a267-e7f49c024a82:
-            uuid: 948a264b-4214-42ab-a267-e7f49c024a82
-            region: image
-            configuration:
-              id: 'field_block:block_content:hero:field_media'
-              label: Image
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: media_thumbnail
-                settings:
-                  image_style: crop_thumbnail
-                  image_link: ''
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 0
-          555f90db-7774-40c2-8d67-0557ed3c0e5f:
-            uuid: 555f90db-7774-40c2-8d67-0557ed3c0e5f
-            region: button
-            configuration:
-              id: 'field_block:block_content:hero:field_link'
-              label: Link
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: link
-                settings:
-                  trim_length: 80
-                  url_only: false
-                  url_plain: false
-                  rel: '0'
-                  target: '0'
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 0
         third_party_settings: {  }
   layout_library:
     enable: false
-id: block_content.hero.default
+id: block_content.card.default
 targetEntityType: block_content
-bundle: hero
+bundle: card
 mode: default
 content:
   body:
@@ -142,16 +123,16 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_media:
-    type: entity_reference_entity_view
-    weight: 2
+  field_image:
+    weight: 3
     label: above
     settings:
-      view_mode: default
-      link: false
+      image_style: ''
+      image_link: ''
     third_party_settings: {  }
+    type: image
     region: content
-  field_title:
+  field_preheadline:
     weight: 1
     label: above
     settings:
@@ -159,7 +140,13 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  field_title:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
 hidden:
-  field_link: true
-  field_preheadline: true
   search_api_excerpt: true

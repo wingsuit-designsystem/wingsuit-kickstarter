@@ -1,0 +1,23 @@
+uuid: aaace8df-6a34-4176-a8c1-1cdaafa1c997
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.card
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.card.body
+field_name: body
+entity_type: block_content
+bundle: card
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

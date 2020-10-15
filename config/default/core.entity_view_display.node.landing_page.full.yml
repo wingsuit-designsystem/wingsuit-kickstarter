@@ -55,7 +55,9 @@ third_party_settings:
         Forms: {  }
         Help: {  }
         'Inline blocks':
+          - 'inline_block:accordion_item'
           - 'inline_block:banner'
+          - 'inline_block:card'
           - 'inline_block:hero'
           - 'inline_block:media_slideshow'
           - 'inline_block:text'

@@ -1,0 +1,19 @@
+uuid: dcefaa15-2ac7-4a1a-b228-072c04f44e84
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.card
+    - field.storage.block_content.field_preheadline
+id: block_content.card.field_preheadline
+field_name: field_preheadline
+entity_type: block_content
+bundle: card
+label: Preheadline
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

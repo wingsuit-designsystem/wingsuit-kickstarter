@@ -1,0 +1,19 @@
+uuid: e0c43e7d-8118-453a-b97f-c59916a14fa2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.accordion_item
+    - field.storage.block_content.field_title
+id: block_content.accordion_item.field_title
+field_name: field_title
+entity_type: block_content
+bundle: accordion_item
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
