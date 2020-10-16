@@ -8,6 +8,7 @@ dependencies:
     - field.field.block_content.hero.field_link
     - field.field.block_content.hero.field_media
     - field.field.block_content.hero.field_preheadline
+    - field.field.block_content.hero.field_text
     - field.field.block_content.hero.field_title
   module:
     - link
@@ -18,16 +19,6 @@ targetEntityType: block_content
 bundle: hero
 mode: default
 content:
-  body:
-    type: text_textarea_with_summary
-    weight: 2
-    settings:
-      rows: 9
-      summary_rows: 3
-      placeholder: ''
-      show_summary: false
-    third_party_settings: {  }
-    region: content
   field_link:
     weight: 4
     settings:
@@ -51,6 +42,14 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  field_text:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
   field_title:
     weight: 1
     settings:
@@ -67,4 +66,5 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  body: true

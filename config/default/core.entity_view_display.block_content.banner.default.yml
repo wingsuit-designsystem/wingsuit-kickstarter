@@ -9,11 +9,14 @@ dependencies:
     - field.field.block_content.banner.field_link
     - field.field.block_content.banner.field_summary
     - field.field.block_content.banner.field_title
+    - field.field.block_content.banner.field_variant
   module:
     - bg_image_formatter
     - layout_builder
+    - layout_builder_restrictions
     - layout_library
     - link
+    - options
     - text
   theme:
     - wingsuit
@@ -29,6 +32,7 @@ third_party_settings:
           pattern:
             field_templates: default
             variant: center_left
+            variant_token: '[block_content:field_variant:value]'
         components:
           0eb6358e-b709-4d3a-8e71-69b38df9e9fc:
             uuid: 0eb6358e-b709-4d3a-8e71-69b38df9e9fc
@@ -87,9 +91,30 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 0
+          91b01628-6f03-48d3-a79a-a949bf7f9b71:
+            uuid: 91b01628-6f03-48d3-a79a-a949bf7f9b71
+            region: null
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:block_content:banner:field_variant'
+              formatter:
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+                type: list_default
+            additional: {  }
+            weight: 0
         third_party_settings: {  }
   layout_library:
     enable: false
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      whitelisted_blocks: {  }
+      blacklisted_blocks: {  }
+      allowed_layouts: {  }
 _core:
   default_config_hash: uxz6UULElzOJv5OWJVKIpGjpbt2nVclXZJCN2g9KpC0
 id: block_content.banner.default
@@ -151,5 +176,12 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  field_variant:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: null
 hidden:
   search_api_excerpt: true

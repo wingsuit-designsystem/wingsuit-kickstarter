@@ -9,6 +9,7 @@ dependencies:
     - field.field.block_content.banner.field_link
     - field.field.block_content.banner.field_summary
     - field.field.block_content.banner.field_title
+    - field.field.block_content.banner.field_variant
     - image.style.thumbnail
   module:
     - image
@@ -45,6 +46,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textfield
+    region: content
+  field_variant:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   info:
     type: string_textfield

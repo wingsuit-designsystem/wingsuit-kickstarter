@@ -1,0 +1,48 @@
+uuid: dd75db66-19c4-4d6f-9d6e-cda8e68273af
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+id: block_content.field_variant
+field_name: field_variant
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: top_left
+      label: 'Top left'
+    -
+      value: top_center
+      label: 'Top center'
+    -
+      value: top_right
+      label: 'Top right'
+    -
+      value: center_left
+      label: 'Center left'
+    -
+      value: center_center
+      label: 'Center center'
+    -
+      value: center_right
+      label: 'Center right'
+    -
+      value: bottom_left
+      label: 'Bottom left'
+    -
+      value: bottom_center
+      label: 'Bottom center'
+    -
+      value: bottom_right
+      label: 'Bottom  right'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
