@@ -1,5 +1,6 @@
 project:
   machine_name: wingsuit
+  prefix: WS
   profile:
     name: lightning
 cm:

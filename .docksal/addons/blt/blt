@@ -4,4 +4,4 @@
 ##
 ## Usage: fin blt [command]
 
-fin exec /var/www/vendor/bin/blt "$@"
+fin exec /var/www/vendor/bin/blt "$@" --environment docksal

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-fin exec /var/www/blt/git-hooks/commit-msg.php
+fin exec /var/www/vendor/bin/blt internal:git-hook:execute:commit-msg "$(cat $1)"
 
 exit $?
