@@ -7,6 +7,10 @@
 # Abort if anything fails
 set -e
 
+# To load the docksal-wingsuit.yml and .env fiels
+# set docksal environment to wingsuit.
+export DOCKSAL_ENVIRONMENT=wingsuit
+
 #-------------------------- Helper functions --------------------------------
 
 # Console colors
