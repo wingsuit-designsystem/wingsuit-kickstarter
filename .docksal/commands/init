@@ -1,45 +1,37 @@
 #!/usr/bin/env bash
 
-## Init local docksal.
-## (Copy default local docksal configuration to start pattern container. Install drupal.)
-DOCROOT='docroot'
-DOCROOT_PATH=${PROJECT_ROOT}/${DOCROOT}
+## Initialize stack and site (full reset)
+##
+## Usage: fin init
 
+# Abort if anything fails
 set -e
 
-# Copy a settings file.
-# Skips if the destination file already exists.
-# @param $1 source file
-# @param $2 destination file
-copy_settings_file()
-{
-	local source="$1"
-	local dest="$2"
-
-	if [[ ! -f $dest ]]; then
-		echo "Copying settings ${dest}..."
-		cp $source $dest
-		fin restart
-	else
-		echo "${dest} already in place."
-	fi
-}
-
-
 #-------------------------- Helper functions --------------------------------
-# Startup Docksal.
-init_settings ()
-{
-	# Copy from settings templates
-	copy_settings_file "${DOCROOT_PATH}/sites/default/settings/default.local.settings.php" "${DOCROOT_PATH}/sites/default/settings/local.settings.php"
-}
 
-export DOCKSAL_ENVIRONMENT=wingsuit
+# Console colors
+red='\033[0;31m'
+green='\033[0;32m'
+green_bg='\033[1;97;42m'
+yellow='\033[1;33m'
+NC='\033[0m'
 
-fin up
+echo-red () { echo -e "${red}$1${NC}"; }
+echo-green () { echo -e "${green}$1${NC}"; }
+echo-green-bg () { echo -e "${green_bg}$1${NC}"; }
+echo-yellow () { echo -e "${yellow}$1${NC}"; }
 
-init_settings
+#-------------------------- Execution --------------------------------
 
-fin exec composer install
+# Stack initialization
+echo -e "${green_bg} Step 1 ${NC}${green} Initializing stack...${NC}"
+fin project reset -f
 
-fin blt setup
+# Site initialization
+echo -e "${green_bg} Step 2 ${NC}${green} Initializing site...${NC}"
+# This runs inside cli using http://docs.docksal.io/en/v1.4.0/fin/custom-commands/#executing-commands-inside-cli
+fin init-site
+
+echo -e "${green_bg} DONE! ${NC}${green} Completed all initialization steps.${NC}"
+
+#-------------------------- END: Execution --------------------------------

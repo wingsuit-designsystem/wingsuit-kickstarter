@@ -28,7 +28,8 @@
 
         "drupal/image_style_generate": "^1.0@beta",
         "drupal/migrate_plus": "^5.1",
-        "drupal/migrate_tools": "^5.0"
+        "drupal/migrate_tools": "^5.0",
+        "docksal/blt-docksal": "dev-master"
     },
     "require-dev": {
         "drush/drush": ">=9.7",

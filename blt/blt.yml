@@ -10,3 +10,4 @@ validate:
   twig:
     filters: [asset]
     functions: [uuid, asset, pattern, pattern_preview]
+

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0f59d1e491b915f3548d25d53abd8d6f",
+    "content-hash": "4bbb113518c9618a86c38ebcfc05ec52",
     "packages": [
         {
             "name": "acquia/blt",
@@ -385,7 +385,7 @@
             "version": "v1.8.1",
             "source": {
                 "type": "git",
-                "url": "git@github.com:kenwheeler/slick.git",
+                "url": "https://github.com/kenwheeler/slick.git",
                 "reference": "0f40c9d6a02a5c08b5f4dd80fdada3a854a59bee"
             },
             "dist": {
@@ -1656,6 +1656,56 @@
             ],
             "description": "implementation of xdg base directory specification for php",
             "time": "2019-12-04T15:06:13+00:00"
+        },
+        {
+            "name": "docksal/blt-docksal",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/docksal/blt-docksal.git",
+                "reference": "4bd4a4626fff091248a5c8ff58bb090164496a18"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/docksal/blt-docksal/zipball/4bd4a4626fff091248a5c8ff58bb090164496a18",
+                "reference": "4bd4a4626fff091248a5c8ff58bb090164496a18",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Docksal\\BltDockal\\": "./src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Docksal Team",
+                    "homepage": "https://docksal.io",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Docksal integration for Acquia BLT",
+            "homepage": "https://github.com/docksal/blt-docksal",
+            "keywords": [
+                "acquia",
+                "blt",
+                "docksal"
+            ],
+            "funding": [
+                {
+                    "url": "https://github.com/docksal",
+                    "type": "github"
+                },
+                {
+                    "url": "https://opencollective.com/docksal",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2019-10-25T17:19:30+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -11380,6 +11430,20 @@
                 "interoperability",
                 "standards"
             ],
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
             "time": "2020-09-07T11:33:47+00:00"
         },
         {
@@ -13333,7 +13397,8 @@
         "drupal/ui_patterns_settings": 20,
         "drupal/wingsuit_companion": 20,
         "drupal/media_library_edit": 15,
-        "drupal/image_style_generate": 10
+        "drupal/image_style_generate": 10,
+        "docksal/blt-docksal": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

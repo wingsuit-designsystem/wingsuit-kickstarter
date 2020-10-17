@@ -1,28 +1,21 @@
-# Basic LAMP stack
 version: "2.1"
-services:
-  # Web
-  web:
-    extends:
-      file: ${HOME}/.docksal/stacks/services.yml
-      service: web
-    depends_on:
-      - cli
 
-  # DB
-  db:
-    extends:
-      file: ${HOME}/.docksal/stacks/services.yml
-      service: mysql
-  # CLI
-  cli:
-    extends:
-      file: ${HOME}/.docksal/stacks/services.yml
-      service: cli
-    environment:
-      - PATH=/var/www/vendor/bin:$PATH
-      - PHP_IDE_CONFIG=serverName=${VIRTUAL_HOST}
-      - XDEBUG_CONFIG=remote_enable=1 remote_mode=req remote_port=9000 remote_host=m-ysp.docksal remote_connect_back=0
-      - DOCKSAL=1
-      - COMPOSER_MEMORY_LIMIT=-1
-      - SYMFONY_DEPRECATIONS_HELPER=weak
+services:
+  # Add your service overrides here.
+  # Expose Solr on a Virtualhost.
+  #solr:
+  #  labels:
+  #    - io.docksal.virtual-host=solr.${VIRTUAL_HOST}
+  #    - io.docksal.virtual-port=8983
+
+  chrome:
+    hostname: chrome
+    # We're using older headless chrome that still allows access to debugging
+    # from non-localhost hostname, as it was patched in https://bugs.chromium.org/p/chromium/issues/detail?id=813540
+    image: yukinying/chrome-headless-browser:64.0.3282.24
+    shm_size: 512M
+    cap_add:
+      - SYS_ADMIN
+    dns:
+      - ${DOCKSAL_DNS1}
+      - ${DOCKSAL_DNS2}
