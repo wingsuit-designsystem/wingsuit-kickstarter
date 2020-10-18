@@ -15,7 +15,7 @@
         "drupal/panels": "^4.6",
 
         "drupal/components": "^2.0",
-        "drupal/ui_patterns_settings": "2.x-dev",
+        "drupal/ui_patterns_settings": "2.0-alpha1",
         "drupal/ui_patterns_layout_builder": "^1.0",
         "drupal/ui_patterns_field_formatters": "^1.2",
         "drupal/component_blocks": "^1.1",
