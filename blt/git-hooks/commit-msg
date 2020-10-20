@@ -1,17 +1,5 @@
-#!/usr/bin/env php
-<?php
-echo "Executing .git/hooks/commit-msg...\n";
-$repo_root = getcwd();
+#!/usr/bin/env bash
 
-$original_argv = $_SERVER['argv'];
-$commit_msg = rtrim(file_get_contents($original_argv[1]), "\n");
+fin exec /var/www/vendor/bin/blt internal:git-hook:execute:commit-msg "$(cat $1)"
 
-// Construct pseudo `blt commit-msg $commit_msg` call.
-$_SERVER['argv'] = [
-  $repo_root . '/bin/blt',
-  'internal:git-hook:execute:commit-msg',
-  $commit_msg,
-];
-$_SERVER['argc'] = count($_SERVER['argv']);
-
-require __DIR__ . '/../../bin/blt-robo.php';
+exit $?

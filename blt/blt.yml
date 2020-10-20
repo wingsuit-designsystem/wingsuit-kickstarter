@@ -1,5 +1,6 @@
 project:
   machine_name: wingsuit
+  prefix: WS
   profile:
     name: lightning
 cm:
@@ -10,3 +11,4 @@ validate:
   twig:
     filters: [asset]
     functions: [uuid, asset, pattern, pattern_preview]
+

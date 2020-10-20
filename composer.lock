@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0f59d1e491b915f3548d25d53abd8d6f",
+    "content-hash": "356c28881daad77c83660cbfd40885ec",
     "packages": [
         {
             "name": "acquia/blt",
@@ -8013,11 +8013,17 @@
         },
         {
             "name": "drupal/ui_patterns_settings",
-            "version": "dev-2.x",
+            "version": "2.0.0-alpha1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/ui_patterns_settings.git",
-                "reference": "5aef3354be3d889f1d12cea1e0c397e7dc341b61"
+                "reference": "8.x-2.0-alpha1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/ui_patterns_settings-8.x-2.0-alpha1.zip",
+                "reference": "8.x-2.0-alpha1",
+                "shasum": "2e034729f409d5d1573a6706ec379e5dc28379bc"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
@@ -8044,15 +8050,12 @@
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-2.x": "2.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-2.x-dev",
-                    "datestamp": "1600844867",
+                    "version": "8.x-2.0-alpha1",
+                    "datestamp": "1603058667",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "message": "Alpha releases are not covered by Drupal security advisories."
                     }
                 },
                 "enable-patching": true,
@@ -8115,8 +8118,7 @@
             ],
             "support": {
                 "source": "https://git.drupalcode.org/project/ui_patterns_settings"
-            },
-            "time": "2020-09-23T07:07:09+00:00"
+            }
         },
         {
             "name": "drupal/video_embed_field",
@@ -10647,16 +10649,16 @@
         },
         {
             "name": "swagger-api/swagger-ui",
-            "version": "v3.35.1",
+            "version": "v3.35.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/swagger-api/swagger-ui.git",
-                "reference": "82fdabf0a916e93a9d20dc91c5a31fb61b8d2e35"
+                "reference": "8fecd98c8bdc9541555155065d477d41d0bf3233"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swagger-api/swagger-ui/zipball/82fdabf0a916e93a9d20dc91c5a31fb61b8d2e35",
-                "reference": "82fdabf0a916e93a9d20dc91c5a31fb61b8d2e35",
+                "url": "https://api.github.com/repos/swagger-api/swagger-ui/zipball/8fecd98c8bdc9541555155065d477d41d0bf3233",
+                "reference": "8fecd98c8bdc9541555155065d477d41d0bf3233",
                 "shasum": ""
             },
             "type": "library",
@@ -10700,7 +10702,7 @@
                 "swagger",
                 "ui"
             ],
-            "time": "2020-10-08T23:06:37+00:00"
+            "time": "2020-10-15T21:07:34+00:00"
         },
         {
             "name": "symfony-cmf/routing",
@@ -13345,7 +13347,6 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/lb_claro": 20,
-        "drupal/ui_patterns_settings": 20,
         "drupal/wingsuit_companion": 20,
         "drupal/media_library_edit": 15,
         "drupal/image_style_generate": 10

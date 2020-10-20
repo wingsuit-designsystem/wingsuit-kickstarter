@@ -10,26 +10,6 @@ use Drupal\Component\Assertion\Handle;
 
 $db_name = '${drupal.db.database}';
 
-/**
- * Database configuration.
- */
-$databases = [
-  'default' =>
-  [
-    'default' =>
-    [
-      'database' => $db_name,
-      'username' => '${drupal.db.username}',
-      'password' => '${drupal.db.password}',
-      'host' => '${drupal.db.host}',
-      'port' => '${drupal.db.port}',
-      'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-      'driver' => 'mysql',
-      'prefix' => '',
-    ],
-  ],
-];
-
 // Use development service parameters.
 $settings['container_yamls'][] = EnvironmentDetector::getRepoRoot() . '/docroot/sites/development.services.yml';
 $settings['container_yamls'][] = EnvironmentDetector::getRepoRoot() . '/docroot/sites/blt.development.services.yml';
