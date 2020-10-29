@@ -10,5 +10,5 @@ cm:
 validate:
   twig:
     filters: [asset]
-    functions: [uuid, asset, pattern, pattern_preview]
+    functions: [uuid, asset, pattern, pattern_preview, pattern_configuration]
 
