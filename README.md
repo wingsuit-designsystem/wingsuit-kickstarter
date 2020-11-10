@@ -5,8 +5,7 @@
 # Wingsuit Kickstarter
 Wingsuit Kickstarter is a demo project to show how to use Wingsuit with Drupal.
 
-## Setup
-
+## PHP Kickstart
    * Clone the repository and run:
 ```
 cd wingsuit_kickstarter
@@ -14,20 +13,18 @@ composer install
 ./vendor/bin/blt setup
 ```
 
-## Setup with docksal
+## Docksal kickstart
 
    * Clone the repository and run:
 ```
-cd wingsuit_kickstarter
-fin init
+cd wingsuit_kickstarter && fin init
 ```
 
-## Dev with docksal
+## Dev Mode: Link wingsuit to wingsuit_kickstarter
+Use this mode to link `https://github.com/wingsuit-designsystem/wingsuit` as volume.
 
-   * Clone the repository and clone "https://github.com/wingsuit-designsystem/wingsuit" run:
-```
-# Check
-export DOCKSAL_ENVIRONMENT=docksal-dev
-cd wingsuit_kickstarter
-fin init
-```
+   * Create a folder `wingsuit`
+   * Clone "https://github.com/wingsuit-designsystem/wingsuit" and this repository inside `wingsuit`
+   * Run `export DOCKSAL_ENVIRONMENT=docksal-dev`
+   * Check the `WINGSUIT_PATH` in `.docksal/docksal-docksal-dev.env`
+   * run `cd wingsuit_kickstarter && fin init`
