@@ -319,8 +319,6 @@ third_party_settings:
       whitelisted_blocks: {  }
       blacklisted_blocks: {  }
       allowed_layouts: {  }
-_core:
-  default_config_hash: SzjkUfUbWXbaeKTEBOATifPH0TvdYKt35-rJFASvP-I
 id: block_content.hero.default
 targetEntityType: block_content
 bundle: hero

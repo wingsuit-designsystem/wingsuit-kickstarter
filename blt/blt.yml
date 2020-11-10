@@ -7,6 +7,19 @@ cm:
   core:
     install_from_config: true
 
+setup:
+  # Valid values are install, sync, import.
+  strategy: import
+  dump-file: "../dump/dump.sql"
+
+command-hooks:
+  frontend-reqs:
+    dir: ${docroot}/themes/custom
+    command: '[ ! -d "wingsuit" ] && npx @wingsuit-designsystem/cli init --skip-install; cd wingsuit && yarn install'
+  frontend-assets:
+    dir: ${docroot}/themes/custom/wingsuit
+    command: '[ -s "$NVM_DIR/nvm.sh" ] && yarn build:drupal'
+
 validate:
   twig:
     filters: [asset]

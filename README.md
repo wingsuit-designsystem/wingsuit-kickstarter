@@ -1,19 +1,18 @@
+<p align="center">
+<img src="https://github.com/wingsuit-designsystem/wingsuit/raw/master/images/wsuit-logo-stacked.svg" width="340px">
+</p>
+
 # Wingsuit Kickstart
 Wingsuit Kickstart is a demo project to show how to use Wingsuit with Drupal.
 
 ## Installation instruction
 
    * Clone the repository
-   * Go to `docroot/themes/custom` and install the latest Wingsuit:
+   * run composer install
 ```
-    npx @wingsuit-designsystem/cli init
+    composer install
 ```
-   * Build drupal templates
+   * Install drupal with blt
 ```
-    cd wingsuit
-    yarn build:drupal
-```
-* Install drupal
-```
-    drush si lightning --existing-config
+    ./vendor/bin/blt stup
 ```

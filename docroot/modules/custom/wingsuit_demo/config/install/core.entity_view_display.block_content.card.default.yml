@@ -111,8 +111,6 @@ third_party_settings:
         third_party_settings: {  }
   layout_library:
     enable: false
-_core:
-  default_config_hash: M7Oh2ETj16VYbTlcUGVhwV4-JzluVnOICfpTXbXiqxI
 id: block_content.card.default
 targetEntityType: block_content
 bundle: card

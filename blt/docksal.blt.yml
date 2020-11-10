@@ -3,3 +3,11 @@ git:
     pre-commit: ${repo.root}/blt/git-hooks
     pre-push: ${repo.root}/blt/git-hooks
     commit-msg: ${repo.root}/blt/git-hooks
+
+command-hooks:
+  frontend-reqs:
+    dir: ${docroot}/themes/custom
+    command: '[ ! -d "wingsuit" ] && npx @wingsuit-designsystem/cli init --skip-install; cd wingsuit && yarn install'
+  frontend-assets:
+    dir: ${docroot}/themes/custom/wingsuit
+    command: '[ -s "$NVM_DIR/nvm.sh" ] && yarn build:drupal'
