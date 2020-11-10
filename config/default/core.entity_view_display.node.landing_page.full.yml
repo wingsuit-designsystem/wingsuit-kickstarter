@@ -31,7 +31,7 @@ third_party_settings:
             variant: 1_column
             settings:
               padding_top: ''
-              padding_bottom: ''
+              padding_bottom: default
               padding_x: default
               gutter: default
               width: default
