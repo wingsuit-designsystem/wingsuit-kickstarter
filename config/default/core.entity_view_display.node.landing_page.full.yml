@@ -30,18 +30,18 @@ third_party_settings:
             field_templates: default
             variant: 1_column
             settings:
-              width: default
-              bg: ''
-              padding_x: default
-              padding_top: default
+              padding_top: ''
               padding_bottom: default
-              gap: default
-              columns: ''
-              config_1: equal
-              config_2: equal
-              config_3: equal
-              config_4: equal
-              config_5: equal
+              padding_x: default
+              gutter: default
+              width: default
+              columns: '1'
+              columns_width_1: equal
+              columns_width_2: equal
+              columns_width_3: equal
+              columns_width_4: equal
+              columns_width_5: equal
+              bg: ''
         components: {  }
         third_party_settings: {  }
   layout_library:
@@ -72,7 +72,7 @@ third_party_settings:
       blacklisted_blocks: {  }
     allowed_block_categories: {  }
 _core:
-  default_config_hash: d83Jic-g8eE88n6hk6kgqfzNI0Y-gEnPXKI5qed2hc0
+  default_config_hash: zenmAxG5aYHyBSvE9ZgTDLnf6-0oxXnVg6CFwNcc1no
 id: node.landing_page.full
 targetEntityType: node
 bundle: landing_page

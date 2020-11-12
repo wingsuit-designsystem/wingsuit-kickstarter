@@ -9,7 +9,8 @@ set -e
 
 # To load the docksal-wingsuit.yml and .env fiels
 # set docksal environment to wingsuit.
-export DOCKSAL_ENVIRONMENT=wingsuit
+
+# export DOCKSAL_ENVIRONMENT=dev
 
 #-------------------------- Helper functions --------------------------------
 

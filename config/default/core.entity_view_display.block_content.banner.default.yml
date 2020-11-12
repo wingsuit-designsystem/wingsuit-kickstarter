@@ -116,7 +116,7 @@ third_party_settings:
       blacklisted_blocks: {  }
       allowed_layouts: {  }
 _core:
-  default_config_hash: uxz6UULElzOJv5OWJVKIpGjpbt2nVclXZJCN2g9KpC0
+  default_config_hash: uBKOxnJjoxMk8fwczCvLINDfgSMaWyPEesRuUsiFBNQ
 id: block_content.banner.default
 targetEntityType: block_content
 bundle: banner

@@ -65,6 +65,8 @@ third_party_settings:
         third_party_settings: {  }
   layout_library:
     enable: false
+_core:
+  default_config_hash: Xj2UtvO5Gwg-tSOGXdOj4HGkO8OF_0j_aeB8LFJtGe8
 id: block_content.accordion_item.default
 targetEntityType: block_content
 bundle: accordion_item

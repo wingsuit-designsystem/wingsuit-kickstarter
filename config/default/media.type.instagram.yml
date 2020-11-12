@@ -9,9 +9,11 @@ _core:
 id: instagram
 label: Instagram
 description: 'Instagram posts.'
-source: instagram
+source: 'oembed:instagram'
 queue_thumbnail_downloads: false
 new_revision: false
 source_configuration:
+  thumbnails_directory: 'public://oembed_thumbnails'
+  providers: {  }
   source_field: embed_code
 field_map: {  }

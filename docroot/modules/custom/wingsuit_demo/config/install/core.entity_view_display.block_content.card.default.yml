@@ -1,0 +1,152 @@
+uuid: cab0f93f-7736-4abf-80be-504e85feef07
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.card
+    - field.field.block_content.card.body
+    - field.field.block_content.card.field_image
+    - field.field.block_content.card.field_preheadline
+    - field.field.block_content.card.field_title
+  module:
+    - image
+    - layout_builder
+    - layout_library
+    - text
+  theme:
+    - wingsuit
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: pattern_card
+        layout_settings:
+          label: ''
+          pattern:
+            field_templates: default
+            variant: ''
+            settings:
+              alignment: left
+              url:
+                input: ''
+        components:
+          3234c20b-ff28-4dd3-8ab0-3d731e163ddb:
+            uuid: 3234c20b-ff28-4dd3-8ab0-3d731e163ddb
+            region: image
+            configuration:
+              id: 'field_block:block_content:card:field_image'
+              label: Image
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: image
+                settings:
+                  image_style: ''
+                  image_link: ''
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          79a98879-82a3-4f0e-bfca-0e43a2f844bc:
+            uuid: 79a98879-82a3-4f0e-bfca-0e43a2f844bc
+            region: preheadline
+            configuration:
+              id: 'field_block:block_content:card:field_preheadline'
+              label: Preheadline
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          b1c3d00f-ba37-4b54-b81b-22082648df39:
+            uuid: b1c3d00f-ba37-4b54-b81b-22082648df39
+            region: headline
+            configuration:
+              id: 'field_block:block_content:card:field_title'
+              label: Headline
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          ea4bbc40-85ef-4a95-906b-7fb85c9e2d65:
+            uuid: ea4bbc40-85ef-4a95-906b-7fb85c9e2d65
+            region: text
+            configuration:
+              id: 'field_block:block_content:card:body'
+              label: Body
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+  layout_library:
+    enable: false
+id: block_content.card.default
+targetEntityType: block_content
+bundle: card
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_image:
+    weight: 3
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_preheadline:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_title:
+    weight: 2
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  search_api_excerpt: true

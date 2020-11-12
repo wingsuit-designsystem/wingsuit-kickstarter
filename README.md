@@ -1,19 +1,30 @@
-# Wingsuit Kickstart
-Wingsuit Kickstart is a demo project to show how to use Wingsuit with Drupal.
+<p align="center">
+<img src="https://github.com/wingsuit-designsystem/wingsuit/raw/master/images/wsuit-logo-stacked.svg" width="340px">
+</p>
 
-## Installation instruction
+# Wingsuit Kickstarter
+Wingsuit Kickstarter is a demo project to show how to use Wingsuit with Drupal.
 
-   * Clone the repository
-   * Go to `docroot/themes/custom` and install the latest Wingsuit:
+## PHP Kickstart
+   * Clone the repository and run:
 ```
-    npx @wingsuit-designsystem/cli init
+cd wingsuit_kickstarter
+composer install
+./vendor/bin/blt setup
 ```
-   * Build drupal templates
+
+## Docksal kickstart
+
+   * Clone the repository and run:
 ```
-    cd wingsuit
-    yarn build:drupal
+cd wingsuit_kickstarter && fin init
 ```
-* Install drupal
-```
-    drush si lightning --existing-config
-```
+
+## Dev Mode: Link wingsuit to wingsuit_kickstarter
+Use this mode to link `https://github.com/wingsuit-designsystem/wingsuit` as volume.
+
+   * Create a folder `wingsuit`
+   * Clone "https://github.com/wingsuit-designsystem/wingsuit" and this repository inside `wingsuit`
+   * Run `export DOCKSAL_ENVIRONMENT=docksal-dev`
+   * Check the `WINGSUIT_PATH` in `.docksal/docksal-docksal-dev.env`
+   * run `cd wingsuit_kickstarter && fin init`

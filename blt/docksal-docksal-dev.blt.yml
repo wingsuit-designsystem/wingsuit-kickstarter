@@ -1,0 +1,13 @@
+git:
+  hooks:
+    pre-commit: ${repo.root}/blt/git-hooks
+    pre-push: ${repo.root}/blt/git-hooks
+    commit-msg: ${repo.root}/blt/git-hooks
+
+command-hooks:
+  frontend-reqs:
+    dir: ${docroot}/themes/custom
+    command: ''
+  frontend-assets:
+    dir: ${docroot}/themes/custom/wingsuit
+    command: 'yarn build:drupal'

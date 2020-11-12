@@ -1,0 +1,187 @@
+uuid: e1994883-f483-452d-af5d-da016726c1f5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.banner
+    - field.field.block_content.banner.body
+    - field.field.block_content.banner.field_banner_image
+    - field.field.block_content.banner.field_link
+    - field.field.block_content.banner.field_summary
+    - field.field.block_content.banner.field_title
+    - field.field.block_content.banner.field_variant
+  module:
+    - bg_image_formatter
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_library
+    - link
+    - options
+    - text
+  theme:
+    - wingsuit
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: pattern_banner
+        layout_settings:
+          label: ''
+          pattern:
+            field_templates: default
+            variant: center_left
+            variant_token: '[block_content:field_variant:value]'
+        components:
+          0eb6358e-b709-4d3a-8e71-69b38df9e9fc:
+            uuid: 0eb6358e-b709-4d3a-8e71-69b38df9e9fc
+            region: headline
+            configuration:
+              id: 'field_block:block_content:banner:field_title'
+              label: Title
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          0a46a289-ce7e-4860-9d0a-4613ebd52ee9:
+            uuid: 0a46a289-ce7e-4860-9d0a-4613ebd52ee9
+            region: image
+            configuration:
+              id: 'field_block:block_content:banner:field_banner_image'
+              label: Image
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: image
+                settings:
+                  image_style: 16x9_016000_1280x720
+                  image_link: ''
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          f740e7f9-ea12-4078-be8c-b8e8a4134484:
+            uuid: f740e7f9-ea12-4078-be8c-b8e8a4134484
+            region: teaser
+            configuration:
+              id: 'field_block:block_content:banner:body'
+              label: Body
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          91b01628-6f03-48d3-a79a-a949bf7f9b71:
+            uuid: 91b01628-6f03-48d3-a79a-a949bf7f9b71
+            region: null
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:block_content:banner:field_variant'
+              formatter:
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+                type: list_default
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+  layout_library:
+    enable: false
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      whitelisted_blocks: {  }
+      blacklisted_blocks: {  }
+      allowed_layouts: {  }
+_core:
+  default_config_hash: uxz6UULElzOJv5OWJVKIpGjpbt2nVclXZJCN2g9KpC0
+id: block_content.banner.default
+targetEntityType: block_content
+bundle: banner
+mode: default
+content:
+  body:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_banner_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      css_settings:
+        bg_image_selector: '[data-block-plugin-id="block_content:[block_content:uuid]"], [data-inline-block-uuid="[block_content:uuid]"]'
+        bg_image_z_index: auto
+        bg_image_color: '#FFFFFF'
+        bg_image_x: left
+        bg_image_y: top
+        bg_image_attachment: scroll
+        bg_image_repeat: no-repeat
+        bg_image_background_size: cover
+        bg_image_media_query: all
+        bg_image_important: 1
+        bg_image_background_size_ie8: 0
+    third_party_settings: {  }
+    type: bg_image_formatter
+    region: content
+  field_link:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_summary:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_variant:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: null
+hidden:
+  search_api_excerpt: true
