@@ -2,6 +2,8 @@ uuid: e7c0a515-2542-4b72-b3a4-3f3c50517666
 langcode: en
 status: true
 dependencies:
+  config:
+    - core.entity_view_mode.media.embedded
   module:
     - editor
     - media
@@ -76,5 +78,5 @@ filters:
     weight: -39
     settings:
       default_view_mode: embedded
-      allowed_view_modes: {  }
       allowed_media_types: {  }
+      allowed_view_modes: {  }

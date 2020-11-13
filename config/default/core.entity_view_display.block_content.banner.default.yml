@@ -5,13 +5,12 @@ dependencies:
   config:
     - block_content.type.banner
     - field.field.block_content.banner.body
-    - field.field.block_content.banner.field_banner_image
     - field.field.block_content.banner.field_link
+    - field.field.block_content.banner.field_media
     - field.field.block_content.banner.field_summary
     - field.field.block_content.banner.field_title
     - field.field.block_content.banner.field_variant
   module:
-    - bg_image_formatter
     - layout_builder
     - layout_builder_restrictions
     - layout_library
@@ -53,26 +52,6 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 0
-          0a46a289-ce7e-4860-9d0a-4613ebd52ee9:
-            uuid: 0a46a289-ce7e-4860-9d0a-4613ebd52ee9
-            region: image
-            configuration:
-              id: 'field_block:block_content:banner:field_banner_image'
-              label: Image
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: image
-                settings:
-                  image_style: 16x9_016000_1280x720
-                  image_link: ''
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 0
           f740e7f9-ea12-4078-be8c-b8e8a4134484:
             uuid: f740e7f9-ea12-4078-be8c-b8e8a4134484
             region: teaser
@@ -106,6 +85,42 @@ third_party_settings:
                 type: list_default
             additional: {  }
             weight: 0
+          dda9ee39-2ed4-4d9f-94a2-833a3d8892e4:
+            uuid: dda9ee39-2ed4-4d9f-94a2-833a3d8892e4
+            region: null
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:block_content:banner:field_media'
+              formatter:
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+                type: entity_reference_label
+            additional: {  }
+            weight: 1
+          cd8dacd3-9160-46d5-b1cf-ebdbeb98ca03:
+            uuid: cd8dacd3-9160-46d5-b1cf-ebdbeb98ca03
+            region: image
+            configuration:
+              id: 'field_block:block_content:banner:field_media'
+              label: Image
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: media_thumbnail
+                settings:
+                  image_style: ''
+                  image_link: ''
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
         third_party_settings: {  }
   layout_library:
     enable: false
@@ -129,26 +144,6 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
-  field_banner_image:
-    weight: 0
-    label: hidden
-    settings:
-      image_style: ''
-      css_settings:
-        bg_image_selector: '[data-block-plugin-id="block_content:[block_content:uuid]"], [data-inline-block-uuid="[block_content:uuid]"]'
-        bg_image_z_index: auto
-        bg_image_color: '#FFFFFF'
-        bg_image_x: left
-        bg_image_y: top
-        bg_image_attachment: scroll
-        bg_image_repeat: no-repeat
-        bg_image_background_size: cover
-        bg_image_media_query: all
-        bg_image_important: 1
-        bg_image_background_size_ie8: 0
-    third_party_settings: {  }
-    type: bg_image_formatter
-    region: content
   field_link:
     weight: 3
     label: hidden
@@ -161,6 +156,14 @@ content:
     third_party_settings: {  }
     type: link
     region: content
+  field_media:
+    weight: 6
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: null
   field_summary:
     weight: 2
     label: hidden

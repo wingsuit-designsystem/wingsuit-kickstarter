@@ -6,7 +6,52 @@ dependencies:
     - block_content.type.text
     - field.field.block_content.text.body
   module:
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_library
     - text
+  theme:
+    - wingsuit
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: pattern_rich_text
+        layout_settings:
+          label: ''
+          pattern:
+            field_templates: default
+            variant: ''
+        components:
+          bdc43ab2-8be6-4fcf-a6ec-bca379bb7a59:
+            uuid: bdc43ab2-8be6-4fcf-a6ec-bca379bb7a59
+            region: text
+            configuration:
+              id: 'field_block:block_content:text:body'
+              label: Body
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+  layout_library:
+    enable: false
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      whitelisted_blocks: {  }
+      blacklisted_blocks: {  }
+      allowed_layouts: {  }
 _core:
   default_config_hash: hnByvtMj31gAERO5MfA3XSwYMYfcWqUtSTxtZLbodrQ
 id: block_content.text.default

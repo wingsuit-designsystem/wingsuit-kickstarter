@@ -10,10 +10,12 @@ dependencies:
     - field.field.block_content.hero.field_preheadline
     - field.field.block_content.hero.field_text
     - field.field.block_content.hero.field_title
+    - field.field.block_content.hero.field_variant_
   module:
     - layout_builder
     - layout_builder_restrictions
     - layout_library
+    - options
     - text
   theme:
     - wingsuit
@@ -103,7 +105,7 @@ third_party_settings:
                   pattern: button
                   variants:
                     banner: top_left
-                    button: default
+                    button: outline
                     image: image
                     section: 1_column
                   pattern_mapping:
@@ -132,10 +134,10 @@ third_party_settings:
                     article:
                       settings:
                         'field_properties:uri':
-                          destination: _hidden
+                          destination: text
                           weight: '0'
                         'field_properties:title':
-                          destination: _hidden
+                          destination: text
                           weight: '0'
                         'field_properties:options':
                           destination: _hidden
@@ -165,6 +167,28 @@ third_party_settings:
                     card:
                       settings:
                         'field_properties:uri':
+                          destination: text
+                          weight: '0'
+                        'field_properties:title':
+                          destination: text
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    container:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    grid:
+                      settings:
+                        'field_properties:uri':
                           destination: _hidden
                           weight: '0'
                         'field_properties:title':
@@ -187,10 +211,10 @@ third_party_settings:
                     hero:
                       settings:
                         'field_properties:uri':
-                          destination: _hidden
+                          destination: text
                           weight: '0'
                         'field_properties:title':
-                          destination: _hidden
+                          destination: text
                           weight: '0'
                         'field_properties:options':
                           destination: _hidden
@@ -202,6 +226,39 @@ third_party_settings:
                           weight: '0'
                         'field_properties:title':
                           destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    link:
+                      settings:
+                        'field_properties:uri':
+                          destination: text
+                          weight: '0'
+                        'field_properties:title':
+                          destination: text
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    logo:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    rich_text:
+                      settings:
+                        'field_properties:uri':
+                          destination: text
+                          weight: '0'
+                        'field_properties:title':
+                          destination: text
                           weight: '0'
                         'field_properties:options':
                           destination: _hidden
@@ -244,33 +301,53 @@ third_party_settings:
                       id:
                         input: ''
                     button:
-                      color: orange
+                      size: small
+                      expanded: 0
+                      color: primary
                       url:
                         input: '[block_content:field_link:uri]'
-                      svg: ''
+                      icon: ''
+                      icon_alignment: right
                     card:
                       alignment: left
+                      bg_color: ''
                       url:
                         input: ''
+                    container:
+                      width: default
+                      bg: ''
+                      padding_x: default
+                      padding_top: default
+                      padding_bottom: ''
+                      classes: ''
+                    grid:
+                      gutter: default
+                      columns: '1'
                     headline:
                       element: h1
                       size: ''
                     image:
                       url: ''
                       background_style: ''
+                    link:
+                      url:
+                        input: ''
+                      icon: right-arrow
                     section:
-                      width: default
-                      bg: ''
-                      padding_x: default
                       padding_top: default
                       padding_bottom: default
-                      gap: default
-                      columns: ''
-                      config_1: equal
-                      config_2: equal
-                      config_3: equal
-                      config_4: equal
-                      config_5: equal
+                      padding_x: default
+                      gutter: default
+                      width: default
+                      columns: '1'
+                      columns_width_1: equal
+                      columns_width_2: equal
+                      columns_width_3: equal
+                      columns_width_4: equal
+                      columns_width_5: equal
+                      bg: ''
+                  variants_token:
+                    button: '[block_content:field_variant_:value]'
                 third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
@@ -310,6 +387,21 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 0
+          9e671789-404b-410a-bd07-a390aba88416:
+            uuid: 9e671789-404b-410a-bd07-a390aba88416
+            region: null
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:block_content:hero:field_variant_'
+              formatter:
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+                type: list_default
+            additional: {  }
+            weight: 1
         third_party_settings: {  }
   layout_library:
     enable: false
@@ -357,6 +449,13 @@ content:
     third_party_settings: {  }
     type: string
     region: content
+  field_variant_:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: null
 hidden:
   field_link: true
   field_preheadline: true

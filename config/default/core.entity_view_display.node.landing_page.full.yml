@@ -68,6 +68,7 @@ third_party_settings:
         Views: {  }
         core: {  }
       allowed_layouts:
+        - pattern_accordion
         - pattern_section
       blacklisted_blocks: {  }
     allowed_block_categories: {  }

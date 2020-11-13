@@ -9,48 +9,39 @@ dependencies:
     - layout_builder
     - layout_library
     - slick_entityreference
+  theme:
+    - wingsuit
 third_party_settings:
   layout_builder:
     allow_custom: false
     enabled: true
     sections:
       -
-        layout_id: layout_onecol
+        layout_id: pattern_slider
         layout_settings:
           label: ''
+          pattern:
+            field_templates: default
+            variant: ''
         components:
-          ce1f65ba-bb33-41ba-9d91-caaa5fe4eba0:
-            uuid: ce1f65ba-bb33-41ba-9d91-caaa5fe4eba0
-            region: content
+          2d56bdd8-67ab-48f9-bbfc-198c8ffa1b47:
+            uuid: 2d56bdd8-67ab-48f9-bbfc-198c8ffa1b47
+            region: items
             configuration:
+              id: 'field_block:block_content:media_slideshow:field_slideshow_items'
+              label: 'Media items'
+              provider: layout_builder
               label_display: '0'
+              formatter:
+                label: hidden
+                type: media_thumbnail
+                settings:
+                  image_style: 16x9_016000_1280x720
+                  image_link: ''
+                third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:block_content:media_slideshow:field_slideshow_items'
-              formatter:
-                type: slick_entityreference_vanilla
-                label: visually_hidden
-                settings:
-                  optionset: default
-                  skin: default
-                  view_mode: default
-                  cache: 0
-                  current_view_mode: default
-                  override: false
-                  overridables:
-                    arrows: '0'
-                    autoplay: '0'
-                    dots: '0'
-                    draggable: '0'
-                    infinite: '0'
-                    mouseWheel: '0'
-                    randomize: '0'
-                    variableWidth: '0'
-                  skin_arrows: ''
-                  skin_dots: ''
-                  style: ''
-                  fx: ''
-                third_party_settings: {  }
+                view_mode: view_mode
             additional: {  }
             weight: 0
         third_party_settings: {  }
