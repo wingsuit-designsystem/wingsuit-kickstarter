@@ -1,0 +1,15 @@
+uuid: 8d9b559e-b694-41f4-bc37-3853d0596d5c
+langcode: en
+status: true
+dependencies: {  }
+name: drimage_focal_720_0
+label: 'DrImage Focal (720x0)'
+effects:
+  4f933ed0-9072-4d2b-9e49-fbd2b1d47c0b:
+    uuid: 4f933ed0-9072-4d2b-9e49-fbd2b1d47c0b
+    id: image_scale
+    weight: 0
+    data:
+      upscale: false
+      width: 720
+      height: null

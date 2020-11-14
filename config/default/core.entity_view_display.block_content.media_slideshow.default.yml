@@ -7,46 +7,21 @@ dependencies:
     - field.field.block_content.media_slideshow.field_slideshow_items
   module:
     - layout_builder
+    - layout_builder_restrictions
     - layout_library
-    - slick_entityreference
-  theme:
-    - wingsuit
+    - ui_patterns_field_formatters
 third_party_settings:
   layout_builder:
     allow_custom: false
-    enabled: true
-    sections:
-      -
-        layout_id: pattern_slider
-        layout_settings:
-          label: ''
-          pattern:
-            field_templates: default
-            variant: ''
-        components:
-          2d56bdd8-67ab-48f9-bbfc-198c8ffa1b47:
-            uuid: 2d56bdd8-67ab-48f9-bbfc-198c8ffa1b47
-            region: items
-            configuration:
-              id: 'field_block:block_content:media_slideshow:field_slideshow_items'
-              label: 'Media items'
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: media_thumbnail
-                settings:
-                  image_style: 16x9_016000_1280x720
-                  image_link: ''
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 0
-        third_party_settings: {  }
+    enabled: false
   layout_library:
     enable: false
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      whitelisted_blocks: {  }
+      blacklisted_blocks: {  }
+      allowed_layouts: {  }
 _core:
   default_config_hash: hVHMNQ6SuxyBzrEV2AJkwdHKAxQ7btc6JPGH548r9_E
 id: block_content.media_slideshow.default
@@ -55,29 +30,205 @@ bundle: media_slideshow
 mode: default
 content:
   field_slideshow_items:
-    type: slick_entityreference_vanilla
+    type: pattern_wrapper_entity_reference_formatter
     weight: 0
     label: visually_hidden
     settings:
-      optionset: default
-      skin: default
-      view_mode: default
-      cache: 0
-      current_view_mode: default
-      override: false
-      overridables:
-        arrows: '0'
-        autoplay: '0'
-        dots: '0'
-        draggable: '0'
-        infinite: '0'
-        mouseWheel: '0'
-        randomize: '0'
-        variableWidth: '0'
-      skin_arrows: ''
-      skin_dots: ''
-      style: ''
-      fx: ''
+      view_mode: slideshow
+      pattern: slider
+      variants:
+        banner: top_left
+        button: default
+        image: image
+        section: 1_column
+      pattern_mapping:
+        accordion_item:
+          settings:
+            'field_wrapper:label':
+              destination: _hidden
+              weight: '0'
+            'field_wrapper:items':
+              destination: _hidden
+              weight: '0'
+        accordion:
+          settings:
+            'field_wrapper:label':
+              destination: _hidden
+              weight: '0'
+            'field_wrapper:items':
+              destination: items
+              weight: '0'
+        article:
+          settings:
+            'field_wrapper:label':
+              destination: _hidden
+              weight: '0'
+            'field_wrapper:items':
+              destination: _hidden
+              weight: '0'
+        banner:
+          settings:
+            'field_wrapper:label':
+              destination: _hidden
+              weight: '0'
+            'field_wrapper:items':
+              destination: _hidden
+              weight: '0'
+        button:
+          settings:
+            'field_wrapper:label':
+              destination: _hidden
+              weight: '0'
+            'field_wrapper:items':
+              destination: _hidden
+              weight: '0'
+        card:
+          settings:
+            'field_wrapper:label':
+              destination: _hidden
+              weight: '0'
+            'field_wrapper:items':
+              destination: _hidden
+              weight: '0'
+        container:
+          settings:
+            'field_wrapper:label':
+              destination: _hidden
+              weight: '0'
+            'field_wrapper:items':
+              destination: _hidden
+              weight: '0'
+        grid:
+          settings:
+            'field_wrapper:label':
+              destination: _hidden
+              weight: '0'
+            'field_wrapper:items':
+              destination: _hidden
+              weight: '0'
+        headline:
+          settings:
+            'field_wrapper:label':
+              destination: _hidden
+              weight: '0'
+            'field_wrapper:items':
+              destination: _hidden
+              weight: '0'
+        hero:
+          settings:
+            'field_wrapper:label':
+              destination: _hidden
+              weight: '0'
+            'field_wrapper:items':
+              destination: _hidden
+              weight: '0'
+        image:
+          settings:
+            'field_wrapper:label':
+              destination: _hidden
+              weight: '0'
+            'field_wrapper:items':
+              destination: _hidden
+              weight: '0'
+        link:
+          settings:
+            'field_wrapper:label':
+              destination: _hidden
+              weight: '0'
+            'field_wrapper:items':
+              destination: _hidden
+              weight: '0'
+        logo:
+          settings:
+            'field_wrapper:label':
+              destination: _hidden
+              weight: '0'
+            'field_wrapper:items':
+              destination: _hidden
+              weight: '0'
+        rich_text:
+          settings:
+            'field_wrapper:label':
+              destination: _hidden
+              weight: '0'
+            'field_wrapper:items':
+              destination: _hidden
+              weight: '0'
+        section:
+          settings:
+            'field_wrapper:label':
+              destination: _hidden
+              weight: '0'
+            'field_wrapper:items':
+              destination: _hidden
+              weight: '0'
+        slider:
+          settings:
+            'field_wrapper:label':
+              destination: _hidden
+              weight: '0'
+            'field_wrapper:items':
+              destination: items
+              weight: '0'
+        video:
+          settings:
+            'field_wrapper:label':
+              destination: _hidden
+              weight: '0'
+            'field_wrapper:items':
+              destination: _hidden
+              weight: '0'
+      pattern_settings:
+        accordion_item:
+          id:
+            input: ''
+        button:
+          size: small
+          color: primary
+          url:
+            input: ''
+          icon: ''
+          icon_alignment: right
+          expanded: 0
+        card:
+          alignment: left
+          bg_color: ''
+          url:
+            input: ''
+        container:
+          width: default
+          bg: ''
+          padding_x: default
+          padding_top: default
+          padding_bottom: ''
+          classes: ''
+        grid:
+          gutter: default
+          columns: '1'
+        headline:
+          element: h1
+          size: ''
+        image:
+          url: ''
+          background_style: ''
+        link:
+          url:
+            input: ''
+          icon: right-arrow
+        section:
+          padding_top: ''
+          padding_bottom: default
+          padding_x: default
+          gutter: default
+          width: default
+          columns: '1'
+          columns_width_1: equal
+          columns_width_2: equal
+          columns_width_3: equal
+          columns_width_4: equal
+          columns_width_5: equal
+          bg: ''
+      link: false
     third_party_settings: {  }
     region: content
 hidden:

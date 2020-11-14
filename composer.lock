@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b2e8f90e6bd89f91df53ce08c955aa09",
+    "content-hash": "c08817275f6bd36eace0c894e068f968",
     "packages": [
         {
             "name": "acquia/blt",
@@ -422,7 +422,7 @@
             "version": "3.5.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/jquery/jquery-dist.git",
+                "url": "git@github.com:jquery/jquery-dist.git",
                 "reference": "4c0e4becb8263bb5b3e6dadc448d8e7305ef8215"
             },
             "dist": {
@@ -3378,6 +3378,7 @@
                 "patches_applied": {
                     "Provide a Layout Overview dialog that allows performing all actions in a text/form based method.": "https://www.drupal.org/files/issues/2019-06-25/3019490-23.patch",
                     "https://www.drupal.org/files/issues/2020-09-15/3070493-41.patch": "https://www.drupal.org/files/issues/2020-09-15/3070493-41.patch",
+                    "PHP message: Error: Call to a member function getEntityTypeId() on null (Layout Builder)": "https://www.drupal.org/files/issues/2020-08-05/3049332-inline-35.patch",
                     "2869592 - Disabled update module shouldn't produce a status report warning": "https://www.drupal.org/files/issues/2869592-remove-update-warning-7.patch",
                     "1356276 - Allow profiles to define a base/parent profile and load them in the correct order": "https://www.drupal.org/files/issues/2020-03-24/1356276-531-9.0.x-9.patch",
                     "2914389 - Allow profiles to exclude dependencies of their parent": "https://www.drupal.org/files/issues/2018-07-09/2914389-8-do-not-test.patch",
@@ -6061,6 +6062,50 @@
             }
         },
         {
+            "name": "drupal/media_responsive_thumbnail",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/media_responsive_thumbnail.git",
+                "reference": "8.x-1.2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/media_responsive_thumbnail-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "d4d9ebcb862b341dafdb1efd5960f43ab83a7b61"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.2",
+                    "datestamp": "1592402054",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "yoruvo",
+                    "homepage": "https://www.drupal.org/user/2989799"
+                }
+            ],
+            "description": "Adds a field formatter for Media references which displays a responsive image.",
+            "homepage": "https://www.drupal.org/project/media_responsive_thumbnail",
+            "support": {
+                "source": "https://git.drupalcode.org/project/media_responsive_thumbnail"
+            }
+        },
+        {
             "name": "drupal/metatag",
             "version": "1.14.0",
             "source": {
@@ -7836,6 +7881,9 @@
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
                     }
+                },
+                "patches_applied": {
+                    "Text is not processed.": "https://git.drupalcode.org/project/ui_patterns_field_formatters/-/merge_requests/1.diff"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",

@@ -13,10 +13,10 @@ settings:
   allowed_values:
     -
       value: top_left
-      label: Default
+      label: 'Top left'
     -
       value: top_center
-      label: Outline
+      label: 'Top center'
     -
       value: top_right
       label: 'Top right'

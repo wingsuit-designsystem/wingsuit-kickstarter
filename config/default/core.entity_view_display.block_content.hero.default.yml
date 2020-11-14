@@ -10,12 +10,10 @@ dependencies:
     - field.field.block_content.hero.field_preheadline
     - field.field.block_content.hero.field_text
     - field.field.block_content.hero.field_title
-    - field.field.block_content.hero.field_variant_
   module:
     - layout_builder
     - layout_builder_restrictions
     - layout_library
-    - options
     - text
   theme:
     - wingsuit
@@ -80,10 +78,9 @@ third_party_settings:
               label_display: '0'
               formatter:
                 label: hidden
-                type: media_thumbnail
+                type: entity_reference_entity_view
                 settings:
-                  image_style: crop_thumbnail
-                  image_link: ''
+                  view_mode: default
                 third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
@@ -387,21 +384,6 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 0
-          9e671789-404b-410a-bd07-a390aba88416:
-            uuid: 9e671789-404b-410a-bd07-a390aba88416
-            region: null
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:block_content:hero:field_variant_'
-              formatter:
-                label: above
-                settings: {  }
-                third_party_settings: {  }
-                type: list_default
-            additional: {  }
-            weight: 1
         third_party_settings: {  }
   layout_library:
     enable: false
@@ -449,13 +431,6 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-  field_variant_:
-    weight: 4
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: null
 hidden:
   field_link: true
   field_preheadline: true

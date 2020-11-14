@@ -1,0 +1,102 @@
+uuid: 38135ef5-4224-48c8-afcd-b12ebe35a654
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.slideshow
+    - field.field.media.image.field_media_image
+    - field.field.media.image.field_media_in_library
+    - media.type.image
+  module:
+    - drimage
+    - layout_builder
+    - layout_library
+  theme:
+    - wingsuit
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: pattern_banner
+        layout_settings:
+          label: ''
+          pattern:
+            field_templates: default
+            variant: center_left
+            variant_token: ''
+        components:
+          6fd360b8-2491-4c53-9da0-3b0d8911299c:
+            uuid: 6fd360b8-2491-4c53-9da0-3b0d8911299c
+            region: image
+            configuration:
+              id: 'field_block:media:image:field_media_image'
+              label: Image
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: responsive_image
+                settings:
+                  responsive_image_style: banner
+                  image_link: ''
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          5d5abe34-0952-4685-80c9-e8127708272f:
+            uuid: 5d5abe34-0952-4685-80c9-e8127708272f
+            region: headline
+            configuration:
+              id: 'field_block:media:image:name'
+              label: Name
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+  layout_library:
+    enable: false
+_core:
+  default_config_hash: OkEIcPIF2jnli7EgxTcs1QX0WN9YZM9aKZjgC7KFlIg
+id: media.image.slideshow
+targetEntityType: media
+bundle: image
+mode: slideshow
+content:
+  field_media_image:
+    type: drimage
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+      image_handling: scale
+      aspect_ratio:
+        width: 1
+        height: 1
+      background:
+        attachment: scroll
+        position: 'center center'
+        size: cover
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  field_media_in_library: true
+  name: true
+  search_api_excerpt: true
+  thumbnail: true
+  uid: true

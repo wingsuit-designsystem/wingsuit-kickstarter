@@ -29,7 +29,8 @@
         "drupal/image_style_generate": "^1.0@beta",
         "drupal/migrate_plus": "^5.1",
         "drupal/migrate_tools": "^5.0",
-        "drupal/console": "~1.0"
+        "drupal/console": "~1.0",
+        "drupal/media_responsive_thumbnail": "^1.2"
     },
     "require-dev": {
         "drush/drush": ">=9.7",
@@ -50,9 +51,13 @@
             "drupal/media_library_edit": {
                 "Open in modal.": "https://www.drupal.org/files/issues/2020-06-25/open-in-modal-3034205-43.patch"
             },
+            "drupal/ui_patterns_field_formatters": {
+                "Text is not processed.": "https://git.drupalcode.org/project/ui_patterns_field_formatters/-/merge_requests/1.diff"
+            },
             "drupal/core": {
                 "Provide a Layout Overview dialog that allows performing all actions in a text/form based method.": "https://www.drupal.org/files/issues/2019-06-25/3019490-23.patch",
-                "https://www.drupal.org/files/issues/2020-09-15/3070493-41.patch": "https://www.drupal.org/files/issues/2020-09-15/3070493-41.patch"
+                "https://www.drupal.org/files/issues/2020-09-15/3070493-41.patch": "https://www.drupal.org/files/issues/2020-09-15/3070493-41.patch",
+                "PHP message: Error: Call to a member function getEntityTypeId() on null (Layout Builder)" : "https://www.drupal.org/files/issues/2020-08-05/3049332-inline-35.patch"
             },
             "drupal/ui_patterns": {
                 "Allow for Layout Builder sections to be given administrativ.": "https://patch-diff.githubusercontent.com/raw/nuvoleweb/ui_patterns/pull/278.patch",

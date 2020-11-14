@@ -111,9 +111,9 @@ third_party_settings:
               label_display: '0'
               formatter:
                 label: hidden
-                type: media_thumbnail
+                type: media_responsive_thumbnail
                 settings:
-                  image_style: ''
+                  responsive_image_style: banner
                   image_link: ''
                 third_party_settings: {  }
               context_mapping:

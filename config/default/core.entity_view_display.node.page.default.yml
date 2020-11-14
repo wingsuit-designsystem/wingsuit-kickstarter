@@ -3,7 +3,6 @@ langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.text
     - field.field.node.page.body
     - field.field.node.page.field_meta_tags
     - field.field.node.page.layout_selection
@@ -61,22 +60,8 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 0
-          abce8669-1516-49b9-8d6f-033808a90692:
-            uuid: abce8669-1516-49b9-8d6f-033808a90692
-            region: column_1
-            configuration:
-              id: 'inline_block:text'
-              label: Rich-text
-              provider: layout_builder
-              label_display: '0'
-              view_mode: full
-              block_revision_id: 14
-              block_serialized: null
-              context_mapping: {  }
-            additional: {  }
-            weight: 0
-          e98cc6a3-4135-496a-b86e-f82a0f171f1b:
-            uuid: e98cc6a3-4135-496a-b86e-f82a0f171f1b
+          4e04ec8a-d16c-4a80-9a55-4e42de93ac82:
+            uuid: 4e04ec8a-d16c-4a80-9a55-4e42de93ac82
             region: column_1
             configuration:
               id: 'field_block:node:page:body'
@@ -134,16 +119,16 @@ third_party_settings:
                           destination: text
                           weight: '0'
                         'field_properties:format':
-                          destination: text
+                          destination: _hidden
                           weight: '0'
                         'field_properties:processed':
                           destination: text
                           weight: '0'
                         'field_properties:summary':
-                          destination: text
+                          destination: _hidden
                           weight: '0'
                         'field_properties:summary_processed':
-                          destination: text
+                          destination: _hidden
                           weight: '0'
                     banner:
                       settings:
@@ -168,16 +153,16 @@ third_party_settings:
                           destination: text
                           weight: '0'
                         'field_properties:format':
-                          destination: text
+                          destination: _hidden
                           weight: '0'
                         'field_properties:processed':
                           destination: text
                           weight: '0'
                         'field_properties:summary':
-                          destination: text
+                          destination: _hidden
                           weight: '0'
                         'field_properties:summary_processed':
-                          destination: text
+                          destination: _hidden
                           weight: '0'
                     card:
                       settings:
@@ -185,16 +170,16 @@ third_party_settings:
                           destination: text
                           weight: '0'
                         'field_properties:format':
-                          destination: text
+                          destination: _hidden
                           weight: '0'
                         'field_properties:processed':
                           destination: text
                           weight: '0'
                         'field_properties:summary':
-                          destination: text
+                          destination: _hidden
                           weight: '0'
                         'field_properties:summary_processed':
-                          destination: text
+                          destination: _hidden
                           weight: '0'
                     container:
                       settings:
@@ -253,16 +238,16 @@ third_party_settings:
                           destination: text
                           weight: '0'
                         'field_properties:format':
-                          destination: text
+                          destination: _hidden
                           weight: '0'
                         'field_properties:processed':
                           destination: text
                           weight: '0'
                         'field_properties:summary':
-                          destination: text
+                          destination: _hidden
                           weight: '0'
                         'field_properties:summary_processed':
-                          destination: text
+                          destination: _hidden
                           weight: '0'
                     image:
                       settings:
@@ -287,16 +272,16 @@ third_party_settings:
                           destination: text
                           weight: '0'
                         'field_properties:format':
-                          destination: text
+                          destination: _hidden
                           weight: '0'
                         'field_properties:processed':
                           destination: text
                           weight: '0'
                         'field_properties:summary':
-                          destination: text
+                          destination: _hidden
                           weight: '0'
                         'field_properties:summary_processed':
-                          destination: text
+                          destination: _hidden
                           weight: '0'
                     logo:
                       settings:
@@ -318,19 +303,19 @@ third_party_settings:
                     rich_text:
                       settings:
                         'field_properties:value':
-                          destination: text
+                          destination: _hidden
                           weight: '0'
                         'field_properties:format':
-                          destination: text
+                          destination: _hidden
                           weight: '0'
                         'field_properties:processed':
                           destination: text
                           weight: '0'
                         'field_properties:summary':
-                          destination: text
+                          destination: _hidden
                           weight: '0'
                         'field_properties:summary_processed':
-                          destination: text
+                          destination: _hidden
                           weight: '0'
                     section:
                       settings:
@@ -434,13 +419,13 @@ third_party_settings:
                       columns_width_5: equal
                       bg: ''
                   variants_token:
-                    button: ''
+                    banner: ''
                 third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
             additional: {  }
-            weight: 1
+            weight: 0
         third_party_settings: {  }
     allow_custom: false
   layout_library:
