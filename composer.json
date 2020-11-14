@@ -30,7 +30,8 @@
         "drupal/migrate_plus": "^5.1",
         "drupal/migrate_tools": "^5.0",
         "drupal/console": "~1.0",
-        "drupal/media_responsive_thumbnail": "^1.2"
+        "drupal/media_responsive_thumbnail": "^1.2",
+        "drupal/layout_builder_browser": "^1.1"
     },
     "require-dev": {
         "drush/drush": ">=9.7",

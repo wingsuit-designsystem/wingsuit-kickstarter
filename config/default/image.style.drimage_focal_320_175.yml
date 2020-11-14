@@ -1,0 +1,18 @@
+uuid: af3ed58f-013c-4fd0-b282-34f90374cd20
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: drimage_focal_320_175
+label: 'DrImage Focal (320x175)'
+effects:
+  c23c4a1e-274f-4779-8e33-4ecab91d9a2e:
+    uuid: c23c4a1e-274f-4779-8e33-4ecab91d9a2e
+    id: focal_point_scale_and_crop
+    weight: 0
+    data:
+      upscale: false
+      width: 320
+      height: 175
+      crop_type: focal_point

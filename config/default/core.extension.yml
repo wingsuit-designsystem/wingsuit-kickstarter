@@ -38,6 +38,7 @@ module:
   inline_entity_form: 0
   jsonapi: 0
   layout_builder: 0
+  layout_builder_browser: 0
   layout_builder_restrictions: 0
   layout_builder_styles: 0
   layout_discovery: 0
@@ -117,6 +118,7 @@ module:
   user: 0
   views_ui: 0
   wingsuit_companion: 0
+  wingsuit_layout: 0
   workflows: 0
   pathauto: 1
   views: 10

@@ -23,8 +23,6 @@ settings:
             - JustifyCenter
             - JustifyRight
             - Strike
-            - Superscript
-            - Subscript
             - '-'
             - RemoveFormat
         -

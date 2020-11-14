@@ -39,6 +39,7 @@ image_widget_crop: 2.3.0
 inline_entity_form: 1.0.0-rc7
 jsonapi: 0.0.0
 layout_builder: 9.0.6
+layout_builder_browser: 1.1.0
 layout_builder_restrictions: 2.7.0
 layout_builder_styles: 1.0.0-beta2
 layout_discovery: 9.0.6
@@ -125,4 +126,5 @@ views: 9.0.6
 views_ui: 9.0.6
 wingsuit_companion: 0.0.0
 wingsuit_demo: 0.0.0
+wingsuit_layout: 0.0.0
 workflows: 9.0.6
