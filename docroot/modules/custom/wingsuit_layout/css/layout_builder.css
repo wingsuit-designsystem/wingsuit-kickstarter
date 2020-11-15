@@ -1,0 +1,22 @@
+.layout-builder-browser-block-item {
+  display: flex;
+  border-bottom: 1px solid #e2e8f0;
+  align-items: center;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
+  margin-left: -20px !important;
+  margin-right: -20px !important;
+  padding-left: 20px !important;
+  color: #ffffff !important;
+}
+
+.layout-builder-browser-block-item:hover {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.125) 20%, transparent 200%);
+}
+
+.layout-builder-browser-block-item img {
+  flex: 0;
+  margin-right: 10px;
+}

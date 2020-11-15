@@ -13,9 +13,11 @@ entity_type: block_content
 bundle: banner
 label: Variant
 description: ''
-required: false
+required: true
 translatable: false
-default_value: {  }
+default_value:
+  -
+    value: center_center
 default_value_callback: ''
 settings: {  }
 field_type: list_string

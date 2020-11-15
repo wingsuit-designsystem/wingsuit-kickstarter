@@ -1,8 +1,8 @@
-name: 'Wingsuit demo'
+name: 'Wingsuit Layout'
 core: 8.x
 core_version_requirement: '^8 || ^9'
 type: module
-description: 'Demo patterns for Wingsuit.'
+description: 'Layout extensions Wingsuit Kickstarter.'
 package: Wingsuit
 dependencies:
   - wingsuit_companion

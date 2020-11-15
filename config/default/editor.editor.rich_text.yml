@@ -19,9 +19,10 @@ settings:
           items:
             - Bold
             - Italic
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
             - Strike
-            - Superscript
-            - Subscript
             - '-'
             - RemoveFormat
         -

@@ -1,0 +1,19 @@
+<?php
+
+use Drupal\layout_builder\Form\OverridesEntityForm;
+use Drupal\layout_builder\Form\DefaultsEntityForm;
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_form_alter().
+ */
+function wingsuit_layout_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  $form_object = $form_state->getFormObject();
+  if ($form_object instanceof OverridesEntityForm || $form_object instanceof DefaultsEntityForm
+    || $form_object->getFormId() === 'layout_layout_builder_form'
+  ) {
+    $form['#attached']['library'][] = 'wingsuit_layout/layout_builder';
+  }
+
+}
+

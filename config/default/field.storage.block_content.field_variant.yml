@@ -37,7 +37,7 @@ settings:
       label: 'Bottom center'
     -
       value: bottom_right
-      label: 'Bottom  right'
+      label: 'Bottom right'
   allowed_values_function: ''
 module: options
 locked: false

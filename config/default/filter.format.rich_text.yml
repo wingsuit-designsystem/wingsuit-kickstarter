@@ -2,6 +2,8 @@ uuid: e7c0a515-2542-4b72-b3a4-3f3c50517666
 langcode: en
 status: true
 dependencies:
+  config:
+    - core.entity_view_mode.media.embedded
   module:
     - editor
     - media
@@ -41,7 +43,7 @@ filters:
     status: true
     weight: -50
     settings:
-      allowed_html: '<a href hreflang> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h3 id> <h4 id> <h5 id> <h6 id> <s> <sup> <sub> <img src alt data-entity-type data-entity-uuid data-align data-caption> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr> <p> <br> <h1> <pre> <drupal-entity data-* title alt> <drupal-media data-entity-type data-entity-uuid data-view-mode data-align data-caption alt>'
+      allowed_html: '<a href hreflang class> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id class> <h3 id class> <h4 id class> <h5 id> <h6 id> <s> <sup> <sub> <img src alt data-entity-type data-entity-uuid data-align data-caption> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr> <p class> <br> <h1> <pre> <drupal-entity data-* title alt> <drupal-media data-entity-type data-entity-uuid data-view-mode data-align data-caption alt>'
       filter_html_help: true
       filter_html_nofollow: false
   filter_autop:
@@ -76,5 +78,6 @@ filters:
     weight: -39
     settings:
       default_view_mode: embedded
+      allowed_media_types:
+        image: image
       allowed_view_modes: {  }
-      allowed_media_types: {  }
