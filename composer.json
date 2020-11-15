@@ -113,11 +113,5 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true,
-    "scripts": {
-        "quick-start": [
-            "composer install",
-            "./vendor/bin/blt setup"
-        ]
-    }
+    "prefer-stable": true
 }

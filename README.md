@@ -3,20 +3,7 @@
 </p>
 
 # Wingsuit Kickstarter
-
-Wingsuit Kickstarter is a demo project to show how to use Wingsuit with Drupal.
-The project uses Aquia blt to install Drupal.
-
-After installation create a new node Landingpage.
-
-Click `configure section` to see all the pattern settings for wingsuit component section.
-
-Next click add block. All the custom blocks are mapped to patterns. Check `Manage Display` of these blocks.
-
-If you want to make changes to the templates go to `themes/custom/storybook` and run:
-* `yarn dev:storybook` to start storybook
-* `yarn dev:drupal` to compile to Drupal.
-
+See the [documentation](https://wingsuit-designsystem.github.io/drupal/ui_patterns/) for more details.
 
 ## Prerequisites
 
@@ -24,22 +11,19 @@ If you want to make changes to the templates go to `themes/custom/storybook` and
 - [YARN `^1.22`](https://classic.yarnpkg.com/)
 - [PHP `^7.0.0`](https://php.net)
 
-## PHP kickstart
-   * Clone the repository and run:
+## Quickstart
 ```
-cd wingsuit-kickstarter
-composer install
-./vendor/bin/blt setup
+composer create-project wingsuit-designsystem/wingsuit-kickstarter wingsuit-kickstarter --stability dev --no-interaction
+cd wingsuit-kickstarter && ./vendor/bin/blt setup
 ```
 
-## Docksal kickstart
-
-   * Clone the repository and run:
+## Docksal Quickstart
 ```
+fin rc -T composer create-project wingsuit-designsystem/wingsuit-kickstarter wingsuit-kickstarter --stability dev --no-interaction
 cd wingsuit_kickstarter && fin init
 ```
 
-## Develop: Link `Wingsuit` to `Wingsuit Kickstarter`
+## Develop with Docksal: Link `Wingsuit` to `Wingsuit Kickstarter`
 Use this mode to link `https://github.com/wingsuit-designsystem/wingsuit` as volume.
 
    * Create a folder `wingsuit`
