@@ -20,7 +20,7 @@ composer install
 cd wingsuit_kickstarter && fin init
 ```
 
-## Dev Mode: Link wingsuit to wingsuit_kickstarter
+## Dev Mode: Link `Wingsuit` to `Wingsuit Kickstarter`
 Use this mode to link `https://github.com/wingsuit-designsystem/wingsuit` as volume.
 
    * Create a folder `wingsuit`
