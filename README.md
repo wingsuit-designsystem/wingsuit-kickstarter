@@ -34,7 +34,6 @@ cd wingsuit_kickstarter && fin init
 ```
 
 ## Develop: Link `Wingsuit` to `Wingsuit Kickstarter`
->>>>>>> c4639d23570dff8da4492f6b5d3f2f5b61367308
 Use this mode to link `https://github.com/wingsuit-designsystem/wingsuit` as volume.
 
    * Create a folder `wingsuit`
