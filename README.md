@@ -3,14 +3,27 @@
 </p>
 
 # Wingsuit Kickstarter
-Wingsuit Kickstarter is a demo project to show how to use Wingsuit with Drupal.
 
-## PHP Kickstart
+Wingsuit Kickstarter is a demo project to show how to use Wingsuit with Drupal.
+The project uses Aquia blt to install Drupal. 
+
+After installation create a new node Landingpage. 
+
+Click `configure section` to see all the pattern settings for wingsuit component section. 
+
+Next click add block. All the custom blocks are mapped to patterns. Check `Manage Display` of these blocks. 
+
+If you want to make changes to the templates go to `themes/custom/storybook` and run:
+* `yarn dev:storybook` to start storybook
+* `yarn dev:drupal` to compile to Drupal. 
+
+## PHP kickstart
    * Clone the repository and run:
 ```
 cd wingsuit_kickstarter
 composer install
 ./vendor/bin/blt setup
+./vendor/bin/drush cim -y
 ```
 
 ## Docksal kickstart
@@ -20,7 +33,7 @@ composer install
 cd wingsuit_kickstarter && fin init
 ```
 
-## Dev Mode: Link wingsuit to wingsuit_kickstarter
+## Development: Link wingsuit to wingsuit_kickstarter
 Use this mode to link `https://github.com/wingsuit-designsystem/wingsuit` as volume.
 
    * Create a folder `wingsuit`
