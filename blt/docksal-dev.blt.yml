@@ -10,4 +10,4 @@ command-hooks:
     command: ''
   frontend-assets:
     dir: ${docroot}/themes/custom/wingsuit
-    command: 'yarn build:drupal'
+    command: ''
