@@ -1,0 +1,33 @@
+uuid: a318b639-3356-4b00-94d5-6aa884fffa75
+langcode: en
+status: true
+dependencies: {  }
+id: blocks
+label: Blocks
+weight: null
+blocks:
+  -
+    block_id: 'inline_block:banner'
+    weight: 0
+    image_path: modules/custom/wingsuit_layout/layout_builder_browser/banner.svg
+    image_alt: ''
+  -
+    block_id: 'inline_block:card'
+    weight: 0
+    image_path: modules/custom/wingsuit_layout/layout_builder_browser/card.svg
+    image_alt: ''
+  -
+    block_id: 'inline_block:hero'
+    weight: 0
+    image_path: modules/custom/wingsuit_layout/layout_builder_browser/hero.svg
+    image_alt: ''
+  -
+    block_id: 'inline_block:media_slideshow'
+    weight: 0
+    image_path: modules/custom/wingsuit_layout/layout_builder_browser/slideshow.svg
+    image_alt: ''
+  -
+    block_id: 'inline_block:text'
+    weight: 0
+    image_path: modules/custom/wingsuit_layout/layout_builder_browser/text.svg
+    image_alt: ''

@@ -1,0 +1,15 @@
+uuid: 900e0163-3a20-4264-bc9d-d9a4f6d321fb
+langcode: en
+status: true
+dependencies: {  }
+name: drimage_focal_2120_0
+label: 'DrImage Focal (2120x0)'
+effects:
+  c228139b-0114-41e2-8336-9fe503dc5d65:
+    uuid: c228139b-0114-41e2-8336-9fe503dc5d65
+    id: image_scale
+    weight: 0
+    data:
+      upscale: false
+      width: 2120
+      height: null

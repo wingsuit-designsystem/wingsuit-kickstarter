@@ -1,0 +1,5 @@
+layout_builder:
+  version: VERSION
+  css:
+    theme:
+      css/layout_builder.css: {}

@@ -1,0 +1,18 @@
+uuid: a1d0123d-7f48-4a45-999a-6eb72b15fb4d
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: drimage_focal_520_292
+label: 'DrImage Focal (520x292)'
+effects:
+  3f8c3a47-062a-4378-b96c-a51a0d4ee463:
+    uuid: 3f8c3a47-062a-4378-b96c-a51a0d4ee463
+    id: focal_point_scale_and_crop
+    weight: 0
+    data:
+      upscale: false
+      width: 520
+      height: 292
+      crop_type: focal_point
