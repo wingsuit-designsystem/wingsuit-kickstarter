@@ -27,10 +27,9 @@ If you want to make changes to the templates go to `themes/custom/storybook` and
 ## PHP kickstart
    * Clone the repository and run:
 ```
-cd wingsuit_kickstarter
+cd wingsuit-kickstarter
 composer install
 ./vendor/bin/blt setup
-./vendor/bin/drush cim -y
 ```
 
 ## Docksal kickstart
