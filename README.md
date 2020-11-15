@@ -17,6 +17,13 @@ If you want to make changes to the templates go to `themes/custom/storybook` and
 * `yarn dev:storybook` to start storybook
 * `yarn dev:drupal` to compile to Drupal.
 
+
+## Prerequisites
+
+- [Node `^8`, `^10`](https://nodejs.org)
+- [YARN `^1.22`](https://classic.yarnpkg.com/)
+- [PHP `^7.0.0`](https://php.net)
+
 ## PHP kickstart
    * Clone the repository and run:
 ```
