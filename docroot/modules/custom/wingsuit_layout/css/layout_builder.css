@@ -20,3 +20,61 @@
   flex: 0;
   margin-right: 10px;
 }
+
+.layout-builder-form-fixed {
+  background-color: #222222;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.layout-builder-form-fixed summary {
+  background-color: #333333;
+  color: #eeeeee;
+  padding: 20px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.layout-builder-form-fixed summary:hover {
+  background-color: #222222;
+}
+
+.layout-builder-form-fixed .layout-builder__message {
+  display: none;
+}
+
+.layout-builder > a.use-ajax {
+  display: none;
+}
+
+.layout-overview-button {
+  display: inline;
+}
+
+.layout-builder-form > .form-actions,
+.layout-builder-form > .field--name-moderation-state {
+  background-color: #333333;
+  border: none;
+  color: #eeeeee;
+}
+
+.layout-builder-form > .field--name-moderation-state select,
+.layout-builder-form > .form-actions .button {
+  color: #222222;
+}
+
+.layout-builder-form > .form-actions .button--primary {
+  color: #eeeeee;
+}
+
+.layout-builder-form > .field--name-moderation-state {
+  display: none;
+  text-align: left;
+}
+
+.layout-builder-form > .field--name-moderation-state input,
+.layout-builder-form > .field--name-moderation-state .button {
+  color: #222222;
+}
