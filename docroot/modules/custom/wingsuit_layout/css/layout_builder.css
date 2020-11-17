@@ -1,4 +1,10 @@
-.layout-builder-browser-block-item {
+.layout-selection li {
+  padding-bottom: 0 !important;
+}
+
+.layout-builder-browser-block-item,
+.layout-selection li a
+{
   display: flex;
   border-bottom: 1px solid #e2e8f0;
   align-items: center;
@@ -12,7 +18,8 @@
   color: #ffffff !important;
 }
 
-.layout-builder-browser-block-item:hover {
+.layout-builder-browser-block-item:hover,
+.layout-selection li a:hover {
   background-image: linear-gradient(rgba(255, 255, 255, 0.125) 20%, transparent 200%);
 }
 
@@ -82,6 +89,7 @@
 .scheduled-transition label {
   display: inline-block !important;
 }
+
 .scheduled-transition input {
   padding: 14px;
 }
@@ -92,8 +100,8 @@
 }
 
 .scheduled-transition > * {
-  margin-right: 1rem;
-  margin-left: 1rem;
+  margin-right: 12px;
+  margin-left: 20px;
 }
 
 #edit-moderation-state-wrapper {
