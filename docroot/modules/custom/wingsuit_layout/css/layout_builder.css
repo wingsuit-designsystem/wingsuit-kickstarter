@@ -55,6 +55,7 @@
 
 .layout-builder-form > .form-actions {
   margin-bottom: 0;
+  margin-top: 0;
 }
 
 .layout-builder-form > .form-actions,
@@ -104,4 +105,8 @@
 
 #edit-moderation-state-wrapper {
   border-top: 1px solid #eeeeee;
+}
+
+#edit-moderation-state-0-current {
+  margin-bottom: 1rem;
 }
