@@ -27,7 +27,9 @@ function wingsuit_layout_form_alter(&$form, FormStateInterface $form_state, $for
   ) {
     $form['#attached']['library'][] = 'wingsuit_layout/layout_builder';
   }
-
+  if ($form_id === 'layout_builder_configure_section') {
+    hide($form['layout_settings']['pattern']['field_templates']);
+  }
   if (strpos($form_id, 'layout_builder_form') !== FALSE) {
     $form['actions']['layout_overview']['#markup'] = '<div id="layout-overview-button" class="layout-overview-button button">' . t('Layout overview') . '</div>';
     $form['actions']['layout_overview']['#weight'] = 14;
@@ -40,8 +42,7 @@ function wingsuit_layout_form_alter(&$form, FormStateInterface $form_state, $for
       ]
     ];
     $form['layout_builder_message']['#weight'] = -3000;
-    $form['revision_information']['#prefix'] = '<div class="hidden">';
-    $form['revision_information']['#suffix'] = '</div>';
+    hide($form['revision_information']);
   }
 }
 

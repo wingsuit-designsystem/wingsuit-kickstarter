@@ -118,3 +118,8 @@
 #edit-moderation-state-0-current {
   margin-bottom: 1rem;
 }
+
+details[data-drupal-selector] label,
+details[data-drupal-selector] select {
+  width: 100%;
+}
