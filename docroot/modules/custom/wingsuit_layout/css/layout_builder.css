@@ -39,7 +39,7 @@
 .layout-builder-form-fixed summary {
   background-color: #333333;
   color: #eeeeee;
-  padding: 20px;
+  padding: 10px;
   cursor: pointer;
   text-align: center;
 }
@@ -60,11 +60,17 @@
   display: inline;
 }
 
+.layout-builder-form > .form-actions {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
 .layout-builder-form > .form-actions,
 .layout-builder-form > .field--name-moderation-state {
   background-color: inherit;
   border: none;
   color: #eeeeee;
+  box-shadow: none;
 }
 
 .layout-builder-form > .field--name-moderation-state select,
@@ -79,6 +85,7 @@
 .layout-builder-form > .field--name-moderation-state {
   display: none;
   text-align: left;
+  margin-top: 0;
 }
 
 .layout-builder-form > .field--name-moderation-state input,
@@ -106,4 +113,8 @@
 
 #edit-moderation-state-wrapper {
   border-top: 1px solid #eeeeee;
+}
+
+#edit-moderation-state-0-current {
+  margin-bottom: 1rem;
 }
