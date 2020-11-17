@@ -59,7 +59,7 @@
 
 .layout-builder-form > .form-actions,
 .layout-builder-form > .field--name-moderation-state {
-  background-color: #333333;
+  background-color: inherit;
   border: none;
   color: #eeeeee;
   box-shadow: none;
@@ -83,4 +83,25 @@
 .layout-builder-form > .field--name-moderation-state input,
 .layout-builder-form > .field--name-moderation-state .button {
   color: #222222;
+}
+
+.scheduled-transition label {
+  display: inline-block !important;
+}
+.scheduled-transition input {
+  padding: 14px;
+}
+
+.scheduled-transition {
+  font-size: 0.889rem;
+  font-weight: bold;
+}
+
+.scheduled-transition > * {
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+#edit-moderation-state-wrapper {
+  border-top: 1px solid #eeeeee;
 }
