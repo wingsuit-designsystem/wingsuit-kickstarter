@@ -8,18 +8,16 @@
         "acquia/lightning": "~5.0.0",
         "cweagans/composer-patches": "^1.6.0",
         "drupal/core-composer-scaffold": "*",
-        "oomphinc/composer-installers-extender": "^1.1",
         "acquia/blt": "^12.0",
         "drupal/config_split": "^1.5",
         "drupal/lb_claro": "1.x-dev",
-        "drupal/panels": "^4.6",
 
         "drupal/components": "^2.0",
         "drupal/ui_patterns_settings": "^2.0",
-        "drupal/ui_patterns_layout_builder": "^1.0",
+        "drupal/ui_patterns_layout_builder": "^1.1",
         "drupal/ui_patterns_field_formatters": "^1.2",
         "drupal/component_blocks": "^1.1",
-        "drupal/wingsuit_companion": "1.x-dev",
+        "drupal/wingsuit_companion": "^1.0@beta",
 
         "drupal/focal_point": "^1.5",
         "drupal/media_library_theme_reset": "^1.0",
@@ -29,13 +27,11 @@
         "drupal/image_style_generate": "^1.0@beta",
         "drupal/migrate_plus": "^5.1",
         "drupal/migrate_tools": "^5.0",
-        "drupal/console": "~1.0",
         "drupal/media_responsive_thumbnail": "^1.2",
         "drupal/layout_builder_browser": "^1.1"
     },
     "require-dev": {
-        "drush/drush": ">=9.7",
-        "zaporylie/composer-drupal-optimizations": "^1.1"
+        "drush/drush": ">=9.7"
     },
     "config": {
         "process-timeout": 0

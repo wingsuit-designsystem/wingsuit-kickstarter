@@ -1,0 +1,11 @@
+uuid: 177ca36c-5d8b-4de9-9360-5ca7512f4059
+langcode: en
+status: true
+dependencies: {  }
+id: inline_blocktext
+block_id: 'inline_block:text'
+category: blocks
+label: Text
+weight: 0
+image_path: modules/custom/wingsuit_layout/layout_builder_browser/text.svg
+image_alt: ''
