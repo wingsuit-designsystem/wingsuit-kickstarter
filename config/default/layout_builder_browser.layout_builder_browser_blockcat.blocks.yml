@@ -31,3 +31,8 @@ blocks:
     weight: 0
     image_path: modules/custom/wingsuit_layout/layout_builder_browser/text.svg
     image_alt: ''
+  -
+    block_id: 'entity_browser_block:image_browser'
+    weight: 0
+    image_path: null
+    image_alt: null

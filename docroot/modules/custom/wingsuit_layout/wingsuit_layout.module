@@ -3,6 +3,19 @@
 use Drupal\layout_builder\Form\OverridesEntityForm;
 use Drupal\layout_builder\Form\DefaultsEntityForm;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Url;
+
+/**
+ * Implements hook_theme().
+ */
+function wingsuit_layout_theme($existing, $type, $theme, $path) {
+  return array(
+    'form__layout_builder_form' => array(
+      'template' => 'form--layout-builder-form',
+      'base hook' => 'form'
+    ),
+  );
+}
 
 /**
  * Implements hook_form_alter().
@@ -14,6 +27,30 @@ function wingsuit_layout_form_alter(&$form, FormStateInterface $form_state, $for
   ) {
     $form['#attached']['library'][] = 'wingsuit_layout/layout_builder';
   }
-
+  if ($form_id === 'layout_builder_configure_section') {
+    hide($form['layout_settings']['pattern']['field_templates']);
+  }
+  if (strpos($form_id, 'layout_builder_form') !== FALSE) {
+    $form['actions']['layout_overview']['#markup'] = '<div id="layout-overview-button" class="layout-overview-button button">' . t('Layout overview') . '</div>';
+    $form['actions']['layout_overview']['#weight'] = 14;
+    $form['actions']['moderation_state_toggler'] = [
+      '#type' => 'checkbox',
+      '#title' => t('Show moderation states'),
+      '#weight' => 20,
+      '#attributes' => [
+        'class' => ['layout-builder-moderation-state'],
+      ]
+    ];
+    $form['layout_builder_message']['#weight'] = -3000;
+    hide($form['revision_information']);
+  }
 }
 
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function wingsuit_layout_theme_suggestions_form_alter(array &$suggestions, array $variables) {
+  if (strpos($variables['element']['#form_id'], 'layout_builder_form') !== FALSE) {
+    $suggestions[] = 'form__layout_builder_form';
+  }
+}
