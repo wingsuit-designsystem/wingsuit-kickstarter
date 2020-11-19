@@ -2,6 +2,24 @@
   padding-bottom: 0 !important;
 }
 
+#drupal-off-canvas .layout-selection li a {
+  display: flex !important;
+}
+
+fieldset[id^="edit-layout-settings-pattern-settings"] > legend{
+  border-bottom: 1px solid white;
+  width: 100%;
+  font-size: 11px;
+}
+.layout-builder-configure-section .form-item__description {
+  font-size: 11px;
+}
+
+#drupal-off-canvas .layout-selection li a img {
+  margin-right: 10px;
+  width: 30px;
+}
+
 .layout-builder-browser-block-item,
 .layout-selection li a
 {
