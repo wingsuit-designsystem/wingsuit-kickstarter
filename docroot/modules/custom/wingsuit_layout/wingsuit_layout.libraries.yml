@@ -3,3 +3,5 @@ layout_builder:
   css:
     theme:
       css/layout_builder.css: {}
+  js:
+    js/wingsuit_layout_builder.js: {}
