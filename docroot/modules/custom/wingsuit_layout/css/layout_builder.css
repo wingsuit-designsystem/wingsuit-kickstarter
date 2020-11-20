@@ -6,11 +6,25 @@
   display: flex !important;
 }
 
-fieldset[id^="edit-layout-settings-pattern-settings"] > legend{
+fieldset[id^="edit-layout-settings-pattern-settings"] > legend {
   border-bottom: 1px solid white;
   width: 100%;
   font-size: 11px;
 }
+
+fieldset[id^="edit-layout-settings-pattern-settings"] .form-item--radio {
+  display: inline-flex;
+}
+
+fieldset[id^="edit-layout-settings-pattern-settings"] .form-item--radio .form-item > div {
+  display: flex;
+}
+
+fieldset[id^="edit-layout-settings-pattern-settings"] .form-item--radio .form-item input {
+  margin-right: 6px;
+}
+
+
 .layout-builder-configure-section .form-item__description {
   font-size: 11px;
 }
