@@ -20,7 +20,7 @@ cd wingsuit-kickstarter && ./vendor/bin/blt setup
 ## Docksal Quickstart
 ```
 fin rc -T composer create-project wingsuit-designsystem/wingsuit-kickstarter wingsuit-kickstarter --stability dev --no-interaction
-cd wingsuit_kickstarter && fin init
+cd wingsuit-kickstarter && fin init
 ```
 
 ## Develop with Docksal: Link `Wingsuit` to `Wingsuit Kickstarter`
@@ -30,4 +30,4 @@ Use this mode to link `https://github.com/wingsuit-designsystem/wingsuit` as vol
    * Clone "https://github.com/wingsuit-designsystem/wingsuit" and this repository inside `wingsuit`
    * Run `export DOCKSAL_ENVIRONMENT=docksal-dev`
    * Check the `WINGSUIT_PATH` in `.docksal/docksal-docksal-dev.env`
-   * run `cd wingsuit_kickstarter && fin init`
+   * run `cd wingsuit-kickstarter && fin init`
