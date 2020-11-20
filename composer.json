@@ -13,7 +13,7 @@
         "drupal/lb_claro": "1.x-dev",
 
         "drupal/components": "^2.0",
-        "drupal/ui_patterns_settings": "^2.0",
+        "drupal/ui_patterns_settings": "^2.0@alpha",
         "drupal/ui_patterns_layout_builder": "^1.1",
         "drupal/ui_patterns_field_formatters": "^1.2",
         "drupal/component_blocks": "^1.1",
