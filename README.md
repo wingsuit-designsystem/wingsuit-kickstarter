@@ -7,7 +7,7 @@ See the [documentation](https://wingsuit-designsystem.github.io/drupal/ui_patter
 
 ## Prerequisites
 
-- [Node `^8`, `^10`](https://nodejs.org)
+- [Node `^12`](https://nodejs.org)
 - [YARN `^1.22`](https://classic.yarnpkg.com/)
 - [PHP `^7.0.0`](https://php.net)
 
@@ -22,8 +22,15 @@ cd wingsuit-kickstarter && ./vendor/bin/blt setup
 fin rc -T composer create-project wingsuit-designsystem/wingsuit-kickstarter wingsuit-kickstarter --stability dev --no-interaction
 cd wingsuit-kickstarter && fin init
 ```
+To start storybook inside docksal:
+```
+cd docroot/themes/custom/wingsuit
+fin exec yarn dev:storybook:docksal
+```
+and open http://storybook.wingsuit-kickstarter.docksal
 
-## Develop with Docksal: Link `Wingsuit` to `Wingsuit Kickstarter`
+
+## Develop Wingsuit only: Link `Wingsuit` to `Wingsuit Kickstarter`
 Use this mode to link `https://github.com/wingsuit-designsystem/wingsuit` as volume.
 
    * Create a folder `wingsuit`
