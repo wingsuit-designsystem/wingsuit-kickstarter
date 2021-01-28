@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d5deedad58b63651559e227a3f8e4c85",
+    "content-hash": "34fb42503c713dce556c6769e89fc0fc",
     "packages": [
         {
             "name": "acquia/blt",
@@ -325,7 +325,7 @@
             "version": "v2.3.4",
             "source": {
                 "type": "git",
-                "url": "https://github.com/fengyuanchen/cropper.git",
+                "url": "git@github.com:fengyuanchen/cropper.git",
                 "reference": "30c58b29ee21010e17e58ebab165fbd84285c685"
             },
             "dist": {
@@ -4189,7 +4189,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/gin_lb.git",
-                "reference": "c9b62050061dbd44b1a50498bf99c51ac5a36951"
+                "reference": "58ec9c7a07df8b15dbeeccfa2ba6b0e3a80062f0"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
@@ -4218,8 +4218,8 @@
                     "dev-1.0.x": "1.0.x-dev"
                 },
                 "drupal": {
-                    "version": "1.0.0-beta2+2-dev",
-                    "datestamp": "1611422662",
+                    "version": "1.0.0-beta2+3-dev",
+                    "datestamp": "1611476092",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -4293,7 +4293,7 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/gin_lb"
             },
-            "time": "2021-01-24T08:13:59+00:00"
+            "time": "2021-01-28T13:06:08+00:00"
         },
         {
             "name": "drupal/gin_toolbar",
@@ -4321,6 +4321,9 @@
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
                     }
+                },
+                "patches_applied": {
+                    "Add option for node local tasks in toolbar": "https://git.drupalcode.org/project/gin_toolbar/-/merge_requests/2.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
