@@ -29,8 +29,9 @@ field_ui: 9.0.6
 file: 9.0.6
 filter: 9.0.6
 focal_point: 1.5.0
+gin_lb: 1.0.0-beta2
 gin_login: 1.0.0-rc6
-gin_toolbar: 1.0.0-beta12
+gin_toolbar: 1.0.0-beta14
 help: 9.0.6
 history: 9.0.6
 image: 9.0.6
@@ -41,6 +42,7 @@ jsonapi: 0.0.0
 layout_builder: 9.0.6
 layout_builder_browser: 1.1.0
 layout_builder_restrictions: 2.7.0
+layout_builder_save_and_edit: 1.0.0
 layout_builder_styles: 1.0.0-beta2
 layout_discovery: 9.0.6
 layout_library: 1.0.0-beta2
