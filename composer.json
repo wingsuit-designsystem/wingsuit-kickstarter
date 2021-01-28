@@ -30,7 +30,8 @@
         "drupal/layout_builder_browser": "^1.1",
         "drupal/gin": "^3.0@alpha",
         "drupal/gin_lb": "1.0.x-dev",
-        "drupal/layout_builder_save_and_edit": "^1.0"
+        "drupal/layout_builder_save_and_edit": "^1.0",
+        "drupal/admin_toolbar": "^3.0"
     },
     "require-dev": {
         "drush/drush": ">=9.7"
@@ -53,6 +54,7 @@
                 "Add option for node local tasks in toolbar": "https://git.drupalcode.org/project/gin_toolbar/-/merge_requests/2.patch"
             },
             "drupal/core": {
+                "Not all form elements can't use in vertical_tabs": "https://www.drupal.org/files/issues/2021-01-02/3122920_group_patch_5.patch",
                 "Custom blocks break layout builder module - Quick Edit could not associate the rendered entity field markup\nPrimary tabs\nView(active tab)\nEdit\n": "https://www.drupal.org/files/issues/2020-10-19/3072231-39-core-9-2-x.patch",
                 "PHP message: Error: Call to a member function getEntityTypeId() on null (Layout Builder)" : "https://www.drupal.org/files/issues/2020-08-05/3049332-inline-35.patch"
             },
