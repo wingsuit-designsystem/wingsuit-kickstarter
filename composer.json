@@ -4,16 +4,15 @@
     "description": "Starterkit for Wingsuit and Layout Builder.",
     "license": "GPL-2.0-or-later",
     "require": {
-        "drupal/core": "~9.0",
-        "acquia/lightning": "~5.0.0",
+        "drupal/core": "~9.1",
+        "acquia/lightning": "~5.1.0",
         "cweagans/composer-patches": "^1.6.0",
         "drupal/core-composer-scaffold": "*",
         "acquia/blt": "^12.0",
         "drupal/config_split": "^1.5",
-        "drupal/lb_claro": "1.x-dev",
 
         "drupal/components": "^2.0",
-        "drupal/ui_patterns_settings": "^2.0@alpha",
+        "drupal/ui_patterns_settings": "^2.0@beta",
         "drupal/ui_patterns_layout_builder": "^1.1",
         "drupal/ui_patterns_field_formatters": "^1.2",
         "drupal/component_blocks": "^1.1",
@@ -28,7 +27,10 @@
         "drupal/migrate_plus": "^5.1",
         "drupal/migrate_tools": "^5.0",
         "drupal/media_responsive_thumbnail": "^1.2",
-        "drupal/layout_builder_browser": "^1.1"
+        "drupal/layout_builder_browser": "^1.1",
+        "drupal/gin": "^3.0@alpha",
+        "drupal/gin_lb": "1.0.x-dev",
+        "drupal/layout_builder_save_and_edit": "^1.0"
     },
     "require-dev": {
         "drush/drush": ">=9.7"
@@ -38,10 +40,6 @@
     },
     "extra": {
         "patches": {
-            "drupal/lb_claro": {
-                "Css not applied to \"Layout Library\"\n": "https://www.drupal.org/files/issues/2020-10-09/3176073.patch",
-                "CSS for Patch \"Layout overview\"\n": "https://www.drupal.org/files/issues/2020-10-09/layout_overview.patch"
-            },
             "drupal/lightning_layout": {
                 "Call to a member function uuid() on null when Layout Builder renders a Placeholder": "https://www.drupal.org/files/issues/2020-04-15/light_layout.patch"
             },
@@ -52,8 +50,7 @@
                 "Text is not processed.": "https://git.drupalcode.org/project/ui_patterns_field_formatters/-/merge_requests/1.diff"
             },
             "drupal/core": {
-                "Provide a Layout Overview dialog that allows performing all actions in a text/form based method.": "https://www.drupal.org/files/issues/2019-06-25/3019490-23.patch",
-                "https://www.drupal.org/files/issues/2020-09-15/3070493-41.patch": "https://www.drupal.org/files/issues/2020-09-15/3070493-41.patch",
+                "Custom blocks break layout builder module - Quick Edit could not associate the rendered entity field markup\nPrimary tabs\nView(active tab)\nEdit\n": "https://www.drupal.org/files/issues/2020-10-19/3072231-39-core-9-2-x.patch",
                 "PHP message: Error: Call to a member function getEntityTypeId() on null (Layout Builder)" : "https://www.drupal.org/files/issues/2020-08-05/3049332-inline-35.patch"
             },
             "drupal/ui_patterns": {

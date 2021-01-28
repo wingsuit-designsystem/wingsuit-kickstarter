@@ -20,7 +20,7 @@ services:
       file: ${HOME}/.docksal/stacks/services.yml
       service: cli
     labels:
-      - io.docksal.virtual-host=storybook.wingsuit-kickstarter.docksal
+      - io.docksal.virtual-host=storybook.${VIRTUAL_HOST}
       - io.docksal.virtual-port=3000
     environment:
       - PATH=/var/www/vendor/bin:$PATH

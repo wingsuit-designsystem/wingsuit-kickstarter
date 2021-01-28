@@ -1,56 +1,22 @@
 <?php
-
-use Drupal\layout_builder\Form\OverridesEntityForm;
-use Drupal\layout_builder\Form\DefaultsEntityForm;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Url;
+use Drupal\ui_patterns\Definition\PatternDefinition ;
 
 /**
- * Implements hook_theme().
+ * Implements hook_ui_patterns_layouts_display_settings_form_alter().
  */
-function wingsuit_layout_theme($existing, $type, $theme, $path) {
-  return array(
-    'form__layout_builder_form' => array(
-      'template' => 'form--layout-builder-form',
-      'base hook' => 'form'
-    ),
-  );
+function wingsuit_layout_ui_patterns_layouts_display_settings_form_alter(&$form, PatternDefinition $definition, $configuration) {
+  $form['#type'] = 'container';
+  $form['field_templates']['#type'] = 'hidden';
+  $form['settings']['#type'] = 'container';
 }
 
 /**
  * Implements hook_form_alter().
  */
 function wingsuit_layout_form_alter(&$form, FormStateInterface $form_state, $form_id) {
-  $form_object = $form_state->getFormObject();
-  if ($form_object instanceof OverridesEntityForm || $form_object instanceof DefaultsEntityForm
-    || $form_object->getFormId() === 'layout_layout_builder_form'
-  ) {
-    $form['#attached']['library'][] = 'wingsuit_layout/layout_builder';
-  }
-  if ($form_id === 'layout_builder_configure_section') {
-    hide($form['layout_settings']['pattern']['field_templates']);
-  }
-  if (strpos($form_id, 'layout_builder_form') !== FALSE) {
-    $form['actions']['layout_overview']['#markup'] = '<div id="layout-overview-button" class="layout-overview-button button">' . t('Layout overview') . '</div>';
-    $form['actions']['layout_overview']['#weight'] = 14;
-    $form['actions']['moderation_state_toggler'] = [
-      '#type' => 'checkbox',
-      '#title' => t('Show moderation states'),
-      '#weight' => 20,
-      '#attributes' => [
-        'class' => ['layout-builder-moderation-state'],
-      ]
-    ];
-    $form['layout_builder_message']['#weight'] = -3000;
-    hide($form['revision_information']);
-  }
-}
-
-/**
- * Implements hook_theme_suggestions_HOOK_alter().
- */
-function wingsuit_layout_theme_suggestions_form_alter(array &$suggestions, array $variables) {
-  if (strpos($variables['element']['#form_id'], 'layout_builder_form') !== FALSE) {
-    $suggestions[] = 'form__layout_builder_form';
+  if ($form_id === 'node_landing_page_layout_builder_form') {
+    hide($form['actions']['submit']);
+    $form['actions']['layout_builder_save_and_edit_layout']['#value'] = t('Save');
   }
 }
