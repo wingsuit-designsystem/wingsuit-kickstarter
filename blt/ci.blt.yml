@@ -1,0 +1,6 @@
+git:
+  hooks:
+    pre-commit: ''
+    pre-push: ''
+    commit-msg: ''
+
