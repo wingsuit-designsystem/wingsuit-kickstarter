@@ -19,8 +19,7 @@
         "drupal/wingsuit_companion": "^1.0@beta",
 
         "drupal/focal_point": "^1.5",
-        "drupal/media_library_theme_reset": "^1.0",
-        "drupal/media_library_edit": "^1.0@alpha",
+        "drupal/media_library_edit": "^2.0",
         "drupal/drimage": "^2.0",
 
         "drupal/image_style_generate": "^1.0@beta",
@@ -31,7 +30,10 @@
         "drupal/gin": "^3.0@alpha",
         "drupal/gin_lb": "1.0.x-dev",
         "drupal/layout_builder_save_and_edit": "^1.0",
-        "drupal/admin_toolbar": "^3.0"
+        "drupal/admin_toolbar": "^3.0",
+        "drupal/inline_block_title_automatic": "^1.0@alpha",
+        "drupal/ui_patterns_extends": "1.0.x-dev",
+        "drupal/colorwidget": "1.0.x-dev"
     },
     "require-dev": {
         "drush/drush": ">=9.7"
@@ -44,9 +46,6 @@
             "drupal/lightning_layout": {
                 "Call to a member function uuid() on null when Layout Builder renders a Placeholder": "https://www.drupal.org/files/issues/2020-04-15/light_layout.patch"
             },
-            "drupal/media_library_edit": {
-                "Open in modal.": "https://www.drupal.org/files/issues/2020-06-25/open-in-modal-3034205-43.patch"
-            },
             "drupal/ui_patterns_field_formatters": {
                 "Text is not processed.": "https://git.drupalcode.org/project/ui_patterns_field_formatters/-/merge_requests/1.diff"
             },
@@ -57,6 +56,9 @@
                 "Not all form elements can't use in vertical_tabs": "https://www.drupal.org/files/issues/2021-01-02/3122920_group_patch_5.patch",
                 "Custom blocks break layout builder module - Quick Edit could not associate the rendered entity field markup\nPrimary tabs\nView(active tab)\nEdit\n": "https://www.drupal.org/files/issues/2020-10-19/3072231-39-core-9-2-x.patch",
                 "PHP message: Error: Call to a member function getEntityTypeId() on null (Layout Builder)" : "https://www.drupal.org/files/issues/2020-08-05/3049332-inline-35.patch"
+            },
+            "drupal/colorwidget": {
+                "CSS Streamline": "https://git.drupalcode.org/project/colorwidget/-/merge_requests/2.patch"
             },
             "drupal/ui_patterns": {
                 "Allow for Layout Builder sections to be given administrativ.": "https://patch-diff.githubusercontent.com/raw/nuvoleweb/ui_patterns/pull/278.patch",

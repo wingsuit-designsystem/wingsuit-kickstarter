@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6e0e7072849db6a1f75edac89aa132de",
+    "content-hash": "926330a5490acd83d3797eaaac7c8d69",
     "packages": [
         {
             "name": "acquia/blt",
@@ -325,7 +325,7 @@
             "version": "v2.3.4",
             "source": {
                 "type": "git",
-                "url": "git@github.com:fengyuanchen/cropper.git",
+                "url": "https://github.com/fengyuanchen/cropper.git",
                 "reference": "30c58b29ee21010e17e58ebab165fbd84285c685"
             },
             "dist": {
@@ -2522,6 +2522,51 @@
             }
         },
         {
+            "name": "drupal/colorwidget",
+            "version": "dev-1.0.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/colorwidget.git",
+                "reference": "491b734bff84aa25acdb086ec3c5cd545120bd14"
+            },
+            "require": {
+                "drupal/core": "^8.9 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.0.x": "1.0.x-dev"
+                },
+                "drupal": {
+                    "version": "1.0.x-dev",
+                    "datestamp": "1612055319",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                },
+                "patches_applied": {
+                    "CSS Streamline": "https://git.drupalcode.org/project/colorwidget/-/merge_requests/2.patch"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Pasqualle",
+                    "homepage": "https://www.drupal.org/user/80733"
+                }
+            ],
+            "description": "Defines a color widget for \"List (text)\" fields.",
+            "homepage": "https://www.drupal.org/project/colorwidget",
+            "support": {
+                "source": "https://git.drupalcode.org/project/colorwidget"
+            },
+            "time": "2021-01-31T03:05:47+00:00"
+        },
+        {
             "name": "drupal/component_blocks",
             "version": "1.2.1",
             "source": {
@@ -4092,68 +4137,6 @@
             }
         },
         {
-            "name": "drupal/field_group",
-            "version": "dev-3.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/field_group.git",
-                "reference": "9f59f951d92d1b20afae70940947769dc6c63a52"
-            },
-            "require": {
-                "drupal/core": "^8.8 || ^9"
-            },
-            "require-dev": {
-                "drupal/jquery_ui_accordion": "^1.0"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-3.x": "3.x-dev"
-                },
-                "drupal": {
-                    "version": "8.x-3.1+12-dev",
-                    "datestamp": "1605118690",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Hydra",
-                    "homepage": "https://www.drupal.org/user/647364"
-                },
-                {
-                    "name": "Stalski",
-                    "homepage": "https://www.drupal.org/user/322618"
-                },
-                {
-                    "name": "jyve",
-                    "homepage": "https://www.drupal.org/user/591438"
-                },
-                {
-                    "name": "nils.destoop",
-                    "homepage": "https://www.drupal.org/user/361625"
-                },
-                {
-                    "name": "swentel",
-                    "homepage": "https://www.drupal.org/user/107403"
-                }
-            ],
-            "description": "Provides the field_group module.",
-            "homepage": "https://www.drupal.org/project/field_group",
-            "support": {
-                "source": "https://git.drupalcode.org/project/field_group",
-                "issues": "https://www.drupal.org/project/issues/field_group"
-            },
-            "time": "2020-11-11T18:37:27+00:00"
-        },
-        {
             "name": "drupal/focal_point",
             "version": "1.5.0",
             "source": {
@@ -4271,7 +4254,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/gin_lb.git",
-                "reference": "54120d87d60c99522e216b149478d5d2adf7d1d3"
+                "reference": "6e8df4c4d465ad51f9b0fd05cb22ea236571bfaa"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
@@ -4300,8 +4283,8 @@
                     "dev-1.0.x": "1.0.x-dev"
                 },
                 "drupal": {
-                    "version": "1.0.0-beta2+5-dev",
-                    "datestamp": "1611841507",
+                    "version": "1.0.0-beta2+7-dev",
+                    "datestamp": "1611961849",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -4375,7 +4358,7 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/gin_lb"
             },
-            "time": "2021-01-28T14:55:15+00:00"
+            "time": "2021-02-03T16:36:49+00:00"
         },
         {
             "name": "drupal/gin_toolbar",
@@ -4562,6 +4545,50 @@
                 "source": "https://www.drupal.org/project/image_widget_crop",
                 "issues": "https://www.drupal.org/project/issues/image_widget_crop",
                 "irc": "irc://irc.freenode.org/drupal-contribute"
+            }
+        },
+        {
+            "name": "drupal/inline_block_title_automatic",
+            "version": "1.0.0-alpha3",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/inline_block_title_automatic.git",
+                "reference": "8.x-1.0-alpha3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/inline_block_title_automatic-8.x-1.0-alpha3.zip",
+                "reference": "8.x-1.0-alpha3",
+                "shasum": "8d1daec030bcd77cac1a731fd3c6de0ce38bf5e5"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0-alpha3",
+                    "datestamp": "1591161208",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Alpha releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Sam152",
+                    "homepage": "https://www.drupal.org/user/1485048"
+                }
+            ],
+            "description": "Remove the choice to define titles for block_content entities in layout builder.",
+            "homepage": "https://www.drupal.org/project/inline_block_title_automatic",
+            "support": {
+                "source": "https://git.drupalcode.org/project/inline_block_title_automatic"
             }
         },
         {
@@ -6027,17 +6054,17 @@
         },
         {
             "name": "drupal/media_library_edit",
-            "version": "1.0.0",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/media_library_edit.git",
-                "reference": "8.x-1.0"
+                "reference": "8.x-2.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/media_library_edit-8.x-1.0.zip",
-                "reference": "8.x-1.0",
-                "shasum": "0c00f1aa800e614d68243b3bf545358bde66f72a"
+                "url": "https://ftp.drupal.org/files/projects/media_library_edit-8.x-2.0.zip",
+                "reference": "8.x-2.0",
+                "shasum": "611b1fe827c8f8dc892326ded6468ff097fecdb3"
             },
             "require": {
                 "drupal/core": "^8 || ^9"
@@ -6045,15 +6072,12 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.0",
-                    "datestamp": "1607795644",
+                    "version": "8.x-2.0",
+                    "datestamp": "1607795681",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Project has not opted into security advisory coverage!"
                     }
-                },
-                "patches_applied": {
-                    "Open in modal.": "https://www.drupal.org/files/issues/2020-06-25/open-in-modal-3034205-43.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -6074,70 +6098,6 @@
             "support": {
                 "source": "http://cgit.drupalcode.org/media_library_edit",
                 "issues": "https://www.drupal.org/project/issues/media_library_edit"
-            }
-        },
-        {
-            "name": "drupal/media_library_theme_reset",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/media_library_theme_reset.git",
-                "reference": "8.x-1.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/media_library_theme_reset-8.x-1.0.zip",
-                "reference": "8.x-1.0",
-                "shasum": "f1e6237d7863e1dae4b61bf451f4b2035f1f4004"
-            },
-            "require": {
-                "drupal/core": "^8 || ^9"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.0",
-                    "datestamp": "1592330513",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Jeff Cardwell",
-                    "homepage": "https://www.drupal.org/user/2913129"
-                },
-                {
-                    "name": "gravelpot",
-                    "homepage": "https://www.drupal.org/user/748208"
-                },
-                {
-                    "name": "lreynaga",
-                    "homepage": "https://www.drupal.org/user/3400232"
-                },
-                {
-                    "name": "mark_fullmer",
-                    "homepage": "https://www.drupal.org/user/2612816"
-                },
-                {
-                    "name": "ricksta",
-                    "homepage": "https://www.drupal.org/user/311042"
-                },
-                {
-                    "name": "texas_tater",
-                    "homepage": "https://www.drupal.org/user/753614"
-                }
-            ],
-            "description": "Display the Media Library with an administrative theme",
-            "homepage": "https://www.drupal.org/project/media_library_theme_reset",
-            "support": {
-                "source": "https://git.drupalcode.org/project/media_library_theme_reset"
             }
         },
         {
@@ -8009,6 +7969,119 @@
             }
         },
         {
+            "name": "drupal/ui_patterns_extends",
+            "version": "dev-1.0.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/ui_patterns_extends.git",
+                "reference": "d99c06b4bc53f02628362b6cda326c45658caed2"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9",
+                "drupal/token": "*",
+                "drupal/ui_patterns": "*"
+            },
+            "require-dev": {
+                "composer/installers": "^1.2",
+                "cweagans/composer-patches": "~1.4",
+                "drupal/colorwidget": "1.0.x-dev",
+                "drupal/config_devel": "~1",
+                "drupal/core-composer-scaffold": "^8.0",
+                "drupal/core-dev": "^8.0",
+                "drupal/core-recommended": "~9.0",
+                "drupal/ds": "~3",
+                "drupal/field_group": "3.x-dev@dev",
+                "drupal/page_manager": "*",
+                "drupal/panels": "~4",
+                "drupal/paragraphs": "~1",
+                "drupal/token": "~1",
+                "drupal/ui_patterns": "~1.2",
+                "drupal/ui_patterns_settings": "~2.0",
+                "drush/drush": "~10",
+                "openeuropa/task-runner": "~1.0-beta3",
+                "phpro/grumphp": "~0.14"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.0.x": "1.0.x-dev"
+                },
+                "drupal": {
+                    "version": "1.0.x-dev",
+                    "datestamp": "1612222430",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                },
+                "enable-patching": true,
+                "composer-exit-on-patch-failure": true,
+                "drupal-scaffold": {
+                    "locations": {
+                        "web-root": "build/"
+                    }
+                },
+                "installer-paths": {
+                    "build/core": [
+                        "type:drupal-core"
+                    ],
+                    "build/modules/contrib/{$name}": [
+                        "type:drupal-module"
+                    ],
+                    "build/profiles/contrib/{$name}": [
+                        "type:drupal-profile"
+                    ],
+                    "build/themes/contrib/{$name}": [
+                        "type:drupal-theme"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Drupal\\ui_patterns_extends\\": "./src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "Drupal\\Tests\\ui_patterns_extends\\": "./tests/src"
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "scripts": {
+                "post-install-cmd": [
+                    "./vendor/bin/run drupal:site-setup"
+                ],
+                "post-update-cmd": [
+                    "./vendor/bin/run drupal:site-setup"
+                ]
+            },
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Christian Wiedemann",
+                    "homepage": "https://www.drupal.org/user/861002",
+                    "email": "christian.wiedemann@key-tec.de"
+                },
+                {
+                    "name": "sch4lly",
+                    "homepage": "https://www.drupal.org/user/856550"
+                }
+            ],
+            "description": "Extend Patterns with other patterns.",
+            "homepage": "https://www.drupal.org/project/ui_patterns_extends",
+            "keywords": [
+                "drupal",
+                "ui",
+                "web"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/ui_patterns_extends"
+            },
+            "time": "2021-02-03T15:22:39+00:00"
+        },
+        {
             "name": "drupal/ui_patterns_field_formatters",
             "version": "1.2.0",
             "source": {
@@ -8211,32 +8284,34 @@
         },
         {
             "name": "drupal/ui_patterns_settings",
-            "version": "2.0.0-beta1",
+            "version": "2.0.0-beta2",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/ui_patterns_settings.git",
-                "reference": "8.x-2.0-beta1"
+                "reference": "8.x-2.0-beta2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/ui_patterns_settings-8.x-2.0-beta1.zip",
-                "reference": "8.x-2.0-beta1",
-                "shasum": "7b5bd800d0ec6eb974be93ab317f1642afa27ac7"
+                "url": "https://ftp.drupal.org/files/projects/ui_patterns_settings-8.x-2.0-beta2.zip",
+                "reference": "8.x-2.0-beta2",
+                "shasum": "93776446e82add889b85194bbbefa5ca88d233de"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
-                "drupal/field_group": "3.x-dev@dev",
                 "drupal/token": "*",
                 "drupal/ui_patterns": "*"
             },
             "require-dev": {
                 "composer/installers": "^1.2",
                 "cweagans/composer-patches": "~1.4",
+                "drupal/colorwidget": "1.0.x-dev",
                 "drupal/config_devel": "~1",
                 "drupal/core-composer-scaffold": "^8.0",
                 "drupal/core-dev": "^8.0",
                 "drupal/core-recommended": "~9.0",
                 "drupal/ds": "~3",
+                "drupal/field_group": "3.x-dev@dev",
+                "drupal/media_library_form_element": "~2.0.3",
                 "drupal/page_manager": "*",
                 "drupal/panels": "~4",
                 "drupal/paragraphs": "~1",
@@ -8249,8 +8324,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-2.0-beta1",
-                    "datestamp": "1610626775",
+                    "version": "8.x-2.0-beta2",
+                    "datestamp": "1612359675",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
@@ -14086,16 +14161,145 @@
             "time": "2019-08-08T15:19:30+00:00"
         }
     ],
-    "packages-dev": [],
+    "packages-dev": [
+        {
+            "name": "drupal/field_group",
+            "version": "dev-3.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/field_group.git",
+                "reference": "9f59f951d92d1b20afae70940947769dc6c63a52"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9"
+            },
+            "require-dev": {
+                "drupal/jquery_ui_accordion": "^1.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-3.x": "3.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-3.1+12-dev",
+                    "datestamp": "1605118690",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Hydra",
+                    "homepage": "https://www.drupal.org/user/647364"
+                },
+                {
+                    "name": "Stalski",
+                    "homepage": "https://www.drupal.org/user/322618"
+                },
+                {
+                    "name": "jyve",
+                    "homepage": "https://www.drupal.org/user/591438"
+                },
+                {
+                    "name": "nils.destoop",
+                    "homepage": "https://www.drupal.org/user/361625"
+                },
+                {
+                    "name": "swentel",
+                    "homepage": "https://www.drupal.org/user/107403"
+                }
+            ],
+            "description": "Provides the field_group module.",
+            "homepage": "https://www.drupal.org/project/field_group",
+            "support": {
+                "source": "https://git.drupalcode.org/project/field_group",
+                "issues": "https://www.drupal.org/project/issues/field_group"
+            },
+            "time": "2020-11-11T18:37:27+00:00"
+        },
+        {
+            "name": "drupal/media_library_theme_reset",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/media_library_theme_reset.git",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/media_library_theme_reset-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "f1e6237d7863e1dae4b61bf451f4b2035f1f4004"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1592330513",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Jeff Cardwell",
+                    "homepage": "https://www.drupal.org/user/2913129"
+                },
+                {
+                    "name": "gravelpot",
+                    "homepage": "https://www.drupal.org/user/748208"
+                },
+                {
+                    "name": "lreynaga",
+                    "homepage": "https://www.drupal.org/user/3400232"
+                },
+                {
+                    "name": "mark_fullmer",
+                    "homepage": "https://www.drupal.org/user/2612816"
+                },
+                {
+                    "name": "ricksta",
+                    "homepage": "https://www.drupal.org/user/311042"
+                },
+                {
+                    "name": "texas_tater",
+                    "homepage": "https://www.drupal.org/user/753614"
+                }
+            ],
+            "description": "Display the Media Library with an administrative theme",
+            "homepage": "https://www.drupal.org/project/media_library_theme_reset",
+            "support": {
+                "source": "https://git.drupalcode.org/project/media_library_theme_reset"
+            }
+        }
+    ],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/ui_patterns_settings": 10,
         "drupal/wingsuit_companion": 10,
-        "drupal/media_library_edit": 15,
         "drupal/image_style_generate": 10,
         "drupal/gin": 15,
-        "drupal/gin_lb": 20
+        "drupal/gin_lb": 20,
+        "drupal/inline_block_title_automatic": 15,
+        "drupal/ui_patterns_extends": 20,
+        "drupal/colorwidget": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
