@@ -12,6 +12,7 @@ dependencies:
     - field.field.block_content.banner.field_variant
   module:
     - media_library
+    - media_library_edit
     - text
 _core:
   default_config_hash: '-LvLxBq-PLV2bypCqXrJ4A4ThsIrEzPs9CcthejlwB8'
@@ -34,7 +35,9 @@ content:
     weight: 0
     settings:
       media_types: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
     type: media_library_widget
     region: content
   field_title:

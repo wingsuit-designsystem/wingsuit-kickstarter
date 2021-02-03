@@ -7,6 +7,7 @@ module:
   block_content: 0
   breakpoint: 0
   ckeditor: 0
+  colorwidget: 0
   components: 0
   config: 0
   conflict: 0
@@ -39,6 +40,7 @@ module:
   image: 0
   image_style_generate: 0
   image_widget_crop: 0
+  inline_block_title_automatic: 0
   inline_entity_form: 0
   jsonapi: 0
   layout_builder: 0
@@ -114,6 +116,7 @@ module:
   token: 0
   toolbar: 0
   ui_patterns: 0
+  ui_patterns_extends: 0
   ui_patterns_field_formatters: 0
   ui_patterns_layout_builder: 0
   ui_patterns_layouts: 0

@@ -13,6 +13,7 @@ dependencies:
   module:
     - link
     - media_library
+    - media_library_edit
     - text
 id: block_content.hero.default
 targetEntityType: block_content
@@ -32,7 +33,9 @@ content:
     weight: 3
     settings:
       media_types: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
     region: content
   field_preheadline:
     weight: 0

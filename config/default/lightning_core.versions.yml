@@ -6,6 +6,7 @@ block: 9.0.6
 block_content: 9.0.6
 breakpoint: 9.0.6
 ckeditor: 9.0.6
+colorwidget: 0.0.0
 components: 2.0.0-beta3
 config: 9.0.6
 conflict: 2.0.0-alpha2
@@ -39,6 +40,7 @@ history: 9.0.6
 image: 9.0.6
 image_style_generate: 1.0.0-beta1
 image_widget_crop: 2.3.0
+inline_block_title_automatic: 1.0.0-alpha3
 inline_entity_form: 1.0.0-rc7
 jsonapi: 0.0.0
 layout_builder: 9.0.6
@@ -78,6 +80,7 @@ media_entity_instagram: 2.1.0
 media_entity_twitter: 2.4.0
 media_library: 9.0.6
 media_library_edit: 1.0.0-alpha2
+media_library_theme_reset: 1.0.0
 media_responsive_thumbnail: 1.2.0
 menu_link_content: 9.0.6
 menu_ui: 9.0.6
@@ -120,6 +123,7 @@ text: 9.0.6
 token: 1.7.0
 toolbar: 9.0.6
 ui_patterns: 1.2.0
+ui_patterns_extends: 0.0.0
 ui_patterns_field_formatters: 1.2.0
 ui_patterns_layout_builder: 0.0.0
 ui_patterns_layouts: 1.2.0
