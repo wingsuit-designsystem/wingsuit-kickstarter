@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "926330a5490acd83d3797eaaac7c8d69",
+    "content-hash": "296d4d870b654fd5d732091b75b93ece",
     "packages": [
         {
             "name": "acquia/blt",
@@ -2546,7 +2546,8 @@
                     }
                 },
                 "patches_applied": {
-                    "CSS Streamline": "https://git.drupalcode.org/project/colorwidget/-/merge_requests/2.patch"
+                    "CSS Streamline": "https://git.drupalcode.org/project/colorwidget/-/merge_requests/2.patch",
+                    "Horizontal": "https://git.drupalcode.org/project/colorwidget/-/merge_requests/3.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -4254,7 +4255,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/gin_lb.git",
-                "reference": "6e8df4c4d465ad51f9b0fd05cb22ea236571bfaa"
+                "reference": "b96246b63b65f478517f04eec083d8e71c5a5e9b"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
@@ -4283,8 +4284,8 @@
                     "dev-1.0.x": "1.0.x-dev"
                 },
                 "drupal": {
-                    "version": "1.0.0-beta2+7-dev",
-                    "datestamp": "1611961849",
+                    "version": "1.0.0-beta2+8-dev",
+                    "datestamp": "1612370249",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -4358,7 +4359,7 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/gin_lb"
             },
-            "time": "2021-02-03T16:36:49+00:00"
+            "time": "2021-02-04T21:44:58+00:00"
         },
         {
             "name": "drupal/gin_toolbar",
