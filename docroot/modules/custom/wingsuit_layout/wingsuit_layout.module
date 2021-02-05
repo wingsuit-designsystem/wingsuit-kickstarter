@@ -6,13 +6,15 @@ use Drupal\ui_patterns\Definition\PatternDefinition ;
  * Implements hook_ui_patterns_layouts_display_settings_form_alter().
  */
 function wingsuit_layout_ui_patterns_layouts_display_settings_form_alter(&$form, PatternDefinition $definition, $configuration) {
+
   $form['#type'] = 'container';
   $form['field_templates']['#type'] = 'hidden';
-  $form['variant']['#title'] = t('Columns');
   $form['settings']['#type'] = 'container';
-  $form['settings']['display_header_region']['#group'] = 'additional_settings';
-  $form['settings']['display_header_region']['#weight'] = 10;
-  $form['settings']['width']['#weight'] = -10;
+  if ($definition->id() === 'section') {
+    $form['variant']['#title'] = t('Columns');
+    $form['settings']['display_header_region']['#weight'] = 10;
+    $form['settings']['width']['#weight'] = -10;
+  }
 }
 
 /**

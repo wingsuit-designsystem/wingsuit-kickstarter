@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "296d4d870b654fd5d732091b75b93ece",
+    "content-hash": "a42bd6ff24f3c965cffa0181ef5643e4",
     "packages": [
         {
             "name": "acquia/blt",
@@ -3197,6 +3197,7 @@
                     }
                 },
                 "patches_applied": {
+                    "Break long text strings in layout edit": "https://www.drupal.org/files/issues/2020-12-22/3016507-50.patch",
                     "Not all form elements can't use in vertical_tabs": "https://www.drupal.org/files/issues/2021-01-02/3122920_group_patch_5.patch",
                     "Custom blocks break layout builder module - Quick Edit could not associate the rendered entity field markup\nPrimary tabs\nView(active tab)\nEdit\n": "https://www.drupal.org/files/issues/2020-10-19/3072231-39-core-9-2-x.patch",
                     "PHP message: Error: Call to a member function getEntityTypeId() on null (Layout Builder)": "https://www.drupal.org/files/issues/2020-08-05/3049332-inline-35.patch",
