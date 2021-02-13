@@ -101,10 +101,12 @@ third_party_settings:
                 settings:
                   pattern: button
                   variants:
-                    banner: top_left
-                    button: outline
+                    button: default
+                    card: default
+                    headline: xl
                     image: image
                     section: 1_column
+                    slider: '1'
                   pattern_mapping:
                     accordion_item:
                       settings:
@@ -150,10 +152,21 @@ third_party_settings:
                         'field_properties:options':
                           destination: _hidden
                           weight: '0'
+                    basic:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
                     button:
                       settings:
                         'field_properties:uri':
-                          destination: text
+                          destination: _hidden
                           weight: '0'
                         'field_properties:title':
                           destination: text
@@ -297,13 +310,16 @@ third_party_settings:
                     accordion_item:
                       id:
                         input: ''
+                    banner:
+                      position: center_center
                     button:
-                      size: small
+                      size: medium
                       expanded: 0
+                      round: 0
                       color: primary
                       url:
                         input: '[block_content:field_link:uri]'
-                      icon: ''
+                      icon: plus
                       icon_alignment: right
                     card:
                       alignment: left
@@ -312,7 +328,8 @@ third_party_settings:
                         input: ''
                     container:
                       width: default
-                      bg: ''
+                      bg:
+                        colorwidget: ''
                       padding_x: default
                       padding_top: default
                       padding_bottom: ''
@@ -321,8 +338,8 @@ third_party_settings:
                       gutter: default
                       columns: '1'
                     headline:
-                      element: h1
-                      size: ''
+                      tag_name: ''
+                      spacing_bottom: default
                     image:
                       url: ''
                       background_style: ''
@@ -331,20 +348,32 @@ third_party_settings:
                         input: ''
                       icon: right-arrow
                     section:
-                      padding_top: default
-                      padding_bottom: default
-                      padding_x: default
-                      gutter: default
-                      width: default
-                      columns: '1'
+                      display_header_region: 0
                       columns_width_1: equal
                       columns_width_2: equal
                       columns_width_3: equal
                       columns_width_4: equal
                       columns_width_5: equal
-                      bg: ''
+                      gutter: default
+                      columns: '1'
+                      width: default
+                      bg:
+                        colorwidget: ''
+                      padding_x: default
+                      padding_top: default
+                      padding_bottom: default
+                      classes: ''
+                    slider:
+                      autoplay: 0
+                      width: default
+                      bg:
+                        colorwidget: ''
+                      padding_x: default
+                      padding_top: default
+                      padding_bottom: ''
+                      classes: ''
                   variants_token:
-                    button: '[block_content:field_variant_:value]'
+                    banner: ''
                 third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
