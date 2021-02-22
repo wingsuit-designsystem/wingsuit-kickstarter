@@ -69,6 +69,7 @@ third_party_settings:
         core: {  }
       allowed_layouts:
         - pattern_section
+        - pattern_slider
       blacklisted_blocks: {  }
     allowed_block_categories: {  }
 _core:

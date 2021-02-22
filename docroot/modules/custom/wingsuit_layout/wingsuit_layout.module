@@ -1,0 +1,28 @@
+<?php
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\ui_patterns\Definition\PatternDefinition ;
+
+/**
+ * Implements hook_ui_patterns_layouts_display_settings_form_alter().
+ */
+function wingsuit_layout_ui_patterns_layouts_display_settings_form_alter(&$form, PatternDefinition $definition, $configuration) {
+
+  $form['#type'] = 'container';
+  $form['field_templates']['#type'] = 'hidden';
+  $form['settings']['#type'] = 'container';
+  if ($definition->id() === 'section') {
+    $form['variant']['#title'] = t('Columns');
+    $form['settings']['display_header_region']['#weight'] = 10;
+    $form['settings']['width']['#weight'] = -10;
+  }
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function wingsuit_layout_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form_id === 'node_landing_page_layout_builder_form') {
+    hide($form['actions']['submit']);
+    $form['actions']['layout_builder_save_and_edit_layout']['#value'] = t('Save');
+  }
+}

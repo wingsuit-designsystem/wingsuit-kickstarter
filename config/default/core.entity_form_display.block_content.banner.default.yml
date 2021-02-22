@@ -5,14 +5,14 @@ dependencies:
   config:
     - block_content.type.banner
     - field.field.block_content.banner.body
-    - field.field.block_content.banner.field_banner_image
     - field.field.block_content.banner.field_link
+    - field.field.block_content.banner.field_media
     - field.field.block_content.banner.field_summary
     - field.field.block_content.banner.field_title
     - field.field.block_content.banner.field_variant
-    - image.style.thumbnail
   module:
-    - image
+    - media_library
+    - media_library_edit
     - text
 _core:
   default_config_hash: '-LvLxBq-PLV2bypCqXrJ4A4ThsIrEzPs9CcthejlwB8'
@@ -31,13 +31,14 @@ content:
     third_party_settings: {  }
     type: text_textarea_with_summary
     region: content
-  field_banner_image:
+  field_media:
     weight: 0
     settings:
-      progress_indicator: throbber
-      preview_image_style: thumbnail
-    third_party_settings: {  }
-    type: image_image
+      media_types: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+    type: media_library_widget
     region: content
   field_title:
     weight: 1
@@ -48,7 +49,7 @@ content:
     type: string_textfield
     region: content
   field_variant:
-    weight: 26
+    weight: 4
     settings: {  }
     third_party_settings: {  }
     type: options_select

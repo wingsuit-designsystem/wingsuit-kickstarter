@@ -19,10 +19,13 @@ services:
     extends:
       file: ${HOME}/.docksal/stacks/services.yml
       service: cli
+    labels:
+      - io.docksal.virtual-host=storybook.${VIRTUAL_HOST}
+      - io.docksal.virtual-port=3000
     environment:
       - PATH=/var/www/vendor/bin:$PATH
       - PHP_IDE_CONFIG=serverName=${VIRTUAL_HOST}
-      - XDEBUG_CONFIG=remote_enable=1 remote_mode=req remote_port=9000 remote_host=m-ysp.docksal remote_connect_back=0
+      - XDEBUG_CONFIG=remote_enable=1 remote_mode=req remote_port=9000 remote_host=${VIRTUAL_HOST} remote_connect_back=0
       - DOCKSAL=1
       - COMPOSER_MEMORY_LIMIT=-1
       - SYMFONY_DEPRECATIONS_HELPER=weak

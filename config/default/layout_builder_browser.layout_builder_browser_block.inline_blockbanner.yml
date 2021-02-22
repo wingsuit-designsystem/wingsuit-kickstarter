@@ -1,0 +1,11 @@
+uuid: 76cade09-637e-4530-a465-5ed96651d1df
+langcode: en
+status: true
+dependencies: {  }
+id: inline_blockbanner
+block_id: 'inline_block:banner'
+category: blocks
+label: Banner
+weight: 0
+image_path: modules/custom/wingsuit_layout/layout_builder_browser/banner.svg
+image_alt: ''

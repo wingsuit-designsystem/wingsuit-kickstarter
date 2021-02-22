@@ -1,0 +1,15 @@
+uuid: 985b73cb-5b7e-4286-94a4-22e3c3ab69e2
+langcode: en
+status: true
+dependencies: {  }
+name: drimage_focal_320_0
+label: 'DrImage Focal (320x0)'
+effects:
+  302adba9-d18d-42a6-9ca6-3a4af223b69e:
+    uuid: 302adba9-d18d-42a6-9ca6-3a4af223b69e
+    id: image_scale
+    weight: 0
+    data:
+      upscale: false
+      width: 320
+      height: null

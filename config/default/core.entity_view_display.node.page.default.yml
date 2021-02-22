@@ -9,63 +9,433 @@ dependencies:
     - node.type.page
   module:
     - layout_builder
-    - layout_discovery
+    - layout_builder_restrictions
     - layout_library
     - metatag
     - text
     - user
+  theme:
+    - wingsuit
 third_party_settings:
   layout_builder:
     enabled: true
     sections:
       -
-        layout_id: layout_onecol
+        layout_id: pattern_section
         layout_settings:
           label: ''
+          pattern:
+            field_templates: default
+            variant: 1_column
+            settings:
+              padding_top: ''
+              padding_bottom: default
+              padding_x: default
+              gutter: default
+              width: default
+              columns: '1'
+              columns_width_1: equal
+              columns_width_2: equal
+              columns_width_3: equal
+              columns_width_4: equal
+              columns_width_5: equal
+              bg: ''
         components:
-          6dba2a8e-75cd-4e23-9745-286b53fb4693:
-            uuid: 6dba2a8e-75cd-4e23-9745-286b53fb4693
-            region: content
+          56cfc188-d299-42d0-b183-d75ae803cfb7:
+            uuid: 56cfc188-d299-42d0-b183-d75ae803cfb7
+            region: headline
             configuration:
+              id: 'field_block:node:page:title'
+              label: Title
+              provider: layout_builder
               label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:page:body'
               formatter:
                 label: hidden
-                type: text_default
-                settings: {  }
+                type: string
+                settings:
+                  link_to_entity: false
                 third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
             additional: {  }
             weight: 0
-          68d5b3de-9601-44d0-93e0-019ed729ccca:
-            uuid: 68d5b3de-9601-44d0-93e0-019ed729ccca
-            region: content
+          4e04ec8a-d16c-4a80-9a55-4e42de93ac82:
+            uuid: 4e04ec8a-d16c-4a80-9a55-4e42de93ac82
+            region: column_1
             configuration:
+              id: 'field_block:node:page:body'
+              label: Body
+              provider: layout_builder
               label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'extra_field_block:node:page:links'
-            additional: {  }
-            weight: 1
-          cedd4237-7749-4892-bd8b-dd23a37dee53:
-            uuid: cedd4237-7749-4892-bd8b-dd23a37dee53
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:page:field_meta_tags'
               formatter:
-                type: metatag_empty_formatter
-                label: above
-                settings: {  }
+                label: hidden
+                type: pattern_formatter
+                settings:
+                  pattern: rich_text
+                  variants:
+                    banner: top_left
+                    button: default
+                    image: image
+                    section: 1_column
+                  pattern_mapping:
+                    accordion_item:
+                      settings:
+                        'field_properties:value':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:format':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:processed':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:summary':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:summary_processed':
+                          destination: _hidden
+                          weight: '0'
+                    accordion:
+                      settings:
+                        'field_properties:value':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:format':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:processed':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:summary':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:summary_processed':
+                          destination: _hidden
+                          weight: '0'
+                    article:
+                      settings:
+                        'field_properties:value':
+                          destination: text
+                          weight: '0'
+                        'field_properties:format':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:processed':
+                          destination: text
+                          weight: '0'
+                        'field_properties:summary':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:summary_processed':
+                          destination: _hidden
+                          weight: '0'
+                    banner:
+                      settings:
+                        'field_properties:value':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:format':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:processed':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:summary':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:summary_processed':
+                          destination: _hidden
+                          weight: '0'
+                    button:
+                      settings:
+                        'field_properties:value':
+                          destination: text
+                          weight: '0'
+                        'field_properties:format':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:processed':
+                          destination: text
+                          weight: '0'
+                        'field_properties:summary':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:summary_processed':
+                          destination: _hidden
+                          weight: '0'
+                    card:
+                      settings:
+                        'field_properties:value':
+                          destination: text
+                          weight: '0'
+                        'field_properties:format':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:processed':
+                          destination: text
+                          weight: '0'
+                        'field_properties:summary':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:summary_processed':
+                          destination: _hidden
+                          weight: '0'
+                    container:
+                      settings:
+                        'field_properties:value':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:format':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:processed':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:summary':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:summary_processed':
+                          destination: _hidden
+                          weight: '0'
+                    grid:
+                      settings:
+                        'field_properties:value':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:format':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:processed':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:summary':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:summary_processed':
+                          destination: _hidden
+                          weight: '0'
+                    headline:
+                      settings:
+                        'field_properties:value':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:format':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:processed':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:summary':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:summary_processed':
+                          destination: _hidden
+                          weight: '0'
+                    hero:
+                      settings:
+                        'field_properties:value':
+                          destination: text
+                          weight: '0'
+                        'field_properties:format':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:processed':
+                          destination: text
+                          weight: '0'
+                        'field_properties:summary':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:summary_processed':
+                          destination: _hidden
+                          weight: '0'
+                    image:
+                      settings:
+                        'field_properties:value':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:format':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:processed':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:summary':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:summary_processed':
+                          destination: _hidden
+                          weight: '0'
+                    link:
+                      settings:
+                        'field_properties:value':
+                          destination: text
+                          weight: '0'
+                        'field_properties:format':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:processed':
+                          destination: text
+                          weight: '0'
+                        'field_properties:summary':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:summary_processed':
+                          destination: _hidden
+                          weight: '0'
+                    logo:
+                      settings:
+                        'field_properties:value':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:format':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:processed':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:summary':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:summary_processed':
+                          destination: _hidden
+                          weight: '0'
+                    rich_text:
+                      settings:
+                        'field_properties:value':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:format':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:processed':
+                          destination: text
+                          weight: '0'
+                        'field_properties:summary':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:summary_processed':
+                          destination: _hidden
+                          weight: '0'
+                    section:
+                      settings:
+                        'field_properties:value':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:format':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:processed':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:summary':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:summary_processed':
+                          destination: _hidden
+                          weight: '0'
+                    slider:
+                      settings:
+                        'field_properties:value':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:format':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:processed':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:summary':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:summary_processed':
+                          destination: _hidden
+                          weight: '0'
+                    video:
+                      settings:
+                        'field_properties:value':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:format':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:processed':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:summary':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:summary_processed':
+                          destination: _hidden
+                          weight: '0'
+                  pattern_settings:
+                    accordion_item:
+                      id:
+                        input: ''
+                    button:
+                      size: small
+                      expanded: 0
+                      color: primary
+                      url:
+                        input: ''
+                      icon: ''
+                      icon_alignment: right
+                    card:
+                      alignment: left
+                      bg_color: ''
+                      url:
+                        input: ''
+                    container:
+                      width: default
+                      bg: ''
+                      padding_x: default
+                      padding_top: default
+                      padding_bottom: ''
+                      classes: ''
+                    grid:
+                      gutter: default
+                      columns: '1'
+                    headline:
+                      element: h1
+                      size: ''
+                    image:
+                      url: ''
+                      background_style: ''
+                    link:
+                      url:
+                        input: ''
+                      icon: right-arrow
+                    section:
+                      padding_top: ''
+                      padding_bottom: default
+                      padding_x: default
+                      gutter: default
+                      width: default
+                      columns: '1'
+                      columns_width_1: equal
+                      columns_width_2: equal
+                      columns_width_3: equal
+                      columns_width_4: equal
+                      columns_width_5: equal
+                      bg: ''
+                  variants_token:
+                    banner: ''
                 third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
             additional: {  }
-            weight: 2
+            weight: 0
         third_party_settings: {  }
+    allow_custom: false
   layout_library:
     enable: true
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      whitelisted_blocks: {  }
+      blacklisted_blocks: {  }
+      allowed_layouts: {  }
 _core:
   default_config_hash: Kfxnq5Imio9VFBoNa_PIkzXoTmjz_T-EY3mOrwDTddU
 id: node.page.default
@@ -93,5 +463,6 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
+  content_moderation_control: true
   layout_selection: true
   search_api_excerpt: true

@@ -1,0 +1,11 @@
+uuid: d4dd6de0-89d2-440e-9361-dd05184d5f41
+langcode: en
+status: true
+dependencies: {  }
+id: inline_blockhero
+block_id: 'inline_block:hero'
+category: blocks
+label: Hero
+weight: 0
+image_path: modules/custom/wingsuit_layout/layout_builder_browser/hero.svg
+image_alt: ''

@@ -3,28 +3,38 @@
 </p>
 
 # Wingsuit Kickstarter
-Wingsuit Kickstarter is a demo project to show how to use Wingsuit with Drupal.
+See the [documentation](https://wingsuit-designsystem.github.io/drupal/ui_patterns/) for more details.
 
-## PHP Kickstart
-   * Clone the repository and run:
-```
-cd wingsuit_kickstarter
-composer install
-./vendor/bin/blt setup
-```
+## Prerequisites
 
-## Docksal kickstart
+- [Node `^12`](https://nodejs.org)
+- [YARN `^1.22`](https://classic.yarnpkg.com/)
+- [PHP `^7.0.0`](https://php.net)
 
-   * Clone the repository and run:
+## Quickstart
 ```
-cd wingsuit_kickstarter && fin init
+composer create-project wingsuit-designsystem/wingsuit-kickstarter wingsuit-kickstarter --stability dev --no-interaction
+cd wingsuit-kickstarter && ./vendor/bin/blt setup
 ```
 
-## Dev Mode: Link wingsuit to wingsuit_kickstarter
+## Docksal Quickstart
+```
+fin rc -T composer create-project wingsuit-designsystem/wingsuit-kickstarter wingsuit-kickstarter --stability dev --no-interaction
+cd wingsuit-kickstarter && fin init
+```
+To start storybook inside docksal:
+```
+cd docroot/themes/custom/wingsuit
+fin exec yarn dev:storybook:docksal
+```
+and open http://storybook.wingsuit-kickstarter.docksal
+
+
+## Develop Wingsuit only: Link `Wingsuit` to `Wingsuit Kickstarter`
 Use this mode to link `https://github.com/wingsuit-designsystem/wingsuit` as volume.
 
    * Create a folder `wingsuit`
    * Clone "https://github.com/wingsuit-designsystem/wingsuit" and this repository inside `wingsuit`
    * Run `export DOCKSAL_ENVIRONMENT=docksal-dev`
    * Check the `WINGSUIT_PATH` in `.docksal/docksal-docksal-dev.env`
-   * run `cd wingsuit_kickstarter && fin init`
+   * run `cd wingsuit-kickstarter && fin init`

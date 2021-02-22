@@ -1,0 +1,11 @@
+uuid: 8879039a-d4a8-474b-b169-56a88b87deed
+langcode: en
+status: true
+dependencies: {  }
+id: inline_blockmedia_slideshow
+block_id: 'inline_block:media_slideshow'
+category: blocks
+label: Slideshow
+weight: 0
+image_path: modules/custom/wingsuit_layout/layout_builder_browser/slideshow.svg
+image_alt: ''

@@ -8,8 +8,8 @@ dependencies:
     - image.style.thumbnail
     - media.type.image
   module:
-    - image
-    - path
+    - focal_point
+    - lightning_media
 _core:
   default_config_hash: MhGC-0dK5T_kLyHSPIctI9OztGTG1uCBBRjO8t1gcd0
 id: media.image.default
@@ -18,41 +18,41 @@ bundle: image
 mode: default
 content:
   field_media_image:
-    type: image_image
+    type: image_focal_point
     weight: 0
     settings:
-      progress_indicator: throbber
       preview_image_style: thumbnail
-    third_party_settings: {  }
+      preview_link: true
+      offsets: '50,50'
+      progress_indicator: throbber
+    third_party_settings:
+      lightning_media:
+        file_links: true
+        remove_button: true
     region: content
   field_media_in_library:
     type: boolean_checkbox
-    weight: 4
+    weight: 2
     settings:
       display_label: true
     third_party_settings: {  }
     region: content
   name:
     type: string_textfield
-    weight: 3
+    weight: 1
     settings:
       size: 60
       placeholder: ''
     third_party_settings: {  }
     region: content
-  path:
-    type: path
-    weight: 30
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
       display_label: true
-    weight: 100
+    weight: 3
     region: content
     third_party_settings: {  }
 hidden:
   created: true
+  path: true
   uid: true

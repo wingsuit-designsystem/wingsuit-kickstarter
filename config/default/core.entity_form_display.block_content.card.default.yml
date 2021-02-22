@@ -4,13 +4,15 @@ status: true
 dependencies:
   config:
     - block_content.type.card
-    - entity_browser.browser.image_browser
     - field.field.block_content.card.body
-    - field.field.block_content.card.field_image
+    - field.field.block_content.card.field_link
+    - field.field.block_content.card.field_media
     - field.field.block_content.card.field_preheadline
     - field.field.block_content.card.field_title
   module:
-    - entity_browser
+    - link
+    - media_library
+    - media_library_edit
     - text
 id: block_content.card.default
 targetEntityType: block_content
@@ -27,20 +29,23 @@ content:
       show_summary: false
     third_party_settings: {  }
     region: content
-  field_image:
-    type: entity_browser_file
+  field_link:
+    weight: 26
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_media:
     weight: 0
     settings:
-      entity_browser: image_browser
-      field_widget_edit: true
-      field_widget_remove: true
-      view_mode: default
-      preview_image_style: thumbnail
-      open: true
-      field_widget_replace: false
-      selection_mode: selection_append
+      media_types: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
+    type: media_library_widget
     region: content
-    third_party_settings: {  }
   field_preheadline:
     weight: 1
     settings:

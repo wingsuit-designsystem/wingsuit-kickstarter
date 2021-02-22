@@ -1,0 +1,11 @@
+uuid: a65e642b-193d-425b-996c-75394c21364e
+langcode: en
+status: true
+dependencies: {  }
+id: inline_blockcard
+block_id: 'inline_block:card'
+category: blocks
+label: Card
+weight: 0
+image_path: modules/custom/wingsuit_layout/layout_builder_browser/card.svg
+image_alt: ''
