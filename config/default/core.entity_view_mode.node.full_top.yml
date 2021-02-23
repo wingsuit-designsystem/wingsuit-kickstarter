@@ -1,0 +1,14 @@
+uuid: 62fae1d1-5dc9-4721-84e9-124cd295407a
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - node
+third_party_settings:
+  lightning_core:
+    description: ''
+id: node.full_top
+label: 'Full Top'
+targetEntityType: node
+cache: true
