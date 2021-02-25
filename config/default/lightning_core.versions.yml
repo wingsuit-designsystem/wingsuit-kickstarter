@@ -122,6 +122,7 @@ taxonomy: 9.0.6
 text: 9.0.6
 token: 1.7.0
 toolbar: 9.0.6
+twig_tweak: 3.0.0
 ui_patterns: 1.2.0
 ui_patterns_extends: 0.0.0
 ui_patterns_field_formatters: 1.2.0

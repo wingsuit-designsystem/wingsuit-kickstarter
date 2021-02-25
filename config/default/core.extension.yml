@@ -115,6 +115,7 @@ module:
   text: 0
   token: 0
   toolbar: 0
+  twig_tweak: 0
   ui_patterns: 0
   ui_patterns_extends: 0
   ui_patterns_field_formatters: 0
