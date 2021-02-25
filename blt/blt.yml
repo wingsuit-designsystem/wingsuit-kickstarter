@@ -23,5 +23,5 @@ command-hooks:
 validate:
   twig:
     filters: [asset]
-    functions: [uuid, asset, pattern, pattern_preview, pattern_configuration]
+    functions: [uuid, asset, pattern, pattern_preview, pattern_configuration, drupal_entity]
 
