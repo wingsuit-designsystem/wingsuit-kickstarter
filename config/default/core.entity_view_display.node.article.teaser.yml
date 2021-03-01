@@ -1,0 +1,40 @@
+uuid: bddcc270-5a76-4604-abc2-7422c3fde9b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.article.body
+    - field.field.node.article.field_media
+    - field.field.node.article.field_meta_tag
+    - field.field.node.article.field_related
+    - field.field.node.article.field_seo_title
+    - node.type.article
+  module:
+    - text
+    - user
+id: node.article.teaser
+targetEntityType: node
+bundle: article
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  content_moderation_control: true
+  field_media: true
+  field_meta_tag: true
+  field_related: true
+  field_seo_title: true
+  search_api_excerpt: true

@@ -39,6 +39,7 @@ field_settings:
         anonymous: anonymous
       view_mode:
         'entity:node':
+          article: default
           landing_page: full
           page: default
   status:
@@ -156,6 +157,7 @@ processor_settings:
       preprocess_index: -6
       preprocess_query: -5
     all_fields: false
+    ignored: ._-
   transliteration:
     fields:
       - label
