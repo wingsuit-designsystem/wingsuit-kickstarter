@@ -8,6 +8,8 @@ dependencies:
     - field.field.node.article.field_meta_tag
     - field.field.node.article.field_related
     - field.field.node.article.field_seo_title
+    - field.field.node.article.layout_builder__layout
+    - field.field.node.article.layout_builder__translation
     - node.type.article
   module:
     - layout_builder
@@ -107,4 +109,6 @@ content:
     third_party_settings: {  }
 hidden:
   content_moderation_control: true
+  layout_builder__layout: true
+  layout_builder__translation: true
   search_api_excerpt: true

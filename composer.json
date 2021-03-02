@@ -34,7 +34,8 @@
         "drupal/inline_block_title_automatic": "^1.0@alpha",
         "drupal/ui_patterns_extends": "1.0.x-dev",
         "drupal/colorwidget": "1.0.x-dev",
-        "drupal/twig_tweak": "^3.0"
+        "drupal/twig_tweak": "^3.0",
+        "drupal/layout_builder_st": "^1.0@alpha"
     },
     "require-dev": {
         "drush/drush": ">=9.7"
