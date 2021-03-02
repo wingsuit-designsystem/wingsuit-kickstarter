@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.article.field_related
     - field.field.node.article.field_seo_title
     - field.field.node.article.layout_builder__layout
+    - field.field.node.article.layout_builder__translation
     - node.type.article
     - workflows.workflow.editorial
   module:
@@ -128,3 +129,4 @@ content:
     third_party_settings: {  }
 hidden:
   layout_builder__layout: true
+  layout_builder__translation: true

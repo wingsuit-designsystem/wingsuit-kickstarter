@@ -47,6 +47,7 @@ layout_builder: 9.0.6
 layout_builder_browser: 1.1.0
 layout_builder_restrictions: 2.7.0
 layout_builder_save_and_edit: 1.0.0
+layout_builder_st: 1.0.0-alpha2
 layout_builder_styles: 1.0.0-beta2
 layout_discovery: 9.0.6
 layout_library: 1.0.0-beta2

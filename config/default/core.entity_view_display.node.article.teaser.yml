@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.article.field_related
     - field.field.node.article.field_seo_title
     - field.field.node.article.layout_builder__layout
+    - field.field.node.article.layout_builder__translation
     - node.type.article
   module:
     - text
@@ -39,4 +40,5 @@ hidden:
   field_related: true
   field_seo_title: true
   layout_builder__layout: true
+  layout_builder__translation: true
   search_api_excerpt: true

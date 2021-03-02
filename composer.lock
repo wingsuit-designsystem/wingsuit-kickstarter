@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f09f47c583370176c9dd38585f56c1a0",
+    "content-hash": "bdedc1d8a4bea68d992112cedfc61568",
     "packages": [
         {
             "name": "acquia/blt",
@@ -239,10 +239,15 @@
                 },
                 "patches": {
                     "drupal/core": {
+                        "Callers of LayoutEntityHelperTrait::getEntitySections() do not account for the view mode": "https://www.drupal.org/files/issues/2020-08-27/3008924-rerolled-17.patch",
                         "2869592 - Disabled update module shouldn't produce a status report warning": "https://www.drupal.org/files/issues/2020-02-07/2869592-remove-update-warning-34.patch",
                         "[subprofile support] 1356276 - Allow profiles to define a base/parent profile and load them in the correct order / 2914389 - Allow profiles to exclude dependencies of their parent": "https://www.drupal.org/files/issues/2020-12-15/3143958-6-subprofile-support-9.1.x.patch",
                         "REMOVE: 2031261 - Fix SQLite variable limit": "https://www.drupal.org/files/issues/2020-04-01/2031261-118.patch",
-                        "REMOVE: Allow installation profile to be changed from Lightning during config sync": "https://www.drupal.org/files/issues/2021-01-08/3143958-10-change-profile-config-sync-9.1.x.patch"
+                        "REMOVE: Allow installation profile to be changed from Lightning during config sync": "https://www.drupal.org/files/issues/2021-01-08/3143958-10-change-profile-config-sync-9.1.x.patch",
+                        "New non translatable field on translatable content throws error": "https://www.drupal.org/files/issues/2021-02-10/3025039_42.patch"
+                    },
+                    "drupal/layout_builder_st": {
+                        "Argument 1 passed to Drupal\\layout_builder_st\\EventSubscriber\\ComponentPluginTranslate::isTranslation() must implement interface Drupal\\layout_builder\\SectionStorageInterface, null given": "https://www.drupal.org/files/issues/2019-07-24/isTranslation-null-given.patch"
                     }
                 },
                 "patches-ignore": {
@@ -14273,7 +14278,8 @@
         "drupal/gin_lb": 20,
         "drupal/inline_block_title_automatic": 15,
         "drupal/ui_patterns_extends": 20,
-        "drupal/colorwidget": 20
+        "drupal/colorwidget": 20,
+        "drupal/layout_builder_st": 15
     },
     "prefer-stable": true,
     "prefer-lowest": false,
