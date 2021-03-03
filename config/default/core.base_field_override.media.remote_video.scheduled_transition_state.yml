@@ -1,0 +1,18 @@
+uuid: 1e3ec62b-0c08-41b5-b122-f8a7dd99f990
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.remote_video
+id: media.remote_video.scheduled_transition_state
+field_name: scheduled_transition_state
+entity_type: media
+bundle: remote_video
+label: 'Scheduled transition state'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,22 @@
+label: Editorial
+type_settings:
+  states:
+    archived:
+      label: Archiviert
+    draft:
+      label: Entwurf
+    published:
+      label: Veröffentlicht
+    review:
+      label: 'In Prüfung'
+  transitions:
+    archive:
+      label: Archivieren
+    archived_published:
+      label: 'Aus Archiv wiederherstellen'
+    create_new_draft:
+      label: 'Neuen Entwurf erstellen'
+    publish:
+      label: Veröffentlichen
+    review:
+      label: 'Zur Überprüfung einreichen'

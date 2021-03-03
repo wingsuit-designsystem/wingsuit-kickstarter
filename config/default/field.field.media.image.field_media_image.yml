@@ -6,7 +6,14 @@ dependencies:
     - field.storage.media.field_media_image
     - media.type.image
   module:
+    - content_translation
     - image
+third_party_settings:
+  content_translation:
+    translation_sync:
+      alt: alt
+      title: title
+      file: '0'
 _core:
   default_config_hash: GFzC4v6vIHe68XgjDLAbqzQohU4q3ITZpHrNqJSNNUY
 id: media.image.field_media_image
@@ -16,7 +23,7 @@ bundle: image
 label: Image
 description: ''
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

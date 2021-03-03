@@ -14,3 +14,4 @@ permissions:
   - 'delete media'
   - 'dropzone upload files'
   - 'update media'
+  - 'view the administration theme'

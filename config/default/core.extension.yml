@@ -10,6 +10,7 @@ module:
   colorwidget: 0
   components: 0
   config: 0
+  config_translation: 0
   conflict: 0
   consumers: 0
   contact: 0
@@ -43,6 +44,7 @@ module:
   inline_block_title_automatic: 0
   inline_entity_form: 0
   jsonapi: 0
+  language: 0
   layout_builder: 0
   layout_builder_browser: 0
   layout_builder_restrictions: 0
@@ -73,6 +75,7 @@ module:
   lightning_search: 0
   lightning_workflow: 0
   link: 0
+  locale: 0
   media: 0
   media_entity_instagram: 0
   media_entity_twitter: 0
@@ -130,6 +133,7 @@ module:
   wingsuit_layout: 0
   workflows: 0
   pathauto: 1
+  content_translation: 10
   views: 10
   lightning: 1000
 theme:

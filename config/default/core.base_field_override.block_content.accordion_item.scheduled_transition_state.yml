@@ -1,0 +1,18 @@
+uuid: 42f00b13-d232-45f8-8e16-4901cf3d7ee1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.accordion_item
+id: block_content.accordion_item.scheduled_transition_state
+field_name: scheduled_transition_state
+entity_type: block_content
+bundle: accordion_item
+label: 'Scheduled transition state'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

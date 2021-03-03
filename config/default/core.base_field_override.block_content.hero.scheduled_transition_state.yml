@@ -1,0 +1,18 @@
+uuid: 4edebb4c-00ad-4fa6-ad6a-7e2cf64ff7e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero
+id: block_content.hero.scheduled_transition_state
+field_name: scheduled_transition_state
+entity_type: block_content
+bundle: hero
+label: 'Scheduled transition state'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
