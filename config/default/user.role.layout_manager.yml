@@ -9,5 +9,15 @@ label: 'Layout manager'
 weight: 2
 is_admin: false
 permissions:
+  - 'administer blocks'
   - 'administer node display'
-  - 'configure any layout'
+  - 'configure editable article node layout overrides'
+  - 'configure editable landing_page node layout overrides'
+  - 'create and edit custom blocks'
+  - 'create content translations'
+  - 'delete content translations'
+  - 'translate block_content'
+  - 'translate editable entities'
+  - 'translate interface'
+  - 'update content translations'
+  - 'view the administration theme'

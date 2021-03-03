@@ -190,4 +190,5 @@ content:
     type: list_default
     region: null
 hidden:
+  langcode: true
   search_api_excerpt: true

@@ -109,6 +109,7 @@ content:
     third_party_settings: {  }
 hidden:
   content_moderation_control: true
+  langcode: true
   layout_builder__layout: true
   layout_builder__translation: true
   search_api_excerpt: true

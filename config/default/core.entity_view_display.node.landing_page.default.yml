@@ -25,6 +25,7 @@ hidden:
   body: true
   content_moderation_control: true
   field_meta_tags: true
+  langcode: true
   layout_builder__layout: true
   layout_builder__translation: true
   layout_selection: true

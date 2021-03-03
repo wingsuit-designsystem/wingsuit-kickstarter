@@ -1,0 +1,22 @@
+uuid: 840d9eef-a6df-40db-9f20-cecdb8f87ea7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.card
+id: block_content.card.status
+field_name: status
+entity_type: block_content
+bundle: card
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
