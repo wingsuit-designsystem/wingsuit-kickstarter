@@ -37,10 +37,12 @@ content:
       view_mode: slideshow
       pattern: slider
       variants:
-        banner: top_left
         button: default
+        card: default
+        headline: xl
         image: image
         section: 1_column
+        slider: '1'
       pattern_mapping:
         accordion_item:
           settings:
@@ -67,6 +69,14 @@ content:
               destination: _hidden
               weight: '0'
         banner:
+          settings:
+            'field_wrapper:label':
+              destination: _hidden
+              weight: '0'
+            'field_wrapper:items':
+              destination: _hidden
+              weight: '0'
+        basic:
           settings:
             'field_wrapper:label':
               destination: _hidden
@@ -182,6 +192,9 @@ content:
         accordion_item:
           id:
             input: ''
+        banner:
+          position:
+            input: center_center
         button:
           size: small
           color: primary
@@ -190,14 +203,15 @@ content:
           icon: ''
           icon_alignment: right
           expanded: 0
+          round: 0
         card:
           alignment: left
           bg_color: ''
           url:
             input: ''
+          show_read_more: 0
         container:
           width: default
-          bg: ''
           padding_x: default
           padding_top: default
           padding_bottom: ''
@@ -206,8 +220,8 @@ content:
           gutter: default
           columns: '1'
         headline:
-          element: h1
-          size: ''
+          tag_name: ''
+          spacing_bottom: default
         image:
           url: ''
           background_style: ''
@@ -216,18 +230,28 @@ content:
             input: ''
           icon: right-arrow
         section:
-          padding_top: ''
-          padding_bottom: default
-          padding_x: default
-          gutter: default
-          width: default
-          columns: '1'
           columns_width_1: equal
           columns_width_2: equal
           columns_width_3: equal
           columns_width_4: equal
           columns_width_5: equal
-          bg: ''
+          gutter: default
+          columns: '1'
+          width: default
+          padding_x: default
+          padding_top: ''
+          padding_bottom: default
+          classes: ''
+          display_header_region: 0
+        slider:
+          bullet_spacing: none
+          pagination_spacing: none
+          width: default
+          padding_x: default
+          padding_top: default
+          padding_bottom: ''
+          classes: ''
+          autoplay: 0
       link: false
     third_party_settings: {  }
     region: content

@@ -23,7 +23,7 @@ dependencies:
     - wingsuit
 third_party_settings:
   layout_builder:
-    allow_custom: false
+    allow_custom: true
     enabled: true
     sections:
       -
@@ -58,7 +58,9 @@ third_party_settings:
     entity_view_mode_restriction:
       whitelisted_blocks: {  }
       blacklisted_blocks: {  }
-      allowed_layouts: {  }
+      allowed_layouts:
+        - pattern_section
+        - pattern_slider
 id: node.article.full
 targetEntityType: node
 bundle: article
