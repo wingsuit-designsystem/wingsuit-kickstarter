@@ -1,0 +1,15 @@
+uuid: 2b0c4687-15ed-4056-aaf8-c1d15e130e01
+langcode: en
+status: true
+dependencies: {  }
+name: responsive_400w
+label: responsive_400w
+effects:
+  dbdd4c10-2990-493d-885a-673f9d9313dc:
+    uuid: dbdd4c10-2990-493d-885a-673f9d9313dc
+    id: image_scale
+    weight: null
+    data:
+      width: 400
+      height: null
+      upscale: true

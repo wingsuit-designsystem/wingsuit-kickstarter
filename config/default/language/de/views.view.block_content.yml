@@ -2,7 +2,6 @@ label: 'Bibliothek benutzerdefinierter Blöcke'
 description: 'Benutzerdefinierte Blöcke finden und verwalten.'
 display:
   default:
-    display_title: Master
     display_options:
       exposed_form:
         options:
@@ -23,10 +22,8 @@ display:
       fields:
         info:
           label: Blockbeschreibung
-          separator: ', '
         type:
           label: Blocktyp
-          separator: ', '
         changed:
           label: Aktualisiert
         operations:

@@ -1,0 +1,15 @@
+uuid: 75be8034-efc2-4367-86c2-04812b9d118e
+langcode: en
+status: true
+dependencies: {  }
+name: responsive_1900w
+label: responsive_1900w
+effects:
+  581eaafa-ff8d-4a84-b341-8c070cb526f2:
+    uuid: 581eaafa-ff8d-4a84-b341-8c070cb526f2
+    id: image_scale
+    weight: null
+    data:
+      width: 1900
+      height: null
+      upscale: true

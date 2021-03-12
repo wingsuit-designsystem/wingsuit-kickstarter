@@ -2,7 +2,6 @@ label: Glossar
 description: 'Gesamter Inhalt, alphabetisch'
 display:
   default:
-    display_title: Master
     display_options:
       exposed_form:
         options:
@@ -17,9 +16,6 @@ display:
             items_per_page_label: 'Elemente pro Seite'
             items_per_page_options_all_label: '- Alle -'
             offset_label: Versatz
-          tags:
-            previous: ‹‹
-            next: ››
       fields:
         title:
           label: Titel

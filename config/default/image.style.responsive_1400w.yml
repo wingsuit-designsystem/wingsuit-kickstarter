@@ -1,0 +1,15 @@
+uuid: d84f78e9-6d17-4709-a28f-564e4748e794
+langcode: en
+status: true
+dependencies: {  }
+name: responsive_1400w
+label: responsive_1400w
+effects:
+  0cbd88ea-2a82-4c10-8a4c-37c37878754b:
+    uuid: 0cbd88ea-2a82-4c10-8a4c-37c37878754b
+    id: image_scale
+    weight: null
+    data:
+      width: 1400
+      height: null
+      upscale: true

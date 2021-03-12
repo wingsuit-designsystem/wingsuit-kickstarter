@@ -2,7 +2,6 @@ label: Archiv
 description: 'Gesamter Inhalt, nach Monaten'
 display:
   default:
-    display_title: Master
     display_options:
       title: 'Monatliches Archiv'
       exposed_form:
@@ -18,17 +17,5 @@ display:
             items_per_page_label: 'Elemente pro Seite'
             items_per_page_options_all_label: '- Alle -'
             offset_label: Versatz
-          tags:
-            previous: ‹‹
-            next: ››
-      arguments:
-        created_year_month:
-          title: '{{ arguments.created_year_month }}'
-  block_1:
-    display_title: Block
-    display_options:
-      arguments:
-        created_year_month:
-          title: '{{ arguments.created_year_month }}'
   page_1:
     display_title: Seite

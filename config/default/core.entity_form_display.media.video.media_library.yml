@@ -36,6 +36,19 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  revision_log_message:
+    type: string_textarea
+    weight: 25
+    settings:
+      rows: 4
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
 hidden:
   created: true
   field_media_video_file: true

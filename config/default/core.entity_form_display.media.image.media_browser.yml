@@ -51,6 +51,14 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
+  revision_log_message:
+    type: string_textarea
+    weight: 25
+    settings:
+      rows: 4
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:
@@ -58,6 +66,11 @@ content:
     weight: 3
     region: content
     third_party_settings: {  }
+  translation:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
 hidden:
   created: true
   path: true

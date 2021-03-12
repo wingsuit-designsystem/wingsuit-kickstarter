@@ -1,0 +1,17 @@
+uuid: 5ca6d2f2-b885-4d39-87ff-203e9ebf30d8
+langcode: en
+status: true
+dependencies:
+  module:
+    - focal_point
+name: responsive_1_1_200w
+label: responsive_1_1_200w
+effects:
+  5ceeb557-28ba-4254-8e3c-aaa9458af572:
+    uuid: 5ceeb557-28ba-4254-8e3c-aaa9458af572
+    id: focal_point_scale_and_crop
+    weight: null
+    data:
+      width: 200
+      height: 200
+      crop_type: focal_point

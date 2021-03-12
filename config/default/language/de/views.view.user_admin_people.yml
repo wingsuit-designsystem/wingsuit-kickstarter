@@ -2,11 +2,9 @@ label: Benutzer
 description: 'Menschen finden und verwalten, die mit Ihrer Website interagieren.'
 display:
   default:
-    display_title: Master
     display_options:
       exposed_form:
         options:
-          submit_button: Filter
           reset_button_label: Zurücksetzen
           exposed_sorts_label: 'Sortieren nach'
           sort_asc_label: Aufsteigend
@@ -28,7 +26,6 @@ display:
         name:
           label: Benutzername
         status:
-          label: Status
           settings:
             format_custom_true: Aktiv
             format_custom_false: Gesperrt
@@ -40,15 +37,12 @@ display:
           label: 'Letzter Zugriff'
         operations:
           label: Aktionen
-        mail:
-          separator: ', '
       filters:
         combine:
           expose:
             label: 'Name oder E-Mail-Adresse enthält'
         status:
           group_info:
-            label: Status
             group_items:
               1:
                 title: Aktiv

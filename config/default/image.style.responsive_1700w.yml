@@ -1,0 +1,15 @@
+uuid: e39a837d-a014-4d74-9956-f65d490273f1
+langcode: en
+status: true
+dependencies: {  }
+name: responsive_1700w
+label: responsive_1700w
+effects:
+  fc4e9169-06e1-4717-9c39-8e5ff89eb952:
+    uuid: fc4e9169-06e1-4717-9c39-8e5ff89eb952
+    id: image_scale
+    weight: null
+    data:
+      width: 1700
+      height: null
+      upscale: true

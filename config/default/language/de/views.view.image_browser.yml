@@ -1,7 +1,6 @@
 label: Bild-Browser
 display:
   default:
-    display_title: Master
     display_options:
       exposed_form:
         options:
@@ -13,17 +12,12 @@ display:
       pager:
         options:
           tags:
-            previous: ‹‹
-            next: ››
             first: '« Anfang'
             last: 'Ende »'
           expose:
             items_per_page_label: 'Elemente pro Seite'
             items_per_page_options_all_label: '- Alle -'
             offset_label: Versatz
-      fields:
-        thumbnail__target_id:
-          separator: ', '
       filters:
         name:
           expose:

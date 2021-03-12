@@ -2,11 +2,9 @@ label: Dateien
 description: 'Dateien suchen und verwalten.'
 display:
   default:
-    display_title: Master
     display_options:
       exposed_form:
         options:
-          submit_button: Filter
           reset_button_label: Zurücksetzen
           exposed_sorts_label: 'Sortieren nach'
           sort_asc_label: Aufsteigend
@@ -21,17 +19,11 @@ display:
             items_per_page_options_all_label: '- Alle -'
             offset_label: Versatz
       fields:
-        fid:
-          label: Fid
-        filename:
-          label: Name
-          separator: ', '
         filemime:
           label: MIME-Typ
         filesize:
           label: Größe
         status:
-          label: Status
           settings:
             format_custom_false: Temporär
             format_custom_true: Dauerhaft
@@ -48,9 +40,6 @@ display:
         filemime:
           expose:
             label: MIME-Typ
-        status:
-          expose:
-            label: Status
       title: Dateien
       empty:
         area_text_custom:

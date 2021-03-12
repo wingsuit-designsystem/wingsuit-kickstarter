@@ -2,7 +2,6 @@ label: Kontaktnachrichten
 description: 'Nachrichten des Kontaktformulars anschauen und bearbeiten.'
 display:
   default:
-    display_title: Master
     display_options:
       exposed_form:
         options:
@@ -27,10 +26,8 @@ display:
           action_title: Auswahl
         subject:
           label: Betreff
-          separator: ', '
         name:
           label: 'Name des Absenders'
-          separator: ', '
         contact_form_label:
           label: Kontaktformular
         created:

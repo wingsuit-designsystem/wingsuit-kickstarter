@@ -24,6 +24,7 @@ module:
   diff: 0
   drimage: 0
   dropzonejs: 0
+  easy_responsive_images: 0
   editor: 0
   entity_block: 0
   entity_browser: 0
@@ -39,7 +40,6 @@ module:
   help: 0
   history: 0
   image: 0
-  image_style_generate: 0
   image_widget_crop: 0
   inline_block_title_automatic: 0
   inline_entity_form: 0
@@ -85,9 +85,6 @@ module:
   menu_link_content: 0
   menu_ui: 0
   metatag: 0
-  migrate: 0
-  migrate_plus: 0
-  migrate_tools: 0
   moderation_sidebar: 0
   node: 0
   openapi: 0
