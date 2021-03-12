@@ -75,6 +75,7 @@ module:
   lightning_search: 0
   lightning_workflow: 0
   link: 0
+  link_attributes: 0
   locale: 0
   media: 0
   media_entity_instagram: 0
@@ -126,9 +127,13 @@ module:
   update: 0
   user: 0
   views_ui: 0
+  webform: 0
+  webform_ui: 0
   wingsuit_companion: 0
   wingsuit_layout: 0
+  wingsuit_link_attributes: 0
   workflows: 0
+  ws_link_attributes: 0
   pathauto: 1
   content_translation: 10
   views: 10
