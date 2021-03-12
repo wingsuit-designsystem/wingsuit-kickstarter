@@ -1,0 +1,20 @@
+uuid: 2266b22b-a254-4efd-91f6-769a1c339882
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.video
+id: media.video.uid
+field_name: uid
+entity_type: media
+bundle: video
+label: 'Authored by'
+description: 'The user ID of the author.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: 'Drupal\media\Entity\Media::getDefaultEntityOwner'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

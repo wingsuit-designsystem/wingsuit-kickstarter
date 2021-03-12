@@ -1,0 +1,11 @@
+uuid: e73e6a75-3229-4507-b3b8-8817e14930b0
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_moderation
+id: content_moderation_state.content_moderation_state
+target_entity_type_id: content_moderation_state
+target_bundle: content_moderation_state
+default_langcode: site_default
+language_alterable: false

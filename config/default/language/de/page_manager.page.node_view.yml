@@ -1,0 +1,5 @@
+label: Beitragsansicht
+description: 'Wenn aktiviert, überschreibt dies das standardmäßige Drupal-Verhalten für die Anzeige von Inhalten bei <em>/node/{node}</em>. Wenn Sie Varianten hinzufügen, können Sie Auswahlkriterien wie Beitragstyp oder Sprache oder Benutzerzugriff verwenden, um verschiedene Ansichten von Inhalten bereitzustellen. Wird keine Variante ausgewählt, wird die standardmäßige Drupal-Inhaltsansicht verwendet. Diese Seite betrifft nur Inhalte, die als Seiten betrachtet werden, nicht aber Beiträge, die in Listen oder an anderen Orten angezeigt werden.'
+parameters:
+  node:
+    label: Beitrag

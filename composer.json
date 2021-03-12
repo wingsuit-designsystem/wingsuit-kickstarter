@@ -33,7 +33,9 @@
         "drupal/admin_toolbar": "^3.0",
         "drupal/inline_block_title_automatic": "^1.0@alpha",
         "drupal/ui_patterns_extends": "1.0.x-dev",
-        "drupal/colorwidget": "1.0.x-dev"
+        "drupal/colorwidget": "1.0.x-dev",
+        "drupal/twig_tweak": "^3.0",
+        "drupal/layout_builder_st": "^1.0@alpha"
     },
     "require-dev": {
         "drush/drush": ">=9.7"
@@ -57,7 +59,13 @@
                 "Improve StringItem::generateSampleValue()": "https://www.drupal.org/files/issues/2020-06-24/3091478-15.patch",
                 "Not all form elements can't use in vertical_tabs": "https://www.drupal.org/files/issues/2021-01-02/3122920_group_patch_5.patch",
                 "Custom blocks break layout builder module - Quick Edit could not associate the rendered entity field markup\nPrimary tabs\nView(active tab)\nEdit\n": "https://www.drupal.org/files/issues/2020-10-19/3072231-39-core-9-2-x.patch",
-                "PHP message: Error: Call to a member function getEntityTypeId() on null (Layout Builder)" : "https://www.drupal.org/files/issues/2020-08-05/3049332-inline-35.patch"
+                "PHP message: Error: Call to a member function getEntityTypeId() on null (Layout Builder)" : "https://www.drupal.org/files/issues/2020-08-05/3049332-inline-35.patch",
+                "Stream wrapper reference in JS library causes error in _locale_parse_js_file()": "https://www.drupal.org/files/issues/2020-05-08/2735717-28.patch",
+                "Callers of LayoutEntityHelperTrait::getEntitySections() do not account for the view mode": "https://www.drupal.org/files/issues/2020-08-27/3008924-rerolled-17.patch",
+                "New non translatable field on translatable content throws error": "https://www.drupal.org/files/issues/2021-02-10/3025039_42.patch"
+            },
+            "drupal/layout_builder_st": {
+                "Argument 1 passed to Drupal\\layout_builder_st\\EventSubscriber\\ComponentPluginTranslate::isTranslation() must implement interface Drupal\\layout_builder\\SectionStorageInterface, null given": "https://www.drupal.org/files/issues/2019-07-24/isTranslation-null-given.patch"
             },
             "drupal/colorwidget": {
                 "CSS Streamline": "https://git.drupalcode.org/project/colorwidget/-/merge_requests/2.patch",

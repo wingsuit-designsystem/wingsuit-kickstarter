@@ -1,0 +1,7 @@
+widgets:
+  44d52e51-9627-43b5-a637-3b0462041d1c:
+    label: Hochladen
+  e7f78bae-bc54-4234-9d09-945dd8fc0398:
+    settings:
+      submit_text: Auswählen
+    label: Bibliothek

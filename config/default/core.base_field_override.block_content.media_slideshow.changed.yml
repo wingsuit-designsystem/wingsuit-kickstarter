@@ -1,0 +1,18 @@
+uuid: c934440b-40c4-4ab5-a0d0-30a346109ae1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.media_slideshow
+id: block_content.media_slideshow.changed
+field_name: changed
+entity_type: block_content
+bundle: media_slideshow
+label: Changed
+description: 'The time that the custom block was last edited.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

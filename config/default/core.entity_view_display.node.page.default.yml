@@ -464,5 +464,6 @@ content:
     region: content
 hidden:
   content_moderation_control: true
+  langcode: true
   layout_selection: true
   search_api_excerpt: true

@@ -1,0 +1,18 @@
+uuid: c4380e4c-a0e2-49cb-8a20-b6fcde27c1ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.audio
+id: media.audio.scheduled_transition_state
+field_name: scheduled_transition_state
+entity_type: media
+bundle: audio
+label: 'Scheduled transition state'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

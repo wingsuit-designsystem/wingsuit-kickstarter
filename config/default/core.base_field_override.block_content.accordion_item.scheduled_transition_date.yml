@@ -1,0 +1,20 @@
+uuid: 345f1df6-4d09-4c6c-a56c-a4b63b8d2b15
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.accordion_item
+  module:
+    - datetime
+id: block_content.accordion_item.scheduled_transition_date
+field_name: scheduled_transition_date
+entity_type: block_content
+bundle: accordion_item
+label: 'Scheduled transition date'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
