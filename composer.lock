@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "50acf76990c2e14989270c7115ff24e3",
+    "content-hash": "07371499978fedb493f60f156883aae6",
     "packages": [
         {
             "name": "acquia/blt",
@@ -2503,7 +2503,8 @@
             "homepage": "https://www.drupal.org/project/colorwidget",
             "support": {
                 "source": "https://git.drupalcode.org/project/colorwidget"
-            }
+            },
+            "time": "2021-02-27T17:31:28+00:00"
         },
         {
             "name": "drupal/component_blocks",

@@ -21,21 +21,14 @@ content:
       rows: 9
       summary_rows: 3
       placeholder: ''
+      show_summary: false
     third_party_settings: {  }
     region: content
-  info:
-    type: string_textfield
-    weight: -5
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
+  translation:
+    weight: 1
     region: content
-  langcode:
-    type: language_select
-    weight: 2
-    region: content
-    settings:
-      include_locked: true
+    settings: {  }
     third_party_settings: {  }
-hidden: {  }
+hidden:
+  info: true
+  langcode: true

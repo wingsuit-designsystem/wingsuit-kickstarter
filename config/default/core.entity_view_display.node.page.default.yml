@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.page.body
     - field.field.node.page.field_meta_tags
+    - field.field.node.page.field_seo_title
     - field.field.node.page.layout_selection
     - node.type.page
   module:
@@ -426,6 +427,22 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 0
+          4536142f-f547-4610-af32-30002820c118:
+            uuid: 4536142f-f547-4610-af32-30002820c118
+            region: null
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:page:field_seo_title'
+              formatter:
+                label: above
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+                type: string
+            additional: {  }
+            weight: 0
         third_party_settings: {  }
     allow_custom: false
   layout_library:
@@ -457,6 +474,14 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
+  field_seo_title:
+    weight: 3
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: null
   links:
     weight: 1
     settings: {  }

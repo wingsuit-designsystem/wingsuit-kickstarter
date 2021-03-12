@@ -5,11 +5,10 @@ dependencies:
   config:
     - block_content.type.banner
     - field.field.block_content.banner.body
+    - field.field.block_content.banner.field_banner_position
     - field.field.block_content.banner.field_link
     - field.field.block_content.banner.field_media
-    - field.field.block_content.banner.field_summary
     - field.field.block_content.banner.field_title
-    - field.field.block_content.banner.field_variant
   module:
     - layout_builder
     - layout_builder_restrictions
@@ -31,10 +30,9 @@ third_party_settings:
           pattern:
             field_templates: default
             variant: ''
-            variant_token: '[block_content:field_variant:value]'
             settings:
-              position:
-                input: '[block_content:field_variant:value]'
+              position: ''
+              position_token: '[block_content:field_banner_position:value]'
         components:
           0eb6358e-b709-4d3a-8e71-69b38df9e9fc:
             uuid: 0eb6358e-b709-4d3a-8e71-69b38df9e9fc
@@ -71,21 +69,6 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
-            additional: {  }
-            weight: 0
-          91b01628-6f03-48d3-a79a-a949bf7f9b71:
-            uuid: 91b01628-6f03-48d3-a79a-a949bf7f9b71
-            region: null
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:block_content:banner:field_variant'
-              formatter:
-                label: above
-                settings: {  }
-                third_party_settings: {  }
-                type: list_default
             additional: {  }
             weight: 0
           dda9ee39-2ed4-4d9f-94a2-833a3d8892e4:
@@ -147,6 +130,21 @@ third_party_settings:
                 view_mode: view_mode
             additional: {  }
             weight: 0
+          212224c6-384e-4c9c-b3de-fc549fae7f29:
+            uuid: 212224c6-384e-4c9c-b3de-fc549fae7f29
+            region: null
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:block_content:banner:field_banner_position'
+              formatter:
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+                type: list_default
+            additional: {  }
+            weight: 2
         third_party_settings: {  }
   layout_library:
     enable: false
@@ -170,6 +168,13 @@ content:
     third_party_settings: {  }
     type: text_default
     region: content
+  field_banner_position:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: null
   field_link:
     weight: 3
     label: hidden
@@ -190,13 +195,6 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: null
-  field_summary:
-    weight: 2
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: basic_string
-    region: content
   field_title:
     weight: 1
     label: hidden
@@ -205,13 +203,6 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-  field_variant:
-    weight: 5
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: null
 hidden:
   langcode: true
   search_api_excerpt: true

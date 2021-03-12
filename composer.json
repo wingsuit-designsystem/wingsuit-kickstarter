@@ -68,10 +68,6 @@
             "drupal/layout_builder_st": {
                 "Argument 1 passed to Drupal\\layout_builder_st\\EventSubscriber\\ComponentPluginTranslate::isTranslation() must implement interface Drupal\\layout_builder\\SectionStorageInterface, null given": "https://www.drupal.org/files/issues/2019-07-24/isTranslation-null-given.patch"
             },
-            "drupal/colorwidget": {
-                "CSS Streamline": "https://git.drupalcode.org/project/colorwidget/-/merge_requests/2.patch",
-                "Horizontal": "https://git.drupalcode.org/project/colorwidget/-/merge_requests/3.patch"
-            },
             "drupal/ui_patterns": {
                 "Allow for Layout Builder sections to be given administrativ.": "https://patch-diff.githubusercontent.com/raw/nuvoleweb/ui_patterns/pull/278.patch",
                 "Add quick edit": "https://patch-diff.githubusercontent.com/raw/nuvoleweb/ui_patterns/pull/273.patch"

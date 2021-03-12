@@ -30,7 +30,7 @@ content:
     third_party_settings: {  }
     region: content
   field_link:
-    weight: 26
+    weight: 5
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -62,19 +62,11 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  info:
-    type: string_textfield
+  translation:
     weight: 4
     region: content
-    settings:
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-  langcode:
-    type: language_select
-    weight: 2
-    region: content
-    settings:
-      include_locked: true
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  info: true
+  langcode: true

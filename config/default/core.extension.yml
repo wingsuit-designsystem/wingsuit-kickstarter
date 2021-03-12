@@ -131,9 +131,7 @@ module:
   webform_ui: 0
   wingsuit_companion: 0
   wingsuit_layout: 0
-  wingsuit_link_attributes: 0
   workflows: 0
-  ws_link_attributes: 0
   pathauto: 1
   content_translation: 10
   views: 10

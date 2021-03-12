@@ -61,20 +61,12 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  info:
-    type: string_textfield
+  translation:
     weight: 5
     region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  langcode:
-    type: language_select
-    weight: 2
-    region: content
-    settings:
-      include_locked: true
+    settings: {  }
     third_party_settings: {  }
 hidden:
   body: true
+  info: true
+  langcode: true

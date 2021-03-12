@@ -1,14 +1,14 @@
-uuid: 2e641f69-ab31-4048-9faa-bc0c1e9738a6
+uuid: 43c6e276-31ee-44f5-8f5b-871929954e15
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.node.field_seo_title
-    - node.type.article
-id: node.article.field_seo_title
+    - node.type.landing_page
+id: node.landing_page.field_seo_title
 field_name: field_seo_title
 entity_type: node
-bundle: article
+bundle: landing_page
 label: URL-Title
 description: ''
 required: true

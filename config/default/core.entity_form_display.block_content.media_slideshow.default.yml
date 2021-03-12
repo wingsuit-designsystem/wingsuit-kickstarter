@@ -21,19 +21,11 @@ content:
       media_types: {  }
     region: content
     third_party_settings: {  }
-  info:
-    type: string_textfield
+  translation:
     weight: 1
     region: content
-    settings:
-      size: 60
-      placeholder: ''
+    settings: {  }
     third_party_settings: {  }
-  langcode:
-    type: language_select
-    weight: 2
-    region: content
-    settings:
-      include_locked: true
-    third_party_settings: {  }
-hidden: {  }
+hidden:
+  info: true
+  langcode: true

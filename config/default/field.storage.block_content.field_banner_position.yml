@@ -1,12 +1,12 @@
-uuid: dd75db66-19c4-4d6f-9d6e-cda8e68273af
+uuid: 12cf07a0-4cad-41cd-ba85-812e0c59a10e
 langcode: en
 status: true
 dependencies:
   module:
     - block_content
     - options
-id: block_content.field_variant
-field_name: field_variant
+id: block_content.field_banner_position
+field_name: field_banner_position
 entity_type: block_content
 type: list_string
 settings:

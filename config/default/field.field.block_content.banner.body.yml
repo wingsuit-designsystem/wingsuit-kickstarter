@@ -11,7 +11,7 @@ id: block_content.banner.body
 field_name: body
 entity_type: block_content
 bundle: banner
-label: Body
+label: Text
 description: ''
 required: false
 translatable: true

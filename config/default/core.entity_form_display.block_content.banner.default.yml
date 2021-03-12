@@ -5,11 +5,10 @@ dependencies:
   config:
     - block_content.type.banner
     - field.field.block_content.banner.body
+    - field.field.block_content.banner.field_banner_position
     - field.field.block_content.banner.field_link
     - field.field.block_content.banner.field_media
-    - field.field.block_content.banner.field_summary
     - field.field.block_content.banner.field_title
-    - field.field.block_content.banner.field_variant
   module:
     - link_attributes
     - media_library
@@ -32,9 +31,15 @@ content:
     third_party_settings: {  }
     type: text_textarea_with_summary
     region: content
+  field_banner_position:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_link:
     type: link_attributes
-    weight: 6
+    weight: 4
     region: content
     settings:
       placeholder_url: ''
@@ -69,31 +74,11 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
-  field_variant:
-    weight: 5
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
-    region: content
-  info:
-    type: string_textfield
-    weight: 4
-    region: content
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-  langcode:
-    type: language_select
-    weight: 2
-    region: content
-    settings:
-      include_locked: true
-    third_party_settings: {  }
   translation:
-    weight: 7
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_summary: true
+  info: true
+  langcode: true

@@ -1,20 +1,20 @@
-uuid: 85d7152c-9e76-44e7-9c85-bca68cb1c551
+uuid: 5fa2920d-92c7-4a85-b650-459a51a6497a
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.banner
-    - field.storage.block_content.field_variant
+    - field.storage.block_content.field_banner_position
   module:
     - options
-id: block_content.banner.field_variant
-field_name: field_variant
+id: block_content.banner.field_banner_position
+field_name: field_banner_position
 entity_type: block_content
 bundle: banner
-label: Variant
+label: Position
 description: ''
 required: true
-translatable: true
+translatable: false
 default_value:
   -
     value: center_center
