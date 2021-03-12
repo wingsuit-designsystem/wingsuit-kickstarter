@@ -11,6 +11,7 @@ dependencies:
     - field.field.block_content.banner.field_title
     - field.field.block_content.banner.field_variant
   module:
+    - link_attributes
     - media_library
     - media_library_edit
     - text
@@ -22,7 +23,7 @@ bundle: banner
 mode: default
 content:
   body:
-    weight: 2
+    weight: 3
     settings:
       rows: 9
       summary_rows: 3
@@ -31,6 +32,26 @@ content:
     third_party_settings: {  }
     type: text_textarea_with_summary
     region: content
+  field_link:
+    type: link_attributes
+    weight: 6
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        variant: true
+        color: true
+        icon: true
+        id: false
+        name: false
+        target: false
+        rel: false
+        class: false
+        accesskey: false
+        aria-label: false
+        title: false
+    third_party_settings: {  }
   field_media:
     weight: 0
     settings:
@@ -49,14 +70,14 @@ content:
     type: string_textfield
     region: content
   field_variant:
-    weight: 4
+    weight: 5
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   info:
     type: string_textfield
-    weight: 3
+    weight: 4
     region: content
     settings:
       size: 60
@@ -69,6 +90,10 @@ content:
     settings:
       include_locked: true
     third_party_settings: {  }
+  translation:
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
-  field_link: true
   field_summary: true
