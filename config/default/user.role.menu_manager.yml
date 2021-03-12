@@ -1,0 +1,17 @@
+uuid: 1c92556a-647c-40a8-8a93-5df2da9533df
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+third_party_settings:
+  lightning_core:
+    description: ''
+id: menu_manager
+label: 'Menu manager'
+weight: 9
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'administer menu'
+  - 'view the administration theme'

@@ -12,3 +12,4 @@ permissions:
   - 'access media overview'
   - 'administer media'
   - 'administer media bundles'
+  - 'view the administration theme'

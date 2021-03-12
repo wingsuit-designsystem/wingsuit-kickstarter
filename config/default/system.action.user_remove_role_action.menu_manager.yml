@@ -1,0 +1,14 @@
+uuid: 57f2ee1e-bc75-47c5-b22f-05c4cf9b367b
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.menu_manager
+  module:
+    - user
+id: user_remove_role_action.menu_manager
+label: 'Remove the Menu manager role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: menu_manager

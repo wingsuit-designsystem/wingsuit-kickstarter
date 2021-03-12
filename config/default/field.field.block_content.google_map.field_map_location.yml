@@ -14,7 +14,7 @@ bundle: google_map
 label: Location
 description: 'Enter a location that is recognizable by Google Maps, e.g. "33 School St., Wayland MA" or "Union Station, Worcester MA".'
 required: true
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

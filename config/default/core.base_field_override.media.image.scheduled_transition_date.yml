@@ -1,0 +1,20 @@
+uuid: b922dbc4-969c-4f26-8b90-3e18e36ea070
+langcode: en
+status: true
+dependencies:
+  config:
+    - media.type.image
+  module:
+    - datetime
+id: media.image.scheduled_transition_date
+field_name: scheduled_transition_date
+entity_type: media
+bundle: image
+label: 'Scheduled transition date'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

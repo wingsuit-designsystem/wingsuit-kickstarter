@@ -1,0 +1,4 @@
+label: Veröffentlichungsstatus
+settings:
+  on_label: An
+  off_label: Aus

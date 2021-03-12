@@ -26,3 +26,16 @@ function wingsuit_layout_form_alter(&$form, FormStateInterface $form_state, $for
     $form['actions']['layout_builder_save_and_edit_layout']['#value'] = t('Save');
   }
 }
+
+/**
+ * Fix Non-translatable fields can only be changed when updating the original language.
+ *
+ * Implements hook_entity_type_alter().
+ */
+function wingsuit_layout_entity_type_alter(array &$entity_types) {
+  foreach ($entity_types as $entity_type) {
+    $constraints = $entity_type->getConstraints();
+    unset($constraints['EntityUntranslatableFields']);
+    $entity_type->setConstraints($constraints);
+  }
+}
