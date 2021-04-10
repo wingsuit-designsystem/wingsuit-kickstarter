@@ -1,0 +1,24 @@
+# German translation of Swagger UI for OpenAPI UI (8.x-1.0-rc4)
+# Copyright (c) 2020 by the German translation team
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Swagger UI for OpenAPI UI (8.x-1.0-rc4)\n"
+"POT-Creation-Date: 2020-08-26 17:46+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Language-Team: German\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+msgid "OpenAPI"
+msgstr "OpenAPI"
+msgid "Swagger UI"
+msgstr "Swagger UI"
+msgid "Swagger UI for OpenAPI UI"
+msgstr "Swagger UI for OpenAPI UI"
+msgid "Provides display of OpenAPI docs using the Swagger UI plugin."
+msgstr ""
+"Ermöglicht die Anzeige der OpenAPI-Dokumente unter Verwendung des "
+"Swagger UI-Plugins."

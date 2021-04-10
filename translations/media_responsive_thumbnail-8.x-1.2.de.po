@@ -1,0 +1,24 @@
+# German translation of Media Responsive Thumbnail (8.x-1.2)
+# Copyright (c) 2020 by the German translation team
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Media Responsive Thumbnail (8.x-1.2)\n"
+"POT-Creation-Date: 2020-06-17 14:46+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Language-Team: German\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+msgid "Content"
+msgstr "Inhalt"
+msgid "Media"
+msgstr "Medien"
+msgid "Linked to content"
+msgstr "Verlinkt mit Inhalt"
+msgid "Linked to media item"
+msgstr "Auf Medium verlinkt"
+msgid "Media item"
+msgstr "Medium"

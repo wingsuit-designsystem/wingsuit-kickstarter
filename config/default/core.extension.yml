@@ -37,10 +37,13 @@ module:
   focal_point: 0
   gin_lb: 0
   gin_toolbar: 0
+  google_tag: 0
   help: 0
   history: 0
   image: 0
   image_widget_crop: 0
+  imageapi_optimize: 0
+  imageapi_optimize_webp: 0
   inline_block_title_automatic: 0
   inline_entity_form: 0
   jsonapi: 0
@@ -102,6 +105,7 @@ module:
   rdf: 0
   redirect: 0
   responsive_image: 0
+  schema_metatag: 0
   schemata: 0
   schemata_json_schema: 0
   search_api: 0
@@ -117,6 +121,7 @@ module:
   text: 0
   token: 0
   toolbar: 0
+  toolbar_anti_flicker: 0
   twig_tweak: 0
   ui_patterns: 0
   ui_patterns_extends: 0

@@ -36,7 +36,11 @@
         "drupal/field_group": "^3.1",
         "drupal/easy_responsive_images": "^1.0",
         "drupal/webform": "^6.0",
-        "drupal/link_attributes": "^1.11"
+        "drupal/link_attributes": "^1.11",
+        "drupal/imageapi_optimize_webp": "^2.0@beta",
+        "drupal/google_tag": "^1.4",
+        "drupal/toolbar_anti_flicker": "^9.3",
+        "drupal/schema_metatag": "^2.1"
     },
     "require-dev": {
         "drush/drush": ">=9.7"
@@ -49,11 +53,18 @@
             "drupal/lightning_layout": {
                 "Call to a member function uuid() on null when Layout Builder renders a Placeholder": "https://www.drupal.org/files/issues/2020-04-15/light_layout.patch"
             },
+            "drupal/imageapi_optimize_webp": {
+                "Error: Call to undefined method Drupal\\imagemagick\\Plugin\\ImageToolkit\\ImagemagickToolkit::getResource()": "https://www.drupal.org/files/issues/2020-07-20/imageapi_optimize_webp-imagemagick-toolkit-3160399-4.patch",
+                "Drupal 9 compatibility for submodule(imageapi_optimize_webp_responsive)": "https://www.drupal.org/files/issues/2020-06-23/3153942-2.patch"
+            },
             "drupal/ui_patterns_field_formatters": {
                 "Text is not processed.": "https://git.drupalcode.org/project/ui_patterns_field_formatters/-/merge_requests/1.diff"
             },
             "drupal/gin_toolbar": {
                 "Add option for node local tasks in toolbar": "https://git.drupalcode.org/project/gin_toolbar/-/merge_requests/2.patch"
+            },
+            "drupal/schema_metatag": {
+                "Illegal offset type in Drupal\\schema_metatag\\SchemaMetatagClient->objectInfo()\n": "https://www.drupal.org/files/issues/2020-09-30/schema_metatag-undefined_index_objectinfo-3174103-2.patch"
             },
             "drupal/core": {
                 "Break long text strings in layout edit": "https://www.drupal.org/files/issues/2020-12-22/3016507-50.patch",
@@ -67,6 +78,11 @@
             },
             "drupal/layout_builder_st": {
                 "Argument 1 passed to Drupal\\layout_builder_st\\EventSubscriber\\ComponentPluginTranslate::isTranslation() must implement interface Drupal\\layout_builder\\SectionStorageInterface, null given": "https://www.drupal.org/files/issues/2019-07-24/isTranslation-null-given.patch"
+            },
+            "drupal/drimage": {
+                "Stage file proxy": "https://git.drupalcode.org/project/drimage/-/merge_requests/1.patch",
+                "webp support for webp": "https://git.drupalcode.org/project/drimage/-/merge_requests/2.patch?X",
+                "embeds in wysiwyg not displaying media": "https://www.drupal.org/files/issues/2020-09-06/3079190-8--show_img_in_media_embed.patch?X"
             },
             "drupal/ui_patterns": {
                 "Allow for Layout Builder sections to be given administrativ.": "https://patch-diff.githubusercontent.com/raw/nuvoleweb/ui_patterns/pull/278.patch",

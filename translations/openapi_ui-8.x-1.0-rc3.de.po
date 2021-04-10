@@ -1,0 +1,26 @@
+# German translation of OpenAPI UI (8.x-1.0-rc3)
+# Copyright (c) 2020 by the German translation team
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenAPI UI (8.x-1.0-rc3)\n"
+"POT-Creation-Date: 2020-08-26 17:46+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Language-Team: German\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+msgid "OpenAPI"
+msgstr "OpenAPI"
+msgid "OpenAPI UI"
+msgstr "OpenAPI UI"
+msgid "Provides plugin system for OpenAPI/Swagger Interface libraries."
+msgstr ""
+"Stellt ein Plugin-System für OpenAPI/Swagger "
+"Schnittstellenbibliotheken zur Verfügung."
+msgid "Unknown OpenAPI UI plugin being used."
+msgstr "Unbekanntes OpenAPI UI Plugin wird verwendet."
+msgid "Invalid schema source provided."
+msgstr "Ungültige Schemaquelle vorhanden."

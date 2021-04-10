@@ -1,6 +1,9 @@
 threshold: 200
 ratio_distortion: 60
 upscale: 320
-downscale: 3840
+downscale: 2840
 multiplier: 1
-lazy_offset: 100
+lazy_offset: 200
+enable_webp_support: true
+fallback_style: ''
+proxy_cache_maximum_age: '86400'

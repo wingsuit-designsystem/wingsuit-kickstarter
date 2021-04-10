@@ -1,5 +1,5 @@
 cache_strings: true
-translate_english: false
+translate_english: true
 javascript:
   directory: languages
 translation:
@@ -9,7 +9,7 @@ translation:
   overwrite_customized: false
   overwrite_not_customized: true
   update_interval_days: 0
-  path: sites/default/files/translations
+  path: ../translations
   import_enabled: true
 _core:
   default_config_hash: cSdYeE-_AQETCNZnl8BMFS9-sVn5--VzAYILkpPBUbM
