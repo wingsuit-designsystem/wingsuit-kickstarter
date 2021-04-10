@@ -1,0 +1,104 @@
+uuid: ec0b63de-4bad-476f-99f4-7421e99dcfbb
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.buttons
+    - field.field.block_content.buttons.field_buttons
+    - field.field.block_content.buttons.field_buttons_align
+  module:
+    - layout_builder
+    - layout_library
+    - link
+    - options
+  theme:
+    - wingsuit
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: pattern_button_group
+        layout_settings:
+          label: ''
+          pattern:
+            field_templates: default
+            variant: ''
+            settings:
+              align: center
+              align_token: '[block_content:field_buttons_align:value]'
+        components:
+          80a13c8c-9f63-4199-b717-dbf90c462964:
+            uuid: 80a13c8c-9f63-4199-b717-dbf90c462964
+            region: null
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:block_content:buttons:field_buttons'
+              formatter:
+                label: above
+                settings:
+                  trim_length: 80
+                  url_only: false
+                  url_plain: false
+                  rel: ''
+                  target: ''
+                third_party_settings: {  }
+                type: link
+            additional: {  }
+            weight: 0
+          88e8c736-66bf-4de9-b8f7-71cd93e56f89:
+            uuid: 88e8c736-66bf-4de9-b8f7-71cd93e56f89
+            region: buttons
+            configuration:
+              id: 'field_block:block_content:buttons:field_buttons'
+              label: Buttons
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: link_separate
+                settings:
+                  trim_length: 200
+                  url_only: false
+                  url_plain: false
+                  rel: '0'
+                  target: '0'
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+  layout_library:
+    enable: false
+id: block_content.buttons.default
+targetEntityType: block_content
+bundle: buttons
+mode: default
+content:
+  field_buttons:
+    weight: 2
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: null
+  field_buttons_align:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden:
+  langcode: true
+  search_api_excerpt: true

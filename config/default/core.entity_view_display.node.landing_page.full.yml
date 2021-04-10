@@ -52,22 +52,9 @@ third_party_settings:
     entity_view_mode_restriction:
       whitelisted_blocks:
         'Chaos Tools': {  }
-        'Content fields': {  }
         'Entity Browser': {  }
         Forms: {  }
         Help: {  }
-        'Inline blocks':
-          - 'inline_block:accordion_item'
-          - 'inline_block:banner'
-          - 'inline_block:card'
-          - 'inline_block:hero'
-          - 'inline_block:media_slideshow'
-          - 'inline_block:text'
-        'Lists (Views)': {  }
-        Menus: {  }
-        System: {  }
-        User: {  }
-        Views: {  }
         core: {  }
       allowed_layouts:
         - pattern_section

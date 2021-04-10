@@ -1,0 +1,11 @@
+uuid: 705683e0-e1da-4c92-bfed-fd557659fa1c
+langcode: en
+status: true
+dependencies: {  }
+id: buttons
+block_id: 'inline_block:buttons'
+category: blocks
+label: Buttons
+weight: -3
+image_path: modules/custom/wingsuit_layout/layout_builder_browser/buttons.svg
+image_alt: ''

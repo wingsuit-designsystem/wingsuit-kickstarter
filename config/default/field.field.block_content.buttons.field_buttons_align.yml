@@ -1,0 +1,26 @@
+uuid: 59d2a5b1-bb13-4cf2-8a28-f4cb4d67f8e2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.buttons
+    - field.storage.block_content.field_buttons_align
+  module:
+    - options
+third_party_settings:
+  tmgmt_content:
+    excluded: false
+id: block_content.buttons.field_buttons_align
+field_name: field_buttons_align
+entity_type: block_content
+bundle: buttons
+label: Align
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: center
+default_value_callback: ''
+settings: {  }
+field_type: list_string

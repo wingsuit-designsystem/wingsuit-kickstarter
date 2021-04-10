@@ -17,6 +17,10 @@ function wingsuit_layout_ui_patterns_layouts_display_settings_form_alter(&$form,
   }
 }
 
+function wingsuit_layout_entity_base_field_info(\Drupal\Core\Entity\EntityTypeInterface $entity_type) {
+  $definitions = \Drupal\ui_patterns\UiPatterns::getPatternDefinitions();
+}
+
 /**
  * Implements hook_form_alter().
  */

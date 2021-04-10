@@ -1,0 +1,11 @@
+uuid: ab52a7e1-4ab9-4433-b8b2-2ae46a6b70de
+langcode: en
+status: true
+dependencies: {  }
+id: webform
+block_id: webform_block
+category: forms
+label: Webform
+weight: -1
+image_path: modules/custom/wingsuit_layout/layout_builder_browser/forms.svg
+image_alt: ''

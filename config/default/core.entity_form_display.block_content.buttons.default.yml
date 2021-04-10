@@ -1,0 +1,52 @@
+uuid: 85a3c8a8-ea64-47a9-a37c-67453729f5b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.buttons
+    - field.field.block_content.buttons.field_buttons
+    - field.field.block_content.buttons.field_buttons_align
+  module:
+    - link_attributes
+id: block_content.buttons.default
+targetEntityType: block_content
+bundle: buttons
+mode: default
+content:
+  field_buttons:
+    weight: 1
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        target: true
+        variant: true
+        color: true
+        icon: true
+        id: false
+        name: false
+        rel: false
+        class: false
+        accesskey: false
+        aria-label: false
+        title: false
+    third_party_settings: {  }
+    type: link_attributes
+    region: content
+  field_buttons_align:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  langcode: true
+  translation: true
