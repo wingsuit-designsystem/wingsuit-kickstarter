@@ -14,8 +14,15 @@ See the [documentation](https://wingsuit-designsystem.github.io/drupal/ui_patter
 ## Quickstart
 ```
 composer create-project wingsuit-designsystem/wingsuit-kickstarter wingsuit-kickstarter --stability dev --no-interaction
-cd wingsuit-kickstarter && ./vendor/bin/blt setup
 ```
+Copy `blt/example.local.blt.yml` to `blt/local.blt.yml` and adjust your database settings in your `blt/local.blt.yml` file.
+
+After that run:
+```
+blt source:build:settings
+blt setup
+```
+
 
 ## Docksal Quickstart
 ```
