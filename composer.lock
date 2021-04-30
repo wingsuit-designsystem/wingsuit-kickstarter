@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ec579615379bcc4dc7b3d38a1b685939",
+    "content-hash": "0abfed1e8516a77efd473348841f4fa6",
     "packages": [
         {
             "name": "acquia/blt",
@@ -348,7 +348,7 @@
             "version": "3.6.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/jquery/jquery-dist.git",
+                "url": "git@github.com:jquery/jquery-dist.git",
                 "reference": "e786e3d9707ffd9b0dd330ca135b66344dcef85a"
             },
             "dist": {
@@ -2475,17 +2475,11 @@
         },
         {
             "name": "drupal/component_blocks",
-            "version": "1.2.1",
+            "version": "dev-1.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/component_blocks.git",
-                "reference": "1.2.1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/component_blocks-1.2.1.zip",
-                "reference": "1.2.1",
-                "shasum": "5c1b7d54a13463a3f48f9909fd8f9957b5d47448"
+                "reference": "5e99a37c7287d47e38eb9e024f2e76ef51374251"
             },
             "require": {
                 "drupal/core": "^8.8 || ~9.0"
@@ -2497,13 +2491,19 @@
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
                 "drupal": {
-                    "version": "1.2.1",
-                    "datestamp": "1606082243",
+                    "version": "1.x-dev",
+                    "datestamp": "1606082225",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
+                },
+                "patches_applied": {
+                    "Switch form ": "https://git.drupalcode.org/project/component_blocks/-/merge_requests/2.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
@@ -2528,7 +2528,8 @@
             "homepage": "https://www.drupal.org/project/component_blocks",
             "support": {
                 "source": "https://git.drupalcode.org/project/component_blocks"
-            }
+            },
+            "time": "2020-11-20T11:10:26+00:00"
         },
         {
             "name": "drupal/components",
@@ -4279,7 +4280,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/gin_lb.git",
-                "reference": "7306980ada937dbf5c4a700b1d3be6882c5eab2b"
+                "reference": "adb970c4104a5122509550396594fc397de646bf"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
@@ -4308,8 +4309,8 @@
                     "dev-1.0.x": "1.0.x-dev"
                 },
                 "drupal": {
-                    "version": "1.0.0-beta3+21-dev",
-                    "datestamp": "1617740734",
+                    "version": "1.0.0-beta3+35-dev",
+                    "datestamp": "1619683497",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -4387,7 +4388,7 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/gin_lb"
             },
-            "time": "2021-04-09T19:49:38+00:00"
+            "time": "2021-04-29T08:30:28+00:00"
         },
         {
             "name": "drupal/gin_toolbar",
@@ -14495,6 +14496,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/ui_patterns_settings": 20,
+        "drupal/component_blocks": 20,
         "drupal/wingsuit_companion": 10,
         "drupal/gin": 15,
         "drupal/gin_lb": 20,

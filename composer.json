@@ -15,7 +15,7 @@
         "drupal/ui_patterns_settings": "2.x-dev",
         "drupal/ui_patterns_layout_builder": "^1.1",
         "drupal/ui_patterns_field_formatters": "^1.2",
-        "drupal/component_blocks": "^1.1",
+        "drupal/component_blocks": "1.x-dev",
         "drupal/wingsuit_companion": "^1.0@beta",
 
         "drupal/focal_point": "^1.5",
@@ -52,6 +52,9 @@
         "patches": {
             "drupal/lightning_layout": {
                 "Call to a member function uuid() on null when Layout Builder renders a Placeholder": "https://www.drupal.org/files/issues/2020-04-15/light_layout.patch"
+            },
+            "drupal/component_blocks": {
+                "Switch form ": "https://git.drupalcode.org/project/component_blocks/-/merge_requests/2.patch"
             },
             "drupal/imageapi_optimize_webp": {
                 "Error: Call to undefined method Drupal\\imagemagick\\Plugin\\ImageToolkit\\ImagemagickToolkit::getResource()": "https://www.drupal.org/files/issues/2020-07-20/imageapi_optimize_webp-imagemagick-toolkit-3160399-4.patch",
