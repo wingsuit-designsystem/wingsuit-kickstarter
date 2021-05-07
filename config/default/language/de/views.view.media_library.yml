@@ -2,6 +2,7 @@ label: Medienbibliothek
 description: 'Medien finden und verwalten.'
 display:
   default:
+    display_title: Master
     display_options:
       exposed_form:
         options:
@@ -16,6 +17,9 @@ display:
             items_per_page_label: 'Elemente pro Seite'
             items_per_page_options_all_label: '- Alle -'
             offset_label: Versatz
+          tags:
+            previous: ‹‹
+            next: ››
       fields:
         media_bulk_form:
           action_title: Aktion
@@ -30,6 +34,9 @@ display:
                 title: Veröffentlicht
               2:
                 title: 'Nicht veröffentlicht'
+        name:
+          expose:
+            label: Name
         bundle:
           expose:
             label: Medientyp
@@ -42,6 +49,12 @@ display:
         created:
           expose:
             label: 'Neueste zuerst'
+        name:
+          expose:
+            label: 'Name (A-Z)'
+        name_1:
+          expose:
+            label: 'Name (Z-A)'
       title: Medien
       empty:
         area_text_custom:
@@ -52,6 +65,8 @@ display:
       fields:
         media_bulk_form:
           action_title: Aktion
+        name:
+          separator: ', '
         edit_media:
           alter:
             text: '{{ name }} bearbeiten'
@@ -65,6 +80,10 @@ display:
   widget:
     display_title: Steuerelement
     display_options:
+      filters:
+        name:
+          expose:
+            label: Name
       arguments:
         bundle:
           exception:
@@ -80,10 +99,16 @@ display:
       fields:
         thumbnail__target_id:
           label: Miniaturbild
+        name:
+          label: Name
         uid:
           label: Autor
         changed:
           label: Aktualisiert
+      filters:
+        name:
+          expose:
+            label: Name
       arguments:
         bundle:
           exception:

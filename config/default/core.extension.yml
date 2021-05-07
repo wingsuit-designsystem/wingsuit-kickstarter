@@ -1,8 +1,8 @@
 module:
   admin_toolbar: 0
+  admin_toolbar_links_access_filter: 0
   autosave_form: 0
   bg_image_formatter: 0
-  blazy: 0
   block: 0
   block_content: 0
   breakpoint: 0
@@ -12,9 +12,6 @@ module:
   config: 0
   config_translation: 0
   conflict: 0
-  consumers: 0
-  contact: 0
-  contact_storage: 0
   content_moderation: 0
   contextual: 0
   crop: 0
@@ -27,8 +24,6 @@ module:
   easy_responsive_images: 0
   editor: 0
   entity_block: 0
-  entity_browser: 0
-  entity_browser_block: 0
   field: 0
   field_group: 0
   field_ui: 0
@@ -44,8 +39,8 @@ module:
   image_widget_crop: 0
   imageapi_optimize: 0
   imageapi_optimize_webp: 0
+  imageapi_optimize_webp_responsive: 0
   inline_block_title_automatic: 0
-  inline_entity_form: 0
   jsonapi: 0
   language: 0
   layout_builder: 0
@@ -53,36 +48,12 @@ module:
   layout_builder_restrictions: 0
   layout_builder_save_and_edit: 0
   layout_builder_st: 0
-  layout_builder_styles: 0
   layout_discovery: 0
   layout_library: 0
-  lightning_api: 0
-  lightning_banner_block: 0
-  lightning_contact_form: 0
-  lightning_core: 0
-  lightning_landing_page: 0
-  lightning_layout: 0
-  lightning_map_block: 0
-  lightning_media: 0
-  lightning_media_audio: 0
-  lightning_media_bulk_upload: 0
-  lightning_media_document: 0
-  lightning_media_image: 0
-  lightning_media_instagram: 0
-  lightning_media_slideshow: 0
-  lightning_media_twitter: 0
-  lightning_media_video: 0
-  lightning_page: 0
-  lightning_roles: 0
-  lightning_scheduler: 0
-  lightning_search: 0
-  lightning_workflow: 0
   link: 0
   link_attributes: 0
   locale: 0
   media: 0
-  media_entity_instagram: 0
-  media_entity_twitter: 0
   media_library: 0
   media_library_edit: 0
   media_responsive_thumbnail: 0
@@ -91,8 +62,6 @@ module:
   metatag: 0
   moderation_sidebar: 0
   node: 0
-  openapi: 0
-  openapi_jsonapi: 0
   openapi_ui: 0
   openapi_ui_redoc: 0
   openapi_ui_swagger: 0
@@ -108,14 +77,9 @@ module:
   schema_metatag: 0
   schemata: 0
   schemata_json_schema: 0
-  search_api: 0
-  search_api_db: 0
   serialization: 0
   shortcut: 0
   simple_gmap: 0
-  simple_oauth: 0
-  slick: 0
-  slick_entityreference: 0
   system: 0
   taxonomy: 0
   text: 0
@@ -140,12 +104,12 @@ module:
   pathauto: 1
   content_translation: 10
   views: 10
-  lightning: 1000
+  minimal: 1000
 theme:
   claro: 0
   stable: 0
   wingsuit: 0
   gin: 0
-profile: lightning
+profile: minimal
 _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc

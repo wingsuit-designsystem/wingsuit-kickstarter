@@ -3,11 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
-    - lightning_core
     - media
-third_party_settings:
-  lightning_core:
-    description: ''
 id: media.16x9
 label: 16x9
 targetEntityType: media

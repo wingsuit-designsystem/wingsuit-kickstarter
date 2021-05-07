@@ -2,7 +2,7 @@ project:
   machine_name: wingsuit
   prefix: WS
   profile:
-    name: lightning
+    name: minimal
 cm:
   core:
     install_from_config: true

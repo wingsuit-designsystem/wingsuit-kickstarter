@@ -4,24 +4,23 @@
     "description": "Starterkit for Wingsuit and Layout Builder.",
     "license": "GPL-2.0-or-later",
     "require": {
+        "composer/installers": "^1.9",
+        "drupal/core-composer-scaffold": "^9.1",
+        "drupal/core-project-message": "^9.1",
+        "drupal/core-recommended": "^9.1",
         "drupal/core": "~9.1",
-        "acquia/lightning": "~5.1.0",
         "cweagans/composer-patches": "^1.6.0",
-        "drupal/core-composer-scaffold": "*",
         "acquia/blt": "^12.0",
         "drupal/config_split": "^1.5",
-
         "drupal/components": "^2.0",
         "drupal/ui_patterns_settings": "2.x-dev",
         "drupal/ui_patterns_layout_builder": "^1.1",
         "drupal/ui_patterns_field_formatters": "^1.2",
         "drupal/component_blocks": "1.x-dev",
         "drupal/wingsuit_companion": "^1.0@beta",
-
         "drupal/focal_point": "^1.5",
         "drupal/media_library_edit": "^2.0",
         "drupal/drimage": "^2.0",
-
         "drupal/media_responsive_thumbnail": "^1.2",
         "drupal/layout_builder_browser": "^1.1",
         "drupal/gin": "^3.0@alpha",
@@ -40,7 +39,27 @@
         "drupal/imageapi_optimize_webp": "^2.0@beta",
         "drupal/google_tag": "^1.4",
         "drupal/toolbar_anti_flicker": "^9.3",
-        "drupal/schema_metatag": "^2.1"
+        "drupal/schema_metatag": "^2.1",
+        "ext-dom": "*",
+        "drupal/autosave_form": "^1.2",
+        "drupal/bg_image_formatter": "^1.14",
+        "drupal/conflict": "~2.0",
+        "drupal/ctools": "^3.5",
+        "drupal/diff": "^1.0",
+        "drupal/dropzonejs": "^2.5",
+        "drupal/entity_block": "^1.0@beta",
+        "drupal/image_widget_crop": "^2.3",
+        "drupal/layout_builder_restrictions": "^2.8",
+        "drupal/layout_library": "^1.0@beta",
+        "drupal/moderation_sidebar": "^1.4",
+        "drupal/openapi_ui": "^1.0@RC",
+        "drupal/openapi_ui_redoc": "^1.0@RC",
+        "drupal/openapi_ui_swagger": "^1.0@RC",
+        "drupal/page_manager": "^4.0@beta",
+        "drupal/redirect": "^1.6",
+        "drupal/schemata": "^1.0@beta",
+        "drupal/simple_gmap": "^3.0",
+        "drupal/pathauto": "^1.8"
     },
     "require-dev": {
         "drush/drush": ">=9.7"
@@ -63,21 +82,19 @@
             "drupal/ui_patterns_field_formatters": {
                 "Text is not processed.": "https://git.drupalcode.org/project/ui_patterns_field_formatters/-/merge_requests/1.diff"
             },
-            "drupal/gin_toolbar": {
-                "Add option for node local tasks in toolbar": "https://git.drupalcode.org/project/gin_toolbar/-/merge_requests/2.patch"
-            },
-            "drupal/schema_metatag": {
-                "Illegal offset type in Drupal\\schema_metatag\\SchemaMetatagClient->objectInfo()\n": "https://www.drupal.org/files/issues/2020-09-30/schema_metatag-undefined_index_objectinfo-3174103-2.patch"
-            },
             "drupal/core": {
                 "Break long text strings in layout edit": "https://www.drupal.org/files/issues/2020-12-22/3016507-50.patch",
                 "Improve StringItem::generateSampleValue()": "https://www.drupal.org/files/issues/2020-06-24/3091478-15.patch",
                 "Not all form elements can't use in vertical_tabs": "https://www.drupal.org/files/issues/2021-01-02/3122920_group_patch_5.patch",
                 "Custom blocks break layout builder module - Quick Edit could not associate the rendered entity field markup\nPrimary tabs\nView(active tab)\nEdit\n": "https://www.drupal.org/files/issues/2020-10-19/3072231-39-core-9-2-x.patch",
-                "PHP message: Error: Call to a member function getEntityTypeId() on null (Layout Builder)" : "https://www.drupal.org/files/issues/2020-08-05/3049332-inline-35.patch",
+                "PHP message: Error: Call to a member function getEntityTypeId() on null (Layout Builder)": "https://www.drupal.org/files/issues/2020-08-05/3049332-inline-35.patch",
                 "Stream wrapper reference in JS library causes error in _locale_parse_js_file()": "https://www.drupal.org/files/issues/2020-05-08/2735717-28.patch",
                 "Callers of LayoutEntityHelperTrait::getEntitySections() do not account for the view mode": "https://www.drupal.org/files/issues/2020-08-27/3008924-rerolled-17.patch",
-                "New non translatable field on translatable content throws error": "https://www.drupal.org/files/issues/2021-02-10/3025039_42.patch"
+                "New non translatable field on translatable content throws error": "https://www.drupal.org/files/issues/2021-02-10/3025039_42.patch",
+                "2869592 - Disabled update module shouldn't produce a status report warning": "https://www.drupal.org/files/issues/2020-02-07/2869592-remove-update-warning-34.patch",
+                "[subprofile support] 1356276 - Allow profiles to define a base/parent profile and load them in the correct order / 2914389 - Allow profiles to exclude dependencies of their parent": "https://www.drupal.org/files/issues/2020-12-15/3143958-6-subprofile-support-9.1.x.patch",
+                "REMOVE: 2031261 - Fix SQLite variable limit": "https://www.drupal.org/files/issues/2020-04-01/2031261-118.patch",
+                "REMOVE: Allow installation profile to be changed from Lightning during config sync": "https://www.drupal.org/files/issues/2021-01-21/3143958-12-change-profile-config-sync-9.1.x.patch"
             },
             "drupal/layout_builder_st": {
                 "Argument 1 passed to Drupal\\layout_builder_st\\EventSubscriber\\ComponentPluginTranslate::isTranslation() must implement interface Drupal\\layout_builder\\SectionStorageInterface, null given": "https://www.drupal.org/files/issues/2019-07-24/isTranslation-null-given.patch"
@@ -119,14 +136,31 @@
             ],
             "drush/contrib/{$name}": [
                 "type:drupal-drush"
+            ],
+            "docroot/modules/custom/{$name}": [
+                "type:drupal-custom-module"
+            ],
+            "docroot/themes/custom/{$name}": [
+                "type:drupal-custom-theme"
             ]
         },
         "installer-types": [
+            "drupal-profile",
+            "drupal-module",
+            "drupal-core",
+            "drupal-library",
             "bower-asset",
             "npm-asset"
         ],
         "patchLevel": {
             "drupal/core": "-p2"
+        },
+        "patches-ignore": {
+            "drupal/lightning_core": {
+                "drupal/core": {
+                    "2869592 - Disabled update module shouldn't produce a status report warning": "https://www.drupal.org/files/issues/2869592-remove-update-warning-7.patch"
+                }
+            }
         }
     },
     "repositories": {

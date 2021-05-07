@@ -15,3 +15,4 @@ effects:
     weight: null
     data:
       crop_type: freeform
+pipeline: __default__

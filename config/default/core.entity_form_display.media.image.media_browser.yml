@@ -10,7 +10,6 @@ dependencies:
     - media.type.image
   module:
     - image
-    - lightning_media
 _core:
   default_config_hash: 1U5XavhCARUa63Cs1qKuE5u_UOMDj8jqZoJ2jVWdfw0
 id: media.image.media_browser
@@ -24,10 +23,7 @@ content:
     settings:
       preview_image_style: medium
       progress_indicator: throbber
-    third_party_settings:
-      lightning_media:
-        file_links: false
-        remove_button: false
+    third_party_settings: {  }
     region: content
   field_media_in_library:
     type: boolean_checkbox
@@ -51,14 +47,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
-  revision_log_message:
-    type: string_textarea
-    weight: 25
-    settings:
-      rows: 4
-      placeholder: ''
-    region: content
-    third_party_settings: {  }
   status:
     type: boolean_checkbox
     settings:

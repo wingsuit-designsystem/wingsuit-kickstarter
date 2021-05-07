@@ -5,6 +5,7 @@ display:
     display_options:
       exposed_form:
         options:
+          submit_button: Filter
           reset_button_label: Zurücksetzen
           exposed_sorts_label: 'Sortieren nach'
           sort_asc_label: Aufsteigend
@@ -21,6 +22,7 @@ display:
           label: Titel
         type:
           label: Inhaltstyp
+          separator: ', '
         name:
           label: Autor
         changed:
@@ -41,6 +43,7 @@ display:
       empty:
         area_text_custom:
           content: 'Kein Inhalt verfügbar.'
+    display_title: Master
   page_1:
     display_options:
       menu:

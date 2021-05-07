@@ -1,4 +1,5 @@
 label: Veröffentlichungsstatus
+description: 'A boolean indicating whether the node is published.'
 settings:
   on_label: An
   off_label: Aus
