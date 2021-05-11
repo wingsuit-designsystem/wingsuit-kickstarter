@@ -1,0 +1,287 @@
+uuid: c41cbe26-68ee-4bcd-90be-02befea80131
+langcode: en
+status: false
+dependencies:
+  config:
+    - block_content.type.media_slideshow
+    - core.entity_view_mode.block_content.full
+    - field.field.block_content.media_slideshow.field_slideshow_items
+  module:
+    - layout_builder
+    - layout_builder_restrictions
+    - layout_library
+    - ui_patterns_field_formatters
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+  layout_library:
+    enable: false
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      whitelisted_blocks: {  }
+      blacklisted_blocks: {  }
+      allowed_layouts: {  }
+id: block_content.media_slideshow.full
+targetEntityType: block_content
+bundle: media_slideshow
+mode: full
+content:
+  field_slideshow_items:
+    type: pattern_wrapper_entity_reference_formatter
+    weight: 0
+    label: above
+    settings:
+      view_mode: default
+      pattern: slider
+      variants:
+        avatar: default
+        button: default
+        card: default
+        headline: xl
+        image: image
+        section: 1_column
+        slider: '1'
+      pattern_mapping:
+        accordion_item:
+          settings:
+            'field_wrapper:label':
+              destination: _hidden
+              weight: '0'
+            'field_wrapper:items':
+              destination: _hidden
+              weight: '0'
+        accordion:
+          settings:
+            'field_wrapper:label':
+              destination: _hidden
+              weight: '0'
+            'field_wrapper:items':
+              destination: _hidden
+              weight: '0'
+        article:
+          settings:
+            'field_wrapper:label':
+              destination: _hidden
+              weight: '0'
+            'field_wrapper:items':
+              destination: _hidden
+              weight: '0'
+        avatar:
+          settings:
+            'field_wrapper:label':
+              destination: _hidden
+              weight: '0'
+            'field_wrapper:items':
+              destination: _hidden
+              weight: '0'
+        banner:
+          settings:
+            'field_wrapper:label':
+              destination: _hidden
+              weight: '0'
+            'field_wrapper:items':
+              destination: _hidden
+              weight: '0'
+        basic:
+          settings:
+            'field_wrapper:label':
+              destination: _hidden
+              weight: '0'
+            'field_wrapper:items':
+              destination: _hidden
+              weight: '0'
+        button_group:
+          settings:
+            'field_wrapper:label':
+              destination: _hidden
+              weight: '0'
+            'field_wrapper:items':
+              destination: _hidden
+              weight: '0'
+        button:
+          settings:
+            'field_wrapper:label':
+              destination: _hidden
+              weight: '0'
+            'field_wrapper:items':
+              destination: _hidden
+              weight: '0'
+        card:
+          settings:
+            'field_wrapper:label':
+              destination: _hidden
+              weight: '0'
+            'field_wrapper:items':
+              destination: _hidden
+              weight: '0'
+        container:
+          settings:
+            'field_wrapper:label':
+              destination: _hidden
+              weight: '0'
+            'field_wrapper:items':
+              destination: _hidden
+              weight: '0'
+        grid:
+          settings:
+            'field_wrapper:label':
+              destination: _hidden
+              weight: '0'
+            'field_wrapper:items':
+              destination: _hidden
+              weight: '0'
+        headline:
+          settings:
+            'field_wrapper:label':
+              destination: _hidden
+              weight: '0'
+            'field_wrapper:items':
+              destination: _hidden
+              weight: '0'
+        hero:
+          settings:
+            'field_wrapper:label':
+              destination: _hidden
+              weight: '0'
+            'field_wrapper:items':
+              destination: _hidden
+              weight: '0'
+        image:
+          settings:
+            'field_wrapper:label':
+              destination: _hidden
+              weight: '0'
+            'field_wrapper:items':
+              destination: _hidden
+              weight: '0'
+        link:
+          settings:
+            'field_wrapper:label':
+              destination: _hidden
+              weight: '0'
+            'field_wrapper:items':
+              destination: _hidden
+              weight: '0'
+        logo:
+          settings:
+            'field_wrapper:label':
+              destination: _hidden
+              weight: '0'
+            'field_wrapper:items':
+              destination: _hidden
+              weight: '0'
+        rich_text:
+          settings:
+            'field_wrapper:label':
+              destination: _hidden
+              weight: '0'
+            'field_wrapper:items':
+              destination: _hidden
+              weight: '0'
+        section:
+          settings:
+            'field_wrapper:label':
+              destination: _hidden
+              weight: '0'
+            'field_wrapper:items':
+              destination: _hidden
+              weight: '0'
+        slider:
+          settings:
+            'field_wrapper:label':
+              destination: _hidden
+              weight: '0'
+            'field_wrapper:items':
+              destination: items
+              weight: '0'
+        video:
+          settings:
+            'field_wrapper:label':
+              destination: _hidden
+              weight: '0'
+            'field_wrapper:items':
+              destination: _hidden
+              weight: '0'
+      pattern_settings:
+        accordion_item:
+          id:
+            input: ''
+        avatar:
+          text_align: ''
+        banner:
+          position: center_center
+          position_token: center_center
+        button_group:
+          align: center
+          align_token: center
+        button:
+          size: small
+          color: primary
+          url:
+            input: ''
+          icon: ''
+          icon_alignment: right
+          expanded: 0
+          round: 0
+        card:
+          alignment: left
+          bg_color: ''
+          url:
+            input: ''
+          show_read_more: 0
+        container:
+          width: default
+          bg:
+            colorwidget: ''
+          padding_x: default
+          padding_top: default
+          padding_bottom: ''
+          classes: ''
+        grid:
+          gutter: default
+          columns: '1'
+        headline:
+          tag_name: div
+          spacing_bottom: default
+        image:
+          url: ''
+          background_style: ''
+        link:
+          url:
+            input: ''
+          icon: right-arrow
+        section:
+          columns_width_1: equal
+          columns_width_2: equal
+          columns_width_3: equal
+          columns_width_4: equal
+          columns_width_5: equal
+          gutter: default
+          columns: '1'
+          width: default
+          bg:
+            colorwidget: ''
+          padding_x: default
+          padding_top: default
+          padding_bottom: ''
+          classes: ''
+          display_header_region: 0
+          equal_height: 0
+        slider:
+          bullet_spacing: none
+          pagination_spacing: none
+          width: default
+          bg:
+            colorwidget: ''
+          padding_x: default
+          padding_top: default
+          padding_bottom: ''
+          classes: ''
+          autoplay: 0
+      link: false
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

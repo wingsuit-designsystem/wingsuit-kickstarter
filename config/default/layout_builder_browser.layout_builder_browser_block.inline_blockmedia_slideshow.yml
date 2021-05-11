@@ -5,7 +5,7 @@ dependencies: {  }
 id: inline_blockmedia_slideshow
 block_id: 'inline_block:media_slideshow'
 category: blocks
-label: Slideshow
+label: 'Media Slideshow'
 weight: 0
 image_path: modules/custom/wingsuit_layout/layout_builder_browser/slideshow.svg
 image_alt: ''

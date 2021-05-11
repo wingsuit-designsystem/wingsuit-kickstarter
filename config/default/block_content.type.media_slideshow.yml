@@ -1,0 +1,8 @@
+uuid: 6bc2f2f3-c1a1-454f-914b-d9a9c8670035
+langcode: en
+status: true
+dependencies: {  }
+id: media_slideshow
+label: 'Media Slideshow'
+revision: 0
+description: ''

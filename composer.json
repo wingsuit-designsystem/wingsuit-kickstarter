@@ -13,7 +13,6 @@
         "acquia/blt": "^12.0",
         "drupal/config_split": "^1.5",
         "drupal/components": "^2.0",
-        "drupal/ui_patterns_settings": "2.x-dev",
         "drupal/ui_patterns_layout_builder": "^1.1",
         "drupal/ui_patterns_field_formatters": "^1.2",
         "drupal/component_blocks": "1.x-dev",
@@ -59,7 +58,8 @@
         "drupal/redirect": "^1.6",
         "drupal/schemata": "^1.0@beta",
         "drupal/simple_gmap": "^3.0",
-        "drupal/pathauto": "^1.8"
+        "drupal/pathauto": "^1.8",
+        "bower-asset/dropzone": "^5.9"
     },
     "require-dev": {
         "drush/drush": ">=9.7"

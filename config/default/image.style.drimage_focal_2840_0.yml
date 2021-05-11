@@ -1,0 +1,16 @@
+uuid: 6d4569e3-bb73-4618-aa58-cea6e67df815
+langcode: en
+status: true
+dependencies: {  }
+name: drimage_focal_2840_0
+label: 'DrImage Focal (2840x0)'
+effects:
+  059e4267-3d09-4b0b-bd11-513d4e713ad3:
+    uuid: 059e4267-3d09-4b0b-bd11-513d4e713ad3
+    id: image_scale
+    weight: 0
+    data:
+      upscale: false
+      width: 2840
+      height: null
+pipeline: __default__
