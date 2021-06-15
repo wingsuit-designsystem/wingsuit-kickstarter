@@ -73,11 +73,14 @@
                 "Call to a member function uuid() on null when Layout Builder renders a Placeholder": "https://www.drupal.org/files/issues/2020-04-15/light_layout.patch"
             },
             "drupal/component_blocks": {
-                "Switch form ": "https://git.drupalcode.org/project/component_blocks/-/merge_requests/2.patch"
+                "3210538 - Not working with Settings Type url and token ": "https://git.drupalcode.org/project/component_blocks/-/merge_requests/2.patch"
             },
             "drupal/imageapi_optimize_webp": {
                 "Error: Call to undefined method Drupal\\imagemagick\\Plugin\\ImageToolkit\\ImagemagickToolkit::getResource()": "https://www.drupal.org/files/issues/2020-07-20/imageapi_optimize_webp-imagemagick-toolkit-3160399-4.patch",
                 "Drupal 9 compatibility for submodule(imageapi_optimize_webp_responsive)": "https://www.drupal.org/files/issues/2020-06-23/3153942-2.patch"
+            },
+            "drupal/gin_toolbar": {
+                "Add option for node local tasks in toolbar.": "https://git.drupalcode.org/project/gin_toolbar/-/merge_requests/10.patch?v1"
             },
             "drupal/ui_patterns_field_formatters": {
                 "Text is not processed.": "https://git.drupalcode.org/project/ui_patterns_field_formatters/-/merge_requests/1.diff"
