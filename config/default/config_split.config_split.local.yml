@@ -8,6 +8,7 @@ description: ''
 folder: ../config/envs/local
 module:
   devel: 0
+  twig_vardumper: 0
 theme: {  }
 blacklist: {  }
 graylist: {  }

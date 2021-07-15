@@ -62,7 +62,8 @@
         "bower-asset/dropzone": "^5.9",
         "drupal/linkit": "~6.0",
         "drupal/devel": "^4.1",
-        "drupal/editor_advanced_link": "^2.0"
+        "drupal/editor_advanced_link": "^2.0",
+        "drupal/twig_vardumper": "^3.0"
     },
     "require-dev": {
         "drush/drush": ">=9.7"
