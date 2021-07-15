@@ -2,7 +2,7 @@ label: 'Wer ist online Block'
 description: 'Zeigt die Benutzernamen der zuletzt aktiven Benutzer und die Gesamtzahl der aktiven Benutzer.'
 display:
   default:
-    display_title: Master
+    display_title: Standard
     display_options:
       exposed_form:
         options:

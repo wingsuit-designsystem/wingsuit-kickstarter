@@ -41,6 +41,7 @@ third_party_settings:
               columns_width_4: equal
               columns_width_5: equal
               bg: ''
+          context_mapping: {  }
         components:
           56cfc188-d299-42d0-b183-d75ae803cfb7:
             uuid: 56cfc188-d299-42d0-b183-d75ae803cfb7

@@ -1,6 +1,3 @@
-wingsuit:
-  starterkit: 'tailwind'
-
 project:
   machine_name: wingsuit
   prefix: WS

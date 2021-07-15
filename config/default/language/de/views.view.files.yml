@@ -2,7 +2,7 @@ label: Dateien
 description: 'Dateien suchen und verwalten.'
 display:
   default:
-    display_title: Master
+    display_title: Standard
     display_options:
       exposed_form:
         options:

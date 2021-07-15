@@ -43,7 +43,7 @@ display:
       empty:
         area_text_custom:
           content: 'Kein Inhalt verfügbar.'
-    display_title: Master
+    display_title: Standard
   page_1:
     display_options:
       menu:

@@ -42,21 +42,6 @@ display:
             label: Statuscode
           group_info:
             label: Statuscode
-            group_items:
-              1:
-                title: '300 Multiple Choices'
-              2:
-                title: '301 Moved Permanently'
-              3:
-                title: '302 Found'
-              4:
-                title: '303 See Other'
-              5:
-                title: '304 Not Modified'
-              6:
-                title: '305 Use Proxy'
-              7:
-                title: '307 Temporary Redirect'
         language:
           expose:
             label: Originalsprache

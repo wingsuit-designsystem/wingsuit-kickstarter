@@ -10,6 +10,8 @@ module:
   colorwidget: 0
   components: 0
   config: 0
+  config_filter: 0
+  config_split: 0
   config_translation: 0
   conflict: 0
   content_moderation: 0
@@ -21,8 +23,10 @@ module:
   diff: 0
   drimage: 0
   dropzonejs: 0
+  dynamic_page_cache: 0
   easy_responsive_images: 0
   editor: 0
+  editor_advanced_link: 0
   entity_block: 0
   field: 0
   field_group: 0
@@ -41,7 +45,6 @@ module:
   imageapi_optimize_webp: 0
   imageapi_optimize_webp_responsive: 0
   inline_block_title_automatic: 0
-  jsonapi: 0
   language: 0
   layout_builder: 0
   layout_builder_browser: 0
@@ -52,6 +55,7 @@ module:
   layout_library: 0
   link: 0
   link_attributes: 0
+  linkit: 0
   locale: 0
   media: 0
   media_library: 0
@@ -62,9 +66,6 @@ module:
   metatag: 0
   moderation_sidebar: 0
   node: 0
-  openapi_ui: 0
-  openapi_ui_redoc: 0
-  openapi_ui_swagger: 0
   options: 0
   page_cache: 0
   page_manager: 0

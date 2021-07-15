@@ -5,10 +5,10 @@
     "license": "GPL-2.0-or-later",
     "require": {
         "composer/installers": "^1.9",
-        "drupal/core-composer-scaffold": "^9.1",
-        "drupal/core-project-message": "^9.1",
-        "drupal/core-recommended": "^9.1",
-        "drupal/core": "~9.1",
+        "drupal/core-composer-scaffold": "^9.2",
+        "drupal/core-project-message": "^9.2",
+        "drupal/core-recommended": "^9.2",
+        "drupal/core": "~9.2",
         "cweagans/composer-patches": "^1.6.0",
         "acquia/blt": "^12.0",
         "drupal/config_split": "^1.5",
@@ -59,7 +59,10 @@
         "drupal/schemata": "^1.0@beta",
         "drupal/simple_gmap": "^3.0",
         "drupal/pathauto": "^1.8",
-        "bower-asset/dropzone": "^5.9"
+        "bower-asset/dropzone": "^5.9",
+        "drupal/linkit": "~6.0",
+        "drupal/devel": "^4.1",
+        "drupal/editor_advanced_link": "^2.0"
     },
     "require-dev": {
         "drush/drush": ">=9.7"
@@ -94,8 +97,7 @@
                 "Stream wrapper reference in JS library causes error in _locale_parse_js_file()": "https://www.drupal.org/files/issues/2020-05-08/2735717-28.patch",
                 "Callers of LayoutEntityHelperTrait::getEntitySections() do not account for the view mode": "https://www.drupal.org/files/issues/2020-08-27/3008924-rerolled-17.patch",
                 "New non translatable field on translatable content throws error": "https://www.drupal.org/files/issues/2021-02-10/3025039_42.patch",
-                "2869592 - Disabled update module shouldn't produce a status report warning": "https://www.drupal.org/files/issues/2020-02-07/2869592-remove-update-warning-34.patch",
-                "REMOVE: 2031261 - Fix SQLite variable limit": "https://www.drupal.org/files/issues/2020-04-01/2031261-118.patch"
+                "2869592 - Disabled update module shouldn't produce a status report warning": "https://www.drupal.org/files/issues/2020-02-07/2869592-remove-update-warning-34.patch"
             },
             "drupal/layout_builder_st": {
                 "Argument 1 passed to Drupal\\layout_builder_st\\EventSubscriber\\ComponentPluginTranslate::isTranslation() must implement interface Drupal\\layout_builder\\SectionStorageInterface, null given": "https://www.drupal.org/files/issues/2019-07-24/isTranslation-null-given.patch"

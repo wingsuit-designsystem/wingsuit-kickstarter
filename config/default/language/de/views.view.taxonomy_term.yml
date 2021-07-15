@@ -2,7 +2,7 @@ label: Taxonomie-Begriff
 description: 'Inhalt, der zu einem bestimmten Taxonomie-Begriff gehört.'
 display:
   default:
-    display_title: Master
+    display_title: Standard
     display_options:
       exposed_form:
         options:

@@ -35,6 +35,7 @@ third_party_settings:
               url:
                 input: '[block_content:field_link:uri]'
               show_read_more: 1
+          context_mapping: {  }
         components:
           79a98879-82a3-4f0e-bfca-0e43a2f844bc:
             uuid: 79a98879-82a3-4f0e-bfca-0e43a2f844bc

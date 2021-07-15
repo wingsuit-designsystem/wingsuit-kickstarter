@@ -49,6 +49,7 @@ third_party_settings:
               padding_top: default
               padding_bottom: ''
               classes: ''
+          context_mapping: {  }
         components: {  }
         third_party_settings: {  }
   layout_library:

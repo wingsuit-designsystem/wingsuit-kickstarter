@@ -2,7 +2,7 @@ label: Archiv
 description: 'Gesamter Inhalt, nach Monaten'
 display:
   default:
-    display_title: Master
+    display_title: Standard
     display_options:
       title: 'Monatliches Archiv'
       exposed_form:

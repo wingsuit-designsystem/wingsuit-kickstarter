@@ -2,7 +2,7 @@ label: Benutzer
 description: 'Menschen finden und verwalten, die mit Ihrer Website interagieren.'
 display:
   default:
-    display_title: Master
+    display_title: Standard
     display_options:
       exposed_form:
         options:

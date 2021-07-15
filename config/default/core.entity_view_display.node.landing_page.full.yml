@@ -44,6 +44,7 @@ third_party_settings:
               columns_width_4: equal
               columns_width_5: equal
               bg: ''
+          context_mapping: {  }
         components: {  }
         third_party_settings: {  }
   layout_library:

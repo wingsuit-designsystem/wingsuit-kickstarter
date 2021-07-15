@@ -24,6 +24,7 @@ third_party_settings:
           pattern:
             field_templates: default
             variant: ''
+          context_mapping: {  }
         components:
           9b95ef58-caa3-4716-b4f9-196c5c657b35:
             uuid: 9b95ef58-caa3-4716-b4f9-196c5c657b35

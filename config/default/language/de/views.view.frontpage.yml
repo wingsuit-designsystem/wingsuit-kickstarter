@@ -26,7 +26,7 @@ display:
             next: 'Nächste Seite ›'
             first: '« Anfang'
             last: 'Ende »'
-    display_title: Master
+    display_title: Standard
   feed_1:
     display_title: Newsfeed
   page_1:

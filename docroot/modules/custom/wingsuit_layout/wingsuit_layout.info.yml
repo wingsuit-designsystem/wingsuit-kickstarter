@@ -3,6 +3,6 @@ core: 8.x
 core_version_requirement: '^8 || ^9'
 type: module
 description: 'Layout extensions Wingsuit Kickstarter.'
-package: Wingsuit
+package: wingsuit
 dependencies:
   - wingsuit_companion

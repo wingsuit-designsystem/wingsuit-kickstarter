@@ -33,6 +33,7 @@ third_party_settings:
             settings:
               position: ''
               position_token: '[block_content:field_banner_position:value]'
+          context_mapping: {  }
         components:
           0eb6358e-b709-4d3a-8e71-69b38df9e9fc:
             uuid: 0eb6358e-b709-4d3a-8e71-69b38df9e9fc

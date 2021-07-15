@@ -26,6 +26,7 @@ third_party_settings:
             field_templates: default
             variant: center_left
             variant_token: ''
+          context_mapping: {  }
         components:
           6fd360b8-2491-4c53-9da0-3b0d8911299c:
             uuid: 6fd360b8-2491-4c53-9da0-3b0d8911299c

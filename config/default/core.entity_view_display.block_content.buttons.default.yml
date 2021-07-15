@@ -28,6 +28,7 @@ third_party_settings:
             settings:
               align: center
               align_token: '[block_content:field_buttons_align:value]'
+          context_mapping: {  }
         components:
           80a13c8c-9f63-4199-b717-dbf90c462964:
             uuid: 80a13c8c-9f63-4199-b717-dbf90c462964
