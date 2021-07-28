@@ -1,0 +1,23 @@
+uuid: 29003963-a38c-4b09-98be-ea972ff8e9ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.success_story
+    - field.storage.block_content.field_button
+  module:
+    - link
+id: block_content.success_story.field_button
+field_name: field_button
+entity_type: block_content
+bundle: success_story
+label: Button
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 2
+field_type: link

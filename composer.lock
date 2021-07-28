@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7ea6457e523a3302df5ded279738ab96",
+    "content-hash": "620d5f0d353810a1cdf491b87f94b226",
     "packages": [
         {
             "name": "acquia/blt",
@@ -3899,11 +3899,17 @@
         },
         {
             "name": "drupal/gin_lb",
-            "version": "dev-1.0.x",
+            "version": "1.0.0-beta6",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/gin_lb.git",
-                "reference": "cbd3810ae7616089b56871113604732f3bff25d0"
+                "reference": "1.0.0-beta6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/gin_lb-1.0.0-beta6.zip",
+                "reference": "1.0.0-beta6",
+                "shasum": "623d241aebeef7f580fe058fd7a8bfaea0f0aa9b"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
@@ -3928,15 +3934,12 @@
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-1.0.x": "1.0.x-dev"
-                },
                 "drupal": {
-                    "version": "1.0.0-beta4+10-dev",
-                    "datestamp": "1626381631",
+                    "version": "1.0.0-beta6",
+                    "datestamp": "1627423013",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "message": "Beta releases are not covered by Drupal security advisories."
                     }
                 },
                 "enable-patching": false,
@@ -5457,6 +5460,59 @@
             }
         },
         {
+            "name": "drupal/section_library",
+            "version": "1.0.0-beta2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/section_library.git",
+                "reference": "1.0.0-beta2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/section_library-1.0.0-beta2.zip",
+                "reference": "1.0.0-beta2",
+                "shasum": "7f8ac3854543c7ad93ea68df78194ca23e789a4c"
+            },
+            "require": {
+                "drupal/core": "^8.7.7 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.0.0-beta2",
+                    "datestamp": "1623102189",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Mahmoud Zayed",
+                    "homepage": "https://www.drupal.org/u/mahmoud-zayed",
+                    "role": "Maintainer"
+                }
+            ],
+            "description": "Create reusable templates for single or multiple sections at the layout builder.",
+            "homepage": "https://www.drupal.org/project/section_library",
+            "keywords": [
+                "Drupal",
+                "Layout Builder",
+                "library",
+                "section",
+                "template"
+            ],
+            "support": {
+                "source": "http://cgit.drupalcode.org/section_library",
+                "issues": "https://www.drupal.org/project/issues/section_library"
+            }
+        },
+        {
             "name": "drupal/simple_gmap",
             "version": "3.0.1",
             "source": {
@@ -6111,48 +6167,6 @@
             }
         },
         {
-            "name": "drupal/ui_patterns_layouts",
-            "version": "1.2.0",
-            "require": {
-                "drupal/core": "^8 || ^9",
-                "drupal/ui_patterns": "*"
-            },
-            "type": "metapackage",
-            "extra": {
-                "drupal": {
-                    "version": "8.x-1.2",
-                    "datestamp": "1591882155",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "ademarco",
-                    "homepage": "https://www.drupal.org/user/186696"
-                },
-                {
-                    "name": "bircher",
-                    "homepage": "https://www.drupal.org/user/1344166"
-                },
-                {
-                    "name": "pescetti",
-                    "homepage": "https://www.drupal.org/user/436244"
-                }
-            ],
-            "description": "Use patterns as layouts via the Layout Discovery module.",
-            "homepage": "https://www.drupal.org/project/ui_patterns",
-            "support": {
-                "source": "https://git.drupalcode.org/project/ui_patterns"
-            }
-        },
-        {
             "name": "drupal/ui_patterns_settings",
             "version": "2.0.0-beta4",
             "source": {
@@ -6377,21 +6391,27 @@
         },
         {
             "name": "drupal/wingsuit_companion",
-            "version": "1.0.0",
+            "version": "dev-2.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/wingsuit_companion.git",
-                "reference": "8.x-1.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/wingsuit_companion-8.x-1.0.zip",
-                "reference": "8.x-1.0",
-                "shasum": "b7f84a2a24eb5719b8156c96697a4ef50a5c4aad"
+                "reference": "fabdb3020f37c0bb870bbfb5cc5ce5a2d3e47383"
             },
             "require": {
-                "drupal/components": "*",
                 "drupal/core": "^8 || ^9",
+                "drupal/field_group": "^3.0",
+                "drupal/gin_lb": "^1.0",
+                "drupal/layout_builder_browser": "^1.0",
+                "drupal/ui_patterns": "^1.1",
+                "drupal/ui_patterns_extends": "^1.0",
+                "drupal/ui_patterns_layout_builder": "^1.1",
+                "drupal/ui_patterns_settings": "^2.0"
+            },
+            "require-dev": {
+                "drupal/components": "*",
+                "drupal/field_group": "*",
+                "drupal/gin_lb": "*",
+                "drupal/layout_builder_browser": "*",
                 "drupal/ui_patterns": "*",
                 "drupal/ui_patterns_extends": "*",
                 "drupal/ui_patterns_layouts": "*",
@@ -6399,12 +6419,15 @@
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
                 "drupal": {
-                    "version": "8.x-1.0",
-                    "datestamp": "1620162328",
+                    "version": "8.x-2.x-dev",
+                    "datestamp": "1627242206",
                     "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -11676,9 +11699,9 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "drupal/component_blocks": 20,
-        "drupal/wingsuit_companion": 10,
+        "drupal/wingsuit_companion": 20,
         "drupal/gin": 15,
-        "drupal/gin_lb": 20,
+        "drupal/gin_lb": 10,
         "drupal/inline_block_title_automatic": 15,
         "drupal/ui_patterns_extends": 20,
         "drupal/colorwidget": 20,
@@ -11690,7 +11713,8 @@
         "drupal/openapi_ui_redoc": 5,
         "drupal/openapi_ui_swagger": 5,
         "drupal/page_manager": 10,
-        "drupal/schemata": 10
+        "drupal/schemata": 10,
+        "drupal/section_library": 10
     },
     "prefer-stable": true,
     "prefer-lowest": false,

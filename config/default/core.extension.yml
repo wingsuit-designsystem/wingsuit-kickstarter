@@ -1,6 +1,7 @@
 module:
   admin_toolbar: 0
   admin_toolbar_links_access_filter: 0
+  admin_toolbar_tools: 0
   autosave_form: 0
   bg_image_formatter: 0
   block: 0
@@ -79,6 +80,7 @@ module:
   schema_metatag: 0
   schemata: 0
   schemata_json_schema: 0
+  section_library: 0
   serialization: 0
   shortcut: 0
   simple_gmap: 0
@@ -102,6 +104,8 @@ module:
   webform_ui: 0
   wingsuit_companion: 0
   wingsuit_layout: 0
+  wingsuit_lb: 0
+  wingsuit_ui_patterns: 0
   workflows: 0
   pathauto: 1
   content_translation: 10

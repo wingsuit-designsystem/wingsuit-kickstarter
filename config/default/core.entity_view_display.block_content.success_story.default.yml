@@ -1,0 +1,459 @@
+uuid: bfb42454-c3d1-4117-9f4f-5d6822e2f3d9
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.success_story
+    - field.field.block_content.success_story.field_button
+    - field.field.block_content.success_story.field_media
+    - field.field.block_content.success_story.field_preheadline
+    - field.field.block_content.success_story.field_text
+  module:
+    - layout_builder
+    - layout_library
+  theme:
+    - wingsuit
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: pattern_avatar
+        layout_settings:
+          label: ''
+          pattern:
+            field_templates: default
+            variant: default
+            settings:
+              text_align: center
+          context_mapping: {  }
+        components:
+          4dc452d9-960a-4bb5-bb60-8baaefe26446:
+            uuid: 4dc452d9-960a-4bb5-bb60-8baaefe26446
+            region: image
+            configuration:
+              id: 'field_block:block_content:success_story:field_media'
+              label: Image
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: 1x1
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          6de55bf7-1dea-4daa-9622-454748b8787e:
+            uuid: 6de55bf7-1dea-4daa-9622-454748b8787e
+            region: text
+            configuration:
+              id: 'field_block:block_content:success_story:field_text'
+              label: Text
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: text_trimmed
+                settings:
+                  trim_length: 200
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          a5c365df-3c1e-4d2f-825e-467dbcf4b95a:
+            uuid: a5c365df-3c1e-4d2f-825e-467dbcf4b95a
+            region: full_name
+            configuration:
+              id: 'field_block:block_content:success_story:field_preheadline'
+              label: Preheadline
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          9e01ab6e-aa57-4c89-8d6d-0d3f8b48c5e7:
+            uuid: 9e01ab6e-aa57-4c89-8d6d-0d3f8b48c5e7
+            region: button
+            configuration:
+              id: 'field_block:block_content:success_story:field_button'
+              label: Button
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: pattern_formatter
+                settings:
+                  pattern: button
+                  variants:
+                    avatar: default
+                    button: default
+                    card: default
+                    headline: xl
+                    image: image
+                    section: 1_column
+                    slider: '1'
+                  pattern_mapping:
+                    accordion_item:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    accordion:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    article:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    avatar:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    banner:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    basic:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    button_group:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    button:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: text
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    card:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    container:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    grid:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    headline:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    hero:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    image:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    link:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    logo:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    marion:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    rich_text:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    section:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    slider:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    table:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    video:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                  pattern_settings:
+                    accordion_item:
+                      id:
+                        input: ''
+                    avatar:
+                      text_align: ''
+                    banner:
+                      position: center_center
+                      position_token: center_center
+                    button_group:
+                      align: center
+                      align_token: center
+                    button:
+                      size: medium
+                      expanded: 0
+                      round: 0
+                      color: primary
+                      url:
+                        input: '[block_content:field_button]'
+                      icon: ''
+                      icon_alignment: right
+                    card:
+                      alignment: left
+                      bg_color: ''
+                      url:
+                        input: ''
+                      show_read_more: 0
+                    container:
+                      width: default
+                      bg:
+                        colorwidget: ''
+                      bg_image: null
+                      padding_x: default
+                      padding_top: ''
+                      padding_bottom: default
+                      classes: ''
+                    grid:
+                      equal_height: 0
+                      gutter: default
+                      columns: '1'
+                    headline:
+                      tag_name: div
+                      spacing_bottom: default
+                    image:
+                      url: ''
+                      background_style: ''
+                    link:
+                      url:
+                        input: ''
+                      icon: right-arrow
+                    section:
+                      display_header_region: 0
+                      columns_width_1: equal
+                      columns_width_2: equal
+                      columns_width_3: equal
+                      columns_width_4: equal
+                      columns_width_5: equal
+                      equal_height: 0
+                      gutter: default
+                      columns: '1'
+                      width: default
+                      bg:
+                        colorwidget: ''
+                      bg_image: null
+                      padding_x: default
+                      padding_top: ''
+                      padding_bottom: default
+                      classes: ''
+                    slider:
+                      autoplay: 0
+                      bullet_spacing: none
+                      pagination_spacing: none
+                      width: default
+                      bg:
+                        colorwidget: ''
+                      bg_image: null
+                      padding_x: default
+                      padding_top: ''
+                      padding_bottom: default
+                      classes: ''
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
+  layout_library:
+    enable: false
+id: block_content.success_story.default
+targetEntityType: block_content
+bundle: success_story
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_button: true
+  field_media: true
+  field_preheadline: true
+  field_text: true
+  langcode: true

@@ -16,14 +16,14 @@
         "drupal/ui_patterns_layout_builder": "^1.1",
         "drupal/ui_patterns_field_formatters": "^1.2",
         "drupal/component_blocks": "1.x-dev",
-        "drupal/wingsuit_companion": "^1.0@beta",
+        "drupal/wingsuit_companion": "2.x-dev",
         "drupal/focal_point": "^1.5",
         "drupal/media_library_edit": "^2.0",
         "drupal/drimage": "^2.0",
         "drupal/media_responsive_thumbnail": "^1.2",
         "drupal/layout_builder_browser": "^1.1",
         "drupal/gin": "^3.0@alpha",
-        "drupal/gin_lb": "1.0.x-dev",
+        "drupal/gin_lb": "^1.0@beta",
         "drupal/layout_builder_save_and_edit": "^1.0",
         "drupal/admin_toolbar": "^3.0",
         "drupal/inline_block_title_automatic": "^1.0@alpha",
@@ -64,7 +64,8 @@
         "drupal/devel": "^4.1",
         "drupal/editor_advanced_link": "^2.0",
         "drupal/twig_vardumper": "^3.0",
-        "drupal/media_library_form_element": "^2.0"
+        "drupal/media_library_form_element": "^2.0",
+        "drupal/section_library": "^1.0@beta"
     },
     "require-dev": {
         "drush/drush": ">=9.7"
@@ -91,6 +92,7 @@
                 "Text is not processed.": "https://git.drupalcode.org/project/ui_patterns_field_formatters/-/merge_requests/1.diff"
             },
             "drupal/core": {
+                "Add new Splitbutton render element to eventually replace Dropbutton": "https://www.drupal.org/files/issues/2020-12-24/1899236-143.patch",
                 "Break long text strings in layout edit": "https://www.drupal.org/files/issues/2020-12-22/3016507-50.patch",
                 "Improve StringItem::generateSampleValue()": "https://www.drupal.org/files/issues/2020-06-24/3091478-15.patch",
                 "Not all form elements can't use in vertical_tabs": "https://www.drupal.org/files/issues/2021-01-02/3122920_group_patch_5.patch",

@@ -7,5 +7,5 @@ block_id: 'inline_block:card'
 category: blocks
 label: Card
 weight: 0
-image_path: modules/custom/wingsuit_layout/layout_builder_browser/card.svg
+image_path: /themes/custom/wingsuit/dist/app-drupal/images/card-icon.png
 image_alt: ''
