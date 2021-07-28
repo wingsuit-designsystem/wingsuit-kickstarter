@@ -6395,7 +6395,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/wingsuit_companion.git",
-                "reference": "e529a18328b16ec7df9f2aad509bbb0c1581584f"
+                "reference": "58b9faaf29c041ed4da56a53162c73cc6c60d227"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
@@ -6424,7 +6424,7 @@
                 },
                 "drupal": {
                     "version": "8.x-2.x-dev",
-                    "datestamp": "1627423594",
+                    "datestamp": "1627503916",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
