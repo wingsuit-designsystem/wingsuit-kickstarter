@@ -8,7 +8,6 @@ dependencies:
     - field.field.block_content.banner.field_banner_position
     - field.field.block_content.banner.field_link
     - field.field.block_content.banner.field_media
-    - field.field.block_content.banner.field_title
   module:
     - layout_builder
     - layout_builder_restrictions
@@ -35,25 +34,6 @@ third_party_settings:
               position_token: '[block_content:field_banner_position:value]'
           context_mapping: {  }
         components:
-          0eb6358e-b709-4d3a-8e71-69b38df9e9fc:
-            uuid: 0eb6358e-b709-4d3a-8e71-69b38df9e9fc
-            region: headline
-            configuration:
-              id: 'field_block:block_content:banner:field_title'
-              label: Title
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: string
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
-            weight: 0
           f740e7f9-ea12-4078-be8c-b8e8a4134484:
             uuid: f740e7f9-ea12-4078-be8c-b8e8a4134484
             region: teaser
@@ -196,14 +176,6 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: null
-  field_title:
-    weight: 1
-    label: hidden
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
 hidden:
   langcode: true
   search_api_excerpt: true

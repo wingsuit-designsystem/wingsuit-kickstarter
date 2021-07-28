@@ -96,7 +96,6 @@
                 "Break long text strings in layout edit": "https://www.drupal.org/files/issues/2020-12-22/3016507-50.patch",
                 "Improve StringItem::generateSampleValue()": "https://www.drupal.org/files/issues/2020-06-24/3091478-15.patch",
                 "Not all form elements can't use in vertical_tabs": "https://www.drupal.org/files/issues/2021-01-02/3122920_group_patch_5.patch",
-                "Custom blocks break layout builder module - Quick Edit could not associate the rendered entity field markup\nPrimary tabs\nView(active tab)\nEdit\n": "https://www.drupal.org/files/issues/2020-10-19/3072231-39-core-9-2-x.patch",
                 "PHP message: Error: Call to a member function getEntityTypeId() on null (Layout Builder)": "https://www.drupal.org/files/issues/2020-08-05/3049332-inline-35.patch",
                 "Stream wrapper reference in JS library causes error in _locale_parse_js_file()": "https://www.drupal.org/files/issues/2020-05-08/2735717-28.patch",
                 "Callers of LayoutEntityHelperTrait::getEntitySections() do not account for the view mode": "https://www.drupal.org/files/issues/2020-08-27/3008924-rerolled-17.patch",
@@ -104,7 +103,8 @@
                 "2869592 - Disabled update module shouldn't produce a status report warning": "https://www.drupal.org/files/issues/2020-02-07/2869592-remove-update-warning-34.patch"
             },
             "drupal/layout_builder_st": {
-                "Argument 1 passed to Drupal\\layout_builder_st\\EventSubscriber\\ComponentPluginTranslate::isTranslation() must implement interface Drupal\\layout_builder\\SectionStorageInterface, null given": "https://www.drupal.org/files/issues/2019-07-24/isTranslation-null-given.patch"
+                "Argument 1 passed to Drupal\\layout_builder_st\\EventSubscriber\\ComponentPluginTranslate::isTranslation() must implement interface Drupal\\layout_builder\\SectionStorageInterface, null given": "https://www.drupal.org/files/issues/2019-07-24/isTranslation-null-given.patch",
+                "Inline block loading active block_content revision even if serialized block exists\n": "https://www.drupal.org/files/issues/2020-05-15/layout_builder_st-3067646-10.patch"
             },
             "drupal/drimage": {
                 "Stage file proxy": "https://git.drupalcode.org/project/drimage/-/merge_requests/1.patch",
