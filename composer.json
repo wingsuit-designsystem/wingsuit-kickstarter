@@ -3,31 +3,43 @@
     "type": "project",
     "description": "Starterkit for Wingsuit and Layout Builder.",
     "license": "GPL-2.0-or-later",
+    "repositories": {
+        "drupal": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        "assets": {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    },
     "require": {
         "composer/installers": "^1.9",
+        "cweagans/composer-patches": "^1.6.0",
+        "oomphinc/composer-installers-extender": "^2.0",
+        "acquia/blt": "*",
+        "ext-dom": "*",
         "drupal/core-composer-scaffold": "^9.2",
         "drupal/core-project-message": "^9.2",
         "drupal/core-recommended": "^9.2",
         "drupal/core": "~9.2",
-        "cweagans/composer-patches": "^1.6.0",
-        "acquia/blt": "^12.0",
         "drupal/config_split": "^1.5",
         "drupal/components": "^2.0",
         "drupal/ui_patterns_layout_builder": "^1.1",
         "drupal/ui_patterns_field_formatters": "^1.2",
-        "drupal/component_blocks": "1.x-dev",
-        "drupal/wingsuit_companion": "2.x-dev",
+        "drupal/component_blocks": "^1.2",
+        "drupal/wingsuit_companion": "^2.0",
         "drupal/focal_point": "^1.5",
         "drupal/media_library_edit": "^2.0",
         "drupal/drimage": "^2.0",
         "drupal/media_responsive_thumbnail": "^1.2",
-        "drupal/layout_builder_browser": "^1.1",
+        "drupal/layout_builder_browser": "^1.3",
         "drupal/gin": "^3.0@alpha",
-        "drupal/gin_lb": "^1.0@beta",
+        "drupal/gin_lb": "~1.0",
         "drupal/layout_builder_save_and_edit": "^1.0",
         "drupal/admin_toolbar": "^3.0",
         "drupal/inline_block_title_automatic": "^1.0@alpha",
-        "drupal/ui_patterns_extends": "1.0.x-dev",
+        "drupal/ui_patterns_extends": "^1.0@beta",
         "drupal/colorwidget": "1.0.x-dev",
         "drupal/twig_tweak": "^3.0",
         "drupal/layout_builder_st": "^1.0@alpha",
@@ -39,7 +51,6 @@
         "drupal/google_tag": "^1.4",
         "drupal/toolbar_anti_flicker": "^9.3",
         "drupal/schema_metatag": "^2.1",
-        "ext-dom": "*",
         "drupal/autosave_form": "^1.2",
         "drupal/bg_image_formatter": "^1.14",
         "drupal/conflict": "~2.0",
@@ -49,30 +60,30 @@
         "drupal/entity_block": "^1.0@beta",
         "drupal/image_widget_crop": "^2.3",
         "drupal/layout_builder_restrictions": "^2.8",
-        "drupal/layout_library": "^1.0@beta",
-        "drupal/moderation_sidebar": "^1.4",
-        "drupal/openapi_ui": "^1.0@RC",
-        "drupal/openapi_ui_redoc": "^1.0@RC",
-        "drupal/openapi_ui_swagger": "^1.0@RC",
         "drupal/page_manager": "^4.0@beta",
         "drupal/redirect": "^1.6",
         "drupal/schemata": "^1.0@beta",
         "drupal/simple_gmap": "^3.0",
         "drupal/pathauto": "^1.8",
-        "bower-asset/dropzone": "^5.9",
         "drupal/linkit": "~6.0",
         "drupal/devel": "^4.1",
         "drupal/editor_advanced_link": "^2.0",
         "drupal/twig_vardumper": "^3.0",
         "drupal/media_library_form_element": "^2.0",
-        "drupal/section_library": "^1.0@beta"
+        "drupal/section_library": "^1.0",
+        "drupal/ui_patterns_settings": "^2.0",
+        "bower-asset/dropzone": "5.7.2",
+        "drupal/media_bulk_upload": "^1.0@alpha",
+        "drupal/section_library_reusable": "^1.0@beta"
     },
     "require-dev": {
-        "drush/drush": ">=9.7"
+        "drush/drush": ">=10"
     },
     "config": {
         "process-timeout": 0
     },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "extra": {
         "patches": {
             "drupal/lightning_layout": {
@@ -86,13 +97,14 @@
                 "Drupal 9 compatibility for submodule(imageapi_optimize_webp_responsive)": "https://www.drupal.org/files/issues/2020-06-23/3153942-2.patch"
             },
             "drupal/gin_toolbar": {
-                "Add option for node local tasks in toolbar.": "https://git.drupalcode.org/project/gin_toolbar/-/merge_requests/10.patch?v1"
+                "Add option for node local tasks in toolbar.": "https://www.drupal.org/files/issues/2021-07-20/3121440-34.patch"
             },
             "drupal/ui_patterns_field_formatters": {
-                "Text is not processed.": "https://git.drupalcode.org/project/ui_patterns_field_formatters/-/merge_requests/1.diff"
+                "Text is not processed.": "https://git.drupalcode.org/project/ui_patterns_field_formatters/-/merge_requests/1.diff",
+                "Item to context": "https://git.drupalcode.org/project/ui_patterns_field_formatters/-/merge_requests/3.patch"
             },
             "drupal/core": {
-                "Add new Splitbutton render element to eventually replace Dropbutton": "https://www.drupal.org/files/issues/2020-12-24/1899236-143.patch",
+                "Custom blocks break layout builder module - Quick Edit could not associate the rendered entity field markup": "https://git.drupalcode.org/project/drupal/-/merge_requests/1136.patch",
                 "Break long text strings in layout edit": "https://www.drupal.org/files/issues/2020-12-22/3016507-50.patch",
                 "Improve StringItem::generateSampleValue()": "https://www.drupal.org/files/issues/2020-06-24/3091478-15.patch",
                 "Not all form elements can't use in vertical_tabs": "https://www.drupal.org/files/issues/2021-01-02/3122920_group_patch_5.patch",
@@ -105,6 +117,9 @@
             "drupal/layout_builder_st": {
                 "Argument 1 passed to Drupal\\layout_builder_st\\EventSubscriber\\ComponentPluginTranslate::isTranslation() must implement interface Drupal\\layout_builder\\SectionStorageInterface, null given": "https://www.drupal.org/files/issues/2019-07-24/isTranslation-null-given.patch",
                 "Inline block loading active block_content revision even if serialized block exists\n": "https://www.drupal.org/files/issues/2020-05-15/layout_builder_st-3067646-10.patch"
+            },
+            "drupal/section_library": {
+                "#3228163: Add create or update logic.": "https://git.drupalcode.org/project/section_library/-/merge_requests/3.patch"
             },
             "drupal/drimage": {
                 "Stage file proxy": "https://git.drupalcode.org/project/drimage/-/merge_requests/1.patch",
@@ -161,25 +176,6 @@
         ],
         "patchLevel": {
             "drupal/core": "-p2"
-        },
-        "patches-ignore": {
-            "drupal/lightning_core": {
-                "drupal/core": {
-                    "2869592 - Disabled update module shouldn't produce a status report warning": "https://www.drupal.org/files/issues/2869592-remove-update-warning-7.patch"
-                }
-            }
         }
-    },
-    "repositories": {
-        "drupal": {
-            "type": "composer",
-            "url": "https://packages.drupal.org/8"
-        },
-        "assets": {
-            "type": "composer",
-            "url": "https://asset-packagist.org"
-        }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    }
 }

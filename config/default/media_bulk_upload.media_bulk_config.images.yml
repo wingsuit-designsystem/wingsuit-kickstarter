@@ -1,0 +1,15 @@
+uuid: 25d91c07-5e54-45dd-ab48-a17021f06941
+langcode: en
+status: true
+dependencies: {  }
+id: images
+label: Images
+media_types:
+  image: image
+  audio: 0
+  document: 0
+  remote_video: 0
+  video: 0
+show_alt: null
+show_title: null
+form_mode: media_browser

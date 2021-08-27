@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.page.body
     - field.field.node.page.field_meta_tags
     - field.field.node.page.field_seo_title
-    - field.field.node.page.layout_selection
     - node.type.page
   module:
     - text
@@ -35,5 +34,4 @@ hidden:
   field_meta_tags: true
   field_seo_title: true
   langcode: true
-  layout_selection: true
   search_api_excerpt: true

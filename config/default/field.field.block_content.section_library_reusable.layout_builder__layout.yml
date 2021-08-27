@@ -1,0 +1,23 @@
+uuid: 53f0606d-d1f4-480a-a655-331a4732e9a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.section_library_reusable
+    - field.storage.block_content.layout_builder__layout
+  module:
+    - layout_builder
+_core:
+  default_config_hash: ApjGiSm8RW64iYuKxuO0UiGGk_QSUGSNMPbVuLfOfbc
+id: block_content.section_library_reusable.layout_builder__layout
+field_name: layout_builder__layout
+entity_type: block_content
+bundle: section_library_reusable
+label: Layout
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: layout_section

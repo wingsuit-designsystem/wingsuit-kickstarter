@@ -8,7 +8,6 @@ dependencies:
     - field.field.block_content.accordion_item.field_title
   module:
     - layout_builder
-    - layout_library
     - text
   theme:
     - wingsuit
@@ -64,8 +63,6 @@ third_party_settings:
             additional: {  }
             weight: 0
         third_party_settings: {  }
-  layout_library:
-    enable: false
 _core:
   default_config_hash: Xj2UtvO5Gwg-tSOGXdOj4HGkO8OF_0j_aeB8LFJtGe8
 id: block_content.accordion_item.default

@@ -10,7 +10,6 @@ dependencies:
     - field.field.block_content.success_story.field_text
   module:
     - layout_builder
-    - layout_library
   theme:
     - wingsuit
 third_party_settings:
@@ -437,8 +436,6 @@ third_party_settings:
             additional: {  }
             weight: 0
         third_party_settings: {  }
-  layout_library:
-    enable: false
 id: block_content.success_story.default
 targetEntityType: block_content
 bundle: success_story

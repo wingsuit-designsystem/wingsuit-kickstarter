@@ -6,7 +6,6 @@ dependencies:
     - field.field.node.page.body
     - field.field.node.page.field_meta_tags
     - field.field.node.page.field_seo_title
-    - field.field.node.page.layout_selection
     - node.type.page
     - workflows.workflow.editorial
   module:
@@ -58,12 +57,6 @@ content:
     region: content
     settings:
       include_locked: true
-    third_party_settings: {  }
-  layout_selection:
-    type: options_select
-    region: content
-    weight: 11
-    settings: {  }
     third_party_settings: {  }
   moderation_state:
     type: moderation_state_default

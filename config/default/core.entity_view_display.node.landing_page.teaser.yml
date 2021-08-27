@@ -9,7 +9,6 @@ dependencies:
     - field.field.node.landing_page.field_seo_title
     - field.field.node.landing_page.layout_builder__layout
     - field.field.node.landing_page.layout_builder__translation
-    - field.field.node.landing_page.layout_selection
     - node.type.landing_page
   module:
     - metatag
@@ -48,5 +47,4 @@ hidden:
   langcode: true
   layout_builder__layout: true
   layout_builder__translation: true
-  layout_selection: true
   search_api_excerpt: true

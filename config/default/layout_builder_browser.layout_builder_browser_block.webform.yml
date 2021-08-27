@@ -5,7 +5,7 @@ dependencies: {  }
 id: webform
 block_id: webform_block
 category: forms
-label: Webform
+label: Form
 weight: -1
-image_path: modules/custom/wingsuit_layout/layout_builder_browser/forms.svg
+image_path: /themes/custom/wingsuit/dist/app-drupal/images/webform-icon.svg
 image_alt: ''

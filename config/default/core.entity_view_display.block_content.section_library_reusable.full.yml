@@ -1,0 +1,26 @@
+uuid: 69f97a9a-0f92-43d8-a74b-d2cd61761452
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.section_library_reusable
+    - core.entity_view_mode.block_content.full
+    - field.field.block_content.section_library_reusable.field_library
+    - field.field.block_content.section_library_reusable.layout_builder__layout
+  module:
+    - layout_builder
+third_party_settings:
+  layout_builder:
+    allow_custom: true
+    enabled: true
+_core:
+  default_config_hash: MAY4eNrPbKXJb9ImqJj1XHBO3DHO7yqAkNEIZWoajQk
+id: block_content.section_library_reusable.full
+targetEntityType: block_content
+bundle: section_library_reusable
+mode: full
+content: {  }
+hidden:
+  field_library: true
+  langcode: true
+  layout_builder__layout: true

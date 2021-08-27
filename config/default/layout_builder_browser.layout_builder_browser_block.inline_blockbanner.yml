@@ -6,6 +6,6 @@ id: inline_blockbanner
 block_id: 'inline_block:banner'
 category: blocks
 label: Banner
-weight: 0
-image_path: /themes/custom/wingsuit/dist/app-drupal/images/banner-icon.png
+weight: 1
+image_path: /themes/custom/wingsuit/dist/app-drupal/images/banner-icon.svg
 image_alt: ''

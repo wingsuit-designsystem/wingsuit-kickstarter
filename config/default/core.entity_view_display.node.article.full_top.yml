@@ -14,7 +14,6 @@ dependencies:
     - node.type.article
   module:
     - layout_builder
-    - layout_library
     - metatag
     - text
     - user
@@ -110,8 +109,6 @@ third_party_settings:
             additional: {  }
             weight: 0
         third_party_settings: {  }
-  layout_library:
-    enable: false
 id: node.article.full_top
 targetEntityType: node
 bundle: article

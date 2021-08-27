@@ -1,0 +1,22 @@
+# German translation of Section Library Reusable (1.0.0-beta1)
+# Copyright (c) 2021 by the German translation team
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Section Library Reusable (1.0.0-beta1)\n"
+"POT-Creation-Date: 2021-08-17 13:42+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Language-Team: German\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+msgid "User interface"
+msgstr "Benutzeroberfläche"
+msgid "Layout"
+msgstr "Layout"
+msgid "Library"
+msgstr "Bibliothek"
+msgid "Reusable"
+msgstr "Wiederverwendbar"

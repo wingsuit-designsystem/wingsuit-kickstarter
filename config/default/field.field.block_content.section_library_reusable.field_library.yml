@@ -1,0 +1,28 @@
+uuid: b139ffda-c539-401a-b0a5-c8ec1e742ce6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.section_library_reusable
+    - field.storage.block_content.field_library
+_core:
+  default_config_hash: KRvCQkkicfPCwHDmE3yZ6DU-av_vvopT99WZ-6dntEs
+id: block_content.section_library_reusable.field_library
+field_name: field_library
+entity_type: block_content
+bundle: section_library_reusable
+label: Library
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:section_library_template'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+field_type: entity_reference

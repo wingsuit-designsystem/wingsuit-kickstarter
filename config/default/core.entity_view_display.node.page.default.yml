@@ -6,12 +6,10 @@ dependencies:
     - field.field.node.page.body
     - field.field.node.page.field_meta_tags
     - field.field.node.page.field_seo_title
-    - field.field.node.page.layout_selection
     - node.type.page
   module:
     - layout_builder
     - layout_builder_restrictions
-    - layout_library
     - metatag
     - text
     - user
@@ -446,8 +444,6 @@ third_party_settings:
             weight: 0
         third_party_settings: {  }
     allow_custom: false
-  layout_library:
-    enable: true
   layout_builder_restrictions:
     allowed_block_categories: {  }
     entity_view_mode_restriction:
@@ -491,5 +487,4 @@ content:
 hidden:
   content_moderation_control: true
   langcode: true
-  layout_selection: true
   search_api_excerpt: true

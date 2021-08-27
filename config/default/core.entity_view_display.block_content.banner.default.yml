@@ -11,7 +11,6 @@ dependencies:
   module:
     - layout_builder
     - layout_builder_restrictions
-    - layout_library
     - link
     - options
     - text
@@ -31,7 +30,7 @@ third_party_settings:
             variant: ''
             settings:
               position: ''
-              position_token: '[block_content:field_banner_position:value]'
+              position_token: ''
           context_mapping: {  }
         components:
           f740e7f9-ea12-4078-be8c-b8e8a4134484:
@@ -591,8 +590,6 @@ third_party_settings:
             additional: {  }
             weight: 2
         third_party_settings: {  }
-  layout_library:
-    enable: false
   layout_builder_restrictions:
     allowed_block_categories: {  }
     entity_view_mode_restriction:
