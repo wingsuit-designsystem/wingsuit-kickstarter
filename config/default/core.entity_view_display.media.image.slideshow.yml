@@ -10,7 +10,6 @@ dependencies:
   module:
     - drimage
     - layout_builder
-    - layout_library
   theme:
     - wingsuit
 third_party_settings:
@@ -68,8 +67,6 @@ third_party_settings:
             additional: {  }
             weight: 0
         third_party_settings: {  }
-  layout_library:
-    enable: false
 _core:
   default_config_hash: OkEIcPIF2jnli7EgxTcs1QX0WN9YZM9aKZjgC7KFlIg
 id: media.image.slideshow

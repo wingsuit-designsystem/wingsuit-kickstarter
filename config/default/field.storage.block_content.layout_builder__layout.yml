@@ -1,0 +1,21 @@
+uuid: ea360527-370b-4272-82bf-2e4e289db8c6
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - layout_builder
+_core:
+  default_config_hash: odAUgiH93LK_qp2fWoHMNg3e8WJ6dczE_PiKXXmBpfw
+id: block_content.layout_builder__layout
+field_name: layout_builder__layout
+entity_type: block_content
+type: layout_section
+settings: {  }
+module: layout_builder
+locked: true
+cardinality: 1
+translatable: false
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

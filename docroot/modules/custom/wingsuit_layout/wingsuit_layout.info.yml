@@ -1,8 +1,0 @@
-name: 'Wingsuit Layout'
-core: 8.x
-core_version_requirement: '^8 || ^9'
-type: module
-description: 'Layout extensions Wingsuit Kickstarter.'
-package: wingsuit
-dependencies:
-  - wingsuit_companion

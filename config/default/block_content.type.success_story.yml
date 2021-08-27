@@ -1,0 +1,8 @@
+uuid: 7a021277-7b3e-4140-9724-05bee1e3bff0
+langcode: en
+status: true
+dependencies: {  }
+id: success_story
+label: 'Success Story'
+revision: 0
+description: ''

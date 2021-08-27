@@ -12,7 +12,6 @@ dependencies:
   module:
     - layout_builder
     - layout_builder_restrictions
-    - layout_library
     - link
     - text
   theme:
@@ -443,8 +442,6 @@ third_party_settings:
             additional: {  }
             weight: 0
         third_party_settings: {  }
-  layout_library:
-    enable: false
   layout_builder_restrictions:
     allowed_block_categories: {  }
     entity_view_mode_restriction:

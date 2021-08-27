@@ -8,7 +8,6 @@ dependencies:
     - field.field.block_content.banner.field_banner_position
     - field.field.block_content.banner.field_link
     - field.field.block_content.banner.field_media
-    - field.field.block_content.banner.field_title
   module:
     - link_attributes
     - media_library
@@ -65,14 +64,6 @@ content:
       media_library_edit:
         show_edit: '1'
     type: media_library_widget
-    region: content
-  field_title:
-    weight: 1
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
     region: content
   translation:
     weight: 5

@@ -8,7 +8,6 @@ dependencies:
     - field.field.block_content.buttons.field_buttons_align
   module:
     - layout_builder
-    - layout_library
     - link
     - options
   theme:
@@ -74,8 +73,6 @@ third_party_settings:
             additional: {  }
             weight: 0
         third_party_settings: {  }
-  layout_library:
-    enable: false
 id: block_content.buttons.default
 targetEntityType: block_content
 bundle: buttons

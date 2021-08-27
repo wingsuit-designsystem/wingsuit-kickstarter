@@ -1,0 +1,10 @@
+uuid: 3bb55983-eb35-414a-990c-85d3830e4109
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: kLIbq_oVpEmxhV9_jH2bP7yxYma7ReUmhnSrsFmM1qo
+id: section_library_reusable
+label: 'Section Library Reusable'
+revision: 0
+description: ''

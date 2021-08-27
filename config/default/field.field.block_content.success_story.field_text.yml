@@ -1,0 +1,21 @@
+uuid: 5203328c-2c87-4d72-8d2f-d3157ca718e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.success_story
+    - field.storage.block_content.field_text
+  module:
+    - text
+id: block_content.success_story.field_text
+field_name: field_text
+entity_type: block_content
+bundle: success_story
+label: Text
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

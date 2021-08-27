@@ -9,14 +9,11 @@ dependencies:
   module:
     - layout_builder
     - layout_builder_restrictions
-    - layout_library
     - ui_patterns_field_formatters
 third_party_settings:
   layout_builder:
     allow_custom: false
     enabled: false
-  layout_library:
-    enable: false
   layout_builder_restrictions:
     allowed_block_categories: {  }
     entity_view_mode_restriction:

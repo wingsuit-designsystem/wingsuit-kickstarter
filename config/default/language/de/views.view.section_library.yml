@@ -1,0 +1,62 @@
+display:
+  default:
+    display_title: Master
+    display_options:
+      exposed_form:
+        options:
+          submit_button: Filter
+          reset_button_label: Zurücksetzen
+          exposed_sorts_label: 'Sortieren nach'
+          sort_asc_label: Aufsteigend
+          sort_desc_label: Absteigend
+      pager:
+        options:
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« Anfang'
+            last: 'Ende »'
+          expose:
+            items_per_page_label: 'Elemente pro Seite'
+            items_per_page_options_all_label: '- Alle -'
+            offset_label: Versatz
+      fields:
+        id:
+          label: ID
+          separator: ', '
+        image__target_id:
+          label: Bild
+          separator: ', '
+        label:
+          label: Beschriftung
+          separator: ', '
+        type:
+          label: Typ
+          separator: ', '
+        entity_id:
+          separator: ', '
+        created:
+          label: Erstellt
+          separator: ', '
+        changed:
+          label: Geändert
+          separator: ', '
+        user_id:
+          label: 'Geschrieben von'
+          separator: ', '
+        operations:
+          label: Aktionslinks
+      filters:
+        label:
+          expose:
+            label: Beschriftung
+        type:
+          expose:
+            label: Typ
+          group_info:
+            label: Typ
+            group_items:
+              1:
+                title: Abschnitt
+  page_section_library:
+    display_title: Seite

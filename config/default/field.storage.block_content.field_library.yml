@@ -1,0 +1,22 @@
+uuid: ccf9eb4a-c92b-4deb-8619-9b6ec4970df4
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - section_library
+_core:
+  default_config_hash: ll-pVFiRDx_HqcVrPGfTIvaRlBfh_eziLJOKpFqvvdY
+id: block_content.field_library
+field_name: field_library
+entity_type: block_content
+type: entity_reference
+settings:
+  target_type: section_library_template
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
