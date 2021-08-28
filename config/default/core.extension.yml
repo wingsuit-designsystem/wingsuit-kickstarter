@@ -103,6 +103,7 @@ module:
   webform_ui: 0
   wingsuit_companion: 0
   wingsuit_lb: 0
+  wingsuit_link: 0
   wingsuit_ui_patterns: 0
   workflows: 0
   pathauto: 1

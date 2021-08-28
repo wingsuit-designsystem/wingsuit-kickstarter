@@ -1,6 +1,6 @@
 uuid: b2ad1ed3-4802-4c89-b002-1a9a6a66bba6
-name: 'Drush Site-Install'
-mail: admin@example.com
+name: 'The Peach Company'
+mail: hello@peach-company.demo
 slogan: ''
 page:
   403: ''

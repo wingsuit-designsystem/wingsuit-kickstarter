@@ -59,13 +59,349 @@ third_party_settings:
               label_display: '0'
               formatter:
                 label: hidden
-                type: link_separate
+                type: pattern_formatter
                 settings:
-                  trim_length: 200
-                  url_only: false
-                  url_plain: false
-                  rel: '0'
-                  target: '0'
+                  pattern: button
+                  variants:
+                    alex: hagenau
+                    avatar: default
+                    button: default
+                    card: default
+                    headline: xl
+                    image: image
+                    section: 1_column
+                    slider: '1'
+                  pattern_mapping:
+                    accordion_item:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    alex:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    article:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    avatar:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    banner:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    basic:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    button_group:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    button:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: text
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    card:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    container:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    grid:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    headline:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    hero:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    image:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    link:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    logo:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    rich_text:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    section:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    slider:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    spacing:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    table:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                    video:
+                      settings:
+                        'field_properties:uri':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:title':
+                          destination: _hidden
+                          weight: '0'
+                        'field_properties:options':
+                          destination: _hidden
+                          weight: '0'
+                  pattern_settings:
+                    accordion_item:
+                      id:
+                        input: ''
+                    alex:
+                      bg_color:
+                        colorwidget: null
+                      text_align: ''
+                    avatar:
+                      text_align: ''
+                    banner:
+                      position: center_center
+                      position_token: center_center
+                    button_group:
+                      align: center
+                      align_token: center
+                    button:
+                      size: medium
+                      expanded: 0
+                      round: 0
+                      color: primary
+                      url:
+                        input: ''
+                      icon: ''
+                      icon_alignment: ''
+                    card:
+                      alignment: left
+                      bg_color: ''
+                      url:
+                        input: ''
+                      show_read_more: 0
+                    container:
+                      width: default
+                      bg:
+                        colorwidget: ''
+                      bg_image: null
+                      classes: ''
+                      padding_x: default
+                      padding_top: ''
+                      padding_bottom: default
+                    grid:
+                      equal_height: 0
+                      gutter: default
+                      columns: '1'
+                    headline:
+                      tag_name: div
+                      spacing_bottom: default
+                    image:
+                      url: ''
+                      background_style: ''
+                    link:
+                      url:
+                        input: ''
+                      icon: right-arrow
+                    section:
+                      display_header_region: 0
+                      columns_width_1: equal
+                      columns_width_2: equal
+                      columns_width_3: equal
+                      columns_width_4: equal
+                      columns_width_5: equal
+                      equal_height: 0
+                      gutter: default
+                      columns: '1'
+                      width: default
+                      bg:
+                        colorwidget: ''
+                      bg_image: null
+                      classes: ''
+                      padding_x: default
+                      padding_top: ''
+                      padding_bottom: default
+                    slider:
+                      autoplay: 0
+                      bullet_spacing: none
+                      pagination_spacing: none
+                      width: default
+                      bg:
+                        colorwidget: ''
+                      bg_image: null
+                      classes: ''
+                      padding_x: default
+                      padding_top: ''
+                      padding_bottom: default
+                    spacing:
+                      padding_x: default
+                      padding_top: ''
+                      padding_bottom: default
                 third_party_settings: {  }
               context_mapping:
                 entity: layout_builder.entity
