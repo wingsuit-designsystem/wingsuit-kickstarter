@@ -3902,17 +3902,17 @@
         },
         {
             "name": "drupal/gin_lb",
-            "version": "1.0.0-beta9",
+            "version": "1.0.0-beta10",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/gin_lb.git",
-                "reference": "1.0.0-beta9"
+                "reference": "1.0.0-beta10"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/gin_lb-1.0.0-beta9.zip",
-                "reference": "1.0.0-beta9",
-                "shasum": "ee98fe251cde7dbab156502ed5f2db19bfa4e7dd"
+                "url": "https://ftp.drupal.org/files/projects/gin_lb-1.0.0-beta10.zip",
+                "reference": "1.0.0-beta10",
+                "shasum": "1c6f4c499a2623e90a9d1a7a44c81eda3fb1f54f"
             },
             "require": {
                 "drupal/core": "^8 || ^9",
@@ -3938,8 +3938,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.0-beta9",
-                    "datestamp": "1630103007",
+                    "version": "1.0.0-beta10",
+                    "datestamp": "1630262519",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Beta releases are not covered by Drupal security advisories."
