@@ -104,7 +104,6 @@
                 "Item to context": "https://git.drupalcode.org/project/ui_patterns_field_formatters/-/merge_requests/3.patch"
             },
             "drupal/core": {
-                "Custom blocks break layout builder module - Quick Edit could not associate the rendered entity field markup": "https://git.drupalcode.org/project/drupal/-/merge_requests/1136.patch",
                 "Break long text strings in layout edit": "https://www.drupal.org/files/issues/2020-12-22/3016507-50.patch",
                 "Improve StringItem::generateSampleValue()": "https://www.drupal.org/files/issues/2020-06-24/3091478-15.patch",
                 "Not all form elements can't use in vertical_tabs": "https://www.drupal.org/files/issues/2021-01-02/3122920_group_patch_5.patch",
