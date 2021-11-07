@@ -13,8 +13,70 @@ dependencies:
     - field.field.node.article.layout_builder__translation
     - node.type.article
   module:
+    - layout_builder
     - text
     - user
+  theme:
+    - wingsuit
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: pattern_card
+        layout_settings:
+          label: ''
+          pattern:
+            field_templates: default
+            variant: default
+            settings:
+              alignment: left
+              bg_color: ''
+              url:
+                input: '[node:url]'
+              show_read_more: 0
+          context_mapping: {  }
+        components:
+          cfb12461-bf0b-4daa-a867-337301ddd1a3:
+            uuid: cfb12461-bf0b-4daa-a867-337301ddd1a3
+            region: image
+            configuration:
+              id: 'field_block:node:article:field_media'
+              label: Media
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_entity_view
+                settings:
+                  view_mode: 16x9
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+          cfab0d30-6479-4323-98fa-3da6e779e589:
+            uuid: cfab0d30-6479-4323-98fa-3da6e779e589
+            region: headline
+            configuration:
+              id: 'field_block:node:article:title'
+              label: Title
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+            additional: {  }
+            weight: 0
+        third_party_settings: {  }
 id: node.article.teaser
 targetEntityType: node
 bundle: article
