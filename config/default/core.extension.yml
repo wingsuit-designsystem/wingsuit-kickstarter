@@ -46,6 +46,7 @@ module:
   imageapi_optimize_webp: 0
   imageapi_optimize_webp_responsive: 0
   inline_block_title_automatic: 0
+  jsonapi: 0
   language: 0
   layout_builder: 0
   layout_builder_browser: 0
