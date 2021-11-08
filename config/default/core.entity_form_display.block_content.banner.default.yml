@@ -5,14 +5,37 @@ dependencies:
   config:
     - block_content.type.banner
     - field.field.block_content.banner.body
+    - field.field.block_content.banner.field_banner_height
+    - field.field.block_content.banner.field_banner_image_position
     - field.field.block_content.banner.field_banner_position
     - field.field.block_content.banner.field_link
     - field.field.block_content.banner.field_media
   module:
+    - field_group
     - link_attributes
     - media_library
     - media_library_edit
     - text
+third_party_settings:
+  field_group:
+    group_settings:
+      children:
+        - field_banner_height
+        - field_banner_position
+        - field_banner_image_position
+      parent_name: ''
+      weight: 3
+      format_type: details
+      region: content
+      format_settings:
+        show_empty_fields: false
+        id: ''
+        classes: ''
+        formatter: closed
+        required_fields: true
+        description: ''
+        open: false
+      label: Settings
 _core:
   default_config_hash: '-LvLxBq-PLV2bypCqXrJ4A4ThsIrEzPs9CcthejlwB8'
 id: block_content.banner.default
@@ -21,7 +44,7 @@ bundle: banner
 mode: default
 content:
   body:
-    weight: 3
+    weight: 1
     settings:
       rows: 9
       summary_rows: 3
@@ -30,15 +53,27 @@ content:
     third_party_settings: {  }
     type: text_textarea_with_summary
     region: content
+  field_banner_height:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_banner_image_position:
+    weight: 7
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
   field_banner_position:
-    weight: 2
+    weight: 6
     settings: {  }
     third_party_settings: {  }
     type: options_select
     region: content
   field_link:
     type: link_attributes
-    weight: 4
+    weight: 2
     region: content
     settings:
       placeholder_url: ''
@@ -66,7 +101,7 @@ content:
     type: media_library_widget
     region: content
   translation:
-    weight: 5
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
