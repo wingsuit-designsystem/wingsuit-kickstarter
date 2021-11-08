@@ -1,23 +1,23 @@
-uuid: 5fa2920d-92c7-4a85-b650-459a51a6497a
+uuid: 4393575b-10a5-42da-a3fb-897469da183c
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.banner
-    - field.storage.block_content.field_banner_position
+    - field.storage.block_content.field_banner_height
   module:
     - options
-id: block_content.banner.field_banner_position
-field_name: field_banner_position
+id: block_content.banner.field_banner_height
+field_name: field_banner_height
 entity_type: block_content
 bundle: banner
-label: 'Text Position'
+label: Height
 description: ''
-required: true
+required: false
 translatable: false
 default_value:
   -
-    value: center_center
+    value: default
 default_value_callback: ''
 settings: {  }
 field_type: list_string

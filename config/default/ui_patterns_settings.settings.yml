@@ -1,2 +1,4 @@
 mapping:
   block_content--field_banner_position: 'banner::position'
+  block_content--field_banner_height: 'banner::height'
+  block_content--field_banner_image_position: 'banner::image_position'
