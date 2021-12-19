@@ -1,0 +1,16 @@
+{
+  "packages": {
+    "fruition-github": {
+      "dev-master": {
+        "name": "fruition/wingsuit-kickstarter",
+        "source": {
+          "reference": "dev-master",
+          "type": "github",
+          "url": "https://github.com/fruition/wingsuit-kickstarter"
+        },
+        "type": "project",
+        "version": "dev-master"
+      }
+    }
+  }
+}
