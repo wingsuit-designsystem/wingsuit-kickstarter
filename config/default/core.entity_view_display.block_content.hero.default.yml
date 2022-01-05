@@ -18,17 +18,17 @@ dependencies:
     - wingsuit
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: true
+    allow_custom: false
     sections:
       -
         layout_id: pattern_hero
         layout_settings:
           label: ''
+          context_mapping: {  }
           pattern:
             field_templates: default
             variant: ''
-          context_mapping: {  }
         components:
           d03a5383-2490-4faa-a3a6-a7de5a26b149:
             uuid: d03a5383-2490-4faa-a3a6-a7de5a26b149
@@ -36,276 +36,79 @@ third_party_settings:
             configuration:
               id: 'field_block:block_content:hero:field_title'
               label: Title
-              provider: layout_builder
               label_display: '0'
-              formatter:
-                label: hidden
-                type: string
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
-            additional: {  }
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
             weight: 0
+            additional: {  }
           a4516ecc-e10e-4fd7-b5a2-7ccea16603df:
             uuid: a4516ecc-e10e-4fd7-b5a2-7ccea16603df
             region: pre_headline
             configuration:
               id: 'field_block:block_content:hero:field_preheadline'
               label: Preheadline
-              provider: layout_builder
               label_display: '0'
-              formatter:
-                label: hidden
-                type: string
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
-            additional: {  }
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
             weight: 0
+            additional: {  }
           948a264b-4214-42ab-a267-e7f49c024a82:
             uuid: 948a264b-4214-42ab-a267-e7f49c024a82
             region: image
             configuration:
               id: 'field_block:block_content:hero:field_media'
               label: Image
-              provider: layout_builder
               label_display: '0'
-              formatter:
-                label: hidden
-                type: entity_reference_entity_view
-                settings:
-                  view_mode: default
-                third_party_settings: {  }
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
-            additional: {  }
+              formatter:
+                type: entity_reference_entity_view
+                label: hidden
+                settings:
+                  view_mode: default
+                third_party_settings: {  }
             weight: 0
+            additional: {  }
           555f90db-7774-40c2-8d67-0557ed3c0e5f:
             uuid: 555f90db-7774-40c2-8d67-0557ed3c0e5f
             region: button
             configuration:
               id: 'field_block:block_content:hero:field_link'
               label: Link
-              provider: layout_builder
               label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
-                label: hidden
                 type: pattern_formatter
+                label: hidden
                 settings:
                   pattern: button
-                  variants:
-                    button: default
-                    card: default
-                    headline: xl
-                    image: image
-                    section: 1_column
-                    slider: '1'
                   pattern_mapping:
-                    accordion_item:
-                      settings:
-                        'field_properties:uri':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:title':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:options':
-                          destination: _hidden
-                          weight: '0'
-                    accordion:
-                      settings:
-                        'field_properties:uri':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:title':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:options':
-                          destination: _hidden
-                          weight: '0'
-                    article:
-                      settings:
-                        'field_properties:uri':
-                          destination: text
-                          weight: '0'
-                        'field_properties:title':
-                          destination: text
-                          weight: '0'
-                        'field_properties:options':
-                          destination: _hidden
-                          weight: '0'
-                    banner:
-                      settings:
-                        'field_properties:uri':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:title':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:options':
-                          destination: _hidden
-                          weight: '0'
-                    basic:
-                      settings:
-                        'field_properties:uri':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:title':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:options':
-                          destination: _hidden
-                          weight: '0'
-                    button:
-                      settings:
-                        'field_properties:uri':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:title':
-                          destination: text
-                          weight: '0'
-                        'field_properties:options':
-                          destination: _hidden
-                          weight: '0'
-                    card:
-                      settings:
-                        'field_properties:uri':
-                          destination: text
-                          weight: '0'
-                        'field_properties:title':
-                          destination: text
-                          weight: '0'
-                        'field_properties:options':
-                          destination: _hidden
-                          weight: '0'
-                    container:
-                      settings:
-                        'field_properties:uri':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:title':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:options':
-                          destination: _hidden
-                          weight: '0'
-                    grid:
-                      settings:
-                        'field_properties:uri':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:title':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:options':
-                          destination: _hidden
-                          weight: '0'
-                    headline:
-                      settings:
-                        'field_properties:uri':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:title':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:options':
-                          destination: _hidden
-                          weight: '0'
-                    hero:
-                      settings:
-                        'field_properties:uri':
-                          destination: text
-                          weight: '0'
-                        'field_properties:title':
-                          destination: text
-                          weight: '0'
-                        'field_properties:options':
-                          destination: _hidden
-                          weight: '0'
-                    image:
-                      settings:
-                        'field_properties:uri':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:title':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:options':
-                          destination: _hidden
-                          weight: '0'
-                    link:
-                      settings:
-                        'field_properties:uri':
-                          destination: text
-                          weight: '0'
-                        'field_properties:title':
-                          destination: text
-                          weight: '0'
-                        'field_properties:options':
-                          destination: _hidden
-                          weight: '0'
-                    logo:
-                      settings:
-                        'field_properties:uri':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:title':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:options':
-                          destination: _hidden
-                          weight: '0'
-                    rich_text:
-                      settings:
-                        'field_properties:uri':
-                          destination: text
-                          weight: '0'
-                        'field_properties:title':
-                          destination: text
-                          weight: '0'
-                        'field_properties:options':
-                          destination: _hidden
-                          weight: '0'
-                    section:
-                      settings:
-                        'field_properties:uri':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:title':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:options':
-                          destination: _hidden
-                          weight: '0'
-                    slider:
-                      settings:
-                        'field_properties:uri':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:title':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:options':
-                          destination: _hidden
-                          weight: '0'
-                    video:
-                      settings:
-                        'field_properties:uri':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:title':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:options':
-                          destination: _hidden
-                          weight: '0'
+                    'field_properties:title':
+                      destination: text
+                      weight: 0
+                      plugin: field_properties
+                      source: title
                   pattern_settings:
                     accordion_item:
                       id:
@@ -374,240 +177,76 @@ third_party_settings:
                       classes: ''
                   variants_token:
                     banner: ''
+                  pattern_variant: default
                 third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
             weight: 0
+            additional: {  }
           b4dc4aa5-0703-4ed6-8a4f-9369c327be06:
             uuid: b4dc4aa5-0703-4ed6-8a4f-9369c327be06
             region: null
             configuration:
+              id: 'field_block:block_content:hero:field_text'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:block_content:hero:field_text'
               formatter:
+                type: text_default
                 label: above
                 settings: {  }
                 third_party_settings: {  }
-                type: text_default
-            additional: {  }
             weight: 0
+            additional: {  }
           4d575eaa-f356-4a4a-900c-8994c149590e:
             uuid: 4d575eaa-f356-4a4a-900c-8994c149590e
             region: text
             configuration:
               id: 'field_block:block_content:hero:field_text'
               label: Text
-              provider: layout_builder
               label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
-                label: hidden
                 type: pattern_formatter
+                label: hidden
                 settings:
                   pattern: rich_text
                   variants:
-                    banner: top_left
+                    avatar: default
                     button: default
+                    card: default
+                    headline: xl
                     image: image
                     section: 1_column
+                    slider: '1'
                   pattern_mapping:
-                    accordion_item:
-                      settings:
-                        'field_properties:value':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:format':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:processed':
-                          destination: _hidden
-                          weight: '0'
-                    accordion:
-                      settings:
-                        'field_properties:value':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:format':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:processed':
-                          destination: _hidden
-                          weight: '0'
-                    article:
-                      settings:
-                        'field_properties:value':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:format':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:processed':
-                          destination: _hidden
-                          weight: '0'
-                    banner:
-                      settings:
-                        'field_properties:value':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:format':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:processed':
-                          destination: _hidden
-                          weight: '0'
-                    button:
-                      settings:
-                        'field_properties:value':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:format':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:processed':
-                          destination: _hidden
-                          weight: '0'
-                    card:
-                      settings:
-                        'field_properties:value':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:format':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:processed':
-                          destination: _hidden
-                          weight: '0'
-                    container:
-                      settings:
-                        'field_properties:value':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:format':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:processed':
-                          destination: _hidden
-                          weight: '0'
-                    grid:
-                      settings:
-                        'field_properties:value':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:format':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:processed':
-                          destination: _hidden
-                          weight: '0'
-                    headline:
-                      settings:
-                        'field_properties:value':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:format':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:processed':
-                          destination: _hidden
-                          weight: '0'
-                    hero:
-                      settings:
-                        'field_properties:value':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:format':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:processed':
-                          destination: _hidden
-                          weight: '0'
-                    image:
-                      settings:
-                        'field_properties:value':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:format':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:processed':
-                          destination: _hidden
-                          weight: '0'
-                    link:
-                      settings:
-                        'field_properties:value':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:format':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:processed':
-                          destination: _hidden
-                          weight: '0'
-                    logo:
-                      settings:
-                        'field_properties:value':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:format':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:processed':
-                          destination: _hidden
-                          weight: '0'
-                    rich_text:
-                      settings:
-                        'field_properties:value':
-                          destination: text
-                          weight: '0'
-                        'field_properties:format':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:processed':
-                          destination: _hidden
-                          weight: '0'
-                    section:
-                      settings:
-                        'field_properties:value':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:format':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:processed':
-                          destination: _hidden
-                          weight: '0'
-                    slider:
-                      settings:
-                        'field_properties:value':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:format':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:processed':
-                          destination: _hidden
-                          weight: '0'
-                    video:
-                      settings:
-                        'field_properties:value':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:format':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:processed':
-                          destination: _hidden
-                          weight: '0'
+                    'field_properties:processed':
+                      destination: text
+                      weight: 0
+                      plugin: field_properties
+                      source: processed
                   pattern_settings:
                     accordion_item:
                       id:
                         input: ''
+                    avatar:
+                      text_align: ''
+                    banner:
+                      height: default
+                      position: center_center
+                      position_token: center_center
+                      image_position: center_center
+                      image_position_token: center_center
+                    button_group:
+                      align: center
+                      align_token: center
                     button:
                       size: small
                       expanded: 0
+                      target: ''
+                      title: ''
+                      round: 0
                       color: primary
                       url:
                         input: ''
@@ -618,54 +257,70 @@ third_party_settings:
                       bg_color: ''
                       url:
                         input: ''
+                      show_read_more: 0
                     container:
                       width: default
-                      bg: ''
+                      bg:
+                        colorwidget: ''
+                      bg_image: null
+                      classes: ''
                       padding_x: default
                       padding_top: default
                       padding_bottom: ''
-                      classes: ''
                     grid:
+                      equal_height: 0
                       gutter: default
                       columns: '1'
                     headline:
-                      element: h1
-                      size: ''
+                      tag_name: div
+                      spacing_bottom: default
                     image:
                       url: ''
                       background_style: ''
-                    link:
-                      url:
-                        input: ''
-                      icon: right-arrow
                     section:
-                      padding_top: ''
-                      padding_bottom: default
-                      padding_x: default
-                      gutter: default
-                      width: default
-                      columns: '1'
+                      display_header_region: 0
                       columns_width_1: equal
                       columns_width_2: equal
                       columns_width_3: equal
                       columns_width_4: equal
                       columns_width_5: equal
-                      bg: ''
-                  variants_token:
-                    banner: ''
+                      equal_height: 0
+                      gutter: default
+                      columns: '1'
+                      width: default
+                      bg:
+                        colorwidget: ''
+                      bg_image: null
+                      classes: ''
+                      padding_x: default
+                      padding_top: ''
+                      padding_bottom: default
+                    slider:
+                      autoplay: 0
+                      bullet_spacing: none
+                      pagination_spacing: none
+                      width: default
+                      bg:
+                        colorwidget: ''
+                      bg_image: null
+                      classes: ''
+                      padding_x: default
+                      padding_top: auto
+                      padding_bottom: auto
+                    spacing:
+                      padding_x: default
+                      padding_top: auto
+                      padding_bottom: auto
                 third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
             weight: 0
+            additional: {  }
         third_party_settings: {  }
   layout_builder_restrictions:
     allowed_block_categories: {  }
     entity_view_mode_restriction:
-      whitelisted_blocks: {  }
-      blacklisted_blocks: {  }
       allowed_layouts: {  }
+      blacklisted_blocks: {  }
+      whitelisted_blocks: {  }
 _core:
   default_config_hash: SzjkUfUbWXbaeKTEBOATifPH0TvdYKt35-rJFASvP-I
 id: block_content.hero.default
@@ -674,35 +329,35 @@ bundle: hero
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 0
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 0
     region: content
   field_media:
     type: entity_reference_entity_view
-    weight: 2
     label: above
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
+    weight: 2
     region: content
   field_text:
-    weight: 3
+    type: text_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: text_default
+    weight: 3
     region: null
   field_title:
-    weight: 1
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 1
     region: content
 hidden:
   field_link: true

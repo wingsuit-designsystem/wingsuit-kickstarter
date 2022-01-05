@@ -1,0 +1,11 @@
+uuid: c72d5e07-4006-468e-bb38-f9355850d62c
+langcode: en
+status: true
+dependencies:
+  module:
+    - webform
+id: webform_submission_make_unlock_action
+label: 'Unlock submission'
+type: webform_submission
+plugin: webform_submission_make_unlock_action
+configuration: {  }

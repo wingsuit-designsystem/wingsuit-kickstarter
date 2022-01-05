@@ -22,13 +22,14 @@ dependencies:
     - wingsuit
 third_party_settings:
   layout_builder:
-    allow_custom: true
     enabled: true
+    allow_custom: true
     sections:
       -
         layout_id: pattern_section
         layout_settings:
           label: ''
+          context_mapping: {  }
           pattern:
             field_templates: default
             variant: 1_column
@@ -48,66 +49,65 @@ third_party_settings:
               padding_top: default
               padding_bottom: ''
               classes: ''
-          context_mapping: {  }
         components: {  }
         third_party_settings: {  }
   layout_builder_restrictions:
     allowed_block_categories: {  }
     entity_view_mode_restriction:
-      whitelisted_blocks: {  }
-      blacklisted_blocks: {  }
       allowed_layouts:
         - pattern_section
         - pattern_slider
+      blacklisted_blocks: {  }
+      whitelisted_blocks: {  }
 id: node.article.full
 targetEntityType: node
 bundle: article
 mode: full
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 101
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 101
     region: content
   field_media:
     type: entity_reference_entity_view
-    weight: 102
     label: above
     settings:
       view_mode: default
       link: false
     third_party_settings: {  }
+    weight: 102
     region: content
   field_meta_tag:
-    weight: 103
+    type: metatag_empty_formatter
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: metatag_empty_formatter
+    weight: 103
     region: content
   field_related:
-    weight: 104
+    type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 104
     region: content
   field_seo_title:
-    weight: 105
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 105
     region: content
   links:
-    weight: 100
-    region: content
     settings: {  }
     third_party_settings: {  }
+    weight: 100
+    region: content
 hidden:
   content_moderation_control: true
   langcode: true

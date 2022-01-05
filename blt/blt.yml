@@ -19,6 +19,14 @@ command-hooks:
   frontend-assets:
     dir: ${docroot}/themes/custom/wingsuit
     command: '[ -s "$NVM_DIR/nvm.sh" ] && yarn build:drupal'
+git:
+  commit-msg:
+    pattern: '/^(?<type>build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test|¯\\_\(ツ\)_\/¯)(?<scope>\(\w+\)?((?=:\s)|(?=!:\s)))?(?<breaking>!)?(?<subject>:\s.*)?|^(?<merge>Merge \w+)/'
+    help_description: "Conventional Commits!
+                      Check https://www.conventionalcommits.org/ for more infos,
+                      <type>[optional scope]: <description>
+                      [optional body]
+                      [optional footer]."
 
 validate:
   twig:

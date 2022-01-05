@@ -13,17 +13,17 @@ dependencies:
     - wingsuit
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: true
+    allow_custom: false
     sections:
       -
         layout_id: pattern_accordion_item
         layout_settings:
           label: ''
+          context_mapping: {  }
           pattern:
             field_templates: default
             variant: ''
-          context_mapping: {  }
         components:
           9b95ef58-caa3-4716-b4f9-196c5c657b35:
             uuid: 9b95ef58-caa3-4716-b4f9-196c5c657b35
@@ -31,37 +31,37 @@ third_party_settings:
             configuration:
               id: 'field_block:block_content:accordion_item:field_title'
               label: Title
-              provider: layout_builder
               label_display: '0'
-              formatter:
-                label: hidden
-                type: string
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
-            additional: {  }
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
             weight: 0
+            additional: {  }
           c65d10eb-92f9-4eae-ab3f-8f3ab581edf8:
             uuid: c65d10eb-92f9-4eae-ab3f-8f3ab581edf8
             region: content
             configuration:
               id: 'field_block:block_content:accordion_item:body'
               label: Body
-              provider: layout_builder
               label_display: '0'
-              formatter:
-                label: hidden
-                type: text_default
-                settings: {  }
-                third_party_settings: {  }
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
-            additional: {  }
+              formatter:
+                type: text_default
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
             weight: 0
+            additional: {  }
         third_party_settings: {  }
 _core:
   default_config_hash: Xj2UtvO5Gwg-tSOGXdOj4HGkO8OF_0j_aeB8LFJtGe8
@@ -71,19 +71,19 @@ bundle: accordion_item
 mode: default
 content:
   body:
-    label: hidden
     type: text_default
-    weight: 0
+    label: hidden
     settings: {  }
     third_party_settings: {  }
+    weight: 0
     region: content
   field_title:
-    weight: 1
+    type: string
     label: above
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    type: string
+    weight: 1
     region: content
 hidden:
   langcode: true

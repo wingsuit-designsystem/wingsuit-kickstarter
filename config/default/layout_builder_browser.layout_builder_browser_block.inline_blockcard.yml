@@ -6,6 +6,6 @@ id: inline_blockcard
 block_id: 'inline_block:card'
 category: blocks
 label: Card
-weight: 2
 image_path: /themes/custom/wingsuit/dist/app-drupal/images/card-icon.svg
 image_alt: ''
+weight: 2

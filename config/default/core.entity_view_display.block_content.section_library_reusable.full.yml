@@ -11,8 +11,8 @@ dependencies:
     - layout_builder
 third_party_settings:
   layout_builder:
-    allow_custom: true
     enabled: true
+    allow_custom: true
 _core:
   default_config_hash: MAY4eNrPbKXJb9ImqJj1XHBO3DHO7yqAkNEIZWoajQk
 id: block_content.section_library_reusable.full

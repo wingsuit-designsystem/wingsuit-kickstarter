@@ -1,7 +1,19 @@
 uuid: fb0eef58-2c25-4ec5-ba96-3b4a44ce1d22
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - media.type.audio
+    - media.type.document
+    - media.type.image
+    - media.type.remote_video
+    - media.type.video
+  module:
+    - block
+    - dropzonejs
+    - media
+    - media_bulk_upload
+    - system
 _core:
   default_config_hash: o-m5GZwgtJ0-J90497MEFlWXIKSxQNQb4yw7hNJ9m38
 id: media_creator

@@ -12,8 +12,8 @@ dependencies:
     - layout_builder
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: false
+    allow_custom: false
 _core:
   default_config_hash: OkEIcPIF2jnli7EgxTcs1QX0WN9YZM9aKZjgC7KFlIg
 id: media.image.1x1
@@ -23,7 +23,6 @@ mode: 1x1
 content:
   field_media_image:
     type: drimage
-    weight: 0
     label: hidden
     settings:
       image_link: ''
@@ -37,6 +36,7 @@ content:
         size: cover
       image_style: ''
     third_party_settings: {  }
+    weight: 0
     region: content
 hidden:
   created: true

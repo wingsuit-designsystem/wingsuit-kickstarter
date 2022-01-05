@@ -10,6 +10,6 @@ media_types:
   document: 0
   remote_video: 0
   video: 0
+form_mode: media_browser
 show_alt: null
 show_title: null
-form_mode: media_browser
