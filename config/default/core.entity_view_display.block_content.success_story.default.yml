@@ -4,9 +4,10 @@ status: true
 dependencies:
   config:
     - block_content.type.success_story
+    - field.field.block_content.success_story.field_avatar_variant
     - field.field.block_content.success_story.field_button
-    - field.field.block_content.success_story.field_media
     - field.field.block_content.success_story.field_preheadline
+    - field.field.block_content.success_story.field_success_story_media
     - field.field.block_content.success_story.field_text
   module:
     - layout_builder
@@ -28,25 +29,6 @@ third_party_settings:
             settings:
               text_align: center
         components:
-          4dc452d9-960a-4bb5-bb60-8baaefe26446:
-            uuid: 4dc452d9-960a-4bb5-bb60-8baaefe26446
-            region: image
-            configuration:
-              id: 'field_block:block_content:success_story:field_media'
-              label: Image
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: entity_reference_entity_view
-                label: hidden
-                settings:
-                  view_mode: 1x1
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
           6de55bf7-1dea-4daa-9622-454748b8787e:
             uuid: 6de55bf7-1dea-4daa-9622-454748b8787e
             region: text
@@ -205,8 +187,9 @@ content:
     weight: 0
     region: content
 hidden:
+  field_avatar_variant: true
   field_button: true
-  field_media: true
   field_preheadline: true
+  field_success_story_media: true
   field_text: true
   langcode: true

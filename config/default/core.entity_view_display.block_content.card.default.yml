@@ -5,14 +5,16 @@ dependencies:
   config:
     - block_content.type.card
     - field.field.block_content.card.body
+    - field.field.block_content.card.field_card_image
+    - field.field.block_content.card.field_card_variant
     - field.field.block_content.card.field_link
-    - field.field.block_content.card.field_media
     - field.field.block_content.card.field_preheadline
     - field.field.block_content.card.field_title
   module:
     - layout_builder
     - layout_builder_restrictions
     - link
+    - options
     - text
   theme:
     - wingsuit
@@ -90,41 +92,6 @@ third_party_settings:
                 label: hidden
                 settings:
                   trim_length: 400
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
-          32b7c45b-b7b2-479e-b7bd-2d9e19d88f01:
-            uuid: 32b7c45b-b7b2-479e-b7bd-2d9e19d88f01
-            region: null
-            configuration:
-              id: 'field_block:block_content:card:field_media'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: entity_reference_label
-                label: above
-                settings:
-                  link: true
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
-          487acc1d-d43a-4022-a619-f2efedc4d4db:
-            uuid: 487acc1d-d43a-4022-a619-f2efedc4d4db
-            region: image
-            configuration:
-              id: 'field_block:block_content:card:field_media'
-              label: Image
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: entity_reference_entity_view
-                label: hidden
-                settings:
-                  view_mode: 16x9
                 third_party_settings: {  }
             weight: 0
             additional: {  }
@@ -253,6 +220,38 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 0
             additional: {  }
+          533441fa-6776-4582-9758-df6e2881acd9:
+            uuid: 533441fa-6776-4582-9758-df6e2881acd9
+            region: null
+            configuration:
+              id: 'field_block:block_content:card:field_card_image'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: entity_reference_entity_view
+                label: above
+                settings:
+                  view_mode: default
+                  link: false
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
+          7cede760-dcfb-4174-8b75-220f1eae8b69:
+            uuid: 7cede760-dcfb-4174-8b75-220f1eae8b69
+            region: null
+            configuration:
+              id: 'field_block:block_content:card:field_card_variant'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: list_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
         third_party_settings: {  }
   layout_builder_restrictions:
     allowed_block_categories: {  }
@@ -274,6 +273,22 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  field_card_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 5
+    region: null
+  field_card_variant:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: null
   field_link:
     type: link
     label: above
@@ -285,14 +300,6 @@ content:
       target: ''
     third_party_settings: {  }
     weight: 4
-    region: null
-  field_media:
-    type: entity_reference_label
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 3
     region: null
   field_preheadline:
     type: string

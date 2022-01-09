@@ -49,14 +49,14 @@ third_party_settings:
     entity_view_mode_restriction:
       allowed_layouts:
         - pattern_section
-        - pattern_slider
+        - pattern_section_slider
       blacklisted_blocks: {  }
       whitelisted_blocks:
         'Chaos Tools': {  }
-        'Entity Browser': {  }
         Forms: {  }
         Help: {  }
         core: {  }
+      restricted_categories: {  }
     allowed_block_categories: {  }
 _core:
   default_config_hash: zenmAxG5aYHyBSvE9ZgTDLnf6-0oxXnVg6CFwNcc1no

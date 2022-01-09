@@ -2,3 +2,8 @@ mapping:
   block_content--field_banner_position: 'banner::position'
   block_content--field_banner_height: 'banner::height'
   block_content--field_banner_image_position: 'banner::image_position'
+  block_content--field_media: 'avatar::image'
+  block_content--field_card_image: 'card::image'
+  block_content--field_success_story_media: 'avatar::image'
+  block_content--field_card_variant: 'card::variant'
+  block_content--field_avatar_variant: 'avatar::variant'

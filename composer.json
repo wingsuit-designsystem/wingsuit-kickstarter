@@ -77,7 +77,8 @@
         "drupal/section_library_reusable": "^1.0@beta"
     },
     "require-dev": {
-        "drush/drush": ">=10"
+        "drush/drush": ">=10",
+        "acquia/blt-phpcs": "^1.0"
     },
     "config": {
         "process-timeout": 0
@@ -114,7 +115,7 @@
             },
             "drupal/drimage": {
                 "Stage file proxy": "https://git.drupalcode.org/project/drimage/-/merge_requests/1.patch",
-                "webp support for webp": "https://www.drupal.org/files/issues/2022-01-05/3202501-2-webp.patch",
+                "webp support for webp": "https://www.drupal.org/files/issues/2022-01-09/3202501-3-webp.patch",
                 "embeds in wysiwyg not displaying media": "https://www.drupal.org/files/issues/2020-09-06/3079190-8--show_img_in_media_embed.patch?X"
             },
             "drupal/ui_patterns": {
