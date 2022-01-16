@@ -14,30 +14,31 @@ dependencies:
     - wingsuit
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: true
+    allow_custom: false
     sections:
       -
         layout_id: pattern_button_group
         layout_settings:
           label: ''
+          context_mapping: {  }
           pattern:
             field_templates: default
             variant: ''
             settings:
               align: center
               align_token: '[block_content:field_buttons_align:value]'
-          context_mapping: {  }
         components:
           80a13c8c-9f63-4199-b717-dbf90c462964:
             uuid: 80a13c8c-9f63-4199-b717-dbf90c462964
             region: null
             configuration:
+              id: 'field_block:block_content:buttons:field_buttons'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:block_content:buttons:field_buttons'
               formatter:
+                type: link
                 label: above
                 settings:
                   trim_length: 80
@@ -46,32 +47,122 @@ third_party_settings:
                   rel: ''
                   target: ''
                 third_party_settings: {  }
-                type: link
-            additional: {  }
             weight: 0
+            additional: {  }
           88e8c736-66bf-4de9-b8f7-71cd93e56f89:
             uuid: 88e8c736-66bf-4de9-b8f7-71cd93e56f89
             region: buttons
             configuration:
               id: 'field_block:block_content:buttons:field_buttons'
               label: Buttons
-              provider: layout_builder
               label_display: '0'
-              formatter:
-                label: hidden
-                type: link_separate
-                settings:
-                  trim_length: 200
-                  url_only: false
-                  url_plain: false
-                  rel: '0'
-                  target: '0'
-                third_party_settings: {  }
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
-            additional: {  }
+              formatter:
+                type: pattern_formatter
+                label: hidden
+                settings:
+                  pattern: button
+                  pattern_mapping:
+                    'field_properties:title':
+                      destination: text
+                      weight: 0
+                      plugin: field_properties
+                      source: title
+                  pattern_settings:
+                    accordion_item:
+                      id:
+                        input: ''
+                    alex:
+                      bg_color:
+                        colorwidget: null
+                      text_align: ''
+                    avatar:
+                      text_align: ''
+                    banner:
+                      position: center_center
+                      position_token: center_center
+                    button_group:
+                      align: center
+                      align_token: center
+                    button:
+                      size: medium
+                      expanded: 0
+                      round: 0
+                      color: primary
+                      url:
+                        input: ''
+                      icon: ''
+                      icon_alignment: ''
+                    card:
+                      alignment: left
+                      bg_color: ''
+                      url:
+                        input: ''
+                      show_read_more: 0
+                    container:
+                      width: default
+                      bg:
+                        colorwidget: ''
+                      bg_image: null
+                      classes: ''
+                      padding_x: default
+                      padding_top: ''
+                      padding_bottom: default
+                    grid:
+                      equal_height: 0
+                      gutter: default
+                      columns: '1'
+                    headline:
+                      tag_name: div
+                      spacing_bottom: default
+                    image:
+                      url: ''
+                      background_style: ''
+                    link:
+                      url:
+                        input: ''
+                      icon: right-arrow
+                    section:
+                      display_header_region: 0
+                      columns_width_1: equal
+                      columns_width_2: equal
+                      columns_width_3: equal
+                      columns_width_4: equal
+                      columns_width_5: equal
+                      equal_height: 0
+                      gutter: default
+                      columns: '1'
+                      width: default
+                      bg:
+                        colorwidget: ''
+                      bg_image: null
+                      classes: ''
+                      padding_x: default
+                      padding_top: ''
+                      padding_bottom: default
+                    slider:
+                      autoplay: 0
+                      bullet_spacing: none
+                      pagination_spacing: none
+                      width: default
+                      bg:
+                        colorwidget: ''
+                      bg_image: null
+                      classes: ''
+                      padding_x: default
+                      padding_top: ''
+                      padding_bottom: default
+                    spacing:
+                      padding_x: default
+                      padding_top: ''
+                      padding_bottom: default
+                  pattern_variant: default
+                third_party_settings: {  }
             weight: 0
+            additional: {  }
         third_party_settings: {  }
 id: block_content.buttons.default
 targetEntityType: block_content
@@ -79,7 +170,7 @@ bundle: buttons
 mode: default
 content:
   field_buttons:
-    weight: 2
+    type: link
     label: above
     settings:
       trim_length: 80
@@ -88,14 +179,14 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 2
     region: null
   field_buttons_align:
-    weight: 1
+    type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 1
     region: content
 hidden:
   langcode: true

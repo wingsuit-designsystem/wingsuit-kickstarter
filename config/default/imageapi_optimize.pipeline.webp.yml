@@ -8,8 +8,8 @@ name: webp
 label: webp
 processors:
   b8374c45-3ce3-4e34-ada4-8e2e75792dcd:
-    uuid: b8374c45-3ce3-4e34-ada4-8e2e75792dcd
     id: imageapi_optimize_webp
-    weight: 1
     data:
       quality: '85'
+    weight: 1
+    uuid: b8374c45-3ce3-4e34-ada4-8e2e75792dcd

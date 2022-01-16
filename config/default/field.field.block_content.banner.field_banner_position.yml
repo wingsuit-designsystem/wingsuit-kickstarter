@@ -11,7 +11,7 @@ id: block_content.banner.field_banner_position
 field_name: field_banner_position
 entity_type: block_content
 bundle: banner
-label: Position
+label: 'Text Position'
 description: ''
 required: true
 translatable: false

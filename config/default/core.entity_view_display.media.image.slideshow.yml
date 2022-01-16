@@ -14,18 +14,18 @@ dependencies:
     - wingsuit
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: true
+    allow_custom: false
     sections:
       -
         layout_id: pattern_banner
         layout_settings:
           label: ''
+          context_mapping: {  }
           pattern:
             field_templates: default
             variant: center_left
             variant_token: ''
-          context_mapping: {  }
         components:
           6fd360b8-2491-4c53-9da0-3b0d8911299c:
             uuid: 6fd360b8-2491-4c53-9da0-3b0d8911299c
@@ -33,39 +33,39 @@ third_party_settings:
             configuration:
               id: 'field_block:media:image:field_media_image'
               label: Image
-              provider: layout_builder
               label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
-                label: hidden
                 type: responsive_image
+                label: hidden
                 settings:
                   responsive_image_style: banner
                   image_link: ''
                 third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
             weight: 0
+            additional: {  }
           5d5abe34-0952-4685-80c9-e8127708272f:
             uuid: 5d5abe34-0952-4685-80c9-e8127708272f
             region: headline
             configuration:
               id: 'field_block:media:image:name'
               label: Name
-              provider: layout_builder
               label_display: '0'
-              formatter:
-                label: hidden
-                type: string
-                settings:
-                  link_to_entity: false
-                third_party_settings: {  }
+              provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
-            additional: {  }
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
             weight: 0
+            additional: {  }
         third_party_settings: {  }
 _core:
   default_config_hash: OkEIcPIF2jnli7EgxTcs1QX0WN9YZM9aKZjgC7KFlIg
@@ -76,7 +76,6 @@ mode: slideshow
 content:
   field_media_image:
     type: drimage
-    weight: 0
     label: hidden
     settings:
       image_style: ''
@@ -90,6 +89,7 @@ content:
         position: 'center center'
         size: cover
     third_party_settings: {  }
+    weight: 0
     region: content
 hidden:
   created: true

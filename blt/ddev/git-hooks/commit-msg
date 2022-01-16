@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+ddev exec /var/www/html/vendor/bin/blt internal:git-hook:execute:commit-msg "$(cat $1)"
+
+exit $?

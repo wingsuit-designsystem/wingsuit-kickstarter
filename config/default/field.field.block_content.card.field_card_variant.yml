@@ -1,0 +1,23 @@
+uuid: d26036bd-ec86-41aa-8bdc-2c9ccd6b2542
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.card
+    - field.storage.block_content.field_card_variant
+  module:
+    - options
+id: block_content.card.field_card_variant
+field_name: field_card_variant
+entity_type: block_content
+bundle: card
+label: Variant
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: default
+default_value_callback: ''
+settings: {  }
+field_type: list_string
