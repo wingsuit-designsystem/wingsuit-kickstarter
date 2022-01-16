@@ -15,7 +15,7 @@ setup:
 command-hooks:
   frontend-reqs:
     dir: ${docroot}/themes/custom
-    command: '[ ! -d "wingsuit" ] && npx @wingsuit-designsystem/cli init -k tailwind --skip-install --branch=master; cd wingsuit && yarn install'
+    command: '[ ! -d "wingsuit" ] && npx @wingsuit-designsystem/cli init -k tailwind --skip-install --branch=next; cd wingsuit && yarn install'
   frontend-assets:
     dir: ${docroot}/themes/custom/wingsuit
     command: 'yarn build:drupal'
