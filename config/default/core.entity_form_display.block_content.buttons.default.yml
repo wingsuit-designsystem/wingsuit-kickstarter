@@ -14,7 +14,9 @@ bundle: buttons
 mode: default
 content:
   field_buttons:
+    type: link_attributes
     weight: 1
+    region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
@@ -31,14 +33,12 @@ content:
         aria-label: false
         title: false
     third_party_settings: {  }
-    type: link_attributes
-    region: content
   field_buttons_align:
+    type: options_select
     weight: 2
+    region: content
     settings: {  }
     third_party_settings: {  }
-    type: options_select
-    region: content
   info:
     type: string_textfield
     weight: 0

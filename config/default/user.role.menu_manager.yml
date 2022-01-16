@@ -1,7 +1,9 @@
 uuid: 1c92556a-647c-40a8-8a93-5df2da9533df
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - system
 id: menu_manager
 label: 'Menu manager'
 weight: 9

@@ -19,13 +19,14 @@ dependencies:
     - wingsuit
 third_party_settings:
   layout_builder:
-    allow_custom: true
     enabled: true
+    allow_custom: true
     sections:
       -
         layout_id: pattern_section
         layout_settings:
           label: ''
+          context_mapping: {  }
           pattern:
             field_templates: default
             variant: 1_column
@@ -42,21 +43,20 @@ third_party_settings:
               columns_width_4: equal
               columns_width_5: equal
               bg: ''
-          context_mapping: {  }
         components: {  }
         third_party_settings: {  }
   layout_builder_restrictions:
     entity_view_mode_restriction:
+      allowed_layouts:
+        - pattern_section
+        - pattern_section_slider
+      blacklisted_blocks: {  }
       whitelisted_blocks:
         'Chaos Tools': {  }
-        'Entity Browser': {  }
         Forms: {  }
         Help: {  }
         core: {  }
-      allowed_layouts:
-        - pattern_section
-        - pattern_slider
-      blacklisted_blocks: {  }
+      restricted_categories: {  }
     allowed_block_categories: {  }
 _core:
   default_config_hash: zenmAxG5aYHyBSvE9ZgTDLnf6-0oxXnVg6CFwNcc1no
@@ -67,11 +67,11 @@ mode: full
 content:
   field_meta_tags:
     type: metatag_empty_formatter
-    region: content
     label: hidden
-    weight: 0
     settings: {  }
     third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   body: true
   content_moderation_control: true

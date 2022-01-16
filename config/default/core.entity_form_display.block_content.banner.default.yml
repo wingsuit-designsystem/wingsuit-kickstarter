@@ -5,14 +5,37 @@ dependencies:
   config:
     - block_content.type.banner
     - field.field.block_content.banner.body
+    - field.field.block_content.banner.field_banner_height
+    - field.field.block_content.banner.field_banner_image_position
     - field.field.block_content.banner.field_banner_position
     - field.field.block_content.banner.field_link
     - field.field.block_content.banner.field_media
   module:
+    - field_group
     - link_attributes
     - media_library
     - media_library_edit
     - text
+third_party_settings:
+  field_group:
+    group_settings:
+      children:
+        - field_banner_height
+        - field_banner_position
+        - field_banner_image_position
+      label: Settings
+      region: content
+      parent_name: ''
+      weight: 3
+      format_type: details
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        open: false
+        description: ''
+        required_fields: true
+        formatter: closed
 _core:
   default_config_hash: '-LvLxBq-PLV2bypCqXrJ4A4ThsIrEzPs9CcthejlwB8'
 id: block_content.banner.default
@@ -21,24 +44,36 @@ bundle: banner
 mode: default
 content:
   body:
-    weight: 3
+    type: text_textarea_with_summary
+    weight: 1
+    region: content
     settings:
       rows: 9
       summary_rows: 3
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
-    type: text_textarea_with_summary
+  field_banner_height:
+    type: options_select
+    weight: 5
     region: content
-  field_banner_position:
-    weight: 2
     settings: {  }
     third_party_settings: {  }
+  field_banner_image_position:
     type: options_select
+    weight: 7
     region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_banner_position:
+    type: options_select
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_link:
     type: link_attributes
-    weight: 4
+    weight: 2
     region: content
     settings:
       placeholder_url: ''
@@ -57,16 +92,16 @@ content:
         title: false
     third_party_settings: {  }
   field_media:
+    type: media_library_widget
     weight: 0
+    region: content
     settings:
       media_types: {  }
     third_party_settings:
       media_library_edit:
         show_edit: '1'
-    type: media_library_widget
-    region: content
   translation:
-    weight: 5
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }

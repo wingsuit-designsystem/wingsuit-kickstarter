@@ -1,0 +1,25 @@
+#!/bin/bash
+
+## Description: Init Environment
+## Usage: init
+## Example: "ddev init"
+
+ddev start
+
+# Run composer install
+ddev composer install
+
+# Import database
+ddev exec blt setup -n -D wingsuit.starterkit='tailwind' --environment ddev
+
+# Clear Cache
+ddev drush cr
+
+# Run config imports
+ddev exec blt drupal:update -q
+
+FULLURL=${DDEV_PRIMARY_URL}
+
+printf "Welcome on Wingsuit! \n\n"
+printf "Open $FULLURL \nLogin under ${FULLURL}/user/login\n"
+printf "Login with: admin/admin\n\n"

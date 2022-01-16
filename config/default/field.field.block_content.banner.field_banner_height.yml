@@ -1,0 +1,23 @@
+uuid: 4393575b-10a5-42da-a3fb-897469da183c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.banner
+    - field.storage.block_content.field_banner_height
+  module:
+    - options
+id: block_content.banner.field_banner_height
+field_name: field_banner_height
+entity_type: block_content
+bundle: banner
+label: Height
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: default
+default_value_callback: ''
+settings: {  }
+field_type: list_string

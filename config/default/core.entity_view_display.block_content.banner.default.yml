@@ -5,6 +5,8 @@ dependencies:
   config:
     - block_content.type.banner
     - field.field.block_content.banner.body
+    - field.field.block_content.banner.field_banner_height
+    - field.field.block_content.banner.field_banner_image_position
     - field.field.block_content.banner.field_banner_position
     - field.field.block_content.banner.field_link
     - field.field.block_content.banner.field_media
@@ -18,20 +20,23 @@ dependencies:
     - wingsuit
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: true
+    allow_custom: false
     sections:
       -
         layout_id: pattern_banner
         layout_settings:
           label: ''
+          context_mapping: {  }
           pattern:
             field_templates: default
             variant: ''
             settings:
+              height: ''
               position: ''
               position_token: ''
-          context_mapping: {  }
+              image_position: ''
+              image_position_token: ''
         components:
           f740e7f9-ea12-4078-be8c-b8e8a4134484:
             uuid: f740e7f9-ea12-4078-be8c-b8e8a4134484
@@ -39,11 +44,14 @@ third_party_settings:
             configuration:
               id: 'field_block:block_content:banner:body'
               label: Body
-              provider: layout_builder
               label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
-                label: hidden
                 type: pattern_formatter
+                label: hidden
                 settings:
                   pattern: rich_text
                   variants:
@@ -55,380 +63,11 @@ third_party_settings:
                     section: 1_column
                     slider: '1'
                   pattern_mapping:
-                    accordion_item:
-                      settings:
-                        'field_properties:value':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:format':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:processed':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary_processed':
-                          destination: _hidden
-                          weight: '0'
-                    accordion:
-                      settings:
-                        'field_properties:value':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:format':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:processed':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary_processed':
-                          destination: _hidden
-                          weight: '0'
-                    article:
-                      settings:
-                        'field_properties:value':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:format':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:processed':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary_processed':
-                          destination: _hidden
-                          weight: '0'
-                    avatar:
-                      settings:
-                        'field_properties:value':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:format':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:processed':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary_processed':
-                          destination: _hidden
-                          weight: '0'
-                    banner:
-                      settings:
-                        'field_properties:value':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:format':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:processed':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary_processed':
-                          destination: _hidden
-                          weight: '0'
-                    basic:
-                      settings:
-                        'field_properties:value':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:format':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:processed':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary_processed':
-                          destination: _hidden
-                          weight: '0'
-                    button_group:
-                      settings:
-                        'field_properties:value':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:format':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:processed':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary_processed':
-                          destination: _hidden
-                          weight: '0'
-                    button:
-                      settings:
-                        'field_properties:value':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:format':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:processed':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary_processed':
-                          destination: _hidden
-                          weight: '0'
-                    card:
-                      settings:
-                        'field_properties:value':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:format':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:processed':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary_processed':
-                          destination: _hidden
-                          weight: '0'
-                    container:
-                      settings:
-                        'field_properties:value':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:format':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:processed':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary_processed':
-                          destination: _hidden
-                          weight: '0'
-                    grid:
-                      settings:
-                        'field_properties:value':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:format':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:processed':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary_processed':
-                          destination: _hidden
-                          weight: '0'
-                    headline:
-                      settings:
-                        'field_properties:value':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:format':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:processed':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary_processed':
-                          destination: _hidden
-                          weight: '0'
-                    hero:
-                      settings:
-                        'field_properties:value':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:format':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:processed':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary_processed':
-                          destination: _hidden
-                          weight: '0'
-                    image:
-                      settings:
-                        'field_properties:value':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:format':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:processed':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary_processed':
-                          destination: _hidden
-                          weight: '0'
-                    link:
-                      settings:
-                        'field_properties:value':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:format':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:processed':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary_processed':
-                          destination: _hidden
-                          weight: '0'
-                    logo:
-                      settings:
-                        'field_properties:value':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:format':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:processed':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary_processed':
-                          destination: _hidden
-                          weight: '0'
-                    marion:
-                      settings:
-                        'field_properties:value':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:format':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:processed':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary_processed':
-                          destination: _hidden
-                          weight: '0'
-                    rich_text:
-                      settings:
-                        'field_properties:value':
-                          destination: text
-                          weight: '0'
-                        'field_properties:format':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:processed':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary_processed':
-                          destination: _hidden
-                          weight: '0'
-                    section:
-                      settings:
-                        'field_properties:value':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:format':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:processed':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary_processed':
-                          destination: _hidden
-                          weight: '0'
-                    slider:
-                      settings:
-                        'field_properties:value':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:format':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:processed':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary_processed':
-                          destination: _hidden
-                          weight: '0'
-                    table:
-                      settings:
-                        'field_properties:value':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:format':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:processed':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary_processed':
-                          destination: _hidden
-                          weight: '0'
-                    video:
-                      settings:
-                        'field_properties:value':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:format':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:processed':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:summary_processed':
-                          destination: _hidden
-                          weight: '0'
+                    'field_properties:processed':
+                      destination: text
+                      weight: 0
+                      plugin: field_properties
+                      source: processed
                   pattern_settings:
                     accordion_item:
                       id:
@@ -436,14 +75,19 @@ third_party_settings:
                     avatar:
                       text_align: ''
                     banner:
+                      height: default
                       position: center_center
                       position_token: center_center
+                      image_position: center_center
+                      image_position_token: center_center
                     button_group:
                       align: center
                       align_token: center
                     button:
                       size: small
                       expanded: 0
+                      target: ''
+                      title: ''
                       round: 0
                       color: primary
                       url:
@@ -461,10 +105,10 @@ third_party_settings:
                       bg:
                         colorwidget: ''
                       bg_image: null
+                      classes: ''
                       padding_x: default
                       padding_top: ''
                       padding_bottom: default
-                      classes: ''
                     grid:
                       equal_height: 0
                       gutter: default
@@ -475,10 +119,6 @@ third_party_settings:
                     image:
                       url: ''
                       background_style: ''
-                    link:
-                      url:
-                        input: ''
-                      icon: right-arrow
                     section:
                       display_header_region: 0
                       columns_width_1: equal
@@ -493,10 +133,10 @@ third_party_settings:
                       bg:
                         colorwidget: ''
                       bg_image: null
+                      classes: ''
                       padding_x: default
                       padding_top: ''
                       padding_bottom: default
-                      classes: ''
                     slider:
                       autoplay: 0
                       bullet_spacing: none
@@ -505,63 +145,67 @@ third_party_settings:
                       bg:
                         colorwidget: ''
                       bg_image: null
+                      classes: ''
                       padding_x: default
                       padding_top: ''
                       padding_bottom: default
-                      classes: ''
+                    spacing:
+                      padding_x: default
+                      padding_top: auto
+                      padding_bottom: auto
                 third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
             weight: 0
+            additional: {  }
           dda9ee39-2ed4-4d9f-94a2-833a3d8892e4:
             uuid: dda9ee39-2ed4-4d9f-94a2-833a3d8892e4
             region: null
             configuration:
+              id: 'field_block:block_content:banner:field_media'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:block_content:banner:field_media'
               formatter:
+                type: entity_reference_label
                 label: above
                 settings:
                   link: true
                 third_party_settings: {  }
-                type: entity_reference_label
-            additional: {  }
             weight: 1
+            additional: {  }
           cd8dacd3-9160-46d5-b1cf-ebdbeb98ca03:
             uuid: cd8dacd3-9160-46d5-b1cf-ebdbeb98ca03
             region: image
             configuration:
               id: 'field_block:block_content:banner:field_media'
               label: Image
-              provider: layout_builder
               label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
-                label: hidden
                 type: media_responsive_thumbnail
+                label: hidden
                 settings:
                   responsive_image_style: banner
                   image_link: ''
                 third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
             weight: 0
+            additional: {  }
           936ff49d-ef7f-4e67-884f-442a100fe2bd:
             uuid: 936ff49d-ef7f-4e67-884f-442a100fe2bd
             region: link_attributes
             configuration:
               id: 'field_block:block_content:banner:field_link'
               label: Link
-              provider: layout_builder
               label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
-                label: hidden
                 type: link_separate
+                label: hidden
                 settings:
                   trim_length: 80
                   url_only: false
@@ -569,33 +213,60 @@ third_party_settings:
                   rel: '0'
                   target: '0'
                 third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
             weight: 0
+            additional: {  }
           212224c6-384e-4c9c-b3de-fc549fae7f29:
             uuid: 212224c6-384e-4c9c-b3de-fc549fae7f29
             region: null
             configuration:
+              id: 'field_block:block_content:banner:field_banner_position'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:block_content:banner:field_banner_position'
               formatter:
+                type: list_default
                 label: above
                 settings: {  }
                 third_party_settings: {  }
-                type: list_default
-            additional: {  }
             weight: 2
+            additional: {  }
+          e2c20e86-3965-4797-bf65-322c1a1cd4b7:
+            uuid: e2c20e86-3965-4797-bf65-322c1a1cd4b7
+            region: null
+            configuration:
+              id: 'field_block:block_content:banner:field_banner_height'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: list_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 3
+            additional: {  }
+          cef33f2f-782f-4202-8404-202fbd1cc115:
+            uuid: cef33f2f-782f-4202-8404-202fbd1cc115
+            region: null
+            configuration:
+              id: 'field_block:block_content:banner:field_banner_image_position'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: list_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 4
+            additional: {  }
         third_party_settings: {  }
   layout_builder_restrictions:
     allowed_block_categories: {  }
     entity_view_mode_restriction:
-      whitelisted_blocks: {  }
-      blacklisted_blocks: {  }
       allowed_layouts: {  }
+      blacklisted_blocks: {  }
+      whitelisted_blocks: {  }
 _core:
   default_config_hash: uBKOxnJjoxMk8fwczCvLINDfgSMaWyPEesRuUsiFBNQ
 id: block_content.banner.default
@@ -604,21 +275,35 @@ bundle: banner
 mode: default
 content:
   body:
-    weight: 4
-    label: above
-    settings: {  }
-    third_party_settings: {  }
     type: text_default
-    region: content
-  field_banner_position:
-    weight: 7
     label: above
     settings: {  }
     third_party_settings: {  }
+    weight: 4
+    region: content
+  field_banner_height:
     type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: null
+  field_banner_image_position:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
+    region: null
+  field_banner_position:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
     region: null
   field_link:
-    weight: 3
+    type: link
     label: hidden
     settings:
       trim_length: 80
@@ -627,15 +312,15 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 3
     region: content
   field_media:
-    weight: 6
+    type: entity_reference_label
     label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
+    weight: 6
     region: null
 hidden:
   langcode: true

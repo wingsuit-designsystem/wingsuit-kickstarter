@@ -13,25 +13,87 @@ dependencies:
     - field.field.node.article.layout_builder__translation
     - node.type.article
   module:
+    - layout_builder
     - text
     - user
+  theme:
+    - wingsuit
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: pattern_card
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          pattern:
+            field_templates: default
+            variant: default
+            settings:
+              alignment: left
+              bg_color: ''
+              url:
+                input: '[node:url]'
+              show_read_more: 0
+        components:
+          cfb12461-bf0b-4daa-a867-337301ddd1a3:
+            uuid: cfb12461-bf0b-4daa-a867-337301ddd1a3
+            region: image
+            configuration:
+              id: 'field_block:node:article:field_media'
+              label: Media
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: entity_reference_entity_view
+                label: hidden
+                settings:
+                  view_mode: 16x9
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          cfab0d30-6479-4323-98fa-3da6e779e589:
+            uuid: cfab0d30-6479-4323-98fa-3da6e779e589
+            region: headline
+            configuration:
+              id: 'field_block:node:article:title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
 id: node.article.teaser
 targetEntityType: node
 bundle: article
 mode: teaser
 content:
   body:
-    label: hidden
     type: text_summary_or_trimmed
-    weight: 101
+    label: hidden
     settings:
       trim_length: 600
     third_party_settings: {  }
+    weight: 101
     region: content
   links:
-    weight: 100
     settings: {  }
     third_party_settings: {  }
+    weight: 100
     region: content
 hidden:
   content_moderation_control: true

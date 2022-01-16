@@ -1,6 +1,6 @@
 uuid: c66c4ce1-829e-4f5e-82cb-c2631a7aec09
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - core.entity_view_mode.media.embedded
@@ -18,7 +18,6 @@ mode: embedded
 content:
   field_media_image:
     type: drimage
-    weight: 0
     label: hidden
     settings:
       image_style: ''
@@ -32,6 +31,7 @@ content:
         position: 'center center'
         size: cover
     third_party_settings: {  }
+    weight: 0
     region: content
 hidden:
   created: true

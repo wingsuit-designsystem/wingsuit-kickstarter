@@ -1,7 +1,29 @@
 uuid: 9b4fa1b3-29ec-4785-959a-b3b2a32bda98
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  config:
+    - core.entity_view_display.block_content.section_library_reusable.full
+    - core.entity_view_display.node.article.full
+    - core.entity_view_display.node.landing_page.full
+    - filter.format.rich_text
+    - node.type.article
+    - node.type.landing_page
+    - node.type.page
+    - workflows.workflow.editorial
+  module:
+    - block
+    - block_content
+    - content_moderation
+    - content_translation
+    - contextual
+    - filter
+    - layout_builder
+    - node
+    - path
+    - section_library
+    - system
+    - toolbar
 id: landing_page_creator
 label: 'Landing page creator'
 weight: 4
@@ -9,8 +31,6 @@ is_admin: false
 permissions:
   - 'access content overview'
   - 'access contextual links'
-  - 'access image_browser entity browser pages'
-  - 'access in-place editing'
   - 'access toolbar'
   - 'add section library templates'
   - 'administer blocks'
@@ -35,9 +55,11 @@ permissions:
   - 'translate landing_page node'
   - 'translate page node'
   - 'update content translations'
+  - 'use editorial transition archive'
+  - 'use editorial transition archived_published'
   - 'use editorial transition create_new_draft'
+  - 'use editorial transition publish'
   - 'use editorial transition review'
-  - 'use moderation sidebar'
   - 'use text format rich_text'
   - 'view any unpublished content'
   - 'view landing_page revisions'
