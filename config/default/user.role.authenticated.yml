@@ -1,7 +1,11 @@
 uuid: 02844494-ecdf-499e-a991-def02779fd42
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - media
+    - shortcut
+    - system
 _core:
   default_config_hash: dJ0L2DNSj5q6XVZAGsuVDpJTh5UeYkIPwKrUOOpr8YI
 id: authenticated
@@ -11,5 +15,4 @@ is_admin: false
 permissions:
   - 'access content'
   - 'access shortcuts'
-  - 'access site-wide contact form'
   - 'view media'

@@ -1,9 +1,11 @@
+_core:
+  default_config_hash: cSdYeE-_AQETCNZnl8BMFS9-sVn5--VzAYILkpPBUbM
 cache_strings: true
 translate_english: true
 javascript:
   directory: languages
 translation:
-  use_source: remote_and_local
+  use_source: local
   default_filename: '%project-%version.%language.po'
   default_server_pattern: 'https://ftp.drupal.org/files/translations/%core/%project/%project-%version.%language.po'
   overwrite_customized: false
@@ -11,5 +13,3 @@ translation:
   update_interval_days: 0
   path: ../translations
   import_enabled: true
-_core:
-  default_config_hash: cSdYeE-_AQETCNZnl8BMFS9-sVn5--VzAYILkpPBUbM

@@ -6,6 +6,6 @@ id: inline_blocktext
 block_id: 'inline_block:text'
 category: blocks
 label: Text
-weight: -3
 image_path: /themes/custom/wingsuit/dist/app-drupal/images/rich_text-icon.svg
 image_alt: ''
+weight: -3

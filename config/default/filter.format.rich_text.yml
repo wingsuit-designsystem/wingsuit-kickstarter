@@ -79,8 +79,8 @@ filters:
     weight: -39
     settings:
       default_view_mode: embedded
-      allowed_media_types:
-        image: image
       allowed_view_modes:
         default: default
         16x9: 16x9
+      allowed_media_types:
+        image: image

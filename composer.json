@@ -77,40 +77,42 @@
         "drupal/section_library_reusable": "^1.0@beta"
     },
     "require-dev": {
-        "drush/drush": ">=10"
+        "drush/drush": ">=10",
+        "acquia/blt-phpcs": "^1.0"
     },
     "config": {
-        "process-timeout": 0
+        "process-timeout": 0,
+        "allow-plugins": {
+            "composer/installers": true,
+            "cweagans/composer-patches": true,
+            "drupal/core-composer-scaffold": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true,
+            "acquia/blt": true,
+            "acquia/blt-phpcs": true,
+            "drupal/core-project-message": true,
+            "oomphinc/composer-installers-extender": true
+        }
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "extra": {
         "patches": {
-            "drupal/lightning_layout": {
-                "Call to a member function uuid() on null when Layout Builder renders a Placeholder": "https://www.drupal.org/files/issues/2020-04-15/light_layout.patch"
-            },
             "drupal/component_blocks": {
                 "3210538 - Not working with Settings Type url and token ": "https://git.drupalcode.org/project/component_blocks/-/merge_requests/2.patch"
-            },
-            "drupal/imageapi_optimize_webp": {
-                "Error: Call to undefined method Drupal\\imagemagick\\Plugin\\ImageToolkit\\ImagemagickToolkit::getResource()": "https://www.drupal.org/files/issues/2020-07-20/imageapi_optimize_webp-imagemagick-toolkit-3160399-4.patch",
-                "Drupal 9 compatibility for submodule(imageapi_optimize_webp_responsive)": "https://www.drupal.org/files/issues/2020-06-23/3153942-2.patch"
             },
             "drupal/gin_toolbar": {
                 "Add option for node local tasks in toolbar.": "https://www.drupal.org/files/issues/2021-07-20/3121440-34.patch"
             },
             "drupal/ui_patterns_field_formatters": {
-                "Text is not processed.": "https://git.drupalcode.org/project/ui_patterns_field_formatters/-/merge_requests/1.diff",
-                "Item to context": "https://git.drupalcode.org/project/ui_patterns_field_formatters/-/merge_requests/3.patch"
+                "Issue #3251489: updb doesn't check layout builder fields.": "https://git.drupalcode.org/project/ui_patterns_field_formatters/-/merge_requests/9.patch"
             },
             "drupal/core": {
-                "Expose Layout Builder data to REST and JSON:API\n": "https://git.drupalcode.org/project/drupal/-/merge_requests/1131.patch",
                 "Break long text strings in layout edit": "https://www.drupal.org/files/issues/2020-12-22/3016507-50.patch",
                 "Improve StringItem::generateSampleValue()": "https://www.drupal.org/files/issues/2020-06-24/3091478-15.patch",
                 "Not all form elements can't use in vertical_tabs": "https://www.drupal.org/files/issues/2021-01-02/3122920_group_patch_5.patch",
                 "PHP message: Error: Call to a member function getEntityTypeId() on null (Layout Builder)": "https://www.drupal.org/files/issues/2020-08-05/3049332-inline-35.patch",
                 "Stream wrapper reference in JS library causes error in _locale_parse_js_file()": "https://www.drupal.org/files/issues/2020-05-08/2735717-28.patch",
-                "Callers of LayoutEntityHelperTrait::getEntitySections() do not account for the view mode": "https://www.drupal.org/files/issues/2020-08-27/3008924-rerolled-17.patch",
+                "Callers of LayoutEntityHelperTrait::getEntitySections() do not account for the view mode": "https://www.drupal.org/files/issues/2021-12-09/3008924-rerolled-24.patch",
                 "New non translatable field on translatable content throws error": "https://www.drupal.org/files/issues/2021-02-10/3025039_42.patch",
                 "2869592 - Disabled update module shouldn't produce a status report warning": "https://www.drupal.org/files/issues/2020-02-07/2869592-remove-update-warning-34.patch"
             },
@@ -123,7 +125,7 @@
             },
             "drupal/drimage": {
                 "Stage file proxy": "https://git.drupalcode.org/project/drimage/-/merge_requests/1.patch",
-                "webp support for webp": "https://git.drupalcode.org/project/drimage/-/merge_requests/2.patch?X",
+                "webp support for webp": "https://www.drupal.org/files/issues/2022-01-09/3202501-3-webp.patch",
                 "embeds in wysiwyg not displaying media": "https://www.drupal.org/files/issues/2020-09-06/3079190-8--show_img_in_media_embed.patch?X"
             },
             "drupal/ui_patterns": {

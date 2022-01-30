@@ -15,11 +15,21 @@ setup:
 command-hooks:
   frontend-reqs:
     dir: ${docroot}/themes/custom
-    command: '[ ! -d "wingsuit" ] && npx @wingsuit-designsystem/cli init -k tailwind --skip-install --branch=master; cd wingsuit && yarn install'
+    command: '[ ! -d "wingsuit" ] && npx @wingsuit-designsystem/cli init -k tailwind --skip-install --branch=next; cd wingsuit && yarn install'
   frontend-assets:
     dir: ${docroot}/themes/custom/wingsuit
-    command: '[ -s "$NVM_DIR/nvm.sh" ] && yarn build:drupal'
-
+    command: 'yarn build:drupal'
+git:
+  commit-msg:
+    pattern: '/^(?<type>build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test|¯\\_\(ツ\)_\/¯)(?<scope>\(\w+\)?((?=:\s)|(?=!:\s)))?(?<breaking>!)?(?<subject>:\s.*)?|^(?<merge>Merge \w+)/'
+    help_description: "\nConventional Commits! \n
+                      Check https://www.conventionalcommits.org/ for more infos. \n\n
+                      <type>[optional scope]: <description> \n
+                      [optional body] \n
+                      [optional footer]\n"
+    example: "fix(author page): Fix typo in label. \n
+              Optional more details about the fix\n
+              #fixes issue #12\n"
 validate:
   twig:
     filters: [asset]

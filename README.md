@@ -23,6 +23,7 @@ blt source:build:settings
 blt setup
 ```
 
+## DDEV Quickstart
 
 ## Docksal Quickstart
 ```
@@ -37,7 +38,8 @@ fin exec yarn dev:storybook:docksal
 and open http://storybook.wingsuit-kickstarter.docksal
 
 
-## Develop Wingsuit only: Link `Wingsuit` to `Wingsuit Kickstarter`
+### For contribution only:
+#### Link `Wingsuit` to `Wingsuit Kickstarter`
 Use this mode to link `https://github.com/wingsuit-designsystem/wingsuit` as volume.
 
    * Create a folder `wingsuit`

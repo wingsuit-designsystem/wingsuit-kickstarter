@@ -17,20 +17,22 @@ mode: default
 content:
   field_media_image:
     type: drimage
-    weight: 0
     label: hidden
     settings:
-      image_style: ''
       image_link: ''
       image_handling: scale
       aspect_ratio:
-        width: 1
-        height: 1
+        width: '1'
+        height: '1'
       background:
         attachment: scroll
         position: 'center center'
         size: cover
+      iwc:
+        image_style: focal_point
+      image_style: ''
     third_party_settings: {  }
+    weight: 0
     region: content
 hidden:
   created: true

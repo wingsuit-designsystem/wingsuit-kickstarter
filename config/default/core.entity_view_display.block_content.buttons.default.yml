@@ -14,30 +14,31 @@ dependencies:
     - wingsuit
 third_party_settings:
   layout_builder:
-    allow_custom: false
     enabled: true
+    allow_custom: false
     sections:
       -
         layout_id: pattern_button_group
         layout_settings:
           label: ''
+          context_mapping: {  }
           pattern:
             field_templates: default
             variant: ''
             settings:
               align: center
               align_token: '[block_content:field_buttons_align:value]'
-          context_mapping: {  }
         components:
           80a13c8c-9f63-4199-b717-dbf90c462964:
             uuid: 80a13c8c-9f63-4199-b717-dbf90c462964
             region: null
             configuration:
+              id: 'field_block:block_content:buttons:field_buttons'
               label_display: '0'
               context_mapping:
                 entity: layout_builder.entity
-              id: 'field_block:block_content:buttons:field_buttons'
               formatter:
+                type: link
                 label: above
                 settings:
                   trim_length: 80
@@ -46,274 +47,30 @@ third_party_settings:
                   rel: ''
                   target: ''
                 third_party_settings: {  }
-                type: link
-            additional: {  }
             weight: 0
+            additional: {  }
           88e8c736-66bf-4de9-b8f7-71cd93e56f89:
             uuid: 88e8c736-66bf-4de9-b8f7-71cd93e56f89
             region: buttons
             configuration:
               id: 'field_block:block_content:buttons:field_buttons'
               label: Buttons
-              provider: layout_builder
               label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
               formatter:
-                label: hidden
                 type: pattern_formatter
+                label: hidden
                 settings:
                   pattern: button
-                  variants:
-                    alex: hagenau
-                    avatar: default
-                    button: default
-                    card: default
-                    headline: xl
-                    image: image
-                    section: 1_column
-                    slider: '1'
                   pattern_mapping:
-                    accordion_item:
-                      settings:
-                        'field_properties:uri':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:title':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:options':
-                          destination: _hidden
-                          weight: '0'
-                    alex:
-                      settings:
-                        'field_properties:uri':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:title':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:options':
-                          destination: _hidden
-                          weight: '0'
-                    article:
-                      settings:
-                        'field_properties:uri':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:title':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:options':
-                          destination: _hidden
-                          weight: '0'
-                    avatar:
-                      settings:
-                        'field_properties:uri':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:title':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:options':
-                          destination: _hidden
-                          weight: '0'
-                    banner:
-                      settings:
-                        'field_properties:uri':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:title':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:options':
-                          destination: _hidden
-                          weight: '0'
-                    basic:
-                      settings:
-                        'field_properties:uri':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:title':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:options':
-                          destination: _hidden
-                          weight: '0'
-                    button_group:
-                      settings:
-                        'field_properties:uri':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:title':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:options':
-                          destination: _hidden
-                          weight: '0'
-                    button:
-                      settings:
-                        'field_properties:uri':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:title':
-                          destination: text
-                          weight: '0'
-                        'field_properties:options':
-                          destination: _hidden
-                          weight: '0'
-                    card:
-                      settings:
-                        'field_properties:uri':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:title':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:options':
-                          destination: _hidden
-                          weight: '0'
-                    container:
-                      settings:
-                        'field_properties:uri':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:title':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:options':
-                          destination: _hidden
-                          weight: '0'
-                    grid:
-                      settings:
-                        'field_properties:uri':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:title':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:options':
-                          destination: _hidden
-                          weight: '0'
-                    headline:
-                      settings:
-                        'field_properties:uri':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:title':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:options':
-                          destination: _hidden
-                          weight: '0'
-                    hero:
-                      settings:
-                        'field_properties:uri':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:title':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:options':
-                          destination: _hidden
-                          weight: '0'
-                    image:
-                      settings:
-                        'field_properties:uri':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:title':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:options':
-                          destination: _hidden
-                          weight: '0'
-                    link:
-                      settings:
-                        'field_properties:uri':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:title':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:options':
-                          destination: _hidden
-                          weight: '0'
-                    logo:
-                      settings:
-                        'field_properties:uri':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:title':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:options':
-                          destination: _hidden
-                          weight: '0'
-                    rich_text:
-                      settings:
-                        'field_properties:uri':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:title':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:options':
-                          destination: _hidden
-                          weight: '0'
-                    section:
-                      settings:
-                        'field_properties:uri':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:title':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:options':
-                          destination: _hidden
-                          weight: '0'
-                    slider:
-                      settings:
-                        'field_properties:uri':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:title':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:options':
-                          destination: _hidden
-                          weight: '0'
-                    spacing:
-                      settings:
-                        'field_properties:uri':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:title':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:options':
-                          destination: _hidden
-                          weight: '0'
-                    table:
-                      settings:
-                        'field_properties:uri':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:title':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:options':
-                          destination: _hidden
-                          weight: '0'
-                    video:
-                      settings:
-                        'field_properties:uri':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:title':
-                          destination: _hidden
-                          weight: '0'
-                        'field_properties:options':
-                          destination: _hidden
-                          weight: '0'
+                    'field_properties:title':
+                      destination: text
+                      weight: 0
+                      plugin: field_properties
+                      source: title
                   pattern_settings:
                     accordion_item:
                       id:
@@ -402,12 +159,10 @@ third_party_settings:
                       padding_x: default
                       padding_top: ''
                       padding_bottom: default
+                  pattern_variant: default
                 third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-            additional: {  }
             weight: 0
+            additional: {  }
         third_party_settings: {  }
 id: block_content.buttons.default
 targetEntityType: block_content
@@ -415,7 +170,7 @@ bundle: buttons
 mode: default
 content:
   field_buttons:
-    weight: 2
+    type: link
     label: above
     settings:
       trim_length: 80
@@ -424,14 +179,14 @@ content:
       rel: ''
       target: ''
     third_party_settings: {  }
-    type: link
+    weight: 2
     region: null
   field_buttons_align:
-    weight: 1
+    type: list_default
     label: above
     settings: {  }
     third_party_settings: {  }
-    type: list_default
+    weight: 1
     region: content
 hidden:
   langcode: true

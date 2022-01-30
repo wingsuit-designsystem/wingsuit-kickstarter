@@ -6,6 +6,6 @@ id: buttons
 block_id: 'inline_block:buttons'
 category: blocks
 label: Buttons
-weight: -2
 image_path: /themes/custom/wingsuit/dist/app-drupal/images/button_group-icon.svg
 image_alt: ''
+weight: -2

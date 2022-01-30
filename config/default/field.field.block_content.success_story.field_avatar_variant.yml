@@ -1,0 +1,23 @@
+uuid: 2ef2db8c-be2f-4c1d-8419-0f12eb52f463
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.success_story
+    - field.storage.block_content.field_avatar_variant
+  module:
+    - options
+id: block_content.success_story.field_avatar_variant
+field_name: field_avatar_variant
+entity_type: block_content
+bundle: success_story
+label: Variant
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: default
+default_value_callback: ''
+settings: {  }
+field_type: list_string
