@@ -10,6 +10,10 @@ tasks:
     command: |
       ddev start -y
       gp await-port 8080 && gp preview $(gp url 8080)
+      cd docroot/themes/custom/wingsuit
+      yarn dev:storybook -p 3003
+      gp preview $(gp url 3003)
+
 
 # VScode xdebug extension
 vscode:

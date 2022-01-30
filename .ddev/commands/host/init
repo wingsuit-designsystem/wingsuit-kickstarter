@@ -16,7 +16,7 @@ ddev exec blt setup -n -D wingsuit.starterkit='tailwind' --environment ddev
 ddev drush cr
 
 # Run config imports
-ddev exec blt drupal:update -q
+ddev exec blt drupal:update -n
 
 FULLURL=${DDEV_PRIMARY_URL}
 
