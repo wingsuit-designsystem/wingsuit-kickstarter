@@ -5,6 +5,7 @@ image:
 # when starting a workspace all docker images are ready
 tasks:
   - init: |
+      ddev config global --instrumentation-opt-in=true
       ddev init
     command: |
       ddev start -y
