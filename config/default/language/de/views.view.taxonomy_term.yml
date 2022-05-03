@@ -4,6 +4,15 @@ display:
   default:
     display_title: Standard
     display_options:
+      pager:
+        options:
+          tags:
+            next: ››
+            previous: ‹‹
+          expose:
+            items_per_page_label: 'Elemente pro Seite'
+            items_per_page_options_all_label: '- Alle -'
+            offset_label: Versatz
       exposed_form:
         options:
           submit_button: Anwenden
@@ -11,15 +20,6 @@ display:
           exposed_sorts_label: 'Sortieren nach'
           sort_asc_label: Aufsteigend
           sort_desc_label: Absteigend
-      pager:
-        options:
-          expose:
-            items_per_page_label: 'Elemente pro Seite'
-            items_per_page_options_all_label: '- Alle -'
-            offset_label: Versatz
-          tags:
-            previous: ‹‹
-            next: ››
       arguments:
         tid:
           exception:
