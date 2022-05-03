@@ -1,18 +1,18 @@
-uuid: ffead811-29ce-47c4-b400-da6b29a9b0bc
+uuid: bb3cd41b-b28f-46f5-92a8-775688b0e800
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.list
-    - field.field.block_content.list.field_list
+    - block_content.type.view
+    - field.field.block_content.view.field_view
   module:
     - viewsreference
-id: block_content.list.default
+id: block_content.view.default
 targetEntityType: block_content
-bundle: list
+bundle: view
 mode: default
 content:
-  field_list:
+  field_view:
     type: viewsreference_select
     weight: 27
     region: content

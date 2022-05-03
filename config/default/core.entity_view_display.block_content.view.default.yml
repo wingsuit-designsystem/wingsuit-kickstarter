@@ -1,20 +1,20 @@
-uuid: 0be04e50-b6cc-40b1-a526-82b3bae52458
+uuid: 4aa93f02-c7b2-4027-8402-f00d36cf98d5
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.list
-    - field.field.block_content.list.field_list
+    - block_content.type.view
+    - field.field.block_content.view.field_view
   module:
     - viewsreference
-id: block_content.list.default
+id: block_content.view.default
 targetEntityType: block_content
-bundle: list
+bundle: view
 mode: default
 content:
-  field_list:
+  field_view:
     type: viewsreference_formatter
-    label: hidden
+    label: above
     settings:
       plugin_types:
         - block

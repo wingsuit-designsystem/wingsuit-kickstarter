@@ -1,4 +1,4 @@
-uuid: ac476fe4-cc05-48e3-b6be-9810e1501a78
+uuid: c895a52b-6a04-4826-8e1c-9765c7dcf0fe
 langcode: en
 status: true
 dependencies:
@@ -6,8 +6,8 @@ dependencies:
     - block_content
     - views
     - viewsreference
-id: block_content.field_list
-field_name: field_list
+id: block_content.field_view
+field_name: field_view
 entity_type: block_content
 type: viewsreference
 settings:

@@ -1,17 +1,17 @@
-uuid: 4f406456-b7d1-4260-b7b1-5e834fa70dce
+uuid: 9f6556a0-e4a0-4432-97d2-7a40dbf2cbf6
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.list
-    - field.storage.block_content.field_list
+    - block_content.type.view
+    - field.storage.block_content.field_view
   module:
     - viewsreference
-id: block_content.list.field_list
-field_name: field_list
+id: block_content.view.field_view
+field_name: field_view
 entity_type: block_content
-bundle: list
-label: List
+bundle: view
+label: View
 description: ''
 required: false
 translatable: false
