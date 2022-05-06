@@ -15,8 +15,7 @@ dependencies:
   module:
     - layout_builder
     - user
-  theme:
-    - wingsuit
+    - wingsuit_companion
 third_party_settings:
   layout_builder:
     enabled: true

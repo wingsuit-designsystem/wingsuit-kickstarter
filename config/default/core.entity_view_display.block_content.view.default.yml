@@ -14,7 +14,7 @@ mode: default
 content:
   field_view:
     type: viewsreference_formatter
-    label: above
+    label: hidden
     settings:
       plugin_types:
         - block

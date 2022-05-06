@@ -78,6 +78,7 @@ module:
   redirect: 0
   responsive_image: 0
   schema_metatag: 0
+  schema_organization: 0
   schemata: 0
   schemata_json_schema: 0
   section_library: 0

@@ -1,0 +1,31 @@
+uuid: 52a096ca-3dca-4033-bfcf-233449bbeeab
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.reference
+    - field.storage.block_content.field_nodes
+    - node.type.article
+    - node.type.landing_page
+id: block_content.reference.field_nodes
+field_name: field_nodes
+entity_type: block_content
+bundle: reference
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      article: article
+      landing_page: landing_page
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: article
+field_type: entity_reference

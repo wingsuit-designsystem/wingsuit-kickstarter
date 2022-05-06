@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: view
-label: View
+label: 'Automatic list'
 revision: 0
 description: ''

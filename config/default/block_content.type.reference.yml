@@ -1,0 +1,8 @@
+uuid: a5c10932-0ba5-4216-9a9c-95d2bffa1ffd
+langcode: en
+status: true
+dependencies: {  }
+id: reference
+label: 'Manual list'
+revision: 0
+description: ''
