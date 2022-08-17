@@ -8,4 +8,4 @@ category: blocks
 label: Hero
 image_path: /themes/custom/wingsuit/dist/app-drupal/images/hero-icon.svg
 image_alt: ''
-weight: 0
+weight: -97

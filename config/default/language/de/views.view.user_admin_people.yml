@@ -4,24 +4,7 @@ display:
   default:
     display_title: Standard
     display_options:
-      exposed_form:
-        options:
-          submit_button: Filter
-          reset_button_label: Zurücksetzen
-          exposed_sorts_label: 'Sortieren nach'
-          sort_asc_label: Aufsteigend
-          sort_desc_label: Absteigend
-      pager:
-        options:
-          tags:
-            previous: '‹ Vorherige Seite'
-            next: 'Nächste Seite ›'
-            first: '« Anfang'
-            last: 'Ende »'
-          expose:
-            items_per_page_label: 'Elemente pro Seite'
-            items_per_page_options_all_label: '- Alle -'
-            offset_label: Versatz
+      title: Benutzer
       fields:
         user_bulk_form:
           label: Massenaktualisierung
@@ -30,8 +13,8 @@ display:
         status:
           label: Status
           settings:
-            format_custom_true: Aktiv
             format_custom_false: Gesperrt
+            format_custom_true: Aktiv
         roles_target_id:
           label: Rollen
         created:
@@ -42,6 +25,27 @@ display:
           label: Aktionen
         mail:
           separator: ', '
+      pager:
+        options:
+          tags:
+            next: 'Nächste Seite ›'
+            previous: '‹ Vorherige Seite'
+            first: '« Anfang'
+            last: 'Ende »'
+          expose:
+            items_per_page_label: 'Elemente pro Seite'
+            items_per_page_options_all_label: '- Alle -'
+            offset_label: Versatz
+      exposed_form:
+        options:
+          submit_button: Filter
+          reset_button_label: Zurücksetzen
+          exposed_sorts_label: 'Sortieren nach'
+          sort_asc_label: Aufsteigend
+          sort_desc_label: Absteigend
+      empty:
+        area_text_custom:
+          content: 'Keine Personen verfügbar.'
       filters:
         combine:
           expose:
@@ -60,10 +64,6 @@ display:
         permission:
           expose:
             label: Berechtigung
-      title: Benutzer
-      empty:
-        area_text_custom:
-          content: 'Keine Personen verfügbar.'
       use_more_text: mehr
   page_1:
     display_title: Seite

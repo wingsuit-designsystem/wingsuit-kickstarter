@@ -4,22 +4,7 @@ display:
   default:
     display_title: Standard
     display_options:
-      exposed_form:
-        options:
-          submit_button: Anwenden
-          reset_button_label: Zurücksetzen
-          exposed_sorts_label: 'Sortieren nach'
-          sort_asc_label: Aufsteigend
-          sort_desc_label: Absteigend
-      pager:
-        options:
-          tags:
-            previous: '‹ Vorherige Seite'
-            next: 'Nächste Seite ›'
-          expose:
-            items_per_page_label: 'Elemente pro Seite'
-            items_per_page_options_all_label: '- Alle -'
-            offset_label: Versatz
+      title: 'Bibliothek benutzerdefinierter Blöcke'
       fields:
         info:
           label: Blockbeschreibung
@@ -31,6 +16,25 @@ display:
           label: Aktualisiert
         operations:
           label: Aktionen
+      pager:
+        options:
+          tags:
+            next: 'Nächste Seite ›'
+            previous: '‹ Vorherige Seite'
+          expose:
+            items_per_page_label: 'Elemente pro Seite'
+            items_per_page_options_all_label: '- Alle -'
+            offset_label: Versatz
+      exposed_form:
+        options:
+          submit_button: Anwenden
+          reset_button_label: Zurücksetzen
+          exposed_sorts_label: 'Sortieren nach'
+          sort_asc_label: Aufsteigend
+          sort_desc_label: Absteigend
+      empty:
+        area_text_custom:
+          content: 'Es sind keine benutzerdefinierten Blöcke verfügbar.'
       filters:
         info:
           expose:
@@ -38,10 +42,6 @@ display:
         type:
           expose:
             label: Blocktyp
-      title: 'Bibliothek benutzerdefinierter Blöcke'
-      empty:
-        area_text_custom:
-          content: 'Es sind keine benutzerdefinierten Blöcke verfügbar.'
   page_1:
     display_title: Seite
     display_options:

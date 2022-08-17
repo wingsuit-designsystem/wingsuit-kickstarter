@@ -4,6 +4,7 @@ display:
   default:
     display_title: Standard
     display_options:
+      title: 'Wer ist online'
       exposed_form:
         options:
           submit_button: Anwenden
@@ -11,20 +12,19 @@ display:
           exposed_sorts_label: 'Sortieren nach'
           sort_asc_label: Aufsteigend
           sort_desc_label: Absteigend
+      empty:
+        area_text_custom:
+          content: 'Momentan sind keine Benutzer online.'
       filters:
         access:
           expose:
             label: 'Letzter Zugriff'
             description: 'Ein Benutzer gilt für diesen Zeitraum als „online“, nachdem er das letzte Mal eine Seite betrachtet hat.'
-      title: 'Wer ist online'
       header:
         result:
           content: 'Momentan sind @total Benutzer online.'
-      empty:
-        area_text_custom:
-          content: 'Momentan sind keine Benutzer online.'
   who_s_online_block:
     display_title: 'Wer ist online'
     display_options:
-      block_description: 'Wer ist online'
       display_description: 'Eine Liste der derzeit angemeldeten Benutzer.'
+      block_description: 'Wer ist online'

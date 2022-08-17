@@ -1,0 +1,25 @@
+uuid: 4aa93f02-c7b2-4027-8402-f00d36cf98d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.view
+    - field.field.block_content.view.field_view
+  module:
+    - viewsreference
+id: block_content.view.default
+targetEntityType: block_content
+bundle: view
+mode: default
+content:
+  field_view:
+    type: viewsreference_formatter
+    label: hidden
+    settings:
+      plugin_types:
+        - block
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  langcode: true

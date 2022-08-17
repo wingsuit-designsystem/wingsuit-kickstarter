@@ -8,4 +8,4 @@ category: blocks
 label: 'Media Slideshow'
 image_path: /themes/custom/wingsuit/dist/app-drupal/images/slider-media-icon.svg
 image_alt: ''
-weight: 3
+weight: -94

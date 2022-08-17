@@ -12,7 +12,46 @@ id: contact_form
 title: 'Contact form'
 description: ''
 category: ''
-elements: null
+elements: |-
+  salutation:
+    '#type': select
+    '#title': Salutation
+    '#title_display': none
+    '#options':
+      Male: Male
+      Female: Female
+  flexbox:
+    '#type': webform_flexbox
+    first_name:
+      '#type': textfield
+      '#title': 'First name'
+      '#title_display': none
+      '#placeholder': 'First name'
+    last_name:
+      '#type': textfield
+      '#title': 'Last name'
+      '#title_display': none
+      '#placeholder': 'Last name'
+  flexbox_01:
+    '#type': webform_flexbox
+    e_mail:
+      '#type': email
+      '#title': E-mail
+      '#title_display': none
+      '#placeholder': 'E-mail*'
+    telephone:
+      '#type': tel
+      '#title': Telephone
+      '#title_display': none
+      '#placeholder': 'Telephone*'
+  message:
+    '#type': textarea
+    '#title': Message
+    '#title_display': none
+    '#placeholder': Message
+  privacy:
+    '#type': checkbox
+    '#title': Privacy
 css: ''
 javascript: ''
 settings:

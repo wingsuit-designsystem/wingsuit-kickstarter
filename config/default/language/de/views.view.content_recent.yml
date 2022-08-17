@@ -4,6 +4,10 @@ display:
   default:
     display_title: Standard
     display_options:
+      title: 'Neuester Inhalt'
+      fields:
+        changed:
+          separator: ', '
       exposed_form:
         options:
           submit_button: Anwenden
@@ -11,10 +15,6 @@ display:
           exposed_sorts_label: 'Sortieren nach'
           sort_asc_label: Aufsteigend
           sort_desc_label: Absteigend
-      fields:
-        changed:
-          separator: ', '
-      title: 'Neuester Inhalt'
       empty:
         area_text_custom:
           content: 'Kein Inhalt verfügbar.'

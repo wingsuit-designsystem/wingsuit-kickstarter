@@ -4,22 +4,7 @@ display:
   default:
     display_title: Standard
     display_options:
-      exposed_form:
-        options:
-          submit_button: Filter
-          reset_button_label: Zurücksetzen
-          exposed_sorts_label: 'Sortieren nach'
-          sort_asc_label: Aufsteigend
-          sort_desc_label: Absteigend
-      pager:
-        options:
-          tags:
-            previous: '‹ Vorherige Seite'
-            next: 'Nächste Seite ›'
-          expose:
-            items_per_page_label: 'Elemente pro Seite'
-            items_per_page_options_all_label: '- Alle -'
-            offset_label: Versatz
+      title: Dateien
       fields:
         fid:
           label: Fid
@@ -41,6 +26,25 @@ display:
           label: Änderungsdatum
         count:
           label: 'Verwendet in'
+      pager:
+        options:
+          tags:
+            next: 'Nächste Seite ›'
+            previous: '‹ Vorherige Seite'
+          expose:
+            items_per_page_label: 'Elemente pro Seite'
+            items_per_page_options_all_label: '- Alle -'
+            offset_label: Versatz
+      exposed_form:
+        options:
+          submit_button: Filter
+          reset_button_label: Zurücksetzen
+          exposed_sorts_label: 'Sortieren nach'
+          sort_asc_label: Aufsteigend
+          sort_desc_label: Absteigend
+      empty:
+        area_text_custom:
+          content: 'Keine Dateien verfügbar'
       filters:
         filename:
           expose:
@@ -51,10 +55,6 @@ display:
         status:
           expose:
             label: Status
-      title: Dateien
-      empty:
-        area_text_custom:
-          content: 'Keine Dateien verfügbar'
   page_1:
     display_title: Dateiübersicht
     display_options:
@@ -63,15 +63,7 @@ display:
   page_2:
     display_title: Dateinutzung
     display_options:
-      pager:
-        options:
-          tags:
-            previous: '‹ Vorherige Seite'
-            next: 'Nächste Seite ›'
-          expose:
-            items_per_page_label: 'Elemente pro Seite'
-            items_per_page_options_all_label: '- Alle -'
-            offset_label: Versatz
+      title: Dateinutzung
       fields:
         entity_label:
           label: Entität
@@ -81,7 +73,15 @@ display:
           label: 'Registrierendes Modul'
         count:
           label: 'Anzahl der Verwendung'
-      title: Dateinutzung
+      pager:
+        options:
+          tags:
+            next: 'Nächste Seite ›'
+            previous: '‹ Vorherige Seite'
+          expose:
+            items_per_page_label: 'Elemente pro Seite'
+            items_per_page_options_all_label: '- Alle -'
+            offset_label: Versatz
       arguments:
         fid:
           exception:
