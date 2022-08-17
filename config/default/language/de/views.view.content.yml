@@ -2,21 +2,9 @@ label: Inhalt
 description: 'Inhalte finden und verwalten.'
 display:
   default:
+    display_title: Standard
     display_options:
-      exposed_form:
-        options:
-          submit_button: Filter
-          reset_button_label: Zurücksetzen
-          exposed_sorts_label: 'Sortieren nach'
-          sort_asc_label: Aufsteigend
-          sort_desc_label: Absteigend
-      pager:
-        options:
-          tags:
-            previous: '‹ Vorherige Seite'
-            next: 'Nächste Seite ›'
-            first: '« Anfang'
-            last: 'Ende »'
+      title: Inhalt
       fields:
         title:
           label: Titel
@@ -29,6 +17,23 @@ display:
           label: Aktualisiert
         operations:
           label: Aktionen
+      pager:
+        options:
+          tags:
+            next: 'Nächste Seite ›'
+            previous: '‹ Vorherige Seite'
+            first: '« Anfang'
+            last: 'Ende »'
+      exposed_form:
+        options:
+          submit_button: Filter
+          reset_button_label: Zurücksetzen
+          exposed_sorts_label: 'Sortieren nach'
+          sort_asc_label: Aufsteigend
+          sort_desc_label: Absteigend
+      empty:
+        area_text_custom:
+          content: 'Kein Inhalt verfügbar.'
       filters:
         title:
           expose:
@@ -39,16 +44,11 @@ display:
         langcode:
           expose:
             label: Sprache
-      title: Inhalt
-      empty:
-        area_text_custom:
-          content: 'Kein Inhalt verfügbar.'
-    display_title: Standard
   page_1:
+    display_title: Seite
     display_options:
       menu:
         title: Inhalt
       tab_options:
         title: Inhalt
         description: 'Inhalte finden und verwalten'
-    display_title: Seite

@@ -9,17 +9,21 @@ features:
   comment_user_verification: true
   favicon: false
   node_user_picture: false
+logo:
+  use_default: true
 third_party_settings:
   shortcut:
     module_link: true
 preset_accent_color: blue
 preset_focus_color: gin
-enable_darkmode: false
+enable_darkmode: '0'
 classic_toolbar: vertical
-icon_default: true
-icon_path: ''
+secondary_toolbar_frontend: false
 high_contrast_mode: false
 accent_color: ''
 focus_color: ''
-icon_upload: ''
+show_description_toggle: false
 show_user_theme_settings: false
+icon_default: true
+icon_path: ''
+icon_upload: ''

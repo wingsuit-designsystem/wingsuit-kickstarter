@@ -8,4 +8,4 @@ category: blocks
 label: Card
 image_path: /themes/custom/wingsuit/dist/app-drupal/images/card-icon.svg
 image_alt: ''
-weight: 2
+weight: -95

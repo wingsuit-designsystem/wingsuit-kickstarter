@@ -16,8 +16,7 @@ dependencies:
     - layout_builder
     - text
     - user
-  theme:
-    - wingsuit
+    - wingsuit_companion
 third_party_settings:
   layout_builder:
     enabled: true
@@ -73,6 +72,25 @@ third_party_settings:
                 label: hidden
                 settings:
                   link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          7ca07668-7edd-4081-b789-b004f4a895e0:
+            uuid: 7ca07668-7edd-4081-b789-b004f4a895e0
+            region: text
+            configuration:
+              id: 'field_block:node:article:body'
+              label: Body
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: text_trimmed
+                label: hidden
+                settings:
+                  trim_length: 200
                 third_party_settings: {  }
             weight: 0
             additional: {  }

@@ -1,0 +1,8 @@
+uuid: 55a6677d-24d7-48b2-8819-d9484ee2cf17
+langcode: en
+status: true
+dependencies: {  }
+id: view
+label: 'Automatic list'
+revision: 0
+description: ''

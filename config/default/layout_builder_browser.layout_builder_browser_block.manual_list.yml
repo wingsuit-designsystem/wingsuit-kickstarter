@@ -1,0 +1,11 @@
+uuid: f12c3447-eb1b-4e03-bf33-a94a7d9fe98b
+langcode: en
+status: true
+dependencies: {  }
+id: manual_list
+block_id: 'inline_block:reference'
+category: lists
+label: 'Manual list'
+image_path: /themes/custom/wingsuit/dist/app-drupal/images/card-icon.svg
+image_alt: ''
+weight: -3

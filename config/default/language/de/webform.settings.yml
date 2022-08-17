@@ -1,0 +1,13 @@
+settings:
+  default_submit_button_label: Absenden
+  default_reset_button_label: Zurücksetzen
+  default_delete_button_label: Löschen
+  default_preview_next_button_label: Vorschau
+  default_preview_label: Vorschau
+  dialog_options:
+    narrow:
+      title: Schmal
+    wide:
+      title: Breit
+element:
+  default_more_title: Zusätzlich

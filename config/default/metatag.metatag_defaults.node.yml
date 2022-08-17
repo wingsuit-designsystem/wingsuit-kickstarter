@@ -10,3 +10,7 @@ tags:
   title: '[node:title] | [site:name]'
   description: '[node:summary]'
   canonical_url: '[node:url]'
+  schema_organization_logo: 'a:3:{s:5:"@type";s:11:"ImageObject";s:20:"representativeOfPage";s:4:"True";s:3:"url";s:55:"https://wingsuit-designsystem.github.io/images/logo.svg";}'
+  schema_organization_name: wingsuit
+  schema_organization_type: Organization
+  schema_organization_url: 'https://wingsuit-designsystem.github.io'

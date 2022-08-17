@@ -1,0 +1,19 @@
+uuid: e9fb4b84-ebc1-42fd-81e3-c440bd6ab564
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_sprite_map_icon
+    - media.type.icon
+id: media.icon.field_sprite_map_icon
+field_name: field_sprite_map_icon
+entity_type: media
+bundle: icon
+label: 'Sprite map icon'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

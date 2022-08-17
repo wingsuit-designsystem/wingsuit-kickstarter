@@ -8,4 +8,4 @@ category: blocks
 label: Banner
 image_path: /themes/custom/wingsuit/dist/app-drupal/images/banner-icon.svg
 image_alt: ''
-weight: 1
+weight: -96

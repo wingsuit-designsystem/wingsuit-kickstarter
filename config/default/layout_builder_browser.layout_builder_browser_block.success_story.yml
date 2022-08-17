@@ -8,4 +8,4 @@ category: blocks
 label: 'Success Story'
 image_path: /themes/custom/wingsuit/dist/app-drupal/images/avatar-icon.svg
 image_alt: ''
-weight: -1
+weight: -98

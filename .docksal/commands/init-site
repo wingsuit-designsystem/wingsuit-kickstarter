@@ -48,7 +48,7 @@ ensure_blt_installed ()
 
 # Project initialization steps
 ensure_blt_installed
-fin blt setup -n -D wingsuit.starterkit='tailwind' --environment $DOCKSAL_ENVIRONMENT
+fin blt setup -n -D wingsuit.starterkit='tailwind' --environment docksal
 
 echo -e "Open ${yellow}http://${VIRTUAL_HOST}${NC} in your browser to verify the setup."
 

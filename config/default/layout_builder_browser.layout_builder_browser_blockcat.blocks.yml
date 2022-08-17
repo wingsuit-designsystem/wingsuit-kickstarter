@@ -4,4 +4,4 @@ status: true
 dependencies: {  }
 id: blocks
 label: Blocks
-weight: null
+weight: -10
