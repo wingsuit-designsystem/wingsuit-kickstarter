@@ -7,7 +7,7 @@ dependencies:
     - field.field.media.image.field_media_in_library
     - media.type.image
   module:
-    - drimage
+    - easy_responsive_images
 _core:
   default_config_hash: OkEIcPIF2jnli7EgxTcs1QX0WN9YZM9aKZjgC7KFlIg
 id: media.image.default
@@ -16,20 +16,14 @@ bundle: image
 mode: default
 content:
   field_media_image:
-    type: drimage
+    type: easy_responsive_images
     label: hidden
     settings:
       image_link: ''
       image_handling: scale
-      aspect_ratio:
-        width: '1'
-        height: '1'
-      background:
-        attachment: scroll
-        position: 'center center'
-        size: cover
-      iwc:
-        image_style: focal_point
+      aspect_ratio: '16_9'
+      image_loading:
+        attribute: lazy
       image_style: ''
     third_party_settings: {  }
     weight: 0

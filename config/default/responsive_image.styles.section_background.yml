@@ -1,0 +1,76 @@
+uuid: e8309d52-41b4-4290-b987-ca394341f633
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.responsive_16_9_1000w
+    - image.style.responsive_16_9_1200w
+    - image.style.responsive_16_9_1600w
+    - image.style.responsive_16_9_2000w
+    - image.style.responsive_16_9_2400w
+    - image.style.responsive_3_4_1000w
+    - image.style.responsive_3_4_400w
+    - image.style.responsive_4_3_1200w
+    - image.style.responsive_4_3_800w
+  theme:
+    - wingsuit
+id: section_background
+label: 'Section Background'
+image_style_mappings:
+  -
+    image_mapping_type: image_style
+    image_mapping: responsive_16_9_2400w
+    breakpoint_id: wingsuit.xxlarge
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: responsive_16_9_2000w
+    breakpoint_id: wingsuit.xxlarge
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: responsive_16_9_1600w
+    breakpoint_id: wingsuit.xlarge
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: responsive_16_9_2000w
+    breakpoint_id: wingsuit.xlarge
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: responsive_16_9_1200w
+    breakpoint_id: wingsuit.large
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: responsive_16_9_1000w
+    breakpoint_id: wingsuit.medium
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: responsive_16_9_2000w
+    breakpoint_id: wingsuit.medium
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: responsive_4_3_1200w
+    breakpoint_id: wingsuit.small
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: responsive_4_3_800w
+    breakpoint_id: wingsuit.small
+    multiplier: 2x
+  -
+    image_mapping_type: image_style
+    image_mapping: responsive_3_4_1000w
+    breakpoint_id: wingsuit.xsmall
+    multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: responsive_3_4_400w
+    breakpoint_id: wingsuit.xsmall
+    multiplier: 2x
+breakpoint_group: wingsuit
+fallback_image_style: responsive_3_4_1000w

@@ -56,8 +56,8 @@ third_party_settings:
       allowed_layouts:
         - pattern_section
         - pattern_slider
-      blacklisted_blocks: {  }
-      whitelisted_blocks: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
 id: node.article.full
 targetEntityType: node
 bundle: article

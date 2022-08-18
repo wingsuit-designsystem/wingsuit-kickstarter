@@ -18,8 +18,8 @@ third_party_settings:
     allowed_block_categories: {  }
     entity_view_mode_restriction:
       allowed_layouts: {  }
-      blacklisted_blocks: {  }
-      whitelisted_blocks: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
 id: block_content.media_slideshow.full
 targetEntityType: block_content
 bundle: media_slideshow

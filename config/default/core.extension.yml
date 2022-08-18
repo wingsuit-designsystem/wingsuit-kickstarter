@@ -24,7 +24,6 @@ module:
   datetime: 0
   dblog: 0
   diff: 0
-  drimage: 0
   dropzonejs: 0
   dynamic_page_cache: 0
   easy_responsive_images: 0
@@ -68,10 +67,10 @@ module:
   menu_link_content: 0
   menu_ui: 0
   metatag: 0
+  mysql: 0
   node: 0
   options: 0
   page_cache: 0
-  page_manager: 0
   path: 0
   path_alias: 0
   rdf: 0

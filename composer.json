@@ -19,10 +19,10 @@
         "oomphinc/composer-installers-extender": "^2.0",
         "acquia/blt": "*",
         "ext-dom": "*",
-        "drupal/core-composer-scaffold": "^9.2",
-        "drupal/core-project-message": "^9.2",
-        "drupal/core-recommended": "^9.2",
-        "drupal/core": "~9.2",
+        "drupal/core-composer-scaffold": "^9.4",
+        "drupal/core-project-message": "^9.4",
+        "drupal/core-recommended": "^9.4",
+        "drupal/core": "~9.4",
         "drupal/config_split": "^1.5",
         "drupal/components": "^2.0",
         "drupal/ui_patterns_layout_builder": "^1.1",
@@ -31,7 +31,6 @@
         "drupal/wingsuit_companion": "^2.0",
         "drupal/focal_point": "^1.5",
         "drupal/media_library_edit": "^2.0",
-        "drupal/drimage": "2.0.7",
         "drupal/media_responsive_thumbnail": "^1.2",
         "drupal/layout_builder_browser": "^1.3",
         "drupal/gin": "^3.0@alpha",
@@ -104,18 +103,19 @@
             "drupal/gin_toolbar": {
                 "Add option for node local tasks in toolbar.": "https://www.drupal.org/files/issues/2022-02-11/3263805-41.patch"
             },
-            "drupal/ui_patterns_field_formatters": {
-                "Issue #3251489: updb doesn't check layout builder fields.": "https://git.drupalcode.org/project/ui_patterns_field_formatters/-/merge_requests/9.patch"
-            },
             "drupal/core": {
                 "Break long text strings in layout edit": "https://www.drupal.org/files/issues/2020-12-22/3016507-50.patch",
                 "Improve StringItem::generateSampleValue()": "https://www.drupal.org/files/issues/2020-06-24/3091478-15.patch",
                 "Not all form elements can't use in vertical_tabs": "https://www.drupal.org/files/issues/2021-01-02/3122920_group_patch_5.patch",
                 "PHP message: Error: Call to a member function getEntityTypeId() on null (Layout Builder)": "https://www.drupal.org/files/issues/2020-08-05/3049332-inline-35.patch",
                 "Stream wrapper reference in JS library causes error in _locale_parse_js_file()": "https://www.drupal.org/files/issues/2020-05-08/2735717-28.patch",
-                "Callers of LayoutEntityHelperTrait::getEntitySections() do not account for the view mode": "https://www.drupal.org/files/issues/2021-12-09/3008924-rerolled-24.patch",
+                "Callers of LayoutEntityHelperTrait::getEntitySections() do not account for the view mode": "https://www.drupal.org/files/issues/2022-07-11/3008924-33.patch",
                 "New non translatable field on translatable content throws error": "https://www.drupal.org/files/issues/2021-02-10/3025039_42.patch",
-                "2869592 - Disabled update module shouldn't produce a status report warning": "https://www.drupal.org/files/issues/2020-02-07/2869592-remove-update-warning-34.patch"
+                "2869592 - Disabled update module shouldn't produce a status report warning": "https://www.drupal.org/files/issues/2020-02-07/2869592-remove-update-warning-34.patch",
+                "Reorder Layout Builder sections": "https://www.drupal.org/files/issues/2021-10-18/3080606-66.patch",
+                "Layout builder doesn't support bundle computed field": "https://www.drupal.org/files/issues/2019-02-22/layoutbuilder-bundlecomputedfieldsfix-3034979-3-8.6x.patch",
+                "Workaround for \"Call to a member function getLabel() after enabling layout_builder\"": "https://www.drupal.org/files/issues/2020-04-08/2985882-field-85.patch",
+                "Installing a module causes translations to be overwritten": "https://www.drupal.org/files/issues/2021-08-10/2806009-disable-locale-config-sync-65.patch"
             },
             "drupal/layout_builder_st": {
                 "Argument 1 passed to Drupal\\layout_builder_st\\EventSubscriber\\ComponentPluginTranslate::isTranslation() must implement interface Drupal\\layout_builder\\SectionStorageInterface, null given": "https://www.drupal.org/files/issues/2019-07-24/isTranslation-null-given.patch",
@@ -124,14 +124,11 @@
             "drupal/section_library": {
                 "#3228163: Add create or update logic.": "https://git.drupalcode.org/project/section_library/-/merge_requests/3.patch"
             },
-            "drupal/drimage": {
-                "Stage file proxy": "https://git.drupalcode.org/project/drimage/-/merge_requests/1.patch",
-                "webp support for webp": "https://www.drupal.org/files/issues/2022-02-01/3202501-5-webp.patch",
-                "embeds in wysiwyg not displaying media": "https://www.drupal.org/files/issues/2020-09-06/3079190-8--show_img_in_media_embed.patch?X"
-            },
             "drupal/ui_patterns": {
-                "Allow for Layout Builder sections to be given administrativ.": "https://patch-diff.githubusercontent.com/raw/nuvoleweb/ui_patterns/pull/278.patch",
-                "Add quick edit": "https://patch-diff.githubusercontent.com/raw/nuvoleweb/ui_patterns/pull/273.patch"
+                "Allow for Layout Builder sections to be given administrativ.": "https://patch-diff.githubusercontent.com/raw/nuvoleweb/ui_patterns/pull/278.patch"
+            },
+            "drupal/conflict": {
+                "PHP error when stored entity is not found": "https://www.drupal.org/files/issues/2020-08-05/3163662-2.patch"
             }
         },
         "composer-exit-on-patch-failure": true,

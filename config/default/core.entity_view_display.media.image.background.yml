@@ -7,9 +7,10 @@ dependencies:
     - field.field.media.image.field_media_image
     - field.field.media.image.field_media_in_library
     - media.type.image
+    - responsive_image.styles.section_background
   module:
-    - drimage
     - layout_builder
+    - responsive_image
 third_party_settings:
   layout_builder:
     enabled: false
@@ -22,21 +23,11 @@ bundle: image
 mode: background
 content:
   field_media_image:
-    type: drimage
+    type: responsive_image
     label: hidden
     settings:
+      responsive_image_style: section_background
       image_link: ''
-      image_handling: background
-      aspect_ratio:
-        width: '1'
-        height: '1'
-      background:
-        attachment: scroll
-        position: 'top center'
-        size: cover
-      iwc:
-        image_style: focal_point
-      image_style: ''
     third_party_settings: {  }
     weight: 0
     region: content

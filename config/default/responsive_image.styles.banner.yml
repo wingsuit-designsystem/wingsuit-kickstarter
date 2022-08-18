@@ -3,16 +3,15 @@ langcode: en
 status: true
 dependencies:
   config:
-    - image.style.responsive_16_9_1100w
+    - image.style.responsive_16_9_1000w
     - image.style.responsive_16_9_1200w
-    - image.style.responsive_16_9_1500w
-    - image.style.responsive_16_9_1900w
+    - image.style.responsive_16_9_1600w
     - image.style.responsive_16_9_2000w
-    - image.style.responsive_16_9_2500w
+    - image.style.responsive_16_9_2400w
     - image.style.responsive_3_4_1000w
-    - image.style.responsive_3_4_500w
+    - image.style.responsive_3_4_400w
     - image.style.responsive_4_3_1200w
-    - image.style.responsive_4_3_700w
+    - image.style.responsive_4_3_800w
   theme:
     - wingsuit
 id: banner
@@ -20,17 +19,17 @@ label: Banner
 image_style_mappings:
   -
     image_mapping_type: image_style
-    image_mapping: responsive_16_9_2500w
+    image_mapping: responsive_16_9_2400w
     breakpoint_id: wingsuit.xxlarge
     multiplier: 1x
   -
     image_mapping_type: image_style
-    image_mapping: responsive_16_9_1900w
+    image_mapping: responsive_16_9_2000w
     breakpoint_id: wingsuit.xxlarge
     multiplier: 2x
   -
     image_mapping_type: image_style
-    image_mapping: responsive_16_9_1500w
+    image_mapping: responsive_16_9_1600w
     breakpoint_id: wingsuit.xlarge
     multiplier: 1x
   -
@@ -60,7 +59,7 @@ image_style_mappings:
     multiplier: 1x
   -
     image_mapping_type: image_style
-    image_mapping: responsive_4_3_700w
+    image_mapping: responsive_4_3_800w
     breakpoint_id: wingsuit.small
     multiplier: 2x
   -
@@ -70,7 +69,7 @@ image_style_mappings:
     multiplier: 1x
   -
     image_mapping_type: image_style
-    image_mapping: responsive_3_4_500w
+    image_mapping: responsive_3_4_400w
     breakpoint_id: wingsuit.xsmall
     multiplier: 2x
 breakpoint_group: wingsuit
