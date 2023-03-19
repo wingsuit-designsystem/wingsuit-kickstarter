@@ -10,6 +10,7 @@ module:
   block_content: 0
   breakpoint: 0
   ckeditor: 0
+  ckeditor5: 0
   colorwidget: 0
   components: 0
   config: 0
@@ -31,6 +32,7 @@ module:
   editor_advanced_link: 0
   entity_block: 0
   field: 0
+  field_formatter: 0
   field_group: 0
   field_ui: 0
   file: 0
@@ -60,6 +62,7 @@ module:
   locale: 0
   media: 0
   media_bulk_upload: 0
+  media_bulk_upload_dropzonejs: 0
   media_library: 0
   media_library_edit: 0
   media_library_form_element: 0
@@ -73,7 +76,6 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
-  rdf: 0
   redirect: 0
   responsive_image: 0
   schema_metatag: 0

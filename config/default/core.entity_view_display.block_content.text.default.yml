@@ -27,15 +27,15 @@ bundle: text
 mode: default
 content:
   body:
-    type: pattern_formatter
+    type: pattern_all_formatter
     label: hidden
     settings:
       pattern: rich_text
       pattern_mapping:
-        'field_properties:processed':
+        'field_raw_properties:processed':
           destination: text
           weight: 0
-          plugin: field_properties
+          plugin: field_raw_properties
           source: processed
       pattern_settings:
         accordion_item:
@@ -124,6 +124,8 @@ content:
           padding_bottom: auto
       pattern_variant: ''
       variants_token: {  }
+      type: text_default
+      settings: {  }
     third_party_settings: {  }
     weight: 0
     region: content

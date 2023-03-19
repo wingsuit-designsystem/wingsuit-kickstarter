@@ -18,13 +18,13 @@ third_party_settings:
     allow_custom: false
     sections:
       -
-        layout_id: pattern_svg_icon
+        layout_id: pattern_icon
         layout_settings:
           label: ''
           context_mapping: {  }
           pattern:
             field_templates: default
-            variant: icon
+            variant: spritemap
             settings:
               fill_color: ''
               size: ''
@@ -54,8 +54,8 @@ third_party_settings:
                   enable_title: true
                   link: ''
                   force_fill: false
-                  sanitize: 1
-                  sanitize_remote: 0
+                  sanitize: true
+                  sanitize_remote: false
                 third_party_settings: {  }
             weight: 0
             additional: {  }

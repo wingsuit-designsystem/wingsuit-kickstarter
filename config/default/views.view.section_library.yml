@@ -632,7 +632,7 @@ display:
       access:
         type: perm
         options:
-          perm: 'access content'
+          perm: 'view section library templates'
       cache:
         type: tag
         options: {  }

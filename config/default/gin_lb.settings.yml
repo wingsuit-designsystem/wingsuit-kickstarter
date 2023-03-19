@@ -1,1 +1,5 @@
 toastify_cdn: 1
+toastify_loading: cdn
+safe_behavior: null
+save_behavior: stay
+hide_discard_revert_buttons: true

@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_mode.media.16x9
   module:
     - editor
+    - linkit
     - media
 _core:
   default_config_hash: jSgFEz67Hgc7d9x_pE9rCJIY79pg52p0QBW3o84YpA8
@@ -43,7 +44,7 @@ filters:
     status: true
     weight: -50
     settings:
-      allowed_html: '<a href hreflang target title> <em> <strong> <cite> <blockquote cite> <code> <ul type> <ol type start> <li> <dl> <dt> <dd> <h2 id class=""> <h3 id class=""> <h4 id class=""> <h5 id> <h6 id> <s> <sup> <sub> <img src alt data-entity-type data-entity-uuid data-align data-caption> <table> <caption> <tbody> <thead> <tfoot> <th> <td> <tr> <hr> <p class=""> <br> <h1 id class=""> <pre> <drupal-entity data-* title alt> <drupal-media data-entity-type data-entity-uuid data-view-mode data-align data-caption alt data-entity-type data-entity-uuid data-view-mode data-align data-caption alt title>'
+      allowed_html: '<br> <p class="text-align-left text-align-center text-align-right text-align-justify"> <h1 class="text-align-left text-align-center text-align-right text-align-justify"> <h2 class="text-align-left text-align-center text-align-right text-align-justify"> <h3 class="text-align-left text-align-center text-align-right text-align-justify"> <h4 class="text-align-left text-align-center text-align-right text-align-justify"> <h5 class="text-align-left text-align-center text-align-right text-align-justify"> <h6 class="text-align-left text-align-center text-align-right text-align-justify"> <strong> <em> <s> <sub> <sup> <blockquote> <a href title target="_blank" data-entity-type data-entity-uuid data-entity-substitution> <ul> <ol start> <li> <hr> <table> <tr> <td rowspan colspan> <th rowspan colspan> <thead> <tbody> <tfoot> <caption> <drupal-media data-entity-type data-entity-uuid alt data-view-mode data-caption data-align>'
       filter_html_help: true
       filter_html_nofollow: false
   filter_autop:
@@ -83,3 +84,10 @@ filters:
         16x9: 16x9
       allowed_media_types:
         image: image
+  linkit:
+    id: linkit
+    provider: linkit
+    status: true
+    weight: 0
+    settings:
+      title: true

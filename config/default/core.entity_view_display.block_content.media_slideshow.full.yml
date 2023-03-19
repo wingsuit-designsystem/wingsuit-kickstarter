@@ -26,17 +26,16 @@ bundle: media_slideshow
 mode: full
 content:
   field_slideshow_items:
-    type: pattern_wrapper_entity_reference_formatter
+    type: pattern_each_formatter
     label: above
     settings:
-      view_mode: default
       pattern: slider
       pattern_mapping:
-        'field_wrapper:items':
+        'field_meta_properties:_formatted':
           destination: items
           weight: 0
-          plugin: field_wrapper
-          source: items
+          plugin: field_meta_properties
+          source: _formatted
       pattern_settings:
         accordion_item:
           id:
@@ -113,8 +112,12 @@ content:
           padding_bottom: ''
           classes: ''
           autoplay: 0
-      link: false
       pattern_variant: '1'
+      type: entity_reference_entity_view
+      settings:
+        view_mode: default
+        link: false
+      variants_token: {  }
     third_party_settings: {  }
     weight: 0
     region: content

@@ -18,7 +18,7 @@ command-hooks:
     command: '[ ! -d "wingsuit" ] && npx @wingsuit-designsystem/cli init -k tailwind --skip-install --branch=master; cd wingsuit && yarn install'
   frontend-assets:
     dir: ${docroot}/themes/custom/wingsuit
-    command: 'yarn build:drupal'
+    command: ''
 git:
   commit-msg:
     pattern: '/^(?<type>build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test|¯\\_\(ツ\)_\/¯)(?<scope>\(\w+\)?((?=:\s)|(?=!:\s)))?(?<breaking>!)?(?<subject>:\s.*)?|^(?<merge>Merge \w+)/'
