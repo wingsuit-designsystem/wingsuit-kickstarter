@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4cf913b7d6327da553a25ea19e2d2b36",
+    "content-hash": "369a88451fef6c8cf83ea42611daf275",
     "packages": [
         {
             "name": "acquia/blt",
@@ -5788,17 +5788,11 @@
         },
         {
             "name": "drupal/ui_patterns_settings",
-            "version": "2.0.0-rc1",
+            "version": "dev-2.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/ui_patterns_settings.git",
-                "reference": "8.x-2.0-rc1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/ui_patterns_settings-8.x-2.0-rc1.zip",
-                "reference": "8.x-2.0-rc1",
-                "shasum": "56a156dc3b35d1e30f11ac17e14c801649599d12"
+                "reference": "caf47a3987e869d601449cacb0f82e0a4fe1c74e"
             },
             "require": {
                 "drupal/core": "^8 || ^9 || ^10",
@@ -5821,12 +5815,15 @@
             },
             "type": "drupal-module",
             "extra": {
+                "branch-alias": {
+                    "dev-2.x": "2.x-dev"
+                },
                 "drupal": {
-                    "version": "8.x-2.0-rc1",
-                    "datestamp": "1673987241",
+                    "version": "8.x-2.0-rc1+1-dev",
+                    "datestamp": "1679335055",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "RC releases are not covered by Drupal security advisories."
+                        "message": "Dev releases are not covered by Drupal security advisories."
                     }
                 },
                 "enable-patching": true,
@@ -11872,6 +11869,7 @@
         "drupal/layout_builder_st": 15,
         "drupal/entity_block": 10,
         "drupal/schemata": 10,
+        "drupal/ui_patterns_settings": 20,
         "drupal/section_library_reusable": 10,
         "drupal/wingsuit_companion": 20,
         "drupal/imageapi_optimize_webp": 10,
