@@ -1,0 +1,23 @@
+uuid: 3808a349-a43d-46ea-a81d-562196ff10e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero
+    - field.storage.block_content.field_reverse
+id: block_content.hero.field_reverse
+field_name: field_reverse
+entity_type: block_content
+bundle: hero
+label: Reverse
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

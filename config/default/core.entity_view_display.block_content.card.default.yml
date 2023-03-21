@@ -16,8 +16,7 @@ dependencies:
     - link
     - options
     - text
-  theme:
-    - wingsuit
+    - wingsuit_companion
 third_party_settings:
   layout_builder:
     enabled: true
@@ -251,6 +250,50 @@ third_party_settings:
                 settings: {  }
                 third_party_settings: {  }
             weight: 3
+            additional: {  }
+          3d73ad76-72f1-4378-b026-a4e440576a5d:
+            uuid: 3d73ad76-72f1-4378-b026-a4e440576a5d
+            region: action
+            configuration:
+              id: 'field_block:block_content:card:field_link'
+              label: Link
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: pattern_all_formatter
+                label: hidden
+                settings:
+                  type: link
+                  settings:
+                    trim_length: '80'
+                    url_only: 0
+                    url_plain: 0
+                    rel: 0
+                    target: 0
+                  pattern: button
+                  pattern_mapping:
+                    'field_raw_properties:title':
+                      destination: text
+                      weight: 0
+                      plugin: field_raw_properties
+                      source: title
+                  pattern_settings:
+                    button:
+                      size: small
+                      icon_alignment: left
+                      title: ''
+                      target: ''
+                      url:
+                        input: ''
+                      disabled: 0
+                      expanded: 0
+                      icon: ''
+                  pattern_variant: link
+                third_party_settings: {  }
+            weight: 0
             additional: {  }
         third_party_settings: {  }
   layout_builder_restrictions:

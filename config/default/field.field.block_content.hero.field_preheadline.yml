@@ -11,8 +11,8 @@ entity_type: block_content
 bundle: hero
 label: Preheadline
 description: ''
-required: true
-translatable: true
+required: false
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

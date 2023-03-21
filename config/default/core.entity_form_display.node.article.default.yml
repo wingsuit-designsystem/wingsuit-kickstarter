@@ -15,6 +15,7 @@ dependencies:
   module:
     - content_moderation
     - media_library
+    - media_library_edit
     - metatag
     - path
     - text
@@ -45,13 +46,16 @@ content:
     region: content
     settings:
       media_types: {  }
-    third_party_settings: {  }
+    third_party_settings:
+      media_library_edit:
+        show_edit: '1'
   field_meta_tag:
     type: metatag_firehose
     weight: 10
     region: content
     settings:
       sidebar: true
+      use_details: true
     third_party_settings: {  }
   field_related:
     type: entity_reference_autocomplete

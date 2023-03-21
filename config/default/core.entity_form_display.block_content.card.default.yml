@@ -11,7 +11,7 @@ dependencies:
     - field.field.block_content.card.field_preheadline
     - field.field.block_content.card.field_title
   module:
-    - link
+    - link_attributes
     - media_library
     - text
 id: block_content.card.default
@@ -43,12 +43,27 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_link:
-    type: link_default
+    type: link_attributes
     weight: 4
     region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
+      enabled_attributes:
+        variant: true
+        icon_alignment: true
+        icon: true
+        id: false
+        name: false
+        target: false
+        rel: false
+        class: false
+        accesskey: false
+        aria-label: false
+        title: false
+        size: false
+        disabled: false
+        expanded: false
     third_party_settings: {  }
   field_preheadline:
     type: string_textfield

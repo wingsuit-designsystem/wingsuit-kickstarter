@@ -28,6 +28,8 @@ third_party_settings:
             variant: ''
             settings:
               image: null
+              url:
+                input: '[block_content:field_button:uri]'
         components:
           9a9c9209-8ccc-494d-bb3f-d71faf0a79f5:
             uuid: 9a9c9209-8ccc-494d-bb3f-d71faf0a79f5
@@ -98,16 +100,16 @@ third_party_settings:
                       source: title
                   pattern_settings:
                     button:
-                      size: label
+                      size: small
                       icon_alignment: ''
                       title: demo
-                      target: ''
+                      target: _blank
                       url:
-                        input: '[block_content:field_button:uri]'
+                        input: ''
                       disabled: 0
                       expanded: 0
                       icon: ''
-                  pattern_variant: default
+                  pattern_variant: outline
                 third_party_settings: {  }
             weight: 0
             additional: {  }
