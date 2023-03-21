@@ -1,0 +1,20 @@
+uuid: 717d2704-5931-4d67-bb00-cee6c10a9aac
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - media
+id: block_content.field_avatar_image
+field_name: field_avatar_image
+entity_type: block_content
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
