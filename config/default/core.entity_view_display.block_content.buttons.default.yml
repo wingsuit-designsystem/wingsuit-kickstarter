@@ -72,9 +72,14 @@ third_party_settings:
                     target: 0
                   pattern: button
                   pattern_mapping:
+                    'field_raw_properties:uri':
+                      destination: url
+                      weight: 0
+                      plugin: field_raw_properties
+                      source: uri
                     'field_raw_properties:title':
                       destination: text
-                      weight: 0
+                      weight: 1
                       plugin: field_raw_properties
                       source: title
                   pattern_settings:
@@ -84,7 +89,7 @@ third_party_settings:
                       title: ''
                       target: ''
                       url:
-                        input: '[block_content:field_link:uri]'
+                        input: ''
                       disabled: 0
                       expanded: 0
                       icon: ''
