@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "616f13061fc6749687646132af247f70",
+    "content-hash": "a8cdbe8c5fccabcede1f0ca915c1d538",
     "packages": [
         {
             "name": "acquia/blt",
@@ -3176,6 +3176,70 @@
             }
         },
         {
+            "name": "drupal/field_formatter",
+            "version": "3.0.0-rc2",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/field_formatter.git",
+                "reference": "3.0.0-rc2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/field_formatter-3.0.0-rc2.zip",
+                "reference": "3.0.0-rc2",
+                "shasum": "a96bca9512340881237597e5d95f27cefd42e18e"
+            },
+            "require": {
+                "drupal/core": "^9.1 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "3.0.0-rc2",
+                    "datestamp": "1671205508",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "RC releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Anybody",
+                    "homepage": "https://www.drupal.org/user/291091"
+                },
+                {
+                    "name": "Dave Reid",
+                    "homepage": "https://www.drupal.org/user/53892"
+                },
+                {
+                    "name": "dawehner",
+                    "homepage": "https://www.drupal.org/user/99340"
+                },
+                {
+                    "name": "Drupal media CI",
+                    "homepage": "https://www.drupal.org/user/3057985"
+                },
+                {
+                    "name": "Drupal Media Team",
+                    "homepage": "https://www.drupal.org/user/3260690"
+                },
+                {
+                    "name": "slashrsm",
+                    "homepage": "https://www.drupal.org/user/744628"
+                }
+            ],
+            "description": "Collection of general formatters that display a single field from the referenced entity.",
+            "homepage": "https://www.drupal.org/project/field_formatter",
+            "support": {
+                "source": "https://git.drupalcode.org/project/field_formatter"
+            }
+        },
+        {
             "name": "drupal/field_group",
             "version": "3.4.0",
             "source": {
@@ -5614,24 +5678,25 @@
         },
         {
             "name": "drupal/ui_patterns_field_formatters",
-            "version": "dev-1.x",
+            "version": "dev-2.x",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/ui_patterns_field_formatters.git",
-                "reference": "d196cab2617bd75e45388891445cd12840efb0bd"
+                "reference": "2323ee9b6c1c965748d19562b94758d5c7a26bc0"
             },
             "require": {
                 "drupal/core": "^8 || ^9 || ^10",
+                "drupal/field_formatter": "^3.0@RC",
                 "drupal/ui_patterns": "^1.0@RC"
             },
             "type": "drupal-module",
             "extra": {
                 "branch-alias": {
-                    "dev-1.x": "1.x-dev"
+                    "dev-2.x": "2.x-dev"
                 },
                 "drupal": {
-                    "version": "8.x-1.7+5-dev",
-                    "datestamp": "1670922866",
+                    "version": "2.0.0-beta4+1-dev",
+                    "datestamp": "1672759661",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."
@@ -6043,11 +6108,17 @@
         },
         {
             "name": "drupal/wingsuit_companion",
-            "version": "dev-2.x",
+            "version": "2.0.0-rc3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/wingsuit_companion.git",
-                "reference": "ee1a904ecc33ca65b870840e09ecbbdcc5330d4e"
+                "reference": "8.x-2.0-rc3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/wingsuit_companion-8.x-2.0-rc3.zip",
+                "reference": "8.x-2.0-rc3",
+                "shasum": "3ca5052e866de91796834280ea1b89871d7f9da7"
             },
             "require": {
                 "drupal/core": "^8 || ^9 ||  ^10",
@@ -6073,15 +6144,12 @@
             },
             "type": "drupal-module",
             "extra": {
-                "branch-alias": {
-                    "dev-2.x": "2.x-dev"
-                },
                 "drupal": {
-                    "version": "8.x-2.0-rc2+4-dev",
-                    "datestamp": "1679263538",
+                    "version": "8.x-2.0-rc3",
+                    "datestamp": "1679503594",
                     "security-coverage": {
                         "status": "not-covered",
-                        "message": "Dev releases are not covered by Drupal security advisories."
+                        "message": "RC releases are not covered by Drupal security advisories."
                     }
                 }
             },
@@ -11853,7 +11921,6 @@
         "drupal/schemata": 10,
         "drupal/ui_patterns_settings": 20,
         "drupal/section_library_reusable": 10,
-        "drupal/wingsuit_companion": 20,
         "drupal/imageapi_optimize_webp": 10,
         "drupal/colorwidget": 20
     },
@@ -11863,5 +11930,5 @@
         "ext-dom": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.2.0"
 }
