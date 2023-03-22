@@ -23,7 +23,7 @@ content:
       enabled_attributes:
         target: true
         variant: true
-        color: true
+        icon_alignment: true
         icon: true
         id: false
         name: false
@@ -32,6 +32,9 @@ content:
         accesskey: false
         aria-label: false
         title: false
+        size: false
+        disabled: false
+        expanded: false
     third_party_settings: {  }
   field_buttons_align:
     type: options_select

@@ -1,0 +1,155 @@
+uuid: c4b746e5-95f9-4f2b-8481-5124240b9722
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.avatar
+    - field.field.block_content.avatar.field_avatar_image
+    - field.field.block_content.avatar.field_button
+    - field.field.block_content.avatar.field_name
+    - field.field.block_content.avatar.field_title
+  module:
+    - image
+    - layout_builder
+    - link
+    - wingsuit_companion
+third_party_settings:
+  layout_builder:
+    enabled: true
+    allow_custom: false
+    sections:
+      -
+        layout_id: pattern_avatar
+        layout_settings:
+          label: ''
+          context_mapping: {  }
+          pattern:
+            field_templates: default
+            variant: ''
+            settings:
+              image: null
+              url:
+                input: '[block_content:field_button:uri]'
+        components:
+          9a9c9209-8ccc-494d-bb3f-d71faf0a79f5:
+            uuid: 9a9c9209-8ccc-494d-bb3f-d71faf0a79f5
+            region: full_name
+            configuration:
+              id: 'field_block:block_content:avatar:field_name'
+              label: 'Full Name'
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          8d93738f-dd4e-4fe5-a0bb-a116e11c2ec3:
+            uuid: 8d93738f-dd4e-4fe5-a0bb-a116e11c2ec3
+            region: title
+            configuration:
+              id: 'field_block:block_content:avatar:field_title'
+              label: Title
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          0b468ff0-94f7-4450-9500-7687ff03a689:
+            uuid: 0b468ff0-94f7-4450-9500-7687ff03a689
+            region: button
+            configuration:
+              id: 'field_block:block_content:avatar:field_button'
+              label: Button
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: pattern_formatter
+                label: hidden
+                settings:
+                  pattern: button
+                  pattern_mapping:
+                    'field_properties:title':
+                      destination: text
+                      weight: 0
+                      plugin: field_properties
+                      source: title
+                  pattern_settings:
+                    button:
+                      size: medium
+                      icon_alignment: right
+                      title: demo
+                      target: ''
+                      url:
+                        input: ''
+                      disabled: 0
+                      expanded: 0
+                      icon: ''
+                  pattern_variant: outline
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+        third_party_settings: {  }
+id: block_content.avatar.default
+targetEntityType: block_content
+bundle: avatar
+mode: default
+content:
+  field_avatar_image:
+    type: image
+    label: above
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_button:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden:
+  langcode: true

@@ -10,8 +10,7 @@ dependencies:
     - layout_builder
     - link
     - options
-  theme:
-    - wingsuit
+    - wingsuit_companion
 third_party_settings:
   layout_builder:
     enabled: true
@@ -61,104 +60,39 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
               formatter:
-                type: pattern_formatter
+                type: pattern_each_formatter
                 label: hidden
                 settings:
+                  type: link
+                  settings:
+                    trim_length: '80'
+                    url_only: 0
+                    url_plain: 0
+                    rel: 0
+                    target: 0
                   pattern: button
                   pattern_mapping:
-                    'field_properties:title':
-                      destination: text
+                    'field_raw_properties:uri':
+                      destination: url
                       weight: 0
-                      plugin: field_properties
+                      plugin: field_raw_properties
+                      source: uri
+                    'field_raw_properties:title':
+                      destination: text
+                      weight: 1
+                      plugin: field_raw_properties
                       source: title
                   pattern_settings:
-                    accordion_item:
-                      id:
-                        input: ''
-                    alex:
-                      bg_color:
-                        colorwidget: null
-                      text_align: ''
-                    avatar:
-                      text_align: ''
-                    banner:
-                      position: center_center
-                      position_token: center_center
-                    button_group:
-                      align: center
-                      align_token: center
                     button:
                       size: medium
+                      icon_alignment: right
+                      title: ''
+                      target: ''
+                      url:
+                        input: ''
+                      disabled: 0
                       expanded: 0
-                      round: 0
-                      color: primary
-                      url:
-                        input: ''
                       icon: ''
-                      icon_alignment: ''
-                    card:
-                      alignment: left
-                      bg_color: ''
-                      url:
-                        input: ''
-                      show_read_more: 0
-                    container:
-                      width: default
-                      bg:
-                        colorwidget: ''
-                      bg_image: null
-                      classes: ''
-                      padding_x: default
-                      padding_top: ''
-                      padding_bottom: default
-                    grid:
-                      equal_height: 0
-                      gutter: default
-                      columns: '1'
-                    headline:
-                      tag_name: div
-                      spacing_bottom: default
-                    image:
-                      url: ''
-                      background_style: ''
-                    link:
-                      url:
-                        input: ''
-                      icon: right-arrow
-                    section:
-                      display_header_region: 0
-                      columns_width_1: equal
-                      columns_width_2: equal
-                      columns_width_3: equal
-                      columns_width_4: equal
-                      columns_width_5: equal
-                      equal_height: 0
-                      gutter: default
-                      columns: '1'
-                      width: default
-                      bg:
-                        colorwidget: ''
-                      bg_image: null
-                      classes: ''
-                      padding_x: default
-                      padding_top: ''
-                      padding_bottom: default
-                    slider:
-                      autoplay: 0
-                      bullet_spacing: none
-                      pagination_spacing: none
-                      width: default
-                      bg:
-                        colorwidget: ''
-                      bg_image: null
-                      classes: ''
-                      padding_x: default
-                      padding_top: ''
-                      padding_bottom: default
-                    spacing:
-                      padding_x: default
-                      padding_top: ''
-                      padding_bottom: default
                   pattern_variant: default
                 third_party_settings: {  }
             weight: 0

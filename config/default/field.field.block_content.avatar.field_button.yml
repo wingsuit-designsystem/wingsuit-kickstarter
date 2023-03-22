@@ -1,17 +1,17 @@
-uuid: 93a17504-fddd-425b-b356-89dc01bf67d8
+uuid: 70082e32-26f9-4615-bff3-d33045e69ff2
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.card
-    - field.storage.block_content.field_link
+    - block_content.type.avatar
+    - field.storage.block_content.field_button
   module:
     - link
-id: block_content.card.field_link
-field_name: field_link
+id: block_content.avatar.field_button
+field_name: field_button
 entity_type: block_content
-bundle: card
-label: Link
+bundle: avatar
+label: Button
 description: ''
 required: false
 translatable: true

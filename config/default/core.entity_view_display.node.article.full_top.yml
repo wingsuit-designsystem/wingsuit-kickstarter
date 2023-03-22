@@ -63,7 +63,7 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
               formatter:
-                type: text_trimmed
+                type: text_summary_or_trimmed
                 label: hidden
                 settings:
                   trim_length: 600

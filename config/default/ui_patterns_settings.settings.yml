@@ -8,3 +8,4 @@ mapping:
   block_content--field_card_variant: 'card::variant'
   block_content--field_avatar_variant: 'avatar::variant'
   node--field_media: 'card::image'
+  block_content--field_avatar_image: 'avatar::image'

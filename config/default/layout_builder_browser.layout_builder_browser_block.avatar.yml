@@ -1,0 +1,11 @@
+uuid: eb520d32-9241-4665-a7d5-216cf1329285
+langcode: en
+status: true
+dependencies: {  }
+id: avatar
+block_id: 'inline_block:avatar'
+category: blocks
+label: Avatar
+image_path: ''
+image_alt: ''
+weight: -100

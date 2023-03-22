@@ -1,0 +1,19 @@
+uuid: cc7fa2f4-be8b-4170-ace1-02c46773a9b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.avatar
+    - field.storage.block_content.field_title
+id: block_content.avatar.field_title
+field_name: field_title
+entity_type: block_content
+bundle: avatar
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
