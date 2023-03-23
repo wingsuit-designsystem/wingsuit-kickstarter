@@ -1,18 +1,17 @@
-uuid: bfb42454-c3d1-4117-9f4f-5d6822e2f3d9
+uuid: fa941075-f0bd-416a-8071-166be511b536
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.success_story
-    - field.field.block_content.success_story.field_avatar_variant
-    - field.field.block_content.success_story.field_button
-    - field.field.block_content.success_story.field_preheadline
-    - field.field.block_content.success_story.field_success_story_media
-    - field.field.block_content.success_story.field_text
+    - field.field.block_content.success_story.field_link
+    - field.field.block_content.success_story.field_media
+    - field.field.block_content.success_story.field_name
+    - field.field.block_content.success_story.field_title
   module:
     - layout_builder
-  theme:
-    - wingsuit
+    - link
+    - wingsuit_companion
 third_party_settings:
   layout_builder:
     enabled: true
@@ -25,35 +24,36 @@ third_party_settings:
           context_mapping: {  }
           pattern:
             field_templates: default
-            variant: default
+            variant: ''
             settings:
-              text_align: center
+              url:
+                input: '[block_content:field_link:uri]'
         components:
-          6de55bf7-1dea-4daa-9622-454748b8787e:
-            uuid: 6de55bf7-1dea-4daa-9622-454748b8787e
-            region: text
+          d7b81bd3-f6f3-41f4-ad45-5ea89cbd88ec:
+            uuid: d7b81bd3-f6f3-41f4-ad45-5ea89cbd88ec
+            region: image
             configuration:
-              id: 'field_block:block_content:success_story:field_text'
-              label: Text
+              id: 'field_block:block_content:success_story:field_media'
+              label: Image
               label_display: '0'
               provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
               formatter:
-                type: text_trimmed
+                type: entity_reference_entity_view
                 label: hidden
                 settings:
-                  trim_length: 200
+                  view_mode: 1x1
                 third_party_settings: {  }
             weight: 0
             additional: {  }
-          a5c365df-3c1e-4d2f-825e-467dbcf4b95a:
-            uuid: a5c365df-3c1e-4d2f-825e-467dbcf4b95a
+          85096df5-f00c-4dae-b6ea-8725451c108a:
+            uuid: 85096df5-f00c-4dae-b6ea-8725451c108a
             region: full_name
             configuration:
-              id: 'field_block:block_content:success_story:field_preheadline'
-              label: Preheadline
+              id: 'field_block:block_content:success_story:field_name'
+              label: 'Full Name'
               label_display: '0'
               provider: layout_builder
               context_mapping:
@@ -67,109 +67,66 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 0
             additional: {  }
-          9e01ab6e-aa57-4c89-8d6d-0d3f8b48c5e7:
-            uuid: 9e01ab6e-aa57-4c89-8d6d-0d3f8b48c5e7
-            region: button
+          e61141f2-b59f-4f5f-8c1c-1259ee436514:
+            uuid: e61141f2-b59f-4f5f-8c1c-1259ee436514
+            region: title
             configuration:
-              id: 'field_block:block_content:success_story:field_button'
-              label: Button
+              id: 'field_block:block_content:success_story:field_title'
+              label: Title
               label_display: '0'
               provider: layout_builder
               context_mapping:
                 entity: layout_builder.entity
                 view_mode: view_mode
               formatter:
-                type: pattern_formatter
+                type: string
                 label: hidden
                 settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          05d8216e-5974-4dea-b5df-8a699771128a:
+            uuid: 05d8216e-5974-4dea-b5df-8a699771128a
+            region: button
+            configuration:
+              id: 'field_block:block_content:success_story:field_link'
+              label: Link
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: pattern_all_formatter
+                label: hidden
+                settings:
+                  type: link_separate
+                  settings:
+                    trim_length: '80'
+                    url_only: ''
+                    url_plain: ''
+                    rel: 0
+                    target: 0
                   pattern: button
                   pattern_mapping:
-                    'field_properties:title':
+                    'field_raw_properties:title':
                       destination: text
                       weight: 0
-                      plugin: field_properties
+                      plugin: field_raw_properties
                       source: title
                   pattern_settings:
-                    accordion_item:
-                      id:
-                        input: ''
-                    avatar:
-                      text_align: ''
-                    banner:
-                      position: center_center
-                      position_token: center_center
-                    button_group:
-                      align: center
-                      align_token: center
                     button:
-                      size: medium
+                      size: small
+                      icon_alignment: ''
+                      title: ''
+                      target: ''
+                      url:
+                        input: ''
+                      disabled: 0
                       expanded: 0
-                      round: 0
-                      color: primary
-                      url:
-                        input: '[block_content:field_button]'
                       icon: ''
-                      icon_alignment: right
-                    card:
-                      alignment: left
-                      bg_color: ''
-                      url:
-                        input: ''
-                      show_read_more: 0
-                    container:
-                      width: default
-                      bg:
-                        colorwidget: ''
-                      bg_image: null
-                      padding_x: default
-                      padding_top: ''
-                      padding_bottom: default
-                      classes: ''
-                    grid:
-                      equal_height: 0
-                      gutter: default
-                      columns: '1'
-                    headline:
-                      tag_name: div
-                      spacing_bottom: default
-                    image:
-                      url: ''
-                      background_style: ''
-                    link:
-                      url:
-                        input: ''
-                      icon: right-arrow
-                    section:
-                      display_header_region: 0
-                      columns_width_1: equal
-                      columns_width_2: equal
-                      columns_width_3: equal
-                      columns_width_4: equal
-                      columns_width_5: equal
-                      equal_height: 0
-                      gutter: default
-                      columns: '1'
-                      width: default
-                      bg:
-                        colorwidget: ''
-                      bg_image: null
-                      padding_x: default
-                      padding_top: ''
-                      padding_bottom: default
-                      classes: ''
-                    slider:
-                      autoplay: 0
-                      bullet_spacing: none
-                      pagination_spacing: none
-                      width: default
-                      bg:
-                        colorwidget: ''
-                      bg_image: null
-                      padding_x: default
-                      padding_top: ''
-                      padding_bottom: default
-                      classes: ''
-                  pattern_variant: default
+                  pattern_variant: outline
                 third_party_settings: {  }
             weight: 0
             additional: {  }
@@ -179,17 +136,41 @@ targetEntityType: block_content
 bundle: success_story
 mode: default
 content:
-  body:
-    type: text_default
-    label: hidden
-    settings: {  }
+  field_link:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
     third_party_settings: {  }
-    weight: 0
+    weight: 2
+    region: content
+  field_media:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_name:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
     region: content
 hidden:
-  field_avatar_variant: true
-  field_button: true
-  field_preheadline: true
-  field_success_story_media: true
-  field_text: true
   langcode: true

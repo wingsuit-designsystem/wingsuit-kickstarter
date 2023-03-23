@@ -5,13 +5,13 @@ dependencies:
   config:
     - block_content.type.card
     - field.field.block_content.card.body
-    - field.field.block_content.card.field_card_image
     - field.field.block_content.card.field_card_variant
     - field.field.block_content.card.field_link
+    - field.field.block_content.card.field_media
     - field.field.block_content.card.field_preheadline
     - field.field.block_content.card.field_title
   module:
-    - link_attributes
+    - link
     - media_library
     - text
 id: block_content.card.default
@@ -29,13 +29,6 @@ content:
       placeholder: ''
       show_summary: false
     third_party_settings: {  }
-  field_card_image:
-    type: media_library_widget
-    weight: 0
-    region: content
-    settings:
-      media_types: {  }
-    third_party_settings: {  }
   field_card_variant:
     type: options_select
     weight: 5
@@ -43,27 +36,19 @@ content:
     settings: {  }
     third_party_settings: {  }
   field_link:
-    type: link_attributes
+    type: link_default
     weight: 4
     region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
-      enabled_attributes:
-        variant: true
-        icon_alignment: true
-        icon: true
-        id: false
-        name: false
-        target: false
-        rel: false
-        class: false
-        accesskey: false
-        aria-label: false
-        title: false
-        size: false
-        disabled: false
-        expanded: false
+    third_party_settings: {  }
+  field_media:
+    type: media_library_widget
+    weight: 0
+    region: content
+    settings:
+      media_types: {  }
     third_party_settings: {  }
   field_preheadline:
     type: string_textfield

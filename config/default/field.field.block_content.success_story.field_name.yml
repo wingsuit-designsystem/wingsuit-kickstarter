@@ -1,18 +1,18 @@
-uuid: 98c5ad49-ba0a-49d4-9329-4cdceb0bf3d5
+uuid: 933257e6-ad1f-45d2-aa51-d5e9a69a1d8e
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.avatar
+    - block_content.type.success_story
     - field.storage.block_content.field_name
-id: block_content.avatar.field_name
+id: block_content.success_story.field_name
 field_name: field_name
 entity_type: block_content
-bundle: avatar
+bundle: success_story
 label: 'Full Name'
 description: ''
 required: false
-translatable: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings: {  }

@@ -9,12 +9,12 @@ _core:
 id: landing_page
 label: 'Landing page'
 type: 'canonical_entities:node'
-pattern: '[node:title]'
+pattern: '[node:field_seo_title:value]'
 selection_criteria:
-  357097ed-305b-4a11-9bc7-6b80f1688cd2:
+  2e2e9399-af3b-4a05-8695-9327555117e8:
     id: 'entity_bundle:node'
     negate: false
-    uuid: 357097ed-305b-4a11-9bc7-6b80f1688cd2
+    uuid: 2e2e9399-af3b-4a05-8695-9327555117e8
     context_mapping:
       node: node
     bundles:

@@ -1,19 +1,19 @@
-uuid: dd329549-3f1a-48a3-b083-d492d80e1b9d
+uuid: f96369e7-12be-472a-beb4-b0ad1a27ac41
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.card
-    - field.storage.block_content.field_card_image
+    - field.storage.block_content.field_media
     - media.type.image
-id: block_content.card.field_card_image
-field_name: field_card_image
+id: block_content.card.field_media
+field_name: field_media
 entity_type: block_content
 bundle: card
 label: Image
 description: ''
-required: true
-translatable: false
+required: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
@@ -25,5 +25,5 @@ settings:
       field: _none
       direction: ASC
     auto_create: false
-    auto_create_bundle: icon
+    auto_create_bundle: ''
 field_type: entity_reference

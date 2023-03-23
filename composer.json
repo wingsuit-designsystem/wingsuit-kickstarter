@@ -83,7 +83,8 @@
         "drupal/stable": "^2.0",
         "drupal/toolbar_anti_flicker": "^9.3",
         "drupal/drimage": "^2.2",
-        "drupal/layout_builder_overrides": "1.0.x-dev"
+        "drupal/layout_builder_overrides": "1.0.x-dev",
+        "drupal/metatag_open_graph": "^1.22"
     },
     "require-dev": {
         "acquia/blt-phpcs": "^1.0"

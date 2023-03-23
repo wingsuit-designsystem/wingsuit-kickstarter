@@ -1,0 +1,23 @@
+uuid: f77ca8b8-1fa9-4870-a5ac-f27813e6de63
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_tags
+    - node.type.article
+  module:
+    - metatag
+id: node.article.field_meta_tags
+field_name: field_meta_tags
+entity_type: node
+bundle: article
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'a:1:{s:24:"schema_organization_logo";s:149:"a:3:{s:5:"@type";s:11:"ImageObject";s:20:"representativeOfPage";s:4:"True";s:3:"url";s:55:"https://wingsuit-designsystem.github.io/images/logo.svg";}";}'
+default_value_callback: ''
+settings: {  }
+field_type: metatag
