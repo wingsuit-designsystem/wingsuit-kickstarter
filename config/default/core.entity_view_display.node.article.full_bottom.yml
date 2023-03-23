@@ -14,11 +14,12 @@ dependencies:
     - node.type.article
   module:
     - layout_builder
+    - layout_builder_restrictions
     - user
 third_party_settings:
   layout_builder:
     enabled: true
-    allow_custom: false
+    allow_custom: true
     sections:
       -
         layout_id: layout_builder_blank
@@ -26,6 +27,13 @@ third_party_settings:
           label: ''
         components: {  }
         third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
 id: node.article.full_bottom
 targetEntityType: node
 bundle: article

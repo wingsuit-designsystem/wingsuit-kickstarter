@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a8cdbe8c5fccabcede1f0ca915c1d538",
+    "content-hash": "d90fc1383f31764e90b4e22b744d93d5",
     "packages": [
         {
             "name": "acquia/blt",
@@ -4068,6 +4068,60 @@
             "homepage": "https://www.drupal.org/project/layout_builder_browser",
             "support": {
                 "source": "https://git.drupalcode.org/project/layout_builder_browser"
+            }
+        },
+        {
+            "name": "drupal/layout_builder_overrides",
+            "version": "dev-1.0.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/layout_builder_overrides.git",
+                "reference": "7a6b5ac5e9cd9f1d44058c65c8315794ab1568c7"
+            },
+            "require": {
+                "drupal/core": "^8.8 || ^9 || ^10"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.0.x": "1.0.x-dev"
+                },
+                "drupal": {
+                    "version": "1.0.0-alpha2+4-dev",
+                    "datestamp": "1661754401",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Project has not opted into security advisory coverage!"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Alejandro Arnau Sancho",
+                    "homepage": "https://www.drupal.org/user/3184045",
+                    "email": "aarnaus@gmail.com"
+                },
+                {
+                    "name": "d70rr3s",
+                    "homepage": "https://www.drupal.org/user/3183487"
+                },
+                {
+                    "name": "Panchuk",
+                    "homepage": "https://www.drupal.org/user/3604398"
+                }
+            ],
+            "description": "Overrides any view mode with Layout Builder",
+            "homepage": "https://www.drupal.org/project/layout_builder_overrides",
+            "keywords": [
+                "Drupal"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/layout_builder_overrides",
+                "issues": "https://www.drupal.org/project/issues/layout_builder_overrides"
             }
         },
         {
@@ -11922,7 +11976,8 @@
         "drupal/ui_patterns_settings": 20,
         "drupal/section_library_reusable": 10,
         "drupal/imageapi_optimize_webp": 10,
-        "drupal/colorwidget": 20
+        "drupal/colorwidget": 20,
+        "drupal/layout_builder_overrides": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

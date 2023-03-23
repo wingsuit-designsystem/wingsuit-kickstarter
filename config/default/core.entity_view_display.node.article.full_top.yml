@@ -14,6 +14,7 @@ dependencies:
     - node.type.article
   module:
     - layout_builder
+    - layout_builder_restrictions
     - metatag
     - text
     - user
@@ -21,7 +22,7 @@ dependencies:
 third_party_settings:
   layout_builder:
     enabled: true
-    allow_custom: false
+    allow_custom: true
     sections:
       -
         layout_id: pattern_article
@@ -108,6 +109,13 @@ third_party_settings:
             weight: 0
             additional: {  }
         third_party_settings: {  }
+  layout_builder_restrictions:
+    allowed_block_categories: {  }
+    entity_view_mode_restriction:
+      allowed_layouts: {  }
+      denylisted_blocks: {  }
+      allowlisted_blocks: {  }
+      restricted_categories: {  }
 id: node.article.full_top
 targetEntityType: node
 bundle: article

@@ -82,7 +82,8 @@
         "drupal/colorwidget": "1.0.x-dev",
         "drupal/stable": "^2.0",
         "drupal/toolbar_anti_flicker": "^9.3",
-        "drupal/drimage": "^2.2"
+        "drupal/drimage": "^2.2",
+        "drupal/layout_builder_overrides": "1.0.x-dev"
     },
     "require-dev": {
         "acquia/blt-phpcs": "^1.0"
@@ -115,11 +116,11 @@
                 "Automated Drupal 10 compatibility fixes": "https://www.drupal.org/files/issues/2022-12-29/imageapi_optimize_webp.2.x-dev.d10compatibility.patch"
             },
             "drupal/core": {
+                "Consider supporting Layout Builder Overrides for other view modes": "./patches/test.patch",
                 "Improve StringItem::generateSampleValue()": "https://www.drupal.org/files/issues/2020-06-24/3091478-15.patch",
                 "Not all form elements can't use in vertical_tabs": "https://www.drupal.org/files/issues/2022-03-14/2190333-20.patch",
                 "PHP message: Error: Call to a member function getEntityTypeId() on null (Layout Builder)": "https://www.drupal.org/files/issues/2020-08-05/3049332-inline-35.patch",
                 "Stream wrapper reference in JS library causes error in _locale_parse_js_file()": "https://www.drupal.org/files/issues/2020-05-08/2735717-28.patch",
-                "Callers of LayoutEntityHelperTrait::getEntitySections() do not account for the view mode": "https://www.drupal.org/files/issues/2022-12-15/3008924-42.patch",
                 "New non translatable field on translatable content throws error": "https://www.drupal.org/files/issues/2021-02-10/3025039_42.patch",
                 "2869592 - Disabled update module shouldn't produce a status report warning": "https://www.drupal.org/files/issues/2020-02-07/2869592-remove-update-warning-34.patch",
                 "Layout builder doesn't support bundle computed field": "https://www.drupal.org/files/issues/2019-02-22/layoutbuilder-bundlecomputedfieldsfix-3034979-3-8.6x.patch",

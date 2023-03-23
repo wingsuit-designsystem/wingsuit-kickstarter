@@ -37,6 +37,7 @@ third_party_settings:
         - pattern_slider
       denylisted_blocks: {  }
       allowlisted_blocks: {  }
+      restricted_categories: {  }
 id: node.article.full
 targetEntityType: node
 bundle: article

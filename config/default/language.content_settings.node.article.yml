@@ -15,4 +15,4 @@ id: node.article
 target_entity_type_id: node
 target_bundle: article
 default_langcode: current_interface
-language_alterable: true
+language_alterable: false

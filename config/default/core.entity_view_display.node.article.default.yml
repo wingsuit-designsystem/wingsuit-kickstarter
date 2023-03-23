@@ -15,6 +15,7 @@ dependencies:
     - layout_builder
     - layout_builder_restrictions
     - user
+    - wingsuit_companion
 third_party_settings:
   layout_builder:
     enabled: false

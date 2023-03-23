@@ -1,0 +1,31 @@
+uuid: abb56333-b635-4fcd-bf85-a1d0983030a4
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - node
+  theme:
+    - wingsuit
+id: node_view_full_bottom
+theme: wingsuit
+region: content
+weight: 0
+provider: null
+plugin: 'entity_view:node'
+settings:
+  id: 'entity_view:node'
+  label: 'View Full Bottom (Content)'
+  label_display: '0'
+  provider: ctools
+  view_mode: default
+  context_mapping:
+    entity: '@node.node_route_context:node'
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      article: article
