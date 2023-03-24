@@ -5,6 +5,7 @@ dependencies:
   config:
     - block_content.type.hero
     - field.storage.block_content.field_media
+    - media.type.icon
     - media.type.image
 id: block_content.hero.field_media
 field_name: field_media
@@ -20,9 +21,11 @@ settings:
   handler: 'default:media'
   handler_settings:
     target_bundles:
+      icon: icon
       image: image
     sort:
       field: _none
+      direction: ASC
     auto_create: false
-    auto_create_bundle: ''
+    auto_create_bundle: icon
 field_type: entity_reference

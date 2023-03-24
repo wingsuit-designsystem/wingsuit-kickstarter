@@ -1,15 +1,15 @@
-uuid: 9aa03ed8-175c-4974-89f4-9f59e7d221ae
+uuid: 0cf1e25a-575c-4638-878b-ba55c09f0a67
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.success_story
-    - field.storage.block_content.field_preheadline
-id: block_content.success_story.field_preheadline
-field_name: field_preheadline
+    - field.storage.block_content.field_title
+id: block_content.success_story.field_title
+field_name: field_title
 entity_type: block_content
 bundle: success_story
-label: Preheadline
+label: Title
 description: ''
 required: false
 translatable: true

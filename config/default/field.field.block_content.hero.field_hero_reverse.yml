@@ -1,15 +1,15 @@
-uuid: 3808a349-a43d-46ea-a81d-562196ff10e6
+uuid: f5bfb38e-ba8c-4551-b6cf-243089ec30fa
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.hero
-    - field.storage.block_content.field_reverse
-id: block_content.hero.field_reverse
-field_name: field_reverse
+    - field.storage.block_content.field_hero_reverse
+id: block_content.hero.field_hero_reverse
+field_name: field_hero_reverse
 entity_type: block_content
 bundle: hero
-label: Reverse
+label: 'Hero reverse'
 description: ''
 required: false
 translatable: false

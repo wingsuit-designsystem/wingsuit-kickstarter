@@ -5,8 +5,6 @@ dependencies:
   config:
     - block_content.type.banner
     - field.field.block_content.banner.body
-    - field.field.block_content.banner.field_banner_height
-    - field.field.block_content.banner.field_banner_image_position
     - field.field.block_content.banner.field_banner_position
     - field.field.block_content.banner.field_link
     - field.field.block_content.banner.field_media
@@ -16,8 +14,7 @@ dependencies:
     - link
     - options
     - text
-  theme:
-    - wingsuit
+    - wingsuit_companion
 third_party_settings:
   layout_builder:
     enabled: true
@@ -230,36 +227,6 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 2
             additional: {  }
-          e2c20e86-3965-4797-bf65-322c1a1cd4b7:
-            uuid: e2c20e86-3965-4797-bf65-322c1a1cd4b7
-            region: null
-            configuration:
-              id: 'field_block:block_content:banner:field_banner_height'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: list_default
-                label: above
-                settings: {  }
-                third_party_settings: {  }
-            weight: 3
-            additional: {  }
-          cef33f2f-782f-4202-8404-202fbd1cc115:
-            uuid: cef33f2f-782f-4202-8404-202fbd1cc115
-            region: null
-            configuration:
-              id: 'field_block:block_content:banner:field_banner_image_position'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: list_default
-                label: above
-                settings: {  }
-                third_party_settings: {  }
-            weight: 4
-            additional: {  }
         third_party_settings: {  }
   layout_builder_restrictions:
     allowed_block_categories: {  }
@@ -281,20 +248,6 @@ content:
     third_party_settings: {  }
     weight: 4
     region: content
-  field_banner_height:
-    type: list_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 8
-    region: null
-  field_banner_image_position:
-    type: list_default
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    weight: 9
-    region: null
   field_banner_position:
     type: list_default
     label: above

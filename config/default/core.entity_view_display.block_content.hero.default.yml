@@ -5,10 +5,10 @@ dependencies:
   config:
     - block_content.type.hero
     - field.field.block_content.hero.body
+    - field.field.block_content.hero.field_hero_reverse
     - field.field.block_content.hero.field_link
     - field.field.block_content.hero.field_media
     - field.field.block_content.hero.field_preheadline
-    - field.field.block_content.hero.field_reverse
     - field.field.block_content.hero.field_text
     - field.field.block_content.hero.field_title
   module:
@@ -31,7 +31,7 @@ third_party_settings:
             variant: ''
             settings:
               reverse: 0
-              reverse_token: '[block_content:field_reverse:value]'
+              reverse_token: '[block_content:field_hero_reverse:value]'
         components:
           d03a5383-2490-4faa-a3a6-a7de5a26b149:
             uuid: d03a5383-2490-4faa-a3a6-a7de5a26b149
@@ -347,20 +347,32 @@ third_party_settings:
                 entity: layout_builder.entity
                 view_mode: view_mode
               formatter:
-                type: pattern_formatter
+                type: pattern_all_formatter
                 label: hidden
                 settings:
+                  type: link_separate
+                  settings:
+                    trim_length: '80'
+                    url_only: ''
+                    url_plain: ''
+                    rel: 0
+                    target: 0
                   pattern: button
                   pattern_mapping:
-                    'field_properties:title':
-                      destination: text
+                    'field_raw_properties:uri':
+                      destination: url
                       weight: 0
-                      plugin: field_properties
+                      plugin: field_raw_properties
+                      source: uri
+                    'field_raw_properties:title':
+                      destination: text
+                      weight: 1
+                      plugin: field_raw_properties
                       source: title
                   pattern_settings:
                     button:
                       size: medium
-                      icon_alignment: right
+                      icon_alignment: ''
                       title: ''
                       target: ''
                       url:
@@ -428,6 +440,7 @@ content:
     weight: 1
     region: content
 hidden:
+  field_hero_reverse: true
   field_link: true
   field_preheadline: true
   langcode: true

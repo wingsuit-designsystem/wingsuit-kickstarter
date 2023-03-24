@@ -85,7 +85,7 @@ third_party_settings:
                   pattern_settings:
                     button:
                       size: medium
-                      icon_alignment: right
+                      icon_alignment: ''
                       title: ''
                       target: ''
                       url:

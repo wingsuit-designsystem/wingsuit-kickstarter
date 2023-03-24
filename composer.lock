@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d90fc1383f31764e90b4e22b744d93d5",
+    "content-hash": "594cd46bf316d9b8ecc844f20d4d490f",
     "packages": [
         {
             "name": "acquia/blt",
@@ -4713,6 +4713,44 @@
                 "source": "https://git.drupalcode.org/project/metatag",
                 "issues": "https://www.drupal.org/project/issues/metatag",
                 "docs": "https://www.drupal.org/docs/8/modules/metatag"
+            }
+        },
+        {
+            "name": "drupal/metatag_open_graph",
+            "version": "1.22.0",
+            "require": {
+                "drupal/core": "^9.3 || ^10",
+                "drupal/metatag": "*"
+            },
+            "type": "metapackage",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.22",
+                    "datestamp": "1664472988",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "DamienMcKenna",
+                    "homepage": "https://www.drupal.org/user/108450"
+                },
+                {
+                    "name": "Dave Reid",
+                    "homepage": "https://www.drupal.org/user/53892"
+                }
+            ],
+            "description": "Provides support for Open Graph Protocol meta tags.",
+            "homepage": "https://www.drupal.org/project/metatag",
+            "support": {
+                "source": "https://git.drupalcode.org/project/metatag"
             }
         },
         {
@@ -11985,5 +12023,5 @@
         "ext-dom": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }

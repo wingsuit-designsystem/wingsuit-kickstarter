@@ -1,19 +1,19 @@
-uuid: 3f782b93-12dc-4c62-8fd7-0da281ca8935
+uuid: 96b6d314-8a93-4393-92b4-3e4c0dba8e07
 langcode: en
 status: true
 dependencies:
   config:
     - block_content.type.success_story
-    - field.storage.block_content.field_success_story_media
+    - field.storage.block_content.field_media
     - media.type.image
-id: block_content.success_story.field_success_story_media
-field_name: field_success_story_media
+id: block_content.success_story.field_media
+field_name: field_media
 entity_type: block_content
 bundle: success_story
 label: Image
 description: ''
-required: true
-translatable: false
+required: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:

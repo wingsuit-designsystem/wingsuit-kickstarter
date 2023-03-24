@@ -23,6 +23,7 @@ content:
       enabled_attributes:
         target: true
         variant: true
+        size: true
         icon_alignment: true
         icon: true
         id: false
@@ -32,7 +33,6 @@ content:
         accesskey: false
         aria-label: false
         title: false
-        size: false
         disabled: false
         expanded: false
     third_party_settings: {  }

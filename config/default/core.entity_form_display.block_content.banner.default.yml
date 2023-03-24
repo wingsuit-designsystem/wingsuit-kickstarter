@@ -5,8 +5,6 @@ dependencies:
   config:
     - block_content.type.banner
     - field.field.block_content.banner.body
-    - field.field.block_content.banner.field_banner_height
-    - field.field.block_content.banner.field_banner_image_position
     - field.field.block_content.banner.field_banner_position
     - field.field.block_content.banner.field_link
     - field.field.block_content.banner.field_media
@@ -20,7 +18,6 @@ third_party_settings:
   field_group:
     group_settings:
       children:
-        - field_banner_height
         - field_banner_position
       label: Settings
       region: content
@@ -51,12 +48,6 @@ content:
       summary_rows: 3
       placeholder: ''
       show_summary: false
-    third_party_settings: {  }
-  field_banner_height:
-    type: options_select
-    weight: 5
-    region: content
-    settings: {  }
     third_party_settings: {  }
   field_banner_position:
     type: options_select
@@ -99,6 +90,5 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_banner_image_position: true
   info: true
   langcode: true
