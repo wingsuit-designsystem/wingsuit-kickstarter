@@ -40,7 +40,6 @@
         "drupal/media_responsive_thumbnail": "^1.2",
         "drupal/gin": "^3.0@alpha",
         "drupal/gin_lb": "~1.0",
-        "drupal/layout_builder_save_and_edit": "^1.0",
         "drupal/admin_toolbar": "^3.0",
         "drupal/inline_block_title_automatic": "^1.0@alpha",
         "drupal/ui_patterns_extends": "^1.0@beta",
@@ -82,8 +81,6 @@
         "drupal/colorwidget": "1.0.x-dev",
         "drupal/stable": "^2.0",
         "drupal/toolbar_anti_flicker": "^9.3",
-        "drupal/drimage": "^2.2",
-        "drupal/layout_builder_overrides": "1.0.x-dev",
         "drupal/metatag_open_graph": "^1.22"
     },
     "require-dev": {

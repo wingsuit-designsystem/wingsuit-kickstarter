@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "594cd46bf316d9b8ecc844f20d4d490f",
+    "content-hash": "d7c2ec343b9f59b4472b7a628ab568b0",
     "packages": [
         {
             "name": "acquia/blt",
@@ -2883,55 +2883,6 @@
             }
         },
         {
-            "name": "drupal/drimage",
-            "version": "2.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/drimage.git",
-                "reference": "2.2.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/drimage-2.2.0.zip",
-                "reference": "2.2.0",
-                "shasum": "5f248e34ab6c947d6bc16ebd1dcdf113f55d258a"
-            },
-            "require": {
-                "drupal/core": "^9.3 || ^10"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "2.2.0",
-                    "datestamp": "1674111247",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "JurgenR",
-                    "homepage": "https://www.drupal.org/user/1266410"
-                },
-                {
-                    "name": "weseze",
-                    "homepage": "https://www.drupal.org/user/417521"
-                }
-            ],
-            "description": "Image formatter that will generate image styles on the fly on the front end.",
-            "homepage": "https://www.drupal.org/project/drimage",
-            "support": {
-                "source": "https://git.drupalcode.org/project/drimage",
-                "issues": "https://www.drupal.org/project/issues/drimage"
-            }
-        },
-        {
             "name": "drupal/dropzonejs",
             "version": "2.8.0",
             "source": {
@@ -4071,60 +4022,6 @@
             }
         },
         {
-            "name": "drupal/layout_builder_overrides",
-            "version": "dev-1.0.x",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/layout_builder_overrides.git",
-                "reference": "7a6b5ac5e9cd9f1d44058c65c8315794ab1568c7"
-            },
-            "require": {
-                "drupal/core": "^8.8 || ^9 || ^10"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "branch-alias": {
-                    "dev-1.0.x": "1.0.x-dev"
-                },
-                "drupal": {
-                    "version": "1.0.0-alpha2+4-dev",
-                    "datestamp": "1661754401",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Project has not opted into security advisory coverage!"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Alejandro Arnau Sancho",
-                    "homepage": "https://www.drupal.org/user/3184045",
-                    "email": "aarnaus@gmail.com"
-                },
-                {
-                    "name": "d70rr3s",
-                    "homepage": "https://www.drupal.org/user/3183487"
-                },
-                {
-                    "name": "Panchuk",
-                    "homepage": "https://www.drupal.org/user/3604398"
-                }
-            ],
-            "description": "Overrides any view mode with Layout Builder",
-            "homepage": "https://www.drupal.org/project/layout_builder_overrides",
-            "keywords": [
-                "Drupal"
-            ],
-            "support": {
-                "source": "https://git.drupalcode.org/project/layout_builder_overrides",
-                "issues": "https://www.drupal.org/project/issues/layout_builder_overrides"
-            }
-        },
-        {
             "name": "drupal/layout_builder_restrictions",
             "version": "2.17.0",
             "source": {
@@ -4214,52 +4111,6 @@
             "support": {
                 "source": "https://git.drupalcode.org/project/layout_builder_restrictions",
                 "issues": "https://www.drupal.org/project/issues/layout_builder_restrictions"
-            }
-        },
-        {
-            "name": "drupal/layout_builder_save_and_edit",
-            "version": "1.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/layout_builder_save_and_edit.git",
-                "reference": "1.0.2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/layout_builder_save_and_edit-1.0.2.zip",
-                "reference": "1.0.2",
-                "shasum": "c16e38568628ec0598844a074627224a9fa90a4d"
-            },
-            "require": {
-                "drupal/core": "^8.8 || ^9 || ^10"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "1.0.2",
-                    "datestamp": "1654513526",
-                    "security-coverage": {
-                        "status": "covered",
-                        "message": "Covered by Drupal's security advisory policy"
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0-or-later"
-            ],
-            "authors": [
-                {
-                    "name": "Neslee Canil Pinto",
-                    "homepage": "https://www.drupal.org/u/neslee-canil-pinto",
-                    "role": "Maintainer"
-                }
-            ],
-            "description": "Adds Save and Edit button to layout builder page.",
-            "homepage": "https://www.drupal.org/project/layout_builder_save_and_edit",
-            "support": {
-                "source": "https://git.drupalcode.org/project/layout_builder_save_and_edit",
-                "issues": "https://www.drupal.org/project/issues/layout_builder_save_and_edit"
             }
         },
         {
@@ -12014,8 +11865,7 @@
         "drupal/ui_patterns_settings": 20,
         "drupal/section_library_reusable": 10,
         "drupal/imageapi_optimize_webp": 10,
-        "drupal/colorwidget": 20,
-        "drupal/layout_builder_overrides": 20
+        "drupal/colorwidget": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
@@ -12023,5 +11873,5 @@
         "ext-dom": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.2.0"
 }
