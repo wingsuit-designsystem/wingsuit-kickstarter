@@ -10,56 +10,10 @@ dependencies:
     - layout_builder
     - layout_builder_restrictions
     - svg_image_field
-  theme:
-    - wingsuit
 third_party_settings:
   layout_builder:
-    enabled: true
+    enabled: false
     allow_custom: false
-    sections:
-      -
-        layout_id: pattern_icon
-        layout_settings:
-          label: ''
-          context_mapping: {  }
-          pattern:
-            field_templates: default
-            variant: spritemap
-            settings:
-              fill_color: ''
-              size: ''
-              icon:
-                input: '[media:field_sprite_map_icon:value]'
-        components:
-          0bcf02d4-e0f1-4f5a-9a07-33c21cb3573b:
-            uuid: 0bcf02d4-e0f1-4f5a-9a07-33c21cb3573b
-            region: fallback_icon
-            configuration:
-              id: 'field_block:media:icon:field_media_svg'
-              label: SVG
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: svg_image_field_formatter
-                label: hidden
-                settings:
-                  inline: false
-                  apply_dimensions: true
-                  width: 25
-                  height: 25
-                  enable_alt: true
-                  enable_title: true
-                  link: ''
-                  force_fill: false
-                  sanitize: true
-                  sanitize_remote: false
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
-        third_party_settings: {  }
   layout_builder_restrictions:
     allowed_block_categories: {  }
     entity_view_mode_restriction:

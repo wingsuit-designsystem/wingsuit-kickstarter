@@ -4,7 +4,7 @@ status: true
 dependencies:
   config:
     - core.entity_view_display.block_content.section_library_reusable.full
-    - core.entity_view_display.node.article.full
+    - core.entity_view_display.node.article.full_top
     - core.entity_view_display.node.landing_page.full
     - filter.format.rich_text
     - node.type.article
