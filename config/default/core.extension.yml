@@ -4,6 +4,7 @@ module:
   admin_toolbar: 0
   admin_toolbar_links_access_filter: 0
   admin_toolbar_tools: 0
+  advanced_text_formatter: 0
   autosave_form: 0
   bg_image_formatter: 0
   block: 0
@@ -26,6 +27,7 @@ module:
   diff: 0
   dropzonejs: 0
   dynamic_page_cache: 0
+  easy_breadcrumb: 0
   easy_responsive_images: 0
   editor: 0
   editor_advanced_link: 0
@@ -105,6 +107,7 @@ module:
   views_ui: 0
   viewsreference: 0
   webform: 0
+  webform_config_ignore: 0
   webform_ui: 0
   wingsuit_companion: 0
   wingsuit_lb: 0
@@ -113,8 +116,10 @@ module:
   workflows: 0
   pathauto: 1
   content_translation: 10
+  formdazzle: 10
   views: 10
   minimal: 1000
+  eu_cookie_compliance: 1001
 theme:
   claro: 0
   stable: 0

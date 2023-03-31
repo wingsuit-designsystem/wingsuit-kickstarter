@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
+    - eu_cookie_compliance
     - system
 id: menu_manager
 label: 'Menu manager'
@@ -12,3 +13,4 @@ permissions:
   - 'access administration pages'
   - 'administer menu'
   - 'view the administration theme'
+  - 'display eu cookie compliance popup'

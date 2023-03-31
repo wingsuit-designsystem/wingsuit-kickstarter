@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   module:
+    - eu_cookie_compliance
     - media
     - shortcut
     - system
@@ -16,3 +17,4 @@ permissions:
   - 'access content'
   - 'access shortcuts'
   - 'view media'
+  - 'display eu cookie compliance popup'

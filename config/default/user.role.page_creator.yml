@@ -16,6 +16,7 @@ dependencies:
     - content_moderation
     - content_translation
     - contextual
+    - eu_cookie_compliance
     - filter
     - layout_builder
     - node
@@ -64,3 +65,4 @@ permissions:
   - 'view page revisions'
   - 'view section library templates'
   - 'view the administration theme'
+  - 'display eu cookie compliance popup'

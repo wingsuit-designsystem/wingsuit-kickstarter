@@ -11,6 +11,7 @@ dependencies:
   module:
     - block
     - dropzonejs
+    - eu_cookie_compliance
     - media
     - media_bulk_upload
     - system
@@ -59,3 +60,4 @@ permissions:
   - 'view all media revisions'
   - 'view own unpublished media'
   - 'view the administration theme'
+  - 'display eu cookie compliance popup'
