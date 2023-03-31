@@ -1,0 +1,9 @@
+uuid: 37a3926d-7a7e-431a-a54e-76974dba623c
+langcode: en
+status: true
+dependencies: {  }
+id: marketing
+label: Marketing
+description: ''
+checkbox_default_state: unchecked
+weight: -7

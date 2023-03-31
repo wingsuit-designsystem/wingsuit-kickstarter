@@ -1,0 +1,9 @@
+uuid: 63373fa8-ab9f-4733-95c5-78aafcd9d278
+langcode: en
+status: true
+dependencies: {  }
+id: required
+label: Required
+description: ''
+checkbox_default_state: checked
+weight: -9

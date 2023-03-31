@@ -11,7 +11,7 @@ eu_only_js: false
 popup_position: false
 fixed_top_position: true
 popup_info:
-  value: '<h2>We use cookies on this site to enhance your user experience</h2><p>By clicking the Accept button, you agree to us doing so.</p>'
+  value: '<h5>We use cookies on this site to enhance your user experience</h5><p>By clicking the Accept button, you agree to us doing so.</p>'
   format: rich_text
 mobile_popup_info:
   value: ''
@@ -25,7 +25,7 @@ popup_hide_agreed: false
 disagree_button_label: 'No, thanks'
 popup_agreed:
   value: '<h2>Thank you for accepting cookies</h2><p>You can now hide this message or find out more about cookies.</p>'
-  format: plain_text
+  format: rich_text
 popup_find_more_button_message: 'More info'
 popup_hide_button_message: Hide
 popup_link: '<front>'
@@ -60,7 +60,7 @@ automatic_cookies_removal: true
 allowed_cookies: ''
 consent_storage_method: do_not_store
 withdraw_message:
-  value: '<h2>We use cookies on this site to enhance your user experience</h2><p>You have given your consent for us to set cookies.</p>'
+  value: '<h5>We use cookies on this site to enhance your user experience</h5><p>You have given your consent for us to set cookies.</p>'
   format: rich_text
 withdraw_tab_button_label: 'Privacy settings'
 withdraw_action_button_label: 'Withdraw consent'
@@ -83,5 +83,4 @@ reject_button_enabled: false
 close_button_enabled: false
 dependencies:
   config:
-    0: filter.format.plain_text
-    2: filter.format.rich_text
+    - filter.format.rich_text
