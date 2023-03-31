@@ -7,7 +7,7 @@ dependencies:
     - field.field.media.remote_video.field_media_oembed_video
     - media.type.remote_video
   module:
-    - media
+    - oembed_lazyload
     - user
 _core:
   default_config_hash: GVcT3p3X0jyWP8VaeLOzW7mAvwYo5hwFGEcWJ2vCGRg
@@ -27,11 +27,13 @@ content:
     weight: 1
     region: content
   field_media_oembed_video:
-    type: oembed
+    type: lazyload_oembed
     label: hidden
     settings:
       max_width: 0
       max_height: 0
+      strategy: intersection_observer
+      intersection_observer_margin: ''
     third_party_settings: {  }
     weight: 3
     region: content
