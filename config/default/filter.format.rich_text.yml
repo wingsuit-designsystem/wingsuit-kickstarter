@@ -83,6 +83,7 @@ filters:
         default: default
         16x9: 16x9
       allowed_media_types:
+        icon: icon
         image: image
   linkit:
     id: linkit

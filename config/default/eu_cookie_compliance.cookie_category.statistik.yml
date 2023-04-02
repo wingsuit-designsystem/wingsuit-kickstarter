@@ -1,0 +1,9 @@
+uuid: ac9f9916-8fc8-46eb-ac6d-62daba1dca3f
+langcode: en
+status: true
+dependencies: {  }
+id: statistik
+label: Statistik
+description: ''
+checkbox_default_state: unchecked
+weight: -8
