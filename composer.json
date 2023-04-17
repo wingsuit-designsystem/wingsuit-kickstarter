@@ -113,9 +113,6 @@
             "drupal/component_blocks": {
                 "3210538 - Not working with Settings Type url and token ": "https://git.drupalcode.org/project/component_blocks/-/merge_requests/2.patch"
             },
-            "drupal/layout_builder_browser": {
-                "Add option for node local tasks in toolbar.": "https://www.drupal.org/files/issues/2023-03-17/layout_builder_browser-d10-compatibility-3297496-14.patch"
-            },
             "drupal/imageapi_optimize_webp": {
                 "Automated Drupal 10 compatibility fixes": "https://www.drupal.org/files/issues/2022-12-29/imageapi_optimize_webp.2.x-dev.d10compatibility.patch"
             },
@@ -147,9 +144,6 @@
             },
             "drupal/conflict": {
                 "PHP error when stored entity is not found": "https://www.drupal.org/files/issues/2020-08-05/3163662-2.patch"
-            },
-            "drupal/media_bulk_upload": {
-                "Drupal 10 compatibility": "https://www.drupal.org/files/issues/2023-01-16/3333989_media_bulk_upload_2.patch"
             },
             "drupal/toolbar_anti_flicker": {
                 "Drupal 10 compatibility": "https://www.drupal.org/files/issues/2022-07-23/toolbar_anti_flicker.9.3.x-dev.rector.patch"
