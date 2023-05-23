@@ -43,6 +43,7 @@ permissions:
   - 'delete own image media'
   - 'delete own remote_video media'
   - 'delete own video media'
+  - 'display eu cookie compliance popup'
   - 'dropzone upload files'
   - 'edit any audio media'
   - 'edit any document media'
@@ -60,4 +61,3 @@ permissions:
   - 'view all media revisions'
   - 'view own unpublished media'
   - 'view the administration theme'
-  - 'display eu cookie compliance popup'

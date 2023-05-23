@@ -16,34 +16,15 @@ dependencies:
     - layout_builder_restrictions
     - metatag
     - user
-  theme:
-    - wingsuit
 third_party_settings:
   layout_builder:
     enabled: true
     allow_custom: true
     sections:
       -
-        layout_id: pattern_section
+        layout_id: layout_builder_blank
         layout_settings:
           label: ''
-          context_mapping: {  }
-          pattern:
-            field_templates: default
-            variant: 1_column
-            settings:
-              padding_top: ''
-              padding_bottom: default
-              padding_x: default
-              gutter: default
-              width: default
-              columns: '1'
-              columns_width_1: equal
-              columns_width_2: equal
-              columns_width_3: equal
-              columns_width_4: equal
-              columns_width_5: equal
-              bg: ''
         components: {  }
         third_party_settings: {  }
   layout_builder_restrictions:

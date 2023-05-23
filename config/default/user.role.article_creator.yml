@@ -46,6 +46,7 @@ permissions:
   - 'create content translations'
   - 'create url aliases'
   - 'delete content translations'
+  - 'display eu cookie compliance popup'
   - 'edit any article content'
   - 'edit own article content'
   - 'edit section library templates'
@@ -68,4 +69,3 @@ permissions:
   - 'view own unpublished content'
   - 'view section library templates'
   - 'view the administration theme'
-  - 'display eu cookie compliance popup'

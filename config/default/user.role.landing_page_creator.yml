@@ -46,6 +46,7 @@ permissions:
   - 'create landing_page content'
   - 'create url aliases'
   - 'delete content translations'
+  - 'display eu cookie compliance popup'
   - 'edit any landing_page content'
   - 'edit own landing_page content'
   - 'edit section library templates'
@@ -68,4 +69,3 @@ permissions:
   - 'view own unpublished content'
   - 'view section library templates'
   - 'view the administration theme'
-  - 'display eu cookie compliance popup'

@@ -13,8 +13,8 @@ entity_type: block_content
 bundle: hero
 label: Link
 description: ''
-required: false
-translatable: true
+required: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings:

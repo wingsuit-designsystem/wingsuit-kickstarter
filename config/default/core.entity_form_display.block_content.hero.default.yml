@@ -12,7 +12,7 @@ dependencies:
     - field.field.block_content.hero.field_text
     - field.field.block_content.hero.field_title
   module:
-    - link
+    - link_attributes
     - media_library
     - media_library_edit
     - text
@@ -29,12 +29,28 @@ content:
       display_label: true
     third_party_settings: {  }
   field_link:
-    type: link_default
+    type: link_attributes
     weight: 4
     region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
+      enabled_attributes:
+        variant: true
+        icon_alignment: true
+        icon: true
+        id: false
+        name: false
+        target: false
+        rel: false
+        class: false
+        accesskey: false
+        aria-label: false
+        title: false
+        tag_name: false
+        size: false
+        disabled: false
+        expanded: false
     third_party_settings: {  }
   field_media:
     type: media_library_widget
