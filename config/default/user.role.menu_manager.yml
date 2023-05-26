@@ -12,5 +12,5 @@ is_admin: null
 permissions:
   - 'access administration pages'
   - 'administer menu'
-  - 'view the administration theme'
   - 'display eu cookie compliance popup'
+  - 'view the administration theme'

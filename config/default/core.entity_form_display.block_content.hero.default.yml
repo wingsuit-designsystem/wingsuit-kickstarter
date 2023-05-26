@@ -5,6 +5,7 @@ dependencies:
   config:
     - block_content.type.hero
     - field.field.block_content.hero.body
+    - field.field.block_content.hero.field_hero_headline_size
     - field.field.block_content.hero.field_hero_reverse
     - field.field.block_content.hero.field_link
     - field.field.block_content.hero.field_media
@@ -12,7 +13,7 @@ dependencies:
     - field.field.block_content.hero.field_text
     - field.field.block_content.hero.field_title
   module:
-    - link
+    - link_attributes
     - media_library
     - media_library_edit
     - text
@@ -21,20 +22,42 @@ targetEntityType: block_content
 bundle: hero
 mode: default
 content:
+  field_hero_headline_size:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   field_hero_reverse:
     type: boolean_checkbox
-    weight: 26
+    weight: 8
     region: content
     settings:
       display_label: true
     third_party_settings: {  }
   field_link:
-    type: link_default
-    weight: 4
+    type: link_attributes
+    weight: 5
     region: content
     settings:
       placeholder_url: ''
       placeholder_title: ''
+      enabled_attributes:
+        variant: true
+        icon_alignment: true
+        icon: true
+        id: false
+        name: false
+        target: false
+        rel: false
+        class: false
+        accesskey: false
+        aria-label: false
+        title: false
+        tag_name: false
+        size: false
+        disabled: false
+        expanded: false
     third_party_settings: {  }
   field_media:
     type: media_library_widget
@@ -55,7 +78,7 @@ content:
     third_party_settings: {  }
   field_text:
     type: text_textarea
-    weight: 3
+    weight: 4
     region: content
     settings:
       rows: 5
@@ -63,7 +86,7 @@ content:
     third_party_settings: {  }
   field_title:
     type: string_textfield
-    weight: 2
+    weight: 3
     region: content
     settings:
       size: 60

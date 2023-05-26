@@ -1,23 +1,23 @@
-uuid: d7979a59-d0c4-4068-a126-70a8a93f544b
+uuid: 52d986f2-ab44-443f-912e-c94a7ba74518
 langcode: en
 status: true
 dependencies:
   config:
-    - block_content.type.hero
+    - block_content.type.avatar
     - field.storage.block_content.field_link
   module:
     - link
-id: block_content.hero.field_link
+id: block_content.avatar.field_link
 field_name: field_link
 entity_type: block_content
-bundle: hero
-label: Link
+bundle: avatar
+label: Button
 description: ''
-required: true
-translatable: false
+required: false
+translatable: true
 default_value: {  }
 default_value_callback: ''
 settings:
-  title: 2
+  title: 0
   link_type: 17
 field_type: link

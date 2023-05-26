@@ -1,0 +1,23 @@
+uuid: 02271299-f803-4146-8291-b6c133dfc05a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.hero
+    - field.storage.block_content.field_hero_headline_size
+  module:
+    - options
+id: block_content.hero.field_hero_headline_size
+field_name: field_hero_headline_size
+entity_type: block_content
+bundle: hero
+label: 'Headline size'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: h1
+default_value_callback: ''
+settings: {  }
+field_type: list_string

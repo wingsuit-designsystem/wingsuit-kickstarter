@@ -87,7 +87,10 @@
         "drupal/advanced_text_formatter": "^3.0@RC",
         "drupal/eu_cookie_compliance": "^1.24",
         "drupal/easy_breadcrumb": "^2.0",
-        "drupal/oembed_lazyload": "^2.0"
+        "drupal/oembed_lazyload": "^2.0",
+        "drupal/layout_builder_save_and_edit": "^1.0",
+        "drupal/view_modes_display": "^3.0",
+        "drupal/ui_patterns_views_style": "^1.3"
     },
     "require-dev": {
         "acquia/blt-phpcs": "^1.0"
@@ -140,7 +143,8 @@
                 "The \"use\" attribute should also work for variants": "https://git.drupalcode.org/project/ui_patterns/-/merge_requests/21.patch"
             },
             "drupal/ui_patterns_field_formatters": {
-                "Add item to context.": "https://git.drupalcode.org/project/ui_patterns_field_formatters/-/merge_requests/18.patch"
+                "Add item to context.": "https://git.drupalcode.org/project/ui_patterns_field_formatters/-/merge_requests/18.patch",
+                "Warning: Trying to access array offset on value of type null": "https://git.drupalcode.org/project/ui_patterns_field_formatters/-/merge_requests/15.patch"
             },
             "drupal/conflict": {
                 "PHP error when stored entity is not found": "https://www.drupal.org/files/issues/2020-08-05/3163662-2.patch"

@@ -16,5 +16,5 @@ is_admin: false
 permissions:
   - 'access content'
   - 'access shortcuts'
-  - 'view media'
   - 'display eu cookie compliance popup'
+  - 'view media'

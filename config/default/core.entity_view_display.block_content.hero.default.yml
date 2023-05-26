@@ -5,6 +5,7 @@ dependencies:
   config:
     - block_content.type.hero
     - field.field.block_content.hero.body
+    - field.field.block_content.hero.field_hero_headline_size
     - field.field.block_content.hero.field_hero_reverse
     - field.field.block_content.hero.field_link
     - field.field.block_content.hero.field_media
@@ -14,6 +15,7 @@ dependencies:
   module:
     - layout_builder
     - layout_builder_restrictions
+    - options
     - text
     - wingsuit_companion
 third_party_settings:
@@ -350,11 +352,11 @@ third_party_settings:
                 type: pattern_all_formatter
                 label: hidden
                 settings:
-                  type: link_separate
+                  type: link
                   settings:
                     trim_length: '80'
-                    url_only: ''
-                    url_plain: ''
+                    url_only: 0
+                    url_plain: 0
                     rel: 0
                     target: 0
                   pattern: button
@@ -371,6 +373,7 @@ third_party_settings:
                       source: title
                   pattern_settings:
                     button:
+                      tag_name: ''
                       size: medium
                       icon_alignment: ''
                       title: ''
@@ -379,10 +382,47 @@ third_party_settings:
                         input: ''
                       disabled: 0
                       expanded: 0
+                      extra_classes: ''
                       icon: ''
+                  variants_token:
+                    cookie_banner: ''
                   pattern_variant: default
                 third_party_settings: {  }
             weight: 0
+            additional: {  }
+          9fc5c416-3355-4091-9753-83a3bb77d87d:
+            uuid: 9fc5c416-3355-4091-9753-83a3bb77d87d
+            region: preheadline
+            configuration:
+              id: 'field_block:block_content:hero:field_preheadline'
+              label: Preheadline
+              label_display: '0'
+              provider: layout_builder
+              context_mapping:
+                entity: layout_builder.entity
+                view_mode: view_mode
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            weight: 0
+            additional: {  }
+          e051f3a9-5bc2-440c-a89b-a1c290f0bf19:
+            uuid: e051f3a9-5bc2-440c-a89b-a1c290f0bf19
+            region: null
+            configuration:
+              id: 'field_block:block_content:hero:field_hero_headline_size'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: list_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 2
             additional: {  }
         third_party_settings: {  }
   layout_builder_restrictions:
@@ -405,6 +445,13 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  field_hero_headline_size:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: null
   field_media:
     type: entity_reference_entity_view
     label: above

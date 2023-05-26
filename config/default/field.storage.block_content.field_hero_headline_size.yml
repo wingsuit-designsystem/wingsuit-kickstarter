@@ -1,0 +1,21 @@
+uuid: c38b902c-119a-4ec9-9826-14bfb93127b5
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+id: block_content.field_hero_headline_size
+field_name: field_hero_headline_size
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values: {  }
+  allowed_values_function: ui_patterns_settings_allowed_values_function
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

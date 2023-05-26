@@ -9,3 +9,4 @@ mapping:
   block_content--field_avatar_variant: 'avatar::variant'
   node--field_media: 'card::image'
   block_content--field_avatar_image: 'avatar::image'
+  block_content--field_hero_headline_size: 'rich_snippet::headline_size'

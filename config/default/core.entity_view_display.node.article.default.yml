@@ -18,14 +18,22 @@ dependencies:
     - user
 third_party_settings:
   layout_builder:
-    enabled: false
+    enabled: true
     allow_custom: false
+    sections:
+      -
+        layout_id: layout_builder_blank
+        layout_settings:
+          label: ''
+        components: {  }
+        third_party_settings: {  }
   layout_builder_restrictions:
     allowed_block_categories: {  }
     entity_view_mode_restriction:
       allowed_layouts: {  }
       denylisted_blocks: {  }
       allowlisted_blocks: {  }
+      restricted_categories: {  }
 id: node.article.default
 targetEntityType: node
 bundle: article

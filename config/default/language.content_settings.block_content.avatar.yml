@@ -1,0 +1,11 @@
+uuid: 3ba87676-7a0b-4d2d-ae9e-40108d42ee98
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.avatar
+id: block_content.avatar
+target_entity_type_id: block_content
+target_bundle: avatar
+default_langcode: site_default
+language_alterable: false

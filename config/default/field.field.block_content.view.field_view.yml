@@ -28,6 +28,7 @@ settings:
     page: 0
     feed: 0
   preselect_views:
+    author_article: author_article
     block_content: 0
     content: 0
     content_recent: 0
@@ -45,9 +46,9 @@ settings:
     who_s_new: 0
     who_s_online: 0
   enabled_settings:
+    title: title
     argument: argument
     offset: 0
-    limit: 0
     pager: 0
-    title: title
+    limit: 0
 field_type: viewsreference
