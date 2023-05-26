@@ -86,54 +86,6 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 0
             additional: {  }
-          3d945d7c-f372-430c-aea1-d09027b99c65:
-            uuid: 3d945d7c-f372-430c-aea1-d09027b99c65
-            region: button
-            configuration:
-              id: 'field_block:block_content:avatar:field_link'
-              label: Button
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: pattern_all_formatter
-                label: hidden
-                settings:
-                  type: link_separate
-                  settings:
-                    trim_length: '80'
-                    url_only: ''
-                    url_plain: ''
-                    rel: 0
-                    target: 0
-                  pattern: button
-                  pattern_mapping:
-                    'field_raw_properties:title':
-                      destination: text
-                      weight: 0
-                      plugin: field_raw_properties
-                      source: title
-                  pattern_settings:
-                    button:
-                      tag_name: ''
-                      size: medium
-                      icon_alignment: right
-                      title: demo
-                      target: ''
-                      url:
-                        input: ''
-                      disabled: 0
-                      expanded: 0
-                      extra_classes: ''
-                      icon: ''
-                  variants_token:
-                    cookie_banner: ''
-                  pattern_variant: outline
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
         third_party_settings: {  }
 id: block_content.avatar.default
 targetEntityType: block_content

@@ -28,6 +28,7 @@ settings:
       - drupalMedia
       - '|'
       - heading
+      - style
       - '|'
       - '|'
       - subscript
@@ -50,6 +51,11 @@ settings:
     ckeditor5_list:
       reversed: false
       startIndex: true
+    ckeditor5_style:
+      styles:
+        -
+          label: 'Display 1'
+          element: '<p class="display1">'
     editor_advanced_link_link:
       enabled_attributes:
         - target

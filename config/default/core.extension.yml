@@ -103,8 +103,10 @@ module:
   ui_patterns_layout_builder: 0
   ui_patterns_layouts: 0
   ui_patterns_settings: 0
+  ui_patterns_views_style: 0
   update: 0
   user: 0
+  view_modes_display: 0
   views_ui: 0
   viewsreference: 0
   webform: 0

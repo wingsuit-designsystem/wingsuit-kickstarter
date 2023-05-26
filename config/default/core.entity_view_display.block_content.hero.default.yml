@@ -5,6 +5,7 @@ dependencies:
   config:
     - block_content.type.hero
     - field.field.block_content.hero.body
+    - field.field.block_content.hero.field_hero_headline_size
     - field.field.block_content.hero.field_hero_reverse
     - field.field.block_content.hero.field_link
     - field.field.block_content.hero.field_media
@@ -14,6 +15,7 @@ dependencies:
   module:
     - layout_builder
     - layout_builder_restrictions
+    - options
     - text
     - wingsuit_companion
 third_party_settings:
@@ -407,6 +409,21 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 0
             additional: {  }
+          e051f3a9-5bc2-440c-a89b-a1c290f0bf19:
+            uuid: e051f3a9-5bc2-440c-a89b-a1c290f0bf19
+            region: null
+            configuration:
+              id: 'field_block:block_content:hero:field_hero_headline_size'
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              formatter:
+                type: list_default
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            weight: 2
+            additional: {  }
         third_party_settings: {  }
   layout_builder_restrictions:
     allowed_block_categories: {  }
@@ -428,6 +445,13 @@ content:
     third_party_settings: {  }
     weight: 0
     region: content
+  field_hero_headline_size:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: null
   field_media:
     type: entity_reference_entity_view
     label: above
