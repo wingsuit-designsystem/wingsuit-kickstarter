@@ -129,7 +129,8 @@
                 "2869592 - Disabled update module shouldn't produce a status report warning": "https://www.drupal.org/files/issues/2020-02-07/2869592-remove-update-warning-34.patch",
                 "Layout builder doesn't support bundle computed field": "https://www.drupal.org/files/issues/2019-02-22/layoutbuilder-bundlecomputedfieldsfix-3034979-3-8.6x.patch",
                 "Workaround for \"Call to a member function getLabel() after enabling layout_builder\"": "https://www.drupal.org/files/issues/2020-04-08/2985882-field-85.patch",
-                "Installing a module causes translations to be overwritten": "https://www.drupal.org/files/issues/2021-08-10/2806009-disable-locale-config-sync-65.patch"
+                "Installing a module causes translations to be overwritten": "https://www.drupal.org/files/issues/2021-08-10/2806009-disable-locale-config-sync-65.patch",
+                "#3331397: ListItemBase::generateSampleValue() white screen when options list is empty": "https://www.drupal.org/files/issues/2023-03-10/3331397-4.patch"
             },
             "drupal/layout_builder_st": {
                 "Argument 1 passed to Drupal\\layout_builder_st\\EventSubscriber\\ComponentPluginTranslate::isTranslation() must implement interface Drupal\\layout_builder\\SectionStorageInterface, null given": "https://www.drupal.org/files/issues/2019-07-24/isTranslation-null-given.patch",
