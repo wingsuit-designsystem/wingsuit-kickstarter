@@ -13,13 +13,6 @@ title: 'Contact form'
 description: ''
 category: ''
 elements: |-
-  salutation:
-    '#type': select
-    '#title': Salutation
-    '#title_display': none
-    '#options':
-      Male: Male
-      Female: Female
   flexbox:
     '#type': webform_flexbox
     first_name:
@@ -49,6 +42,29 @@ elements: |-
     '#title': Message
     '#title_display': none
     '#placeholder': Message
+  choose_your_service:
+    '#type': radios
+    '#title': 'Choose your service'
+    '#description': '<h5><strong>Choose your service</strong></h5>'
+    '#title_display': none
+    '#description_display': before
+    '#options':
+      Flying: Flying
+      Landing: Landing
+      Security: Security
+      Savety: Savety
+  feel_free_to_check_some_boxes:
+    '#type': checkboxes
+    '#title': 'Feel free to check some boxes'
+    '#description': '<h5><strong>Feel free to check some boxes</strong></h5>'
+    '#title_display': none
+    '#description_display': before
+    '#options':
+      'Blandit sit nullam nulla euismod feugiat congue ligula et egestas.': 'Blandit sit nullam nulla euismod feugiat congue ligula et egestas.'
+      'Congue in vulputate at gravida aenean.': 'Congue in vulputate at gravida aenean.'
+      'Interdum habitant vel est viverra tellus viverra integer facilisi.': 'Interdum habitant vel est viverra tellus viverra integer facilisi.'
+      'Nullam vivearra vestibulum vel, non consectetur egestas morbi.': 'Nullam vivearra vestibulum vel, non consectetur egestas morbi.'
+      'Maecenas eget blandit rhoncus a fermentum.': 'Maecenas eget blandit rhoncus a fermentum.'
   privacy:
     '#type': checkbox
     '#title': Privacy

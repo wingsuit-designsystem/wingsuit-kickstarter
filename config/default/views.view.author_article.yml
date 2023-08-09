@@ -93,7 +93,7 @@ display:
         type: some
         options:
           offset: 0
-          items_per_page: 5
+          items_per_page: 3
       exposed_form:
         type: basic
         options:
@@ -252,6 +252,27 @@ display:
     display_plugin: block
     position: 2
     display_options:
+      pager:
+        type: full
+        options:
+          offset: 0
+          items_per_page: 2
+          total_pages: null
+          id: 2
+          tags:
+            next: 'Next ›'
+            previous: '‹ Previous'
+            first: '« First'
+            last: 'Last »'
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+          quantity: 6
       style:
         type: pattern
         options:
@@ -281,6 +302,7 @@ display:
           relationship: none
           view_mode: teaser_horizontal
       defaults:
+        pager: false
         style: false
         row: false
       display_description: ''
@@ -290,6 +312,7 @@ display:
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
+        - url.query_args
         - 'user.node_grants:view'
         - user.permissions
       tags: {  }
