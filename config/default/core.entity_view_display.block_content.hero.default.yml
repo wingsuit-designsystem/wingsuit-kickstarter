@@ -319,24 +319,6 @@ third_party_settings:
                 third_party_settings: {  }
             weight: 0
             additional: {  }
-          4416b925-f460-4e80-9a46-da62edd29c61:
-            uuid: 4416b925-f460-4e80-9a46-da62edd29c61
-            region: null
-            configuration:
-              id: 'field_block:block_content:hero:field_reverse'
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              formatter:
-                type: boolean
-                label: above
-                settings:
-                  format: default
-                  format_custom_false: ''
-                  format_custom_true: ''
-                third_party_settings: {  }
-            weight: 1
-            additional: {  }
           05546371-687d-470c-ba6b-5d5247966a2b:
             uuid: 05546371-687d-470c-ba6b-5d5247966a2b
             region: action
@@ -439,16 +421,6 @@ content:
     third_party_settings: {  }
     weight: 2
     region: content
-  field_reverse:
-    type: boolean
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    weight: 4
-    region: null
   field_text:
     type: text_default
     label: above
