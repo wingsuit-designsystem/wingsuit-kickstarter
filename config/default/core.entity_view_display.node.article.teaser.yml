@@ -26,7 +26,6 @@ third_party_settings:
         layout_id: pattern_card
         layout_settings:
           label: ''
-          context_mapping: {  }
           pattern:
             field_templates: default
             variant: default
@@ -36,6 +35,7 @@ third_party_settings:
               url:
                 input: '[node:url]'
               show_read_more: 0
+          context_mapping: {  }
         components:
           cfb12461-bf0b-4daa-a867-337301ddd1a3:
             uuid: cfb12461-bf0b-4daa-a867-337301ddd1a3

@@ -28,6 +28,8 @@ content:
     settings:
       responsive_image_style: section_background
       image_link: ''
+      image_loading:
+        attribute: eager
     third_party_settings: {  }
     weight: 0
     region: content

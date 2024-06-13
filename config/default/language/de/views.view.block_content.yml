@@ -1,10 +1,7 @@
-label: 'Bibliothek benutzerdefinierter Blöcke'
-description: 'Benutzerdefinierte Blöcke finden und verwalten.'
 display:
   default:
     display_title: Standard
     display_options:
-      title: 'Bibliothek benutzerdefinierter Blöcke'
       fields:
         info:
           label: Blockbeschreibung
@@ -32,9 +29,6 @@ display:
           exposed_sorts_label: 'Sortieren nach'
           sort_asc_label: Aufsteigend
           sort_desc_label: Absteigend
-      empty:
-        area_text_custom:
-          content: 'Es sind keine benutzerdefinierten Blöcke verfügbar.'
       filters:
         info:
           expose:
@@ -46,4 +40,4 @@ display:
     display_title: Seite
     display_options:
       menu:
-        title: 'Bibliothek benutzerdefinierter Blöcke'
+        title: Blöcke

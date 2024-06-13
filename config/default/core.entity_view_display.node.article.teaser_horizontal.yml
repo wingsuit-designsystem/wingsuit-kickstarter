@@ -27,13 +27,13 @@ third_party_settings:
         layout_id: pattern_card
         layout_settings:
           label: ''
-          context_mapping: {  }
           pattern:
             field_templates: default
             variant: horizontal
             settings:
               url:
                 input: '[node:url]'
+          context_mapping: {  }
         components:
           07af3642-3b60-45a7-a659-8a49202bcd40:
             uuid: 07af3642-3b60-45a7-a659-8a49202bcd40

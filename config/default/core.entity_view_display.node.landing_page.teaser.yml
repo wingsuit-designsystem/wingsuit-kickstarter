@@ -26,7 +26,6 @@ third_party_settings:
         layout_id: pattern_card
         layout_settings:
           label: ''
-          context_mapping: {  }
           pattern:
             field_templates: default
             variant: default
@@ -36,6 +35,7 @@ third_party_settings:
               bg_color: ''
               url:
                 input: '[node:url]'
+          context_mapping: {  }
         components:
           5cb0bdcb-c255-414b-9fa3-acbad3538767:
             uuid: 5cb0bdcb-c255-414b-9fa3-acbad3538767

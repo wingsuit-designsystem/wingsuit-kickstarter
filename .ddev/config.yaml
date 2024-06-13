@@ -1,7 +1,7 @@
 name: wingsuit-kickstarter
-type: drupal9
+type: drupal10
 docroot: docroot
-php_version: "7.4"
+php_version: "8.2"
 webserver_type: nginx-fpm
 router_http_port: "80"
 router_https_port: "443"
@@ -195,6 +195,4 @@ web_environment: []
 # post-import-db:
 #   - exec: drush cr
 #   - exec: drush updb
-hooks:
-  post-start:
-    - exec: "ln -sf /var/www/html/vendor/acquia/blt/bin/blt /usr/bin/blt"
+

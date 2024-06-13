@@ -6,5 +6,6 @@ dependencies:
     - node
 id: node.full_bottom
 label: 'Full bottom'
+description: ''
 targetEntityType: node
 cache: true

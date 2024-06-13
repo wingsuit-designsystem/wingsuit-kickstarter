@@ -14,8 +14,7 @@ dependencies:
     - metatag
     - text
     - user
-  theme:
-    - wingsuit
+    - wingsuit_companion
 third_party_settings:
   layout_builder:
     enabled: true
@@ -25,7 +24,6 @@ third_party_settings:
         layout_id: pattern_section
         layout_settings:
           label: ''
-          context_mapping: {  }
           pattern:
             field_templates: default
             variant: 1_column
@@ -45,6 +43,7 @@ third_party_settings:
               padding_top: default
               padding_bottom: ''
               classes: ''
+          context_mapping: {  }
         components: {  }
         third_party_settings: {  }
   layout_builder_restrictions:

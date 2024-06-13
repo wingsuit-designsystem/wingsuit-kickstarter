@@ -10,8 +10,10 @@ dependencies:
     - media.type.video
   module:
     - block
+    - block_content
     - dropzonejs
     - eu_cookie_compliance
+    - file
     - media
     - media_bulk_upload
     - system
@@ -22,7 +24,10 @@ label: 'Media creator'
 weight: 5
 is_admin: false
 permissions:
+  - 'access block library'
   - 'access media overview'
+  - 'administer block content'
+  - 'administer block types'
   - 'administer blocks'
   - 'administer media_bulk_upload configuration'
   - 'create audio media'
@@ -40,6 +45,7 @@ permissions:
   - 'delete media'
   - 'delete own audio media'
   - 'delete own document media'
+  - 'delete own files'
   - 'delete own image media'
   - 'delete own remote_video media'
   - 'delete own video media'

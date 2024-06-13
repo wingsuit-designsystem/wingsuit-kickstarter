@@ -13,8 +13,7 @@ dependencies:
     - metatag
     - text
     - user
-  theme:
-    - wingsuit
+    - wingsuit_companion
 third_party_settings:
   layout_builder:
     enabled: true
@@ -24,10 +23,10 @@ third_party_settings:
         layout_id: pattern_basic
         layout_settings:
           label: ''
-          context_mapping: {  }
           pattern:
             field_templates: default
             variant: ''
+          context_mapping: {  }
         components:
           a22f3993-4161-45d5-9ecf-d5b37067bf5a:
             uuid: a22f3993-4161-45d5-9ecf-d5b37067bf5a

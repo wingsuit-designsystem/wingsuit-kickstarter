@@ -7,7 +7,6 @@
         "drupal": {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
-
         },
         "assets": {
             "type": "composer",
@@ -19,12 +18,10 @@
         "composer/installers": "^1.9",
         "cweagans/composer-patches": "^1.6.0",
         "oomphinc/composer-installers-extender": "^2.0",
-        "acquia/blt": "*",
         "ext-dom": "*",
-        "drupal/core-composer-scaffold": "^9.4",
-        "drupal/core-project-message": "^9.4",
-        "drupal/core-recommended": "^10.0",
-        "drupal/core": "~10.0",
+        "drupal/core-composer-scaffold": "^10.2",
+        "drupal/core-project-message": "^10.2",
+        "drupal/core-recommended": "^10.2",
         "drupal/config_split": "^1.5",
         "drupal/components": "^3.0",
         "drupal/ui_patterns_layout_builder": "^1.2",
@@ -68,7 +65,7 @@
         "drupal/section_library_reusable": "^1.0@beta",
         "drupal/svg_image_field": "^2.1",
         "drupal/viewsreference": "^2.0",
-        "drupal/wingsuit_companion": "~2.0",
+        "drupal/wingsuit_companion": "~2.2",
         "drupal/imageapi_optimize_webp": "^2.0@beta",
         "drupal/media_bulk_upload": "^3.0",
         "drupal/devel": "^5.1",
@@ -83,11 +80,11 @@
         "drupal/easy_breadcrumb": "^2.0",
         "drupal/oembed_lazyload": "^2.0",
         "drupal/layout_builder_save_and_edit": "^1.0",
-        "drupal/view_modes_display": "^3.0"
+        "drupal/view_modes_display": "^3.0",
+        "drush/drush": "^12.5",
+        "drupal/ui_patterns_views_style": "^1.3"
     },
-    "require-dev": {
-        "acquia/blt-phpcs": "^1.0"
-    },
+
     "config": {
         "process-timeout": 0,
         "allow-plugins": {
@@ -96,10 +93,9 @@
             "cweagans/composer-patches": true,
             "drupal/core-composer-scaffold": true,
             "dealerdirect/phpcodesniffer-composer-installer": true,
-            "acquia/blt": true,
-            "acquia/blt-phpcs": true,
             "drupal/core-project-message": true,
-            "oomphinc/composer-installers-extender": true
+            "oomphinc/composer-installers-extender": true,
+            "acquia/drupal-recommended-settings": true
         }
     },
     "minimum-stability": "dev",
@@ -114,9 +110,15 @@
                 "Not all form elements can't use in vertical_tabs": "https://www.drupal.org/files/issues/2022-03-14/2190333-20.patch",
                 "PHP message: Error: Call to a member function getEntityTypeId() on null (Layout Builder)": "https://www.drupal.org/files/issues/2020-08-05/3049332-inline-35.patch",
                 "Stream wrapper reference in JS library causes error in _locale_parse_js_file()": "https://www.drupal.org/files/issues/2020-05-08/2735717-28.patch",
-                "New non translatable field on translatable content throws error": "https://www.drupal.org/files/issues/2021-02-10/3025039_42.patch",
+                "New non translatable field on translatable content throws error": "https://www.drupal.org/files/issues/2022-09-30/3025039-MR1105-79.patch",
                 "2869592 - Disabled update module shouldn't produce a status report warning": "https://www.drupal.org/files/issues/2020-02-07/2869592-remove-update-warning-34.patch",
                 "Layout builder doesn't support bundle computed field": "https://www.drupal.org/files/issues/2019-02-22/layoutbuilder-bundlecomputedfieldsfix-3034979-3-8.6x.patch"
+            },
+            "drupal/layout_builder_st": {
+                "Error: Call to a member function getConfig() OverridesSectionStorage.php\n": "https://www.drupal.org/files/issues/2024-03-29/layout_builder_st-call_to_a_member_function_getconfig-3420063-26.patch"
+            },
+            "drupal/autosave_form": {
+                "PHP 8.2 deprecation issue with AutosaveFormBuilder": "https://www.drupal.org/files/issues/2024-04-15/fix-php82-deprecation-3355495-19.patch"
             },
             "drupal/section_library": {
                 "#3228163: Add create or update logic.": "https://www.drupal.org/files/issues/2022-12-09/section-library-3228163-10-refactored.patch"

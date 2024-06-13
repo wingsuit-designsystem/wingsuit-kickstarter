@@ -6,5 +6,6 @@ dependencies:
     - node
 id: node.teaser_horizontal
 label: 'Teaser Horizontal'
+description: ''
 targetEntityType: node
 cache: true

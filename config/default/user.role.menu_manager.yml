@@ -4,6 +4,8 @@ status: true
 dependencies:
   module:
     - eu_cookie_compliance
+    - file
+    - help
     - system
 id: menu_manager
 label: 'Menu manager'
@@ -11,6 +13,8 @@ weight: 9
 is_admin: null
 permissions:
   - 'access administration pages'
+  - 'access help pages'
   - 'administer menu'
+  - 'delete own files'
   - 'display eu cookie compliance popup'
   - 'view the administration theme'

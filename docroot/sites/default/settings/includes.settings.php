@@ -38,13 +38,8 @@
  * It is recommended that you use the DRUPAL_ROOT and $site_dir components to
  * provide full paths in a dynamic manner.
  */
-$is_docksal_env = getenv('DOCKSAL');
 
 $additionalSettingsFiles = [];
-
-if ($is_docksal_env) {
-  $additionalSettingsFiles[] = DRUPAL_ROOT . "/sites/default/settings/docksal.settings.php";
-}
 
 foreach ($additionalSettingsFiles as $settingsFile) {
   if (file_exists($settingsFile)) {

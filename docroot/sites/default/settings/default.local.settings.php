@@ -8,42 +8,7 @@
 use Acquia\Blt\Robo\Common\EnvironmentDetector;
 use Drupal\Component\Assertion\Handle;
 
-$is_docksal_env = getenv('DOCKSAL');
-
-if ($is_docksal_env === FALSE) {
-  $db_name = '${drupal.db.database}';
-  $db_username = '${drupal.db.username}';
-  $db_password = '${drupal.db.password}';
-  $db_host = '${drupal.db.host}';
-  $db_port = '${drupal.db.port}';
-
-  /**
-   * Database configuration.
-   */
-  $databases = [
-    'default' =>
-      [
-        'default' =>
-          [
-            'database' => $db_name,
-            'username' => $db_username,
-            'password' => $db_password,
-            'host' => $db_host,
-            'port' => $db_port,
-            'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
-            'driver' => 'mysql',
-            'prefix' => '',
-          ],
-      ],
-  ];
-}
-// Use development service parameters.
-$settings['container_yamls'][] = EnvironmentDetector::getRepoRoot(
-  ) . '/docroot/sites/development.services.yml';
-$settings['container_yamls'][] = EnvironmentDetector::getRepoRoot(
-  ) . '/docroot/sites/blt.development.services.yml';
-
-// Allow access to update.php.
+  // Allow access to update.php.
 $settings['update_free_access'] = TRUE;
 
 /**

@@ -27,10 +27,10 @@ third_party_settings:
         layout_id: pattern_article
         layout_settings:
           label: ''
-          context_mapping: {  }
           pattern:
             field_templates: default
             variant: ''
+          context_mapping: {  }
         components:
           8a076dd2-e66b-44c5-ade2-5127fc808442:
             uuid: 8a076dd2-e66b-44c5-ade2-5127fc808442

@@ -11,7 +11,7 @@ archive: false
 id: newsletter
 title: Newsletter
 description: ''
-category: ''
+categories: {  }
 elements: |-
   container:
     '#type': container
@@ -28,7 +28,6 @@ elements: |-
       '#title': E-mail
       '#title_display': none
       '#placeholder': maxmuster@muster.mail
-      '#multiple__no_items_message': '<p>No items entered. Please add items below.</p>'
     actions:
       '#type': webform_actions
       '#title': 'Submit button(s)'

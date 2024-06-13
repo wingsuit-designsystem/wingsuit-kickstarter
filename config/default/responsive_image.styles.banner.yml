@@ -3,7 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - image.style.responsive_16_9_1000w
+    - image.style.responsive_16_9_1100w
     - image.style.responsive_16_9_1200w
     - image.style.responsive_16_9_1600w
     - image.style.responsive_16_9_2000w
@@ -59,14 +59,14 @@ image_style_mappings:
     multiplier: 1x
   -
     image_mapping_type: image_style
-    image_mapping: responsive_4_3_800w
-    breakpoint_id: wingsuit.small
-    multiplier: 2x
-  -
-    image_mapping_type: image_style
     image_mapping: responsive_3_4_1000w
     breakpoint_id: wingsuit.xsmall
     multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: responsive_4_3_800w
+    breakpoint_id: wingsuit.small
+    multiplier: 2x
   -
     image_mapping_type: image_style
     image_mapping: responsive_3_4_400w

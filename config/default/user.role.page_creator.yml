@@ -17,6 +17,7 @@ dependencies:
     - content_translation
     - contextual
     - eu_cookie_compliance
+    - file
     - filter
     - layout_builder
     - node
@@ -43,6 +44,7 @@ permissions:
   - 'create page content'
   - 'create url aliases'
   - 'delete content translations'
+  - 'delete own files'
   - 'display eu cookie compliance popup'
   - 'edit any page content'
   - 'edit own page content'

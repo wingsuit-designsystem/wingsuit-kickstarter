@@ -24,6 +24,7 @@ module:
   ctools: 0
   datetime: 0
   dblog: 0
+  devel: 0
   diff: 0
   dropzonejs: 0
   dynamic_page_cache: 0
@@ -78,6 +79,7 @@ module:
   page_cache: 0
   path: 0
   path_alias: 0
+  phpass: 0
   redirect: 0
   responsive_image: 0
   schema_metatag: 0
@@ -95,8 +97,8 @@ module:
   text: 0
   token: 0
   toolbar: 0
-  toolbar_anti_flicker: 0
   twig_tweak: 0
+  twig_vardumper: 0
   ui_patterns: 0
   ui_patterns_extends: 0
   ui_patterns_field_formatters: 0

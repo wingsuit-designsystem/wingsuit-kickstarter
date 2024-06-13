@@ -18,6 +18,7 @@ dependencies:
     - content_translation
     - contextual
     - eu_cookie_compliance
+    - file
     - filter
     - layout_builder
     - node
@@ -30,10 +31,13 @@ label: 'Landing page creator'
 weight: 4
 is_admin: false
 permissions:
+  - 'access block library'
   - 'access content overview'
   - 'access contextual links'
   - 'access toolbar'
   - 'add section library templates'
+  - 'administer block content'
+  - 'administer block types'
   - 'administer blocks'
   - 'configure all article node layout overrides'
   - 'configure all landing_page node layout overrides'
@@ -46,6 +50,7 @@ permissions:
   - 'create landing_page content'
   - 'create url aliases'
   - 'delete content translations'
+  - 'delete own files'
   - 'display eu cookie compliance popup'
   - 'edit any landing_page content'
   - 'edit own landing_page content'

@@ -2,8 +2,12 @@ uuid: 02844494-ecdf-499e-a991-def02779fd42
 langcode: en
 status: true
 dependencies:
+  config:
+    - filter.format.webform_default
   module:
     - eu_cookie_compliance
+    - file
+    - filter
     - media
     - shortcut
     - system
@@ -16,5 +20,7 @@ is_admin: false
 permissions:
   - 'access content'
   - 'access shortcuts'
+  - 'delete own files'
   - 'display eu cookie compliance popup'
+  - 'use text format webform_default'
   - 'view media'

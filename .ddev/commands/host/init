@@ -10,13 +10,13 @@ ddev start
 ddev composer install
 
 # Import database
-ddev exec blt setup -n -D wingsuit.starterkit='tailwind' --environment ddev
+ddev import-db
 
 # Clear Cache
 ddev drush cr
 
 # Run config imports
-ddev exec blt drupal:update -n
+
 
 FULLURL=${DDEV_PRIMARY_URL}
 

@@ -59,14 +59,14 @@ image_style_mappings:
     multiplier: 1x
   -
     image_mapping_type: image_style
-    image_mapping: responsive_4_3_800w
-    breakpoint_id: wingsuit.small
-    multiplier: 2x
-  -
-    image_mapping_type: image_style
     image_mapping: responsive_3_4_1000w
     breakpoint_id: wingsuit.xsmall
     multiplier: 1x
+  -
+    image_mapping_type: image_style
+    image_mapping: responsive_4_3_800w
+    breakpoint_id: wingsuit.small
+    multiplier: 2x
   -
     image_mapping_type: image_style
     image_mapping: responsive_3_4_400w
