@@ -43,6 +43,7 @@ services:
       REDIS_PASSWORD: "redis"
     networks:
       - default
+      - traefik
     volumes:
       - codebase-sync:/var/www/html/docroot # Docker-sync
       - files:/mnt/files/ # Docker volume sync
@@ -52,6 +53,7 @@ services:
     image: wodby/nginx:$NGINX_TAG
     networks:
       - default
+      - traefik
     depends_on:
       - php
     environment:
@@ -103,6 +105,7 @@ services:
     image: mailhog/mailhog
     networks:
       - default
+      - traefik
     container_name: "${PROJECT_NAME}_mailhog"
     labels:
       - "traefik.enable=true"
@@ -219,3 +222,7 @@ volumes:
   db:
     name: ${PROJECT_NAME}-db
 
+networks:
+  traefik:
+    external:
+      name: coolify
