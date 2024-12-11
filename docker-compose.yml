@@ -26,11 +26,11 @@ services:
       DB_NAME: drupal
       DB_DRIVER: mysql
       COLUMNS: 80 # Set 80 columns for docker exec -it.
-      DOCROOT_SUBDIR: docroot
+      DOCROOT_SUBDIR: ""
       WODBY_APP_SUBSITE: default
       HTTP_ROOT: /var/www/html/docroot
       APP_ROOT: /var/www/html
-      CONF_DIR: /var/www/conf
+      CONF_DIR: /var/www/html/conf
       DRUPAL_VERSION: "7"
       DRUSH_OPTIONS_URI: ${COOLFIY_URL}
       DRUPAL_SITE: "default"
@@ -41,9 +41,6 @@ services:
       PHP_FPM_GROUP: "wodby"
       WODBY_HOSTS: '["${COOLIFY_URL}"]'
       WODBY_PRIMARY_HOST: "$COOLIFY_URL"
-      REDIS_HOST: "redis"
-      REDIS_PORT: "6379"
-      REDIS_PASSWORD: "redis"
     networks:
       - default
       - coolify
