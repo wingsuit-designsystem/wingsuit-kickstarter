@@ -10,7 +10,9 @@ ddev start
 ddev composer install
 
 # Import database
-ddev import-db
+ddev import-db --file dump/dump.sql
+
+ddev drush updb
 
 # Clear Cache
 ddev drush cr

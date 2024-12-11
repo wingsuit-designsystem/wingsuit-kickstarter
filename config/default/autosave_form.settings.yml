@@ -15,3 +15,4 @@ allowed_content_entity_types:
       landing_page: landing_page
       page: page
       article: article
+allowed_new: true
