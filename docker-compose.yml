@@ -224,5 +224,6 @@ volumes:
 
 networks:
   coolify:
-    external:
-      name: coolify
+    name: coolify
+    driver: bridge
+    external: false
