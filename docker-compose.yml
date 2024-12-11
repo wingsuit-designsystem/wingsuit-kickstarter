@@ -31,7 +31,7 @@ services:
       HTTP_ROOT: /var/www/html/docroot
       APP_ROOT: /var/www/html
       CONF_DIR: /var/www/html/conf
-      DRUPAL_VERSION: "7"
+      DRUPAL_VERSION: "11"
       DRUSH_OPTIONS_URI: ${COOLFIY_URL}
       DRUPAL_SITE: "default"
       DRUPAL_SITE_DIR: "/var/www/html/docroot/sites/default"
