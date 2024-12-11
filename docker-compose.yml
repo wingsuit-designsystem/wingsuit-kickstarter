@@ -14,6 +14,9 @@ services:
   php:
     image: wodby/drupal-php:$PHP_TAG
     container_name: "${PROJECT_NAME}_php"
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
     environment:
       PHP_SENDMAIL_PATH: /usr/sbin/sendmail -t -i -S mailhog:1025
       DB_HOST: db
@@ -44,9 +47,6 @@ services:
     networks:
       - default
       - coolify
-    volumes:
-      - codebase-sync:/var/www/html/docroot # Docker-sync
-      - files:/mnt/files/ # Docker volume sync
 
   nginx:
     container_name: "${PROJECT_NAME}_nginx"
@@ -63,9 +63,6 @@ services:
       NGINX_SERVER_ROOT: /var/www/html/docroot/web
       NGINX_VHOST_PRESET: $NGINX_VHOST_PRESET
       NGINX_DRUPAL_FILE_PROXY_URL: $COOLIFY_URL
-    volumes:
-      - codebase-sync:/var/www/html/docroot # Docker-sync
-      - files:/mnt/files/ # Docker volume sync
     labels:
       - 'traefik.enable=true'
       - 'traefik.http.routers.${PROJECT_NAME}_nginx.entrypoints=https'
@@ -213,12 +210,6 @@ services:
 
 volumes:
   ## Docker-sync
-  codebase-sync:
-    external: true
-    name: ${PROJECT_NAME}-codebase
-  files:
-    external: true
-    name: ${PROJECT_NAME}-files
   db:
     name: ${PROJECT_NAME}-db
 
