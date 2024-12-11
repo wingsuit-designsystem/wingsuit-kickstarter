@@ -23,27 +23,27 @@ services:
       DB_NAME: drupal
       DB_DRIVER: mysql
       COLUMNS: 80 # Set 80 columns for docker exec -it.
-      DOCROOT_SUBDIR: docroot/web
+      DOCROOT_SUBDIR: docroot
       WODBY_APP_SUBSITE: default
-      HTTP_ROOT: /var/www/html/docroot/web
+      HTTP_ROOT: /var/www/html/docroot
       APP_ROOT: /var/www/html
       CONF_DIR: /var/www/conf
       DRUPAL_VERSION: "7"
-      DRUSH_OPTIONS_URI: ${PROJECT_BASE_URL}
+      DRUSH_OPTIONS_URI: ${COOLFIY_URL}
       DRUPAL_SITE: "default"
-      DRUPAL_SITE_DIR: "/var/www/html/docroot/web/sites/default"
+      DRUPAL_SITE_DIR: "/var/www/html/docroot/sites/default"
       DRUPAL_HASH_SALT: "bad-hash-salt-must-be-32-characters_long"
       DRUPAL_FILES_SYNC_SALT: "files-sync-bad-salt"
       PHP_FPM_USER: "wodby"
       PHP_FPM_GROUP: "wodby"
-      WODBY_HOSTS: '["${PROJECT_BASE_URL}"]'
-      WODBY_PRIMARY_HOST: "$PROJECT_BASE_URL"
+      WODBY_HOSTS: '["${COOLIFY_URL}"]'
+      WODBY_PRIMARY_HOST: "$COOLIFY_URL"
       REDIS_HOST: "redis"
       REDIS_PORT: "6379"
       REDIS_PASSWORD: "redis"
     networks:
       - default
-      - traefik
+      - coolify
     volumes:
       - codebase-sync:/var/www/html/docroot # Docker-sync
       - files:/mnt/files/ # Docker volume sync
@@ -53,7 +53,7 @@ services:
     image: wodby/nginx:$NGINX_TAG
     networks:
       - default
-      - traefik
+      - coolify
     depends_on:
       - php
     environment:
@@ -62,16 +62,16 @@ services:
       NGINX_BACKEND_HOST: php
       NGINX_SERVER_ROOT: /var/www/html/docroot/web
       NGINX_VHOST_PRESET: $NGINX_VHOST_PRESET
-      NGINX_DRUPAL_FILE_PROXY_URL: https://$URL
+      NGINX_DRUPAL_FILE_PROXY_URL: $COOLIFY_URL
     volumes:
       - codebase-sync:/var/www/html/docroot # Docker-sync
       - files:/mnt/files/ # Docker volume sync
     labels:
       - 'traefik.enable=true'
       - 'traefik.http.routers.${PROJECT_NAME}_nginx.entrypoints=https'
-      - 'traefik.http.routers.${PROJECT_NAME}_nginx.rule=Host(`${PROJECT_BASE_URL}`)'
+      - 'traefik.http.routers.${PROJECT_NAME}_nginx.rule=Host(`${COOLIFY_URL}`)'
       ## if varnish is enabled disable above label and enable the following
-      # - "traefik.http.routers.${PROJECT_NAME}_nginx.rule=Host(`nginx-${PROJECT_BASE_URL}`)"
+      # - "traefik.http.routers.${PROJECT_NAME}_nginx.rule=Host(`nginx-${COOLIFY_URL}`)"
       - 'traefik.http.routers.${PROJECT_NAME}_nginx.tls=true'
       - 'traefik.http.services.${PROJECT_NAME}_nginx.loadbalancer.server.port=80'
       - 'traefik.http.routers.${PROJECT_NAME}_nginx.service=${PROJECT_NAME}_nginx@docker'
@@ -95,7 +95,7 @@ services:
   #   labels:
   #     - "traefik.enable=true"
   #     - "traefik.http.routers.${PROJECT_NAME}_varnish.entrypoints=https"
-  #     - "traefik.http.routers.${PROJECT_NAME}_varnish.rule=Host(`${PROJECT_BASE_URL}`)"
+  #     - "traefik.http.routers.${PROJECT_NAME}_varnish.rule=Host(`${COOLIFY_URL}`)"
   #     - "traefik.http.routers.${PROJECT_NAME}_varnish.tls=true"
   #     - "traefik.http.services.${PROJECT_NAME}_varnish.loadbalancer.server.port=6081"
   #     - "traefik.http.routers.${PROJECT_NAME}_varnish.service=${PROJECT_NAME}_varnish@docker"
@@ -105,12 +105,12 @@ services:
     image: mailhog/mailhog
     networks:
       - default
-      - traefik
+      - coolify
     container_name: "${PROJECT_NAME}_mailhog"
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.${PROJECT_NAME}_mailhog.entrypoints=https"
-      - "traefik.http.routers.${PROJECT_NAME}_mailhog.rule=Host(`${PROJECT_BASE_URL}`) && PathPrefix(`/mailhog`)"
+      - "traefik.http.routers.${PROJECT_NAME}_mailhog.rule=Host(`${COOLIFY_URL}`) && PathPrefix(`/mailhog`)"
       - "traefik.http.middlewares.${PROJECT_NAME}_mailhog.stripprefix.prefixes=/mailhog"
       #### use these middlewares (rules like our-auth,our-retry,our-ratelimit are defined within traefik's labels)
       - "traefik.http.routers.${PROJECT_NAME}_mailhog.middlewares=our-slash@docker"
@@ -143,7 +143,7 @@ services:
       #   depends_on:
       #     - elasticsearch
       #   environment:
-      #     SERVER_NAME: '${PROJECT_BASE_URL}/kibana'
+      #     SERVER_NAME: '${COOLIFY_URL}/kibana'
       #     KIBANA_DEFAULTAPPID: 'home'
       #     KIBANA_SERVER_NAME: kibana
       #     KIBANA_SERVER_HOST: 0
@@ -164,7 +164,7 @@ services:
   #     - traefik
   #   labels:
   #     - "traefik.http.routers.${PROJECT_NAME}_kibana.entrypoints=https"
-  #     - "traefik.http.routers.${PROJECT_NAME}_kibana.rule=Host(`${PROJECT_BASE_URL}`) && PathPrefix(`/app/kibana`)"
+  #     - "traefik.http.routers.${PROJECT_NAME}_kibana.rule=Host(`${COOLIFY_URL}`) && PathPrefix(`/app/kibana`)"
   #     - "traefik.http.middlewares.${PROJECT_NAME}_kibana.stripprefix.prefixes=/app/kibana"
   #     #### use these middlewares (rules like our-auth,our-retry,our-ratelimit are defined within traefik's labels)
   #     - "traefik.http.routers.${PROJECT_NAME}_kibana.middlewares=our-slash@docker"
@@ -192,7 +192,7 @@ services:
   #   labels:
   #     - 'traefik.backend=${PROJECT_NAME}_portainer'
   #     - 'traefik.port=9000'
-  #     - 'traefik.frontend.rule=Host:portainer.${PROJECT_BASE_URL}'
+  #     - 'traefik.frontend.rule=Host:portainer.${COOLIFY_URL}'
   #   networks:
   #     - default
   #     - traefik
@@ -222,7 +222,3 @@ volumes:
   db:
     name: ${PROJECT_NAME}-db
 
-networks:
-  traefik:
-    external:
-      name: coolify
