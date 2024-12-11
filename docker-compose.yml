@@ -222,3 +222,7 @@ volumes:
   db:
     name: ${PROJECT_NAME}-db
 
+networks:
+  coolify:
+    external:
+      name: coolify
