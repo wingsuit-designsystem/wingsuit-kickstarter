@@ -221,8 +221,3 @@ volumes:
     name: ${PROJECT_NAME}-files
   db:
     name: ${PROJECT_NAME}-db
-
-networks:
-  traefik:
-    external:
-      name: traefik_proxy
