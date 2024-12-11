@@ -62,7 +62,7 @@ services:
       NGINX_BACKEND_HOST: php
       NGINX_SERVER_ROOT: /var/www/html/docroot/web
       NGINX_VHOST_PRESET: $NGINX_VHOST_PRESET
-      NGINX_DRUPAL_FILE_PROXY_URL: https://$PROJECT_STAGE_URL
+      NGINX_DRUPAL_FILE_PROXY_URL: https://$URL
     volumes:
       - codebase-sync:/var/www/html/docroot # Docker-sync
       - files:/mnt/files/ # Docker volume sync
