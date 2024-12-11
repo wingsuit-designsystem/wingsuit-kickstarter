@@ -23,6 +23,7 @@ USER wodby
 WORKDIR /var/www/html
 COPY composer.* /var/www/html/
 COPY docroot /var/www/html
+COPY config /var/www/html
 RUN composer install --no-dev
 COPY --from=themeBuilder /var/www/html/wingsuit/ /var/www/html/docroot/themes/custom/wingsuit/
 WORKDIR /var/www/html
