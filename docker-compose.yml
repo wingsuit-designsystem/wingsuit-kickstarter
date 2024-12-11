@@ -101,24 +101,6 @@ services:
   #     - "traefik.http.routers.${PROJECT_NAME}_varnish.service=${PROJECT_NAME}_varnish@docker"
   #     - "traefik.docker.network=traefik_proxy"
 
-  mailhog:
-    image: mailhog/mailhog
-    networks:
-      - default
-      - traefik
-    container_name: "${PROJECT_NAME}_mailhog"
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.${PROJECT_NAME}_mailhog.entrypoints=https"
-      - "traefik.http.routers.${PROJECT_NAME}_mailhog.rule=Host(`${PROJECT_BASE_URL}`) && PathPrefix(`/mailhog`)"
-      - "traefik.http.middlewares.${PROJECT_NAME}_mailhog.stripprefix.prefixes=/mailhog"
-      #### use these middlewares (rules like our-auth,our-retry,our-ratelimit are defined within traefik's labels)
-      - "traefik.http.routers.${PROJECT_NAME}_mailhog.middlewares=our-slash@docker"
-      - "traefik.http.routers.${PROJECT_NAME}_mailhog.tls=true"
-      - "traefik.http.services.${PROJECT_NAME}_mailhog.loadbalancer.server.port=8025"
-      - "traefik.http.routers.${PROJECT_NAME}_mailhog.service=${PROJECT_NAME}_mailhog@docker"
-      - "traefik.docker.network=traefik_proxy"
-
 
       # elasticsearch:
       #   image: wodby/elasticsearch:$ELASTICSEARCH_TAG
@@ -221,3 +203,4 @@ volumes:
     name: ${PROJECT_NAME}-files
   db:
     name: ${PROJECT_NAME}-db
+
