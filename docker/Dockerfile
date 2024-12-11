@@ -16,10 +16,10 @@ FROM wodby/drupal-php:8.3-4.62.3
 ARG DRUPAL_VER
 
 ENV DRUPAL_VER="${DRUPAL_VER}" \
-    DOCROOT_SUBDIR="web" \
+    DOCROOT_SUBDIR="" \
     APP_NAME="Drupal 11"
 
-USER root
+USER wodby
 WORKDIR /var/www/html
 COPY composer.* /var/www/html/
 COPY docroot /var/www/html
