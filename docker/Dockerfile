@@ -6,7 +6,7 @@ WORKDIR /var/www/html/
 RUN apk update && apk upgrade && \
     apk add --no-cache bash git openssh
 
-RUN ["npx", "@wingsuit-designsystem/cli", "init", "--branch", "2.0.x"]
+RUN ["npx", "@wingsuit-designsystem/cli", "init", "--branch", "2.0.x", "--skip-install"]
 RUN yarn install
 RUN yarn build:drupal
 
