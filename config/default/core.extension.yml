@@ -2,7 +2,6 @@ _core:
   default_config_hash: R4IF-ClDHXxblLcG0L7MgsLvfBIMAvi_skumNFQwkDc
 module:
   admin_toolbar: 0
-  admin_toolbar_links_access_filter: 0
   admin_toolbar_tools: 0
   advanced_text_formatter: 0
   autosave_form: 0
@@ -59,6 +58,7 @@ module:
   layout_discovery: 0
   link: 0
   link_attributes: 0
+  link_attributes_menu_link_content: 0
   linkit: 0
   locale: 0
   media: 0

@@ -41,3 +41,4 @@ segment_display_limit: 0
 truncator_mode: false
 truncator_length: 100
 truncator_dots: true
+segment_display_minimum: 1

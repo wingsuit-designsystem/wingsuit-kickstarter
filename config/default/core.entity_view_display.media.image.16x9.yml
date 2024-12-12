@@ -31,6 +31,8 @@ content:
       image_loading:
         attribute: lazy
       image_style: ''
+      cover: false
+      multiplier: ''
     third_party_settings: {  }
     weight: 0
     region: content
