@@ -3,6 +3,7 @@ ARG BASE_IMAGE_TAG
 
 FROM node:20-alpine AS themebuilder
 WORKDIR /var/www/html/
+USER wodby
 RUN apk update && apk upgrade && \
     apk add --no-cache bash git openssh
 
@@ -19,7 +20,7 @@ ENV DRUPAL_VER="${DRUPAL_VER}" \
     DOCROOT_SUBDIR="" \
     APP_NAME="Drupal 11"
 
-USER root
+USER wodby
 WORKDIR /var/www/html
 COPY composer.* /var/www/html/
 COPY docroot /var/www/html
