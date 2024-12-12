@@ -41,9 +41,6 @@ services:
       PHP_FPM_GROUP: "wodby"
       WODBY_HOSTS: '["${COOLIFY_URL}"]'
       WODBY_PRIMARY_HOST: "$COOLIFY_URL"
-    networks:
-      - default
-      - coolify
 
   nginx:
     container_name: "${PROJECT_NAME}_nginx"
