@@ -19,12 +19,13 @@ ENV DRUPAL_VER="${DRUPAL_VER}" \
     DOCROOT_SUBDIR="" \
     APP_NAME="Drupal 11"
 
-USER wodby
+USER root
 WORKDIR /var/www/html
 COPY composer.* /var/www/html/
 COPY docroot /var/www/html
-COPY config /var/www/html
-COPY conf /var/www/html
 RUN composer install --no-dev
 COPY --from=themeBuilder /var/www/html/wingsuit/ /var/www/html/docroot/themes/custom/wingsuit/
+COPY config/ /var/www/html/config/
+COPY conf/ /var/www/html/conf/
+
 WORKDIR /var/www/html
