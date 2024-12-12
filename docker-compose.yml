@@ -51,9 +51,6 @@ services:
       context: .
       dockerfile: docker/php.dockerfile
       target: nginxbuilder
-    networks:
-      - default
-      - coolify
     depends_on:
       - php
     environment:
@@ -100,9 +97,6 @@ services:
 
   mailhog:
     image: mailhog/mailhog
-    networks:
-      - default
-      - coolify
     container_name: "${PROJECT_NAME}_mailhog"
     labels:
       - "traefik.enable=true"
@@ -212,7 +206,3 @@ volumes:
   ## Docker-sync
   db:
     name: ${PROJECT_NAME}-db
-
-networks:
-  coolify:
-    external: true
