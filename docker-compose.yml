@@ -13,10 +13,10 @@ services:
 
   php:
     container_name: "${PROJECT_NAME}_php"
-    image: &php-image ${PROJECT_NAME:-drupal-base}-php # this image will be reused as `CLI_IMAGE` in subsequent Docker builds
     build:
       context: .
       dockerfile: docker/php.dockerfile
+      target: drupalbuilder
     environment:
       PHP_SENDMAIL_PATH: /usr/sbin/sendmail -t -i -S mailhog:1025
       DB_HOST: db
@@ -49,9 +49,8 @@ services:
     container_name: "${PROJECT_NAME}_nginx"
     build:
       context: .
-      dockerfile: docker/nginx.dockerfile
-      args:
-        PHP_IMAGE: *php-image # Inject the name of the cli image
+      dockerfile: docker/php.dockerfile
+      target: nginxbuilder
     networks:
       - default
       - coolify

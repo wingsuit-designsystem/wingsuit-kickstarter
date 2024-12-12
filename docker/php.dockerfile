@@ -11,7 +11,7 @@ WORKDIR /var/www/html/wingsuit
 RUN yarn install
 RUN yarn build:drupal
 
-FROM wodby/drupal-php:8.3-4.62.3
+FROM wodby/drupal-php:8.3-4.62.3 as drupalbuilder
 
 ARG DRUPAL_VER
 
@@ -29,3 +29,8 @@ COPY config/ /var/www/html/config/
 COPY conf/ /var/www/html/conf/
 
 WORKDIR /var/www/html
+
+
+FROM wodby/nginx:1.27-5.39.11 AS nginxbuilder
+
+COPY --from=drupalbuilder /var/www/html /var/www/html
