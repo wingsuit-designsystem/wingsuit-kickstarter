@@ -11,7 +11,7 @@ WORKDIR /var/www/html/wingsuit
 RUN yarn install
 RUN yarn build:drupal
 
-FROM wodby/drupal-php:8.3-4.62.3 as drupalbuilder
+FROM wodby/drupal-php:8.3-4.62.3 AS drupalbuilder
 
 ARG DRUPAL_VER
 
@@ -22,15 +22,12 @@ ENV DRUPAL_VER="${DRUPAL_VER}" \
 
 WORKDIR /var/www/html
 USER wodby
-COPY composer.* /var/www/html/
-COPY salt.txt /var/www/html/
-COPY docroot/ /var/www/html/docroot/
+COPY --chown=wodby composer.* /var/www/html/
 RUN composer install --no-dev
-COPY --from=themebuilder /var/www/html/wingsuit/ /var/www/html/docroot/themes/custom/wingsuit/
-COPY config/ /var/www/html/config/
-COPY conf/ /var/www/html/conf/
-
+COPY --chown=wodby --from=themebuilder /var/www/html/wingsuit/ /var/www/html/docroot/themes/custom/wingsuit/
+COPY --chown=wodby . /var/www/html
 WORKDIR /var/www/html
+
 
 
 FROM wodby/nginx:1.27-5.39.11 AS nginxbuilder
