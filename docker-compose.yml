@@ -12,11 +12,11 @@ services:
       - db:/var/lib/mysql # Docker volume sync
 
   php:
-    image: wodby/drupal-php:$PHP_TAG
     container_name: "${PROJECT_NAME}_php"
+    image: wingsuit/php
     build:
       context: .
-      dockerfile: docker/Dockerfile
+      dockerfile: docker/php.dockerfile
     environment:
       PHP_SENDMAIL_PATH: /usr/sbin/sendmail -t -i -S mailhog:1025
       DB_HOST: db
@@ -47,7 +47,9 @@ services:
 
   nginx:
     container_name: "${PROJECT_NAME}_nginx"
-    image: wodby/nginx:$NGINX_TAG
+    build:
+      context: .
+      dockerfile: docker/nginx.dockerfile
     networks:
       - default
       - coolify

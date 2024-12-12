@@ -1,7 +1,7 @@
 ARG BASE_IMAGE_TAG
 
 
-FROM node:20-alpine as themeBuilder
+FROM node:20-alpine AS themebuilder
 WORKDIR /var/www/html/
 RUN apk update && apk upgrade && \
     apk add --no-cache bash git openssh
@@ -24,7 +24,7 @@ WORKDIR /var/www/html
 COPY composer.* /var/www/html/
 COPY docroot /var/www/html
 RUN composer install --no-dev
-COPY --from=themeBuilder /var/www/html/wingsuit/ /var/www/html/docroot/themes/custom/wingsuit/
+COPY --from=themebuilder /var/www/html/wingsuit/ /var/www/html/docroot/themes/custom/wingsuit/
 COPY config/ /var/www/html/config/
 COPY conf/ /var/www/html/conf/
 
