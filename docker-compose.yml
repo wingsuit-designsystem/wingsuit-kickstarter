@@ -210,3 +210,7 @@ volumes:
   ## Docker-sync
   db:
     name: ${PROJECT_NAME}-db
+
+networks:
+  default:
+    driver: bridge
