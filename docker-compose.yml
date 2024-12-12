@@ -13,6 +13,7 @@ services:
 
   php:
     container_name: "${PROJECT_NAME}_php"
+  # this image will be reused as `CLI_IMAGE` in subsequent Docker builds
     build:
       context: .
       dockerfile: docker/php.dockerfile
@@ -41,6 +42,8 @@ services:
       PHP_FPM_GROUP: "wodby"
       WODBY_HOSTS: '["${COOLIFY_URL}"]'
       WODBY_PRIMARY_HOST: "$COOLIFY_URL"
+    networks:
+      - default
 
   nginx:
     container_name: "${PROJECT_NAME}_nginx"
@@ -48,6 +51,8 @@ services:
       context: .
       dockerfile: docker/php.dockerfile
       target: nginxbuilder
+    networks:
+      - default
     depends_on:
       - php
     environment:
@@ -94,6 +99,8 @@ services:
 
   mailhog:
     image: mailhog/mailhog
+    networks:
+      - default
     container_name: "${PROJECT_NAME}_mailhog"
     labels:
       - "traefik.enable=true"
