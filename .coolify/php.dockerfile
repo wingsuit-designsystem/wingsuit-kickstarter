@@ -6,10 +6,10 @@ WORKDIR /var/www/html/
 RUN apk update && apk upgrade && \
     apk add --no-cache bash git openssh
 
-#RUN ["npx", "@wingsuit-designsystem/cli", "init", "--branch", "2.0.x", "--skip-install"]
+RUN ["npx", "@wingsuit-designsystem/cli", "init", "--branch", "2.0.x", "--skip-install"]
 WORKDIR /var/www/html/wingsuit/
-#RUN yarn install
-#RUN yarn build:drupal
+RUN yarn install
+RUN yarn build:drupal
 
 FROM wodby/drupal-php:8.3-4.62.3 AS drupalbuilder
 
