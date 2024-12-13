@@ -4,10 +4,10 @@ services:
     container_name: "${PROJECT_NAME}_db"
     stop_grace_period: 30s
     environment:
-      MYSQL_ROOT_PASSWORD: admin123
-      MYSQL_DATABASE: drupal
-      MYSQL_USER: drupal
-      MYSQL_PASSWORD: drupal
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
     volumes:
       - db:/var/lib/mysql # Docker volume sync
 
