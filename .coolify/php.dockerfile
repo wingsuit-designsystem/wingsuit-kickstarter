@@ -26,8 +26,7 @@ COPY --chown=wodby composer.* /var/www/html/
 RUN composer install --no-dev
 COPY --chown=wodby --from=themebuilder /var/www/html/wingsuit/ /var/www/html/docroot/themes/custom/wingsuit/
 COPY --chown=wodby . /var/www/html
-WORKDIR /var/www/html
-
+WORKDIR ${APP_ROOT}
 
 
 FROM wodby/nginx:1.27-5.39.11 AS nginxbuilder
