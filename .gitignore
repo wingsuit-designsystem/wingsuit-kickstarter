@@ -1,5 +1,6 @@
 # Ignore configuration files that may contain sensitive information.
 .andock
+.env
 local.settings.php
 local.drush.yml
 sqllite/*
