@@ -31,5 +31,5 @@ WORKDIR /var/www/html
 
 
 FROM wodby/nginx:1.27-5.39.11 AS nginxbuilder
-
-COPY --from=drupalbuilder /var/www/html /var/www/html
+USER root
+COPY --chown=root --from=drupalbuilder /var/www/html /var/www/html
