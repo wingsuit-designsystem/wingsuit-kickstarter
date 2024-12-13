@@ -18,7 +18,7 @@ services:
       - private_files:/var/www/html/private-files
     # this image will be reused as `CLI_IMAGE` in subsequent Docker builds
     build:
-      context: ..
+      context: .
       dockerfile: .coolify/php.dockerfile
       target: drupalbuilder
     environment:
@@ -51,7 +51,7 @@ services:
   nginx:
     container_name: "${PROJECT_NAME}_nginx"
     build:
-      context: ..
+      context: .
       dockerfile: .coolify/php.dockerfile
       target: nginxbuilder
     volumes:
