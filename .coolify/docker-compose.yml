@@ -19,7 +19,7 @@ services:
     # this image will be reused as `CLI_IMAGE` in subsequent Docker builds
     build:
       context: ..
-      dockerfile: php.dockerfile
+      dockerfile: .coolify/php.dockerfile
       target: drupalbuilder
     environment:
       PHP_SENDMAIL_PATH: /usr/sbin/sendmail -t -i -S mailpit:1025
@@ -52,7 +52,7 @@ services:
     container_name: "${PROJECT_NAME}_nginx"
     build:
       context: ..
-      dockerfile: php.dockerfile
+      dockerfile: .coolify/php.dockerfile
       target: nginxbuilder
     volumes:
       - public_files:/var/www/html/docroot/sites/default/files
