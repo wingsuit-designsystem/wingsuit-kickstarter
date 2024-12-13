@@ -66,6 +66,11 @@ services:
       NGINX_SERVER_ROOT: /var/www/html/docroot
       NGINX_VHOST_PRESET: $NGINX_VHOST_PRESET
       NGINX_DRUPAL_FILE_PROXY_URL: $COOLIFY_URL
+      DB_HOST: ${DB_HOST}
+      DB_USER: ${DB_USERNAME}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      DB_NAME: ${DB_NAME}
 
 
   # varnish:
