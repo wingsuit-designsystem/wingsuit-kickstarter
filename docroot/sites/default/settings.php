@@ -788,3 +788,7 @@ $ddev_settings = dirname(__FILE__) . '/settings.ddev.php';
 if (getenv('IS_DDEV_PROJECT') == 'true' && is_readable($ddev_settings)) {
   require $ddev_settings;
 }
+$coolify_settings = dirname(__FILE__) . '/settings.coolify.php';
+if (getenv('COOLIFY_BRANCH') !== '' && is_readable($ddev_settings)) {
+  require $coolify_settings;
+}
