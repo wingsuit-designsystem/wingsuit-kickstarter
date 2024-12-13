@@ -23,11 +23,11 @@ services:
       target: drupalbuilder
     environment:
       PHP_SENDMAIL_PATH: /usr/sbin/sendmail -t -i -S mailpit:1025
-      DB_HOST: db
-      DB_USER: drupal
-      DB_PASSWORD: drupal
-      DB_ROOT_PASSWORD: admin123
-      DB_NAME: drupal
+      DB_HOST: ${DB_HOST}
+      DB_USER: ${DB_USERNAME}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      DB_NAME: ${DB_NAME}
       DB_DRIVER: mysql
       COLUMNS: 80 # Set 80 columns for docker exec -it.
       DOCROOT_SUBDIR: ""
