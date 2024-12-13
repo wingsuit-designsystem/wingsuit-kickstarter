@@ -14,8 +14,8 @@ $wodby['sync_salt'] = getenv('DRUPAL_FILES_SYNC_SALT');
 $wodby['db']['host'] = getenv('DB_HOST') ?: 'db';
 $wodby['db']['port'] = getenv('DB_PORT') ?: '3306';
 $wodby['db']['name'] = getenv('DB_NAME') ?: 'drupal';
-$wodby['db']['username'] = getenv("DB_USERNAME");
-$wodby['db']['password'] = getenv("DB_PASSWORD");
+$wodby['db']['username'] = "root";
+$wodby['db']['password'] = getenv("DB_ROOT_PASSWORD");
 $wodby['db']['driver'] = "mysql";
 
 $wodby['redis']['host'] = getenv('REDIS_HOST');
