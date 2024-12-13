@@ -1,81 +1,62 @@
 services:
   db:
-    image: 'wodby/mariadb:$MARIADB_TAG'
-    container_name: db-ko0gk8ckkksokocoww0ws80s-134130755517
+    image: wodby/mariadb:$MARIADB_TAG
+    container_name: "${PROJECT_NAME}_db"
     stop_grace_period: 30s
     environment:
       MYSQL_ROOT_PASSWORD: admin123
       MYSQL_DATABASE: drupal
       MYSQL_USER: drupal
       MYSQL_PASSWORD: drupal
-      COOLIFY_BRANCH: '"d11"'
-      COOLIFY_CONTAINER_NAME: '"db-ko0gk8ckkksokocoww0ws80s-134130755517"'
     volumes:
-      - 'ko0gk8ckkksokocoww0ws80s_db:/var/lib/mysql'
-    restart: unless-stopped
-    labels:
-      - coolify.managed=true
-      - coolify.version=4.0.0-beta.376
-      - coolify.applicationId=11492
-      - coolify.type=application
-      - coolify.name=db-ko0gk8ckkksokocoww0ws80s-134130755517
-      - coolify.pullRequestId=0
-    networks:
-      ko0gk8ckkksokocoww0ws80s: null
+      - db:/var/lib/mysql # Docker volume sync
+
   php:
-    container_name: php-ko0gk8ckkksokocoww0ws80s-134130789020
+    container_name: "${PROJECT_NAME}_php"
+    volumes:
+      - public_files:/var/www/html/docroot/sites/default/files
+      - private_files:/var/www/html/private-files
+    # this image will be reused as `CLI_IMAGE` in subsequent Docker builds
     build:
       context: .
       dockerfile: docker/php.dockerfile
       target: drupalbuilder
     environment:
-      PHP_SENDMAIL_PATH: '/usr/sbin/sendmail -t -i -S mailhog:1025'
+      PHP_SENDMAIL_PATH: /usr/sbin/sendmail -t -i -S mailpit:1025
       DB_HOST: db
       DB_USER: drupal
       DB_PASSWORD: drupal
       DB_ROOT_PASSWORD: admin123
       DB_NAME: drupal
       DB_DRIVER: mysql
-      COLUMNS: 80
-      DOCROOT_SUBDIR: null
+      COLUMNS: 80 # Set 80 columns for docker exec -it.
+      DOCROOT_SUBDIR: ""
       WODBY_APP_SUBSITE: default
       HTTP_ROOT: /var/www/html/docroot
       APP_ROOT: /var/www/html
       CONF_DIR: /var/www/html/conf
-      DRUPAL_VERSION: '11'
-      DRUSH_OPTIONS_URI: '${COOLFIY_URL}'
-      DRUPAL_SITE: default
-      DRUPAL_SITE_DIR: /var/www/html/docroot/sites/default
-      DRUPAL_HASH_SALT: bad-hash-salt-must-be-32-characters_long
-      DRUPAL_FILES_SYNC_SALT: files-sync-bad-salt
-      PHP_FPM_USER: wodby
-      PHP_FPM_GROUP: wodby
+      DRUPAL_VERSION: "11"
+      DRUSH_OPTIONS_URI: ${COOLFIY_URL}
+      DRUPAL_SITE: "default"
+      DRUPAL_SITE_DIR: "/var/www/html/docroot/sites/default"
+      DRUPAL_HASH_SALT: "bad-hash-salt-must-be-32-characters_long"
+      DRUPAL_FILES_SYNC_SALT: "files-sync-bad-salt"
+      PHP_FPM_USER: "wodby"
+      PHP_FPM_GROUP: "wodby"
       WODBY_HOSTS: '["${COOLIFY_URL}"]'
-      WODBY_PRIMARY_HOST: $COOLIFY_URL
-      COOLFIY_URL: null
-      COOLIFY_URL: null
-      COOLIFY_BRANCH: '"d11"'
-      COOLIFY_CONTAINER_NAME: '"php-ko0gk8ckkksokocoww0ws80s-134130789020"'
+      WODBY_PRIMARY_HOST: "$COOLIFY_URL"
     networks:
-      default: null
-      ko0gk8ckkksokocoww0ws80s: null
-    restart: unless-stopped
-    labels:
-      - coolify.managed=true
-      - coolify.version=4.0.0-beta.376
-      - coolify.applicationId=11492
-      - coolify.type=application
-      - coolify.name=php-ko0gk8ckkksokocoww0ws80s-134130789020
-      - coolify.pullRequestId=0
+      - default
+
   nginx:
-    container_name: nginx-ko0gk8ckkksokocoww0ws80s-134130817932
+    container_name: "${PROJECT_NAME}_nginx"
     build:
       context: .
       dockerfile: docker/php.dockerfile
       target: nginxbuilder
-    networks:
-      default: null
-      ko0gk8ckkksokocoww0ws80s: null
+    volumes:
+      - public_files:/var/www/html/docroot/sites/default/files
+      - private_files:/var/www/html/private-files
     depends_on:
       - php
     environment:
@@ -85,79 +66,146 @@ services:
       NGINX_SERVER_ROOT: /var/www/html/docroot
       NGINX_VHOST_PRESET: $NGINX_VHOST_PRESET
       NGINX_DRUPAL_FILE_PROXY_URL: $COOLIFY_URL
-      COOLIFY_URL: 'https://tcg00s40ogow8g8osggw48k8.dev2.key-tec.de'
-      COOLIFY_BRANCH: '"d11"'
-      COOLIFY_CONTAINER_NAME: '"nginx-ko0gk8ckkksokocoww0ws80s-134130817932"'
-      COOLIFY_FQDN: tcg00s40ogow8g8osggw48k8.dev2.key-tec.de
-    labels:
-      - traefik.enable=true
-      - 'traefik.http.routers.$${PROJECT_NAME}_nginx.entrypoints=https'
-      - 'traefik.http.routers.$${PROJECT_NAME}_nginx.rule=Host(`$${COOLIFY_URL}`)'
-      - 'traefik.http.routers.$${PROJECT_NAME}_nginx.tls=true'
-      - 'traefik.http.services.$${PROJECT_NAME}_nginx.loadbalancer.server.port=80'
-      - 'traefik.http.routers.$${PROJECT_NAME}_nginx.service=$${PROJECT_NAME}_nginx@docker'
-      - traefik.docker.network=traefik_proxy
-      - coolify.managed=true
-      - coolify.version=4.0.0-beta.376
-      - coolify.applicationId=11492
-      - coolify.type=application
-      - coolify.name=nginx-ko0gk8ckkksokocoww0ws80s-134130817932
-      - coolify.pullRequestId=0
-      - traefik.enable=true
-      - traefik.http.middlewares.gzip.compress=true
-      - traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https
-      - traefik.http.routers.http-0-ko0gk8ckkksokocoww0ws80s-nginx.entryPoints=http
-      - traefik.http.routers.http-0-ko0gk8ckkksokocoww0ws80s-nginx.middlewares=redirect-to-https
-      - 'traefik.http.routers.http-0-ko0gk8ckkksokocoww0ws80s-nginx.rule=Host(`tcg00s40ogow8g8osggw48k8.dev2.key-tec.de`) && PathPrefix(`/`)'
-      - traefik.http.routers.https-0-ko0gk8ckkksokocoww0ws80s-nginx.entryPoints=https
-      - traefik.http.routers.https-0-ko0gk8ckkksokocoww0ws80s-nginx.middlewares=gzip
-      - 'traefik.http.routers.https-0-ko0gk8ckkksokocoww0ws80s-nginx.rule=Host(`tcg00s40ogow8g8osggw48k8.dev2.key-tec.de`) && PathPrefix(`/`)'
-      - traefik.http.routers.https-0-ko0gk8ckkksokocoww0ws80s-nginx.tls.certresolver=letsencrypt
-      - traefik.http.routers.https-0-ko0gk8ckkksokocoww0ws80s-nginx.tls=true
-      - 'caddy_0.encode=zstd gzip'
-      - 'caddy_0.handle_path.0_reverse_proxy={{upstreams}}'
-      - 'caddy_0.handle_path=/*'
-      - caddy_0.header=-Server
-      - 'caddy_0.try_files={path} /index.html /index.php'
-      - 'caddy_0=https://tcg00s40ogow8g8osggw48k8.dev2.key-tec.de'
-      - caddy_ingress_network=ko0gk8ckkksokocoww0ws80s
+
+
+  # varnish:
+  #   image: wodby/varnish:$VARNISH_TAG
+  #   networks:
+  #     - default
+  #     - traefik
+  #   container_name: "${PROJECT_NAME}_varnish"
+  #   depends_on:
+  #     - nginx
+  #   environment:
+  #     VARNISH_SECRET: secret
+  #     VARNISH_BACKEND_HOST: nginx
+  #     VARNISH_BACKEND_PORT: 80
+  #     VARNISH_CONFIG_PRESET: drupal
+  #     VARNISH_PURGE_EXTERNAL_REQUEST_HEADER: X-Real-IP
+  #   labels:
+  #     - "traefik.enable=true"
+  #     - "traefik.http.routers.${PROJECT_NAME}_varnish.entrypoints=https"
+  #     - "traefik.http.routers.${PROJECT_NAME}_varnish.rule=Host(`${COOLIFY_URL}`)"
+  #     - "traefik.http.routers.${PROJECT_NAME}_varnish.tls=true"
+  #     - "traefik.http.services.${PROJECT_NAME}_varnish.loadbalancer.server.port=6081"
+  #     - "traefik.http.routers.${PROJECT_NAME}_varnish.service=${PROJECT_NAME}_varnish@docker"
+  #     - "traefik.docker.network=traefik_proxy"
+
+  mailpit:
+    image: axllent/mailpit
+    container_name: mailpit
     restart: unless-stopped
-  mailhog:
-    image: mailhog/mailhog
-    networks:
-      default: null
-      ko0gk8ckkksokocoww0ws80s: null
-    container_name: mailhog-ko0gk8ckkksokocoww0ws80s-134130835562
-    labels:
-      - traefik.enable=true
-      - 'traefik.http.routers.$${PROJECT_NAME}_mailhog.entrypoints=https'
-      - 'traefik.http.routers.$${PROJECT_NAME}_mailhog.rule=Host(`$${COOLIFY_URL}`) && PathPrefix(`/mailhog`)'
-      - 'traefik.http.middlewares.$${PROJECT_NAME}_mailhog.stripprefix.prefixes=/mailhog'
-      - 'traefik.http.routers.$${PROJECT_NAME}_mailhog.middlewares=our-slash@docker'
-      - 'traefik.http.routers.$${PROJECT_NAME}_mailhog.tls=true'
-      - 'traefik.http.services.$${PROJECT_NAME}_mailhog.loadbalancer.server.port=8025'
-      - 'traefik.http.routers.$${PROJECT_NAME}_mailhog.service=$${PROJECT_NAME}_mailhog@docker'
-      - traefik.docker.network=traefik_proxy
-      - coolify.managed=true
-      - coolify.version=4.0.0-beta.376
-      - coolify.applicationId=11492
-      - coolify.type=application
-      - coolify.name=mailhog-ko0gk8ckkksokocoww0ws80s-134130835562
-      - coolify.pullRequestId=0
-    restart: unless-stopped
+    volumes:
+      - ./data:/data
+    ports:
+      - 8025:8025
+      - 1025:1025
     environment:
-      COOLIFY_BRANCH: '"d11"'
-      COOLIFY_CONTAINER_NAME: '"mailhog-ko0gk8ckkksokocoww0ws80s-134130835562"'
+      MP_MAX_MESSAGES: 5000
+      MP_DATABASE: /data/mailpit.db
+      MP_SMTP_AUTH_ACCEPT_ANY: 1
+      MP_SMTP_AUTH_ALLOW_INSECURE: 1
+
+
+
+
+      # elasticsearch:
+      #   image: wodby/elasticsearch:$ELASTICSEARCH_TAG
+      #   container_name: "${PROJECT_NAME}_elastic"
+      #   networks:
+      #     - default
+      #     - traefik
+      #   environment:
+      #     ES_JAVA_OPTS: "-Xms500m -Xmx500m"
+      #   ulimits:
+      #     memlock:
+      #       soft: -1
+      #       hard: -1
+      #   ports:
+      #     - 9200:9200
+
+      # kibana:
+      #   image: wodby/kibana:$KIBANA_TAG
+      #   container_name: "${PROJECT_NAME}_kibana"
+      #   volumes:
+      #     - ./kibana-config/kibana.yml:/usr/share/kibana/config/kibana.yml
+      #   depends_on:
+      #     - elasticsearch
+      #   environment:
+      #     SERVER_NAME: '${COOLIFY_URL}/kibana'
+      #     KIBANA_DEFAULTAPPID: 'home'
+      #     KIBANA_SERVER_NAME: kibana
+      #     KIBANA_SERVER_HOST: 0
+      #     # KIBANA_ELASTICSEARCH_HOSTS: http://elasticsearch:9200
+      #     ELASTICSEARCH_URL: 'http://elasticsearch:9200'
+      #     XPACK_MONITORING_ENABLED: 'false'
+      #     STATUS_ALLOW_ANONYMOUS: 'true'
+      #     XPACK_REPORTING_ENABLED: 'false'
+      #     XPACK_SECURITY_ENABLED: 'false'
+      #     ELASTICSEARCH_USERNAME: 'elastic'
+      #     ELASTICSEARCH_PASSWORD: 'changeme'
+      #     XPACK_MONITORING_UI_CONTAINER_ELASTICSEARCH_ENABLED: "false"
+      #     #XPACK_GRAPH_ENABLED: 'false'
+      #   ports:
+      #     - 5601:5601
+      #   networks:
+      # - default
+  #     - traefik
+  #   labels:
+  #     - "traefik.http.routers.${PROJECT_NAME}_kibana.entrypoints=https"
+  #     - "traefik.http.routers.${PROJECT_NAME}_kibana.rule=Host(`${COOLIFY_URL}`) && PathPrefix(`/app/kibana`)"
+  #     - "traefik.http.middlewares.${PROJECT_NAME}_kibana.stripprefix.prefixes=/app/kibana"
+  #     #### use these middlewares (rules like our-auth,our-retry,our-ratelimit are defined within traefik's labels)
+  #     - "traefik.http.routers.${PROJECT_NAME}_kibana.middlewares=our-slash@docker"
+  #     - "traefik.http.routers.${PROJECT_NAME}_kibana.tls=true"
+  #     - "traefik.http.services.${PROJECT_NAME}_kibana.loadbalancer.server.port=5601"
+  #     - "traefik.http.routers.${PROJECT_NAME}_kibana.service=${PROJECT_NAME}_kibana@docker"
+  #     - "traefik.docker.network=traefik_proxy"
+
+
+  # node:
+  #   image: wodby/node:$NODE_TAG
+  #   container_name: "${PROJECT_NAME}_node"
+  #   working_dir: /var/www/html/docroot
+  #   expose:
+  #     - "3000"
+  #   volumes:
+  #     - codebase-sync:/var/www/html/docroot # Docker-sync
+  #   command: sh -c 'tail -f /dev/null'
+  # portainer:
+  #   image: portainer/portainer
+  #   container_name: "${PROJECT_NAME}_portainer"
+  #   command: --no-auth -H unix:///var/run/docker.sock
+  #   volumes:
+  #     - /var/run/docker.sock:/var/run/docker.sock
+  #   labels:
+  #     - 'traefik.backend=${PROJECT_NAME}_portainer'
+  #     - 'traefik.port=9000'
+  #     - 'traefik.frontend.rule=Host:portainer.${COOLIFY_URL}'
+  #   networks:
+  #     - default
+  #     - traefik
+
+  # traefik:
+  #   image: traefik
+  #   container_name: "${PROJECT_NAME}_traefik"
+  #   command: -c /dev/null --web --docker --logLevel=INFO
+  #   ports:
+  #     - '8000:80'
+  #     - '8080:8080' # Dashboard
+  #   volumes:
+  #     - /var/run/docker.sock:/var/run/docker.sock
+  #   networks:
+  #     - default
+  #     - traefik
+
+
 volumes:
+  ## Docker-sync
   db:
-    name: '${PROJECT_NAME}-db'
-  ko0gk8ckkksokocoww0ws80s_db:
-    name: ko0gk8ckkksokocoww0ws80s_db
+    name: ${PROJECT_NAME}-db
+  public_files:
+  private_files:
 networks:
   default:
     driver: bridge
-  ko0gk8ckkksokocoww0ws80s:
-    name: ko0gk8ckkksokocoww0ws80s
-    driver: bridge
-configs: {  }
-secrets: {  }
