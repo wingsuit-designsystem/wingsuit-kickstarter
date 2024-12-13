@@ -34,7 +34,7 @@ services:
       WODBY_APP_SUBSITE: default
       HTTP_ROOT: /var/www/html/docroot
       APP_ROOT: /var/www/html
-      CONF_DIR: /var/www/html/conf
+      CONF_DIR: /var/www/conf
       DRUPAL_VERSION: "11"
       DRUSH_OPTIONS_URI: ${PROJECT_URL}
       DRUPAL_SITE: "default"
@@ -43,10 +43,8 @@ services:
       DRUPAL_FILES_SYNC_SALT: "files-sync-bad-salt"
       PHP_FPM_USER: "wodby"
       PHP_FPM_GROUP: "wodby"
-      WODBY_HOSTS: '["${COOLIFY_URL}"]'
-      WODBY_PRIMARY_HOST: "$COOLIFY_URL"
-    networks:
-      - default
+      WODBY_HOSTS: '["${PROJECT_URL}"]'
+      WODBY_PRIMARY_HOST: "${PROJECT_URL}"
 
   nginx:
     container_name: "${PROJECT_NAME}_nginx"
@@ -65,12 +63,7 @@ services:
       NGINX_BACKEND_HOST: php
       NGINX_SERVER_ROOT: /var/www/html/docroot
       NGINX_VHOST_PRESET: $NGINX_VHOST_PRESET
-      NGINX_DRUPAL_FILE_PROXY_URL: $COOLIFY_URL
-      DB_HOST: ${DB_HOST}
-      DB_USER: ${DB_USERNAME}
-      DB_PASSWORD: ${DB_PASSWORD}
-      DB_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
-      DB_NAME: ${DB_NAME}
+
 
 
   # varnish:
@@ -107,9 +100,6 @@ services:
       MP_DATABASE: /data/mailpit.db
       MP_SMTP_AUTH_ACCEPT_ANY: 1
       MP_SMTP_AUTH_ALLOW_INSECURE: 1
-
-
-
 
       # elasticsearch:
       #   image: wodby/elasticsearch:$ELASTICSEARCH_TAG
@@ -208,6 +198,3 @@ volumes:
     name: ${PROJECT_NAME}-db
   public_files:
   private_files:
-networks:
-  default:
-    driver: bridge

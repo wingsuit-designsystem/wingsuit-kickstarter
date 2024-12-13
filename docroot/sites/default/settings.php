@@ -788,7 +788,7 @@ $ddev_settings = dirname(__FILE__) . '/settings.ddev.php';
 if (getenv('IS_DDEV_PROJECT') == 'true' && is_readable($ddev_settings)) {
   require $ddev_settings;
 }
-$wodby_settings = '/var/www/html/conf/wodby.settings.php';
+$wodby_settings = '/var/www/conf/wodby.settings.php';
 
 if (is_readable($wodby_settings)) {
   require $wodby_settings;
