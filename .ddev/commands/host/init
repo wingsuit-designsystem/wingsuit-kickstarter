@@ -9,6 +9,7 @@ ddev start
 # Run composer install
 ddev composer install
 
+ddev exec --dir /var/www/html/ocroot/themes/custom '[ ! -d "wingsuit" ] && npx @wingsuit-designsystem/cli init -k tailwind --skip-install --branch=2.0.x; cd wingsuit && yarn install; yarn build:drupal'
 # Import database
 ddev import-db --file dump/dump.sql
 
