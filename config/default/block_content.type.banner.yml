@@ -6,5 +6,5 @@ _core:
   default_config_hash: fURxUigLuNciKlJa3rVc9EWyybnCiAyWASCEE1pIHFo
 id: banner
 label: Banner
-revision: 1
+revision: true
 description: 'Contains text over a large image.'

@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: avatar
 label: Avatar
-revision: 0
+revision: false
 description: ''

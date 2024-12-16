@@ -20,9 +20,9 @@
         "cweagans/composer-patches": "^1.6.0",
         "oomphinc/composer-installers-extender": "^2.0",
         "ext-dom": "*",
-        "drupal/core-composer-scaffold": "^11.0",
-        "drupal/core-project-message": "^11.0",
-        "drupal/core-recommended": "^11.0",
+        "drupal/core-composer-scaffold": "^10.3",
+        "drupal/core-project-message": "^10.3",
+        "drupal/core-recommended": "^10.3",
         "drupal/config_split": "^2",
         "drupal/components": "^3",
         "drupal/ui_patterns_layout_builder": "^1",
@@ -66,7 +66,7 @@
         "drupal/section_library_reusable": "^1@beta",
         "drupal/svg_image_field": "^2",
         "drupal/viewsreference": "^2",
-        "drupal/wingsuit_companion": "^2.0.x-dev",
+        "drupal/wingsuit_companion": "^2.x-dev",
         "drupal/imageapi_optimize_webp": "^2",
         "drupal/media_bulk_upload": "^3",
         "drupal/devel": "^5",
@@ -84,9 +84,7 @@
         "drupal/view_modes_display": "^3",
         "drush/drush": "^13",
         "drupal/ui_patterns_views_style": "^1",
-        "drupal/layout_builder_browser": "^1.0@dev",
-        "drupal/rdf": "^3.0@beta",
-        "drupal/toolbar_anti_flicker": "^9.3"
+        "drupal/layout_builder_browser": "^1.0@dev"
     },
 
     "config": {
