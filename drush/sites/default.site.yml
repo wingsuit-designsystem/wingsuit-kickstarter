@@ -1,0 +1,2 @@
+local:
+  root: '${env.cwd}/docroot'

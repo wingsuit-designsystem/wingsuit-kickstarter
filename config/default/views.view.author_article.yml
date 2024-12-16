@@ -273,6 +273,7 @@ display:
             offset: false
             offset_label: Offset
           quantity: 6
+          pagination_heading_level: h4
       style:
         type: pattern
         options:

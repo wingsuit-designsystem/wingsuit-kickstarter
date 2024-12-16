@@ -6,5 +6,5 @@ _core:
   default_config_hash: I6aL46pRCPwdj90fj4yKCYY9ms3ZcidnCdAtK_LoEWs
 id: google_map
 label: 'Google Map'
-revision: 0
+revision: false
 description: 'Displays a Google map.'

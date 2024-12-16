@@ -4,55 +4,57 @@ services:
     container_name: "${PROJECT_NAME}_db"
     stop_grace_period: 30s
     environment:
-      MYSQL_ROOT_PASSWORD: admin123
-      MYSQL_DATABASE: drupal
-      MYSQL_USER: drupal
-      MYSQL_PASSWORD: drupal
+      MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
     volumes:
       - db:/var/lib/mysql # Docker volume sync
 
   php:
     container_name: "${PROJECT_NAME}_php"
-  # this image will be reused as `CLI_IMAGE` in subsequent Docker builds
+    volumes:
+      - public_files:/var/www/html/docroot/sites/default/files
+      - private_files:/var/www/html/private-files
+    # this image will be reused as `CLI_IMAGE` in subsequent Docker builds
     build:
       context: .
-      dockerfile: docker/php.dockerfile
+      dockerfile: .coolify/php.dockerfile
       target: drupalbuilder
     environment:
-      PHP_SENDMAIL_PATH: /usr/sbin/sendmail -t -i -S mailhog:1025
-      DB_HOST: db
-      DB_USER: drupal
-      DB_PASSWORD: drupal
-      DB_ROOT_PASSWORD: admin123
-      DB_NAME: drupal
+      PHP_SENDMAIL_PATH: /usr/sbin/sendmail -t -i -S mailpit:1025
+      DB_HOST: ${DB_HOST}
+      DB_USER: ${DB_USERNAME}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+      DB_NAME: ${DB_NAME}
       DB_DRIVER: mysql
       COLUMNS: 80 # Set 80 columns for docker exec -it.
       DOCROOT_SUBDIR: ""
       WODBY_APP_SUBSITE: default
       HTTP_ROOT: /var/www/html/docroot
       APP_ROOT: /var/www/html
-      CONF_DIR: /var/www/html/conf
+      CONF_DIR: /var/www/conf
       DRUPAL_VERSION: "11"
-      DRUSH_OPTIONS_URI: ${COOLFIY_URL}
+      DRUSH_OPTIONS_URI: ${PROJECT_URL}
       DRUPAL_SITE: "default"
       DRUPAL_SITE_DIR: "/var/www/html/docroot/sites/default"
       DRUPAL_HASH_SALT: "bad-hash-salt-must-be-32-characters_long"
       DRUPAL_FILES_SYNC_SALT: "files-sync-bad-salt"
       PHP_FPM_USER: "wodby"
       PHP_FPM_GROUP: "wodby"
-      WODBY_HOSTS: '["${COOLIFY_URL}"]'
-      WODBY_PRIMARY_HOST: "$COOLIFY_URL"
-    networks:
-      - default
+      WODBY_HOSTS: '["${PROJECT_URL}"]'
+      WODBY_PRIMARY_HOST: "${PROJECT_URL}"
 
   nginx:
     container_name: "${PROJECT_NAME}_nginx"
     build:
       context: .
-      dockerfile: docker/php.dockerfile
+      dockerfile: .coolify/php.dockerfile
       target: nginxbuilder
-    networks:
-      - default
+    volumes:
+      - public_files:/var/www/html/docroot/sites/default/files
+      - private_files:/var/www/html/private-files
     depends_on:
       - php
     environment:
@@ -61,17 +63,7 @@ services:
       NGINX_BACKEND_HOST: php
       NGINX_SERVER_ROOT: /var/www/html/docroot
       NGINX_VHOST_PRESET: $NGINX_VHOST_PRESET
-      NGINX_DRUPAL_FILE_PROXY_URL: $COOLIFY_URL
-    labels:
-      - 'traefik.enable=true'
-      - 'traefik.http.routers.${PROJECT_NAME}_nginx.entrypoints=https'
-      - 'traefik.http.routers.${PROJECT_NAME}_nginx.rule=Host(`${COOLIFY_URL}`)'
-      ## if varnish is enabled disable above label and enable the following
-      # - "traefik.http.routers.${PROJECT_NAME}_nginx.rule=Host(`nginx-${COOLIFY_URL}`)"
-      - 'traefik.http.routers.${PROJECT_NAME}_nginx.tls=true'
-      - 'traefik.http.services.${PROJECT_NAME}_nginx.loadbalancer.server.port=80'
-      - 'traefik.http.routers.${PROJECT_NAME}_nginx.service=${PROJECT_NAME}_nginx@docker'
-      - 'traefik.docker.network=traefik_proxy'
+
 
 
   # varnish:
@@ -97,23 +89,17 @@ services:
   #     - "traefik.http.routers.${PROJECT_NAME}_varnish.service=${PROJECT_NAME}_varnish@docker"
   #     - "traefik.docker.network=traefik_proxy"
 
-  mailhog:
-    image: mailhog/mailhog
-    networks:
-      - default
-    container_name: "${PROJECT_NAME}_mailhog"
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.${PROJECT_NAME}_mailhog.entrypoints=https"
-      - "traefik.http.routers.${PROJECT_NAME}_mailhog.rule=Host(`${COOLIFY_URL}`) && PathPrefix(`/mailhog`)"
-      - "traefik.http.middlewares.${PROJECT_NAME}_mailhog.stripprefix.prefixes=/mailhog"
-      #### use these middlewares (rules like our-auth,our-retry,our-ratelimit are defined within traefik's labels)
-      - "traefik.http.routers.${PROJECT_NAME}_mailhog.middlewares=our-slash@docker"
-      - "traefik.http.routers.${PROJECT_NAME}_mailhog.tls=true"
-      - "traefik.http.services.${PROJECT_NAME}_mailhog.loadbalancer.server.port=8025"
-      - "traefik.http.routers.${PROJECT_NAME}_mailhog.service=${PROJECT_NAME}_mailhog@docker"
-      - "traefik.docker.network=traefik_proxy"
-
+  mailpit:
+    image: axllent/mailpit
+    container_name: mailpit
+    restart: unless-stopped
+    volumes:
+      - ./data:/data
+    environment:
+      MP_MAX_MESSAGES: 5000
+      MP_DATABASE: /data/mailpit.db
+      MP_SMTP_AUTH_ACCEPT_ANY: 1
+      MP_SMTP_AUTH_ALLOW_INSECURE: 1
 
       # elasticsearch:
       #   image: wodby/elasticsearch:$ELASTICSEARCH_TAG
@@ -210,7 +196,5 @@ volumes:
   ## Docker-sync
   db:
     name: ${PROJECT_NAME}-db
-
-networks:
-  default:
-    driver: bridge
+  public_files:
+  private_files:

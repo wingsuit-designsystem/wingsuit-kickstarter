@@ -6,5 +6,5 @@ _core:
   default_config_hash: kLIbq_oVpEmxhV9_jH2bP7yxYma7ReUmhnSrsFmM1qo
 id: section_library_reusable
 label: 'Section Library Reusable'
-revision: 0
+revision: false
 description: ''

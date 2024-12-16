@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: reference
 label: 'Manual list'
-revision: 0
+revision: false
 description: ''

@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: card
 label: Card
-revision: 0
+revision: false
 description: ''

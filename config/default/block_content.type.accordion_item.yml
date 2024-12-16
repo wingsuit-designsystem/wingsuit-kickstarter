@@ -4,5 +4,5 @@ status: true
 dependencies: {  }
 id: accordion_item
 label: 'Accordion item'
-revision: 0
+revision: false
 description: ''

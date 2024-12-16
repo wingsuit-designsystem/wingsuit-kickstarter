@@ -1,0 +1,4 @@
+drush:
+  paths:
+    alias-path:
+      - '${env.HOME}/docroot/sites/default'
