@@ -1,6 +1,7 @@
 {
     "name": "wingsuit-designsystem/wingsuit-kickstarter",
     "type": "project",
+    "version": "2.0.0",
     "description": "Starterkit for Wingsuit and Layout Builder.",
     "license": "GPL-2.0-or-later",
     "repositories": {

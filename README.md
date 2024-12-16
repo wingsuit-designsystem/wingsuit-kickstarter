@@ -12,11 +12,11 @@ See the [documentation](https://wingsuit-designsystem.github.io/drupal/ui_patter
 - [PHP `^7.0.0`](https://php.net)
 
 
-## DDEV Quickstart
+## Quickstart
 
-## Docksal Quickstart
+## ddev Quickstart
 ```
-fin rc -T composer create-project wingsuit-designsystem/wingsuit-kickstarter wingsuit-kickstarter --stability dev --no-interaction
+fin rc -T composer create wingsuit-designsystem/wingsuit-kickstarter wingsuit-kickstarter --stability dev --no-interaction
 cd wingsuit-kickstarter && fin init
 ```
 To start storybook inside ddev:
