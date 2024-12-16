@@ -84,7 +84,9 @@
         "drupal/view_modes_display": "^3",
         "drush/drush": "^13",
         "drupal/ui_patterns_views_style": "^1",
-        "drupal/layout_builder_browser": "^1.0@dev"
+        "drupal/layout_builder_browser": "^1.0@dev",
+        "drupal/rdf": "^3.0@beta",
+        "drupal/toolbar_anti_flicker": "^9.3"
     },
 
     "config": {
@@ -191,7 +193,8 @@
                 "drupal/webform_config_ignore",
                 "drupal/colorwidget",
                 "drupal/view_modes_display",
-                "drupal/bg_image_formatter"
+                "drupal/bg_image_formatter",
+                "drupal/toolbar_anti_flicker"
             ]
         }
     }
