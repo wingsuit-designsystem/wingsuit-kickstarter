@@ -105,6 +105,9 @@
     "prefer-stable": true,
     "extra": {
         "patches": {
+            "consolidation/site-process": {
+                "xx": "https://patch-diff.githubusercontent.com/raw/consolidation/site-process/pull/61.patch"
+            },
             "drupal/component_blocks": {
                 "3210538 - Not working with Settings Type url and token ": "https://git.drupalcode.org/project/component_blocks/-/merge_requests/2.patch"
             },
@@ -117,7 +120,8 @@
                 "PHP message: Error: Call to a member function getEntityTypeId() on null (Layout Builder)": "https://www.drupal.org/files/issues/2020-08-05/3049332-inline-35.patch",
                 "Stream wrapper reference in JS library causes error in _locale_parse_js_file()": "https://www.drupal.org/files/issues/2020-05-08/2735717-28.patch",
                 "New non translatable field on translatable content throws error": "https://www.drupal.org/files/issues/2022-09-30/3025039-MR1105-79.patch",
-                "Layout builder doesn't support bundle computed field": "https://www.drupal.org/files/issues/2024-07-02/layoutbuilder-bundlecomputedfieldsfix-3034979-21-11.x.patch"
+                "Layout builder doesn't support bundle computed field": "https://www.drupal.org/files/issues/2024-07-02/layoutbuilder-bundlecomputedfieldsfix-3034979-21-11.x.patch",
+
             },
             "drupal/layout_builder_st": {
                 "Calling ClassResolver::__construct without the $container argument is deprecated in drupal:10.3.0": "https://git.drupalcode.org/project/layout_builder_st/-/merge_requests/16/diffs.patch"

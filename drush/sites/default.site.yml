@@ -1,2 +1,14 @@
 local:
   root: '${env.cwd}/docroot'
+remote:
+  command: ''
+  custom:
+    command: 'ssh docker compose exec'
+
+docker:
+  docker:
+    service: php
+    host: ssh://root@49.12.98.247
+    project: c4o4s4gwgwoo444gko0skwok
+    compose:
+      version: 2

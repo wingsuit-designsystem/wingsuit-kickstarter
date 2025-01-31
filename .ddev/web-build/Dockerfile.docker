@@ -1,0 +1,10 @@
+ENV DOCKERVERSION=27.5.0
+RUN curl -fsSLO https://download.docker.com/linux/static/stable/x86_64/docker-${DOCKERVERSION}.tgz \
+  && tar xzvf docker-${DOCKERVERSION}.tgz --strip 1 \
+                 -C /usr/local/bin docker/docker \
+  && rm docker-${DOCKERVERSION}.tgz
+
+ENV PLUGIN_FOLDER='/usr/local/lib/docker/cli-plugins'
+RUN mkdir -p $PLUGIN_FOLDER \
+     && curl -SL https://github.com/docker/compose/releases/download/v2.32.4/docker-compose-linux-x86_64 -o $PLUGIN_FOLDER/docker-compose \
+     && chmod 777 $PLUGIN_FOLDER/docker-compose
