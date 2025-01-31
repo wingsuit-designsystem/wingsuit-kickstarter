@@ -3,6 +3,7 @@ _core:
 module:
   advanced_text_formatter: 0
   block: 0
+  block_content: 0
   breakpoint: 0
   ckeditor5: 0
   content_moderation: 0
