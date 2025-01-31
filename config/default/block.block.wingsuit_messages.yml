@@ -1,4 +1,4 @@
-uuid: 39233110-7f16-4ac9-ad51-4fa2c21a8774
+uuid: 6f723e26-b347-4e94-9c03-87dadaf1c210
 langcode: en
 status: true
 dependencies:
@@ -7,7 +7,7 @@ dependencies:
   theme:
     - wingsuit
 _core:
-  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+  default_config_hash: aeqlWs7HwctZeZC7ADcbxfqehJzBRfZKmuZz3DsH3_4
 id: wingsuit_messages
 theme: wingsuit
 region: highlighted

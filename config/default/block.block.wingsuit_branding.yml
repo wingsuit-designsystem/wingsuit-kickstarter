@@ -1,0 +1,25 @@
+uuid: 589f3e66-c7c5-452d-9ec3-7dca9b29e140
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - wingsuit
+_core:
+  default_config_hash: sG8t_FghbUscJ-GrnQ8zs_vx5YM4bJCfntrK-J5HcAY
+id: wingsuit_branding
+theme: wingsuit
+region: primary_menu
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

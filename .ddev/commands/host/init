@@ -14,6 +14,8 @@ ddev import-db --file dump/dump.sql
 
 ddev drush updb
 
+ddev drush cim
+
 # Clear Cache
 ddev drush cr
 

@@ -1,64 +1,48 @@
-uuid: bddcc270-5a76-4604-abc2-7422c3fde9b1
+uuid: 1002bd45-f39b-408f-87f6-e066a87f31ad
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.article.body
-    - field.field.node.article.field_media
-    - field.field.node.article.field_meta_tags
-    - field.field.node.article.field_related
-    - field.field.node.article.field_seo_title
     - field.field.node.article.layout_builder__layout
-    - field.field.node.article.layout_builder__translation
     - node.type.article
   module:
     - layout_builder
     - text
+    - ui_patterns
+    - ui_patterns_layouts
     - user
-    - wingsuit_companion
+  theme:
+    - wingsuit
 third_party_settings:
   layout_builder:
     enabled: true
     allow_custom: false
     sections:
       -
-        layout_id: pattern_card
+        layout_id: 'ui_patterns:wingsuit:teaser'
         layout_settings:
           label: ''
-          pattern:
-            field_templates: default
-            variant: default
-            settings:
-              alignment: left
-              bg_color: ''
-              url:
-                input: '[node:url]'
-              show_read_more: 0
-          context_mapping: {  }
+          context_mapping:
+            entity: layout_builder.entity
+          ui_patterns:
+            component_id: null
+            variant_id: null
+            props:
+              attributes:
+                source_id: attributes
+                source:
+                  value: ''
+              headline_size:
+                source_id: select
+                source:
+                  value: h1
+            slots: {  }
         components:
-          cfb12461-bf0b-4daa-a867-337301ddd1a3:
-            uuid: cfb12461-bf0b-4daa-a867-337301ddd1a3
-            region: image
-            configuration:
-              id: 'field_block:node:article:field_media'
-              label: Media
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: entity_reference_entity_view
-                label: hidden
-                settings:
-                  view_mode: 16x9
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
-          cfab0d30-6479-4323-98fa-3da6e779e589:
-            uuid: cfab0d30-6479-4323-98fa-3da6e779e589
-            region: headline
+          e18f9daf-50e9-427a-81a6-c743bd5463b9:
+            uuid: e18f9daf-50e9-427a-81a6-c743bd5463b9
+            region: prefix
             configuration:
               id: 'field_block:node:article:title'
               label: Title
@@ -69,28 +53,9 @@ third_party_settings:
                 view_mode: view_mode
               formatter:
                 type: string
-                label: hidden
+                label: above
                 settings:
                   link_to_entity: false
-                third_party_settings: {  }
-            weight: 0
-            additional: {  }
-          7ca07668-7edd-4081-b789-b004f4a895e0:
-            uuid: 7ca07668-7edd-4081-b789-b004f4a895e0
-            region: text
-            configuration:
-              id: 'field_block:node:article:body'
-              label: Body
-              label_display: '0'
-              provider: layout_builder
-              context_mapping:
-                entity: layout_builder.entity
-                view_mode: view_mode
-              formatter:
-                type: text_trimmed
-                label: hidden
-                settings:
-                  trim_length: 200
                 third_party_settings: {  }
             weight: 0
             additional: {  }
@@ -114,12 +79,4 @@ content:
     weight: 100
     region: content
 hidden:
-  content_moderation_control: true
-  field_media: true
-  field_meta_tags: true
-  field_related: true
-  field_seo_title: true
-  langcode: true
   layout_builder__layout: true
-  layout_builder__translation: true
-  search_api_excerpt: true

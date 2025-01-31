@@ -1,9 +1,8 @@
-uuid: 8e066608-d323-43e6-af4a-f259ad0897d0
+uuid: a1d14e60-eee5-4d43-9fa2-c495ed19bf4c
 langcode: en
 status: true
 dependencies:
   module:
-    - eu_cookie_compliance
     - media
     - system
 _core:
@@ -14,5 +13,4 @@ weight: 0
 is_admin: false
 permissions:
   - 'access content'
-  - 'display eu cookie compliance popup'
   - 'view media'

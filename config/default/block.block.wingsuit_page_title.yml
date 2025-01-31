@@ -1,0 +1,20 @@
+uuid: e5e98f47-f7bd-4ef9-9ade-1dca71d34b81
+langcode: en
+status: true
+dependencies:
+  theme:
+    - wingsuit
+_core:
+  default_config_hash: Oh72CHUkp6cj6dbrXMK2hzCsM05w9cHVoD22rMLQUfk
+id: wingsuit_page_title
+theme: wingsuit
+region: content
+weight: -30
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

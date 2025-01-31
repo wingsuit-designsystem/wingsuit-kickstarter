@@ -1,18 +1,11 @@
-uuid: 94b16581-4235-41b4-8f2e-438fe632a7bb
+uuid: 8eea85c2-b0bd-4d6d-8663-2fc66917004e
 langcode: en
 status: true
-dependencies:
-  module:
-    - menu_ui
-third_party_settings:
-  menu_ui:
-    available_menus:
-      - main
-    parent: 'main:'
+dependencies: {  }
 name: Article
 type: article
 description: null
 help: null
 new_revision: true
 preview_mode: 1
-display_submitted: false
+display_submitted: true

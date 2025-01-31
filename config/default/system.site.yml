@@ -1,14 +1,14 @@
 _core:
-  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
+  default_config_hash: HlN7eAN2N4JIHsYv56V4E7sqC9bS609KwvGFjyD_mgk
 langcode: en
-uuid: b2ad1ed3-4802-4c89-b002-1a9a6a66bba6
-name: 'The Peach Company'
-mail: hello@peach-company.demo
+uuid: aba5a3f7-a526-4a61-8a60-5e723622bab9
+name: 'Drush Site-Install'
+mail: admin@example.com
 slogan: ''
 page:
   403: ''
   404: ''
-  front: /node/1
+  front: /user/login
 admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en

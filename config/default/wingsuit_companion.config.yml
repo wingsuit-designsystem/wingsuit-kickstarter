@@ -1,5 +1,5 @@
 _core:
-  default_config_hash: W2Pplkp4Uyft2ELCTO5Dc40k5cye2s3Z2df7SAZ7ra4
+  default_config_hash: 6XhiVtfK4sJ3SeGplYYE-DUcklYz8pcFwWTt0l1r6GQ
 dist_path: themes/custom/wingsuit/dist/app-drupal
-only_own_layout: true
-auto_fill_link_url: true
+only_own_layout: false
+auto_fill_link_url: false
