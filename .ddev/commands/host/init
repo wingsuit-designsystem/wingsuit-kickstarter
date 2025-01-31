@@ -9,8 +9,12 @@ ddev start
 # Run composer install
 ddev composer install
 
+ddev exec --dir /var/www/html/docroot/themes/custom/wingsuit "yarn install; yarn build:drupal"
+
+ddev drush updb
 # Import database
 ddev import-db --file dump/dump.sql
+
 
 ddev drush updb
 

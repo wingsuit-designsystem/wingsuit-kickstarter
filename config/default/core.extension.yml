@@ -5,6 +5,7 @@ module:
   block: 0
   breakpoint: 0
   ckeditor5: 0
+  content_moderation: 0
   contextual: 0
   dblog: 0
   devel: 0
@@ -42,6 +43,7 @@ module:
   view_modes_display: 0
   wingsuit_companion: 0
   wingsuit_lb: 0
+  workflows: 0
   formdazzle: 10
   minimal: 1000
 theme:
