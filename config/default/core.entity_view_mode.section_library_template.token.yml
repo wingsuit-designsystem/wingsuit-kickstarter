@@ -1,0 +1,11 @@
+uuid: 5bc6eb61-92fb-41a5-9751-4020f6492387
+langcode: en
+status: true
+dependencies:
+  module:
+    - section_library
+id: section_library_template.token
+label: Token
+description: ''
+targetEntityType: section_library_template
+cache: true
