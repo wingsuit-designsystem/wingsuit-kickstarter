@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "89946d49fcb4f9bfe5905eaf7eab5ab8",
+    "content-hash": "3b0d013e3bb14352073d5e74b2206c43",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4522,6 +4522,55 @@
             "homepage": "https://www.drupal.org/project/ui_patterns",
             "support": {
                 "source": "https://git.drupalcode.org/project/ui_patterns"
+            }
+        },
+        {
+            "name": "drupal/ui_patterns_settings",
+            "version": "dev-3.0.x",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/ui_patterns_settings.git",
+                "reference": "09c66f588e4056356268bdfa09826deca7e62430"
+            },
+            "require": {
+                "drupal/core": "^10.3 || ^11",
+                "drupal/token": "*",
+                "drupal/ui_patterns": "^2.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-3.0.x": "3.0.x-dev"
+                },
+                "drupal": {
+                    "version": "3.0.x-dev",
+                    "datestamp": "1738754295",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Dev releases are not covered by Drupal security advisories."
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Christian Wiedemann",
+                    "homepage": "https://www.drupal.org/user/861002",
+                    "email": "christian.wiedemann@key-tec.de"
+                }
+            ],
+            "description": "Extend UI Patterns with settings.",
+            "homepage": "https://www.drupal.org/project/ui_patterns_settings",
+            "keywords": [
+                "drupal",
+                "ui",
+                "web"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/ui_patterns_settings"
             }
         },
         {
@@ -10061,6 +10110,7 @@
         "drupal/schemata": 10,
         "drupal/section_library_reusable": 10,
         "drupal/ui_patterns": 15,
+        "drupal/ui_patterns_settings": 20,
         "drupal/wingsuit_companion": 20
     },
     "prefer-stable": true,

@@ -1,17 +1,27 @@
-<article{{ attributes.addClass('teaser') }}>
+{% set attributes_set = create_attributes_set(
+  {
+    default: {
+      wrapper: 'teaser'
+    }
+  },
+  { variant: variant }
+) %}
+<article{{ attributes_set.wrapper.merge(attributes) }}>
     <{{ headline_size }}>
     Tolle Komponente
   </{{ headline_size }}>
     {% block prefix %}{% endblock %}
     <div class="teaser__meta">
-      {% block meta %}{% endblock %}
+      {{ meta }}
     </div>
     <div class="teaser__top">
-      <div class="teaser__image">{% block image %}{% endblock %}</div>
-      {% block title %}{% endblock %}
+      <div class="teaser__image">
+        {{ image }}
+      </div>
+       {{ title }}
     </div>
   </header>
   <div class="teaser__content">
-    {% block content %}{% endblock %}
+    {{ content }}
   </div>
 </article>

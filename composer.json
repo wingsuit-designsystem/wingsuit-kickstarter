@@ -38,7 +38,7 @@
         "drupal/pathauto": "^1",
         "drupal/linkit": "^7",
         "drupal/twig_vardumper": "^3",
-        "drupal/media_library_form_element": "^2",
+        "drupal/media_library_form_element": "^2.1",
         "drupal/section_library": "^1",
         "drupal/ui_patterns": "^2@alpha",
         "bower-asset/dropzone": "5.7.2",
@@ -58,7 +58,8 @@
         "drupal/layout_builder_browser": "^1.0@dev",
         "drupal/wingsuit_companion": "3.0.x-dev",
         "drupal/coder": "^8.3",
-        "drupal/devel_entity_updates": "^4.2"
+        "drupal/devel_entity_updates": "^4.2",
+        "drupal/ui_patterns_settings": "3.0.x-dev"
     },
 
     "config": {

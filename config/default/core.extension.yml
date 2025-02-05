@@ -25,6 +25,8 @@ module:
   layout_discovery: 0
   media: 0
   media_bulk_upload: 0
+  media_library: 0
+  media_library_form_element: 0
   mysql: 0
   node: 0
   options: 0
@@ -33,12 +35,14 @@ module:
   section_library: 0
   system: 0
   text: 0
+  token: 0
   toolbar: 0
   ui_patterns: 0
   ui_patterns_blocks: 0
   ui_patterns_field_formatters: 0
   ui_patterns_layouts: 0
   ui_patterns_library: 0
+  ui_patterns_settings: 0
   update: 0
   user: 0
   view_modes_display: 0
@@ -46,6 +50,7 @@ module:
   wingsuit_lb: 0
   workflows: 0
   formdazzle: 10
+  views: 10
   minimal: 1000
 theme:
   stark: 0
