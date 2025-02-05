@@ -1,0 +1,61 @@
+# This is so your IDE knows about the syntax for fixes and autocomplete.
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+# The human readable name.
+name: Button
+
+# Status can be: "experimental", "stable", "deprecated", "obsolete".
+status: stable
+
+# Schema for the props. We support www.json-schema.org. Learn more about the
+# syntax there.
+variants:
+  default:
+    title: Default
+    description: "No 'btn' class added."
+  outline:
+    title: "Outline"
+props:
+  type: object
+  properties:
+    tag_name:
+      type: string
+      title: Tag Name
+      enum:
+        - div
+        - a
+        - button
+      enumNames:
+        div: Div
+        a: A
+        button: Button
+    size:
+      type: string
+      title: Size
+      default: medium
+      enum:
+        - small
+        - medium
+        - large
+      enumNames:
+        small: Small
+        medium: Medium
+        large: Large
+    url:
+      title: URL
+      description: "The button URL. Optional."
+      $ref: "ui-patterns://url"
+      example:
+        - 'https://github.com/wingsuit-designsystem/wingsuit'
+
+
+# Slots always hold arbitrary markup. We know that beforehand, so no need for
+# a schema for slots.
+slots:
+  # The key is the name of the slot. In your template you will use
+  # {% block content %}.
+  text:
+    title: Text
+    description: Button Text
+    example:
+      - Button
