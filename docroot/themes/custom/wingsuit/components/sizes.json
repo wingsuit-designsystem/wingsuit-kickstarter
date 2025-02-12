@@ -1,0 +1,17 @@
+{
+  "size": {
+    "type": "string",
+    "title": "Size",
+    "default": "medium",
+    "enum": [
+      "small",
+      "medium",
+      "large"
+    ],
+    "enumNames": {
+      "small": "Small",
+      "medium": "Medium",
+      "large": "Large"
+    }
+  }
+}

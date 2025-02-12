@@ -59,7 +59,8 @@
         "drupal/wingsuit_companion": "3.0.x-dev",
         "drupal/coder": "^8.3",
         "drupal/devel_entity_updates": "^4.2",
-        "drupal/ui_patterns_settings": "3.0.x-dev"
+        "drupal/ui_patterns_settings": "3.0.x-dev",
+        "drupal/system_stream_wrapper": "^2.0"
     },
 
     "config": {

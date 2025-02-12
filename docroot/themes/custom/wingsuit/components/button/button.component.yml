@@ -32,17 +32,7 @@ props:
         a: A
         button: Button
     size:
-      type: string
-      title: Size
-      default: medium
-      enum:
-        - small
-        - medium
-        - large
-      meta:enum:
-        small: Small
-        medium: Medium
-        large: Large
+      $ref: theme://wingsuit/components/sizes.json#size
     url:
       title: URL
       description: "The button URL. Optional."
@@ -73,7 +63,7 @@ props:
       default: false
     extra_classes:
       type: string
-      title: Extra classes
+      title: Extra classesrush
 
 
 # Slots always hold arbitrary markup. We know that beforehand, so no need for
