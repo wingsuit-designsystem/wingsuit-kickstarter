@@ -1,0 +1,89 @@
+{#
+/**
+ * @file
+ * rich-snippet
+ *
+ * See rich-snippet.wingsuit.yaml for documentation.
+ */
+#}
+
+{#
+  Defaults
+#}
+{% set attributes = attributes|default(create_attribute()) %}
+{% set headline_tag = headline_tag|default('h3') %}
+{% set variant = variant|default('default') %}
+
+{#
+  Attributes
+#}
+{% set preheadline_attributes = preheadline_attributes|default(create_attribute()) %}
+{% set headline_attributes = headline_attributes|default(create_attribute()) %}
+{% set text_attributes = text_attributes|default(create_attribute()) %}
+
+{% set attributes_set = create_attributes_set(
+  {
+    default: {
+    preheadline: 'text-teal-500 mb-2 font-display font-bold',
+    headline: 'font-display font-bold'
+  },
+    headline_tag: {
+    h1: 'text-4xl lg:text-6xl',
+    h2: 'text-2xl lg:text-4xl',
+    h3: 'text-3xl',
+    h4: 'text-2xl'
+  },
+    variant: {
+    small: {
+      text: 'flex flex-col flex-1',
+      spacing: 'mb-3'
+    },
+    default: {
+      text: 'flex flex-col flex-1',
+      spacing: 'mb-3'
+    },
+    large: {
+      text: 'lg:text-lg',
+      spacing: 'mb-4'
+    }
+  }
+  },
+  { variant: variant, headline_tag: headline_tag, text: text, spacing: spacing }
+) %}
+
+{#
+  Render Slots
+#}
+{% set preheadline %}{{- preheadline -}}{% endset %}
+{% set headline %}{{- headline -}}{% endset %}
+{% set text %}{{- text -}}{% endset %}
+
+{#
+  Template
+#}
+<div {{ attributes }}>
+  {% if preheadline is not empty %}
+    <div {{ preheadline_attributes.merge(attributes_set.preheadline) }}>
+      {{ preheadline }}
+    </div>
+  {% endif %}
+  {% if headline %}
+    <div {{ headline_attributes
+      .merge(attributes_set.headline)
+      .merge(attributes_set.headline_tag)
+      .merge(attributes_set.spacing)
+      }}>
+      {{ headline }}
+    </div>
+  {% endif %}
+  {% if text %}
+    <p {{ text_attributes.merge(attributes_set.text) }}>
+      {{ text }}
+    </p>
+  {% endif %}
+  {% if action %}
+    <div class="mt-5" {{ action_attributes }}>
+      {{ action }}
+    </div>
+  {% endif %}
+</div>

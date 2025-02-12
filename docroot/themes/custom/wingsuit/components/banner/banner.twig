@@ -1,0 +1,73 @@
+{#
+/**
+ * @file
+ * banner
+ *
+ * See banner.wingsuit.yaml for documentation.
+ */
+#}
+{#
+  Default
+#}
+{% set attributes = attributes|default(create_attribute()) %}
+{% set slogan_position_attributes = slogan_position_attributes|default(create_attribute()) %}
+{% set slogan_position_classes = slogan_position_classes|default(create_attribute()) %}
+{% set position = position|default('center_center') %}slogan_position_classes
+
+{#
+  Attributes
+#}
+{% set slogan_wrapper_attributes = create_attribute().addClass([
+    teaser_dark == true ? 'dark'
+    ]) %}
+{#
+  Classes
+#}
+{#
+  Render Slots
+#}
+{% set headline %}{{- headline -}}{% endset %}
+{% set teaser %}{{- teaser -}}{% endset %}
+
+{% set attributes_set = create_attributes_set(
+  {
+    default: {
+      wrapper: 'overflow-hidden relative',
+      slogan_wrapper: 'absolute bg-opacity-25 top-0 left-0 w-full h-full flex',
+  },
+    position: {
+      top_left: '',
+      top_center: 'text-center justify-center ',
+      top_right: 'text-right justify-end ',
+      center_left: 'items-center',
+      center_center: 'text-center items-center justify-center',
+      center_right: 'text-right items-center justify-end',
+      bottom_left: 'items-end',
+      bottom_center: 'text-center items-end justify-center',
+      bottom_right: 'text-right items-end justify-end',
+  }
+  },
+  {position: position}
+) %}
+
+{% set text %}
+  <div {{ slogan_position_classes.merge(attributes_set.position) }}>
+    {% include 'wingsuit:rich-text' with {
+      text: teaser,
+    } only %}
+  </div>
+{% endset %}
+{#
+  Template
+#}
+<div {{ attributes.merge(attributes_set.wrapper) }}>
+  <div class="[&>img]:w-full">{{ image }}</div>
+  <div {{ slogan_wrapper_attributes.merge(attributes_set.slogan_wrapper) }}>
+    {% if teaser or headline %}
+      <div class="flex max-w-8xl mx-auto w-full">
+        {{ text }}
+      </div>
+{#      {{ pattern('container', {equal_height: true, content: text, classes: 'flex'}) }}#}
+    {% endif %}
+  </div>
+</div>

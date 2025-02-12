@@ -1,0 +1,106 @@
+{#
+  Defaults
+#}
+{% set attributes = attributes|default(create_attribute()) %}
+
+
+{#
+  Attributes
+#}
+{% set attributes_set = create_attributes_set(
+  {
+    default: {
+    wrapper: 'w-full truncate',
+    list: 'flex items-center font-display',
+    list_item: 'flex items-center',
+    last_item: 'hidden lg:block font-semibold text-royal-500 dark:text-white no-underline',
+    list_link: 'hidden lg:block font-normal text-black lg:hover:underline dark:text-sky-blue-300',
+    list_mobile_wrapper: 'block lg:hidden',
+    list_icon: 'hidden lg:block mx-1 lg:mx-3 text-royal-500 dark:text-white',
+    link: {
+      regular: 'text-sm lg:text-base',
+      loop: {
+        last: 'font-normal text-black hover:underline dark:text-sky-blue-300'
+      }
+    }
+  },
+    mobile_icon: {
+      symbol: 'chevron-left',
+      size: 'small'
+  },
+    desktop_icon: {
+      symbol: 'chevron-right'
+  }
+  },
+  {link: link, default: default}
+) %}
+
+{% set attributes = attributes
+  .addClass([
+    darkmode ? 'dark',
+  ]|sort|join(' ')|trim)
+  .merge(attributes_set.wrapper)
+  .setAttribute('role', 'navigation')
+  .setAttribute('aria-labelledby', 'system-breadcrumb')
+%}
+
+{% set link_attributes = create_attribute().merge(attributes_set.link) %}
+{% set list_item_attributes = create_attribute().merge(attributes_set.list_item) %}
+{% set last_item_attributes = create_attribute().merge(attributes_set.last_item) %}
+{% set list_attributes = create_attribute().merge(attributes_set.list) %}
+{% set list_link_attributes = create_attribute().merge(attributes_set.list_link) %}
+{% set list_mobile_wrapper_attributes = create_attribute().merge(attributes_set.list_mobile_wrapper) %}
+{% set list_icon_attributes = create_attribute().merge(attributes_set.list_icon) %}
+
+{#
+  Render Slots
+#}
+{% set mobile_icon %}
+  <div class="mx-2 text-royal-500 dark:text-white">
+{#    {{ pattern('icon', {#}
+{#      icon: pattern_configuration('breadcrumb', variant, 'icon')['symbol'],#}
+{#      size: pattern_configuration('breadcrumb', variant, 'icon')['size']#}
+{#    }, 'spritemap' ) }}#}
+  </div>
+{% endset %}
+{#
+  Template
+#}
+<nav {{ attributes }}>
+  <ol {{ list_attributes }}>
+    {% for item in links %}
+      {% set mobile_text %}
+        <a class="{{ last_item }} {{ link_classes }}" href="{{ item.url }}">
+          {{ item.text }}
+        </a>
+      {% endset %}
+      <li {{ list_item_attributes }}>
+        {% if loop.last and loop.length != 1%}
+          {% set last_item = '' %}
+          <div {{ last_item_attributes }}>
+            {{ item.text }}
+          </div>
+        {% else %}
+          <a {{ list_link_attributes }} href="{{ item.url }}">
+            {{ item.text }}
+          </a>
+        {% endif %}
+        <div {{ list_mobile_wrapper_attributes }}>
+          {% if loop.length == 1 %}
+            {{ mobile_icon }}
+            {{ mobile_text }}
+          {% endif %}
+          {% if loop.revindex0 == 1 %}
+            {{ mobile_icon }}
+            {{ mobile_text }}
+          {% endif %}
+        </div>
+        {% if loop.last == false %}
+          <div {{ list_icon_attributes }}>
+{#            {{ pattern('icon', {icon: 'chevron-right' }, 'spritemap' ) }}#}
+          </div>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ol>
+</nav>

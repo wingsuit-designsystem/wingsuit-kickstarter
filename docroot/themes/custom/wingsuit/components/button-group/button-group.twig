@@ -1,0 +1,30 @@
+{#
+/**
+ * @file
+ * button-group
+ *
+ * See button-group.wingsuit.yaml for documentation.
+ */
+#}
+
+{#
+  Defaults
+#}
+{% set attributes = attributes|default(create_attribute()) %}
+{% set align = align|default('center') %}
+
+{#
+  Attributes
+#}
+{% set attributes = attributes.addClass([
+    pattern_configuration('button_group', null, 'classes'),
+    pattern_configuration('button_group', null, 'align')[align]['direction']
+  ])
+%}
+
+{#
+  Template
+#}
+<div {{ attributes }}>
+  {{ buttons }}
+</div>

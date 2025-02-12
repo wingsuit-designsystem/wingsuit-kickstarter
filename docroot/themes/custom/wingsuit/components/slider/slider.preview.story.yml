@@ -1,0 +1,15 @@
+name: Preview
+slots:
+  items:
+    - type: component
+      component: "wingsuit:banner"
+      story: preview
+    - type: component
+      component: "wingsuit:banner"
+      story: preview
+    - type: component
+      component: "wingsuit:banner"
+      story: preview
+    - type: component
+      component: "wingsuit:banner"
+      story: preview

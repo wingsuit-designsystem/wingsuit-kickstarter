@@ -1,0 +1,119 @@
+# This is so your IDE knows about the syntax for fixes and autocomplete.
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+# The human-readable name.
+name: Container
+
+# Status can be: "experimental", "stable", "deprecated", "obsolete".
+status: stable
+
+# Schema for the props. We support www.json-schema.org. Learn more about the
+# syntax there.
+props:
+  type: object
+  properties:
+    tab_bg:
+      title: Background
+      type: string
+      group_type: details
+      weight: 80
+    bg_image:
+      type: string
+      title: Background image
+      view_mode: background
+      group: tab_bg
+      description: The background image
+    tab_advanced:
+      title: Advanced
+      type: string
+      group_type: details
+      weight: 100
+    classes:
+      type: string
+      title: Additional classes
+      group: tab_advanced
+    bg_color:
+      type: string
+      label: Background color
+      default_value: ""
+      group: tab_bg
+      enum:
+        - transparent
+        - purple_dark
+        - teal
+        - teal_medium
+        - gray_light
+      meta:enum:
+        transparent: transparent
+        purple_dark: Purple/#581C87
+        teal: Teal/#115e59
+        teal_medium: Teal medium/#14b8a6
+        gray_light: Light gray/#d1d5db
+    padding_x:
+      type: string
+      title: Padding left/right
+      group: tab_spacing
+      default_value: default
+      enum:
+        - none
+        - default
+      meta:enum:
+        none: None
+        default: Default
+    padding_top:
+      type: string
+      title: Padding Top
+      group: tab_spacing
+      default_value: auto
+      enum:
+        - auto
+        - none
+        - xxsmall
+        - xsmall
+        - small
+        - default
+      meta:enum:
+        auto: Auto
+        none: None
+        xxsmall: XXSmall
+        xsmall: XSmall
+        small: Small
+        default: Default
+    padding_bottom:
+      type: string
+      title: Padding bottom
+      group: tab_spacing
+      default_value: auto
+      enum:
+        - auto
+        - none
+        - xxsmall
+        - xsmall
+        - small
+        - default
+      meta:enum:
+        auto: Auto
+        none: None
+        xxsmall: XXSmall
+        xsmall: XSmall
+        small: Small
+        default: Default
+    width:
+      type: string
+      title: Width
+      default_value: default
+      enum:
+        - default
+        - full
+        - small
+      meta:enum:
+        default: Default
+        full: Full
+        small: Small
+# Slots always hold arbitrary markup. We know that beforehand, so no need for
+# a schema for slots.
+slots:
+  # The key is the name of the slot. In your template you will use
+  # {% block content %}.
+    content:
+      title: Content

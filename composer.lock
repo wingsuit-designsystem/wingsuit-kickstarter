@@ -4530,7 +4530,7 @@
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/ui_patterns_settings.git",
-                "reference": "09c66f588e4056356268bdfa09826deca7e62430"
+                "reference": "dfbeabefd7a7d81e4d72a219cae3d6b64c65f32b"
             },
             "require": {
                 "drupal/core": "^10.3 || ^11",
@@ -4544,7 +4544,7 @@
                 },
                 "drupal": {
                     "version": "3.0.x-dev",
-                    "datestamp": "1738754295",
+                    "datestamp": "1738767536",
                     "security-coverage": {
                         "status": "not-covered",
                         "message": "Dev releases are not covered by Drupal security advisories."

@@ -1,0 +1,10 @@
+name: Preview
+slots:
+    message: <h2>We use cookies</h2><p>Click here to give your consent so that we can improve and personalize your user experience on our website. You can change your consent at any time.</p>
+    more_info_button: More information
+    save_preferences_button_label: Save
+    agree_button_label: Ok, I agree
+    agree_button_class: class
+    decline_button_label: No, thanks
+    decline_button_class: class
+    cookie_categories: Categories

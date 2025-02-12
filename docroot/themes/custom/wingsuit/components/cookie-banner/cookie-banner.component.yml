@@ -1,0 +1,51 @@
+# This is so your IDE knows about the syntax for fixes and autocomplete.
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+# The human-readable name.
+name: Cookie Banner
+
+# Status can be: "experimental", "stable", "deprecated", "obsolete".
+status: stable
+
+# Schema for the props. We support www.json-schema.org. Learn more about the
+# syntax there.
+variants:
+  default:
+    title: Default
+  categories:
+    title: "Categories"
+props:
+  type: object
+  properties:
+    wrapper:
+      type: boolean
+      title: Wrapper
+      default: 1
+
+
+# Slots always hold arbitrary markup. We know that beforehand, so no need for
+# a schema for slots.
+slots:
+  # The key is the name of the slot. In your template you will use
+  # {% block content %}.
+    message:
+      title: Message
+      description: The main message string of the cookie banner.
+    more_info_button:
+      title: More info button label
+    save_preferences_button_label:
+      title: Save button label
+    agree_button_label:
+      title: Agree button label
+    agree_button_class:
+      title: Additional primary button classes
+    decline_button_label:
+      title: Decline button label
+    decline_button_class:
+      title: Additional decline button classes
+    cookie_categories:
+      title: Categories
+
+libraryOverrides:
+  dependencies:
+    - wingsuit/cookie-banner

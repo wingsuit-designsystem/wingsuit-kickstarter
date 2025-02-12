@@ -1,0 +1,8 @@
+name: Preview
+slots:
+  title_ids: "test text"
+  status_headings: "test text"
+  message_list: "test text"
+  view_more: "test text"
+  dismiss: "test text"
+

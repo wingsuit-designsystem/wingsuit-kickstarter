@@ -1,0 +1,22 @@
+# This is so your IDE knows about the syntax for fixes and autocomplete.
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+# The human readable name.
+name: Label
+
+# Status can be: "experimental", "stable", "deprecated", "obsolete".
+status: stable
+
+variants:
+  default:
+    title: Default
+  checkbox:
+    title: Checkbox
+  checkboxes:
+    title: Checkboxes
+  textfield:
+    title: Textfield
+
+slots:
+    title:
+      title: Title

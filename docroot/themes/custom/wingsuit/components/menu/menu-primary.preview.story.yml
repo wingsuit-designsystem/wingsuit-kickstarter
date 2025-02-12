@@ -1,0 +1,67 @@
+name: Preview
+slots:
+  items:
+    - title: Products
+      url: "#"
+      in_active_trail: true
+      below:
+        - title: Accounts
+          url: '#'
+        - title: Hosting
+          url: '#'
+        - title: Software
+          url: '#'
+          below:
+            105:
+              title: Drivers
+              url: '#'
+            106:
+              title: Apps
+              url: '#'
+            107:
+              title: FlyMeet
+              url: '#'
+            108:
+              title: FlySecurity
+              url: '#'
+        - title: CRM
+          url: '#'
+        - title: Devices
+          url: '#'
+        - title: Support
+          url: '#'
+        - title: Security
+          url: '#'
+    - title: Pricing
+      url: "#"
+    - title: Partner
+      url: "#"
+    - title: Article
+      url: "#"
+      below:
+        - title: Accounts
+          url: '#'
+        - title: Hosting
+          url: '#'
+        - title: Software
+          url: '#'
+          below:
+            - title: Drivers
+              url: '#'
+            - title: Apps
+              url: '#'
+            - title: FlyMeet
+              url: '#'
+            - title: FlySecurity
+              url: '#'
+        - title: CRM
+          url: '#'
+        - title: Devices
+          url: '#'
+        - title: Support
+          url: '#'
+        - title: Security
+          url: '#'
+    - title: Contact
+      url: "#"
+

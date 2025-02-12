@@ -1,0 +1,47 @@
+# This is so your IDE knows about the syntax for fixes and autocomplete.
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+# The human-readable name.
+name: Card
+
+# Status can be: "experimental", "stable", "deprecated", "obsolete".
+status: stable
+
+# Schema for the props. We support www.json-schema.org. Learn more about the
+# syntax there.
+variants:
+  default:
+    title: Default
+  horizontal:
+    title: "Horizontal"
+props:
+  type: object
+  properties:
+    url:
+      title: URL
+      description: "The button URL. Optional."
+      $ref: "ui-patterns://url"
+      example:
+        - 'https://github.com/wingsuit-designsystem/wingsuit'
+
+
+# Slots always hold arbitrary markup. We know that beforehand, so no need for
+# a schema for slots.
+slots:
+  # The key is the name of the slot. In your template you will use
+  # {% block content %}.
+  image:
+    title: Image
+    description: The image tag.
+  preheadline:
+    description: A short headline above the headline.
+    title: Preheadline
+  headline:
+    description: The main headline.
+    title: Headline
+  text:
+    description: A long text under the headline.
+    title:
+  action:
+    description: Action
+    title: Action

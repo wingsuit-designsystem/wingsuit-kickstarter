@@ -1,0 +1,109 @@
+<div>
+  {% for type, messages in message_list %}
+    {#
+    Classes
+    #}
+    {% set classes = [] %}
+
+
+    {% set attributes = {} %}
+    {% set is_message_with_title = status_headings[type] %}
+    {% set attributes = attributes|default(create_attribute()) %}
+    {% set button_view_classes = button_view_classes|default(create_attribute()) %}
+
+    {#
+    Template
+    #}
+    {% set attributes_set = create_attributes_set(
+      {
+        default: {
+        paddings: 'pt-4 px-4 pb-6 pl-12',
+      },
+        status: {
+        bg_color: 'bg-green-50',
+        heading_color: 'text-green-700',
+        message_color: 'text-green-600',
+        icon: 'circle-exclamation',
+        icon_color: 'text-green-400',
+      },
+        error: {
+        bg_color: 'bg-red-50',
+        heading_color: 'text-red-700',
+        message_color: 'text-red-600',
+        icon: 'circle-exclamation',
+        icon_color: 'text-red-400',
+      },
+        success: {
+        bg_color: 'bg-yellow-50',
+        heading_color: 'text-yellow-700',
+        message_color: 'text-yellow-600',
+        icon: 'circle-exclamation',
+        icon_color: 'text-yellow-400',
+      },
+        info: {
+        bg_color: 'bg-blue-50',
+        heading_color: 'text-blue-700',
+        message_color: 'text-blue-600',
+        icon: 'circle-info',
+        icon_color: 'text-blue-400',
+      }
+      },
+      {info: info, success: success, error: error, status: status}
+    ) %}
+    <div role="contentinfo" aria-labelledby="{{ title_ids[type] }}"{{ attributes.merge(attributes_set.paddings).addClass(classes|sort|join(' ')|trim())|without('role', 'aria-label') }} x-data="{visible: true}" :class="{'hidden': !visible}">
+      {% if type == 'error' %}
+      <div role="alert">
+        {% endif %}
+        {# -- Message header -- #}
+        {% if is_message_with_title or is_message_with_icon %}
+          <div class="relative">
+            {% if is_message_with_title %}
+              <h2 id="{{ title_ids[type] }}" class="font-bold">
+                {{ status_headings[type] }}
+              </h2>
+              <div class="absolute -left-8 top-1/2 -translate-y-1/2">
+{#                {{ pattern('icon', {#}
+{#                  icon: pattern_configuration('alert', '', type)['icon'],#}
+{#                  color: pattern_configuration('alert', '', type)['icon_color'],#}
+{#                }, 'spritemap' ) }}#}
+              </div>
+              <div class="absolute right-4 top-1/2 -translate-y-1/2" @click="visible=false">
+{#                {{ pattern('icon', {#}
+{#                  icon: 'close',#}
+{#                  color: pattern_configuration('alert', '', type)['icon_color'],#}
+{#                }, 'spritemap' ) }}#}
+              </div>
+            {% endif %}
+          </div>
+        {% endif %}
+        {# -- Message content -- #}
+        <div>
+          {# -- Message list -- #}
+          {% if messages|length > 1 %}
+            <ul role="list">
+              {% for message in messages %}
+                <li>{{ message }}</li>
+              {% endfor %}
+            </ul>
+            {# -- Single message -- #}
+          {% else %}
+            {{ messages|first }}
+          {% endif %}
+        </div>
+        {% if buttons == '1' %}
+          <div class="flex items-center gap-6 mt-2">
+            <div>
+              <div class="font-bold {{ button_view_classes.merge(attributes_set.message_color) }}">{{ 'view more' }}</div>
+            </div>
+            <div>
+              <div class="font-bold {{ button_view_classes.merge(attributes_set.message_color) }}">{{ 'Dismiss' }}</div>
+            </div>
+          </div>
+        {% endif %}
+        {% if type == 'error' %}
+      </div>
+      {% endif %}
+    </div>
+  {% endfor %}
+</div>
+

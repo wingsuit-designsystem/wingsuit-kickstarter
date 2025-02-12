@@ -1,0 +1,5 @@
+name: Preview
+slots:
+  label: "test text"
+  content: lorem.paragraph
+

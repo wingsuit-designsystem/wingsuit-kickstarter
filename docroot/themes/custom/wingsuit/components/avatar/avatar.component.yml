@@ -1,0 +1,39 @@
+# This is so your IDE knows about the syntax for fixes and autocomplete.
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+# The human readable name.
+name: Avatar
+
+# Status can be: "experimental", "stable", "deprecated", "obsolete".
+status: stable
+
+# Schema for the props. We support www.json-schema.org. Learn more about the
+# syntax there.
+props:
+  type: object
+  properties:
+    url:
+      title: URL
+      description: "The button URL. Optional."
+      $ref: "ui-patterns://url"
+      example:
+        - 'https://github.com/wingsuit-designsystem/wingsuit'
+
+# Slots always hold arbitrary markup. We know that beforehand, so no need for
+# a schema for slots.
+slots:
+  # The key is the name of the slot. In your template you will use
+  # {% block content %}.
+    image:
+      title: Image
+      description: The profile picture.
+    full_name:
+      title: Full name
+      description: The full name of the profile.
+    title:
+      title: Title
+      description: A short description of the avatar.
+    button:
+      title: Button
+      description: Button with link to profile detail page.
+

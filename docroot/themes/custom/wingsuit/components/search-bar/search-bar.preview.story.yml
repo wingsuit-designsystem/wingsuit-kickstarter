@@ -1,0 +1,5 @@
+name: Preview
+slots:
+  input: "test text"
+  submit: "test text"
+

@@ -1,0 +1,46 @@
+name: Preview
+slots:
+  heading_id: A short headline above the headline card.
+  items:
+    - title: 'First Page'
+      href: '#'
+      attributes: 'foo'
+      in_active_trail: false
+    - title: 'Previous Page'
+      href: '#'
+      attributes: 'foo'
+      in_active_trail: false
+    - title: 'Next Page'
+      href: '#'
+      attributes: 'foo'
+      in_active_trail: false
+    - title: 'Last Page'
+      href: '#'
+      attributes: 'foo'
+      in_active_trail: false
+    - title: 'Page 1'
+      href: '#'
+      attributes: 'foo'
+      in_active_trail: true
+    - title: 'Page 2'
+      href: '#'
+      attributes: 'foo'
+    - title: 'Page 3'
+      href: '#'
+      attributes: 'foo'
+    - title: 'Page 4'
+      href: '#'
+      attributes: 'foo'
+    - title: 'Page 5'
+      href: '#'
+      attributes: 'foo'
+    - title: 'Page 6'
+      href: '#'
+      attributes: 'foo'
+    - title: 'Page 7'
+      href: '#'
+      attributes: 'foo'
+    - title: 'Page 8'
+      href: '#'
+      attributes: 'foo'
+

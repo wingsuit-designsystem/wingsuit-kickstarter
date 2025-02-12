@@ -1,18 +1,18 @@
 {#
-  Defaults
+Defaults
 #}
 {% set attributes = attributes|default(create_attribute()) %}
 {% set tag_name = tag_name|default('div') %}
 {% set size = size|default('medium') %}
 {% set disabled = disabled|default(false) %}
 {% set icon_alignment = icon_alignment|default('right') %}
-{% set active_key = disabled == false ? 'active' : 'disabled' %}
+{% set state_key = disabled == false ? 'state_active' : 'state_inactive' %}
 {% set icon = variant == 'icon' ? icon|default('search') : icon %}
 {% set url = disabled ? null : url %}
 {% set variant = variant|default('default') %}
 
 {#
-  Internal logic
+Internal logic
 #}
 {% if url is not empty %}
   {% set attributes = attributes.setAttribute('href', url) %}
@@ -20,37 +20,46 @@
 {% endif %}
 
 {#
-  Attributes
+Attributes
 #}
 {% set attributes = attributes.addClass([
   extra_classes
-  ])
+])
   .setAttribute('traget', target)
   .setAttribute('title', title)
-  .setAttribute('disabled', disabled)
-%}
+  .setAttribute('disabled', disabled) %}
 {#
-  Template
+Template
 #}
 {% set attributes_set = create_attributes_set(
   {
+    default: {
+    wrapper: 'btn rounded-full font-display flex items-center inline-flex font-bold focus:outline-yellow-500 focus:outline focus:outline-3 focus:outline-offset-2 focus:outline-yellow-400',
+
+  },
+    size: {
+    small: 'py-2 px-4 gap-[10PX] text-sm tracking-[0.01em]',
+    medium: 'py-[10px] px-4 gap-[10PX] tracking-[0.01em]',
+    large: 'py-3 px-4 gap-[10PX] text-lg',
+  },
+
+    variant: {
       default: {
-      size: ''
-    },
-      size: {
-      small: 'py-2 px-4 gap-[10PX] text-sm tracking-[0.01em] icon-scale-1',
-      medium: 'py-[10px] px-4 gap-[10PX] icon-scale-1 tracking-[0.01em]',
-      large: 'py-3 px-4 gap-[10PX] text-lg icon-scale-1.25',
+        state_active: "bg-purple-600 dark:bg-white hover:bg-purple-800 dark:hover:bg-purple-100 text-white dark:text-purple-700",
+        state_inactive: "bg-gray-300 text-gray-400"
+      },
+      outline: {
+        state_active: "border-2 border-purple-600 hover:border-purple-800 bg-white text-purple-600 hover:text-purple-800",
+        state_inactive: "border-2 border-gray-400 bg-white text-gray-400"
+      },
+      link: {
+        state_active: "bg-transparent text-purple-600 dark:text-white hover:text-purple-800 dark:hover:text-purple-400",
+        state_inactive: "text-gray-400"
+      }
     }
   },
   { variant: variant, size: size }
 ) %}
-<{{ tag_name }} {{ attributes.merge(attributes_set.size) }}>
-  {% if variant != 'icon' %}
-    {{ text }}
-  {% endif %}
-{#  {% if icon|render is not empty %}#}
-{#    {{ pattern('icon', {icon: icon, scale: icon_scale }, 'spritemap' ) }}#}
-{#    {% include "@" %}#}
-{#  {% endif %}#}
+<{{ tag_name }} {{ attributes.merge(attributes_set.wrapper).merge(attributes_set.size).merge(attributes_set[state_key]) }}>
+{{ text }}
 </{{ tag_name }}>

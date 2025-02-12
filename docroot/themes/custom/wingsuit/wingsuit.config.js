@@ -23,7 +23,7 @@ module.exports = {
         },
 
         {
-          folder: 'internal/',
+          folder: 'images/',
           glob: 'components/**/images/*.{svg,gif,webp,jpg,jpeg}',
           replace: '',
         },

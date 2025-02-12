@@ -1,0 +1,134 @@
+# This is so your IDE knows about the syntax for fixes and autocomplete.
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+# The human readable name.
+name: Header
+
+# Status can be: "experimental", "stable", "deprecated", "obsolete".
+status: stable
+
+# Schema for the props. We support www.json-schema.org. Learn more about the
+# syntax there.
+variants:
+  variants:
+    column_1:
+      title: 1 Column
+    column_2:
+      title: 2 Column
+    column_3:
+      title: 3 Column
+    column_4:
+      title: 4 Column
+    column_5:
+      title: 5 Column
+
+props:
+  type: object
+  properties:
+    equal_height:
+      type: boolean
+      label: Equal height
+      weight: 20
+    gutter:
+      type: string
+      title: Gutter
+      default_value: default
+      description: The gutter between the cells.
+      enum:
+        - none
+        - footer
+        - small
+        - default
+        - large
+      meta:enum:
+        none: None
+        footer: Footer
+        small: Small
+        default: Default
+        large: Large
+    grid_layout:
+      type: string
+      label: Grid Layout
+      description: Use "grid_layout" when you embed grid direct in code.
+    grid_layout_1:
+      type: string
+      label: Layout
+      states:
+        visible:
+          - variant: hidden
+      enum:
+        - equal
+      meta:enum:
+        equal: 'Equal'
+    grid_layout_2:
+      type: string
+      label: Layout
+      states:
+        visible:
+          - variant: column_2
+      enum:
+        - equal
+        - 66x33
+        - 33x66
+        - 75x25
+        - 25x75
+      meta:enum:
+        equal: 'Equal'
+        66x33: '66%/33%'
+        33x66: '33%/66%'
+        75x25: '75%/25%'
+        25x75: '25%/75%'
+    grid_layout_3:
+      type: string
+      label: Layout
+      states:
+        visible:
+          - variant: column_3
+      enum:
+        - equal
+        - 25x50x25'
+        - 25x25x50'
+      meta:enum:
+        equal: 'Equal'
+        25x50x25: '25x50x25'
+        25x25x50: '25x25x50'
+    grid_layout_4:
+      type: string
+      label: Layout
+      states:
+        visible:
+          - variant: column_4
+      enum:
+        - equal
+      meta:enum:
+          equal: 'Equal'
+    grid_layout_5:
+      type: string
+      label: Layout
+      states:
+        visible:
+          - variant: column_5
+      enum:
+        - equal
+      meta:enum:
+        equal: 'Equal'
+    flip_mobile:
+      type: boolean
+      default_value: false
+      label: Flip on mobile
+      description: Flip columns order on mobile. Useful to display right column first (top) on mobile devices.
+    vertical_center:
+      type: boolean
+      default_value: false
+      label: Vertical Center
+    reverse:
+      type: boolean
+      label: Reverse
+      allow_token: true
+      group: tab_cells
+# Slots always hold arbitrary markup. We know that beforehand, so no need for
+# a schema for slots.
+slots:
+  cells:
+    titel: Cells
+    multi_value_type: items

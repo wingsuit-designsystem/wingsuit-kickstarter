@@ -1,0 +1,68 @@
+{#
+Defaults
+#}
+{% set attributes = attributes|default(create_attribute()) %}
+
+{% set attributes_set = create_attributes_set(
+  {
+    default: {
+      classes: 'w-full z-30 top-0 header-offset bg-teal-800',
+      wrapper_classes: 'flex items-center py-3 lg:py-6 justify-between md:flex-row',
+      logo_classes: 'w-[132px] lg:w-[152px] max-w-xs md:max-w-7xl',
+      hamburger_classes: 'flex justify-end items-center flex-1 lg:hidden',
+      menu_classes: 'w-full flex-grow hidden text-black z-20 mt-5 sm:mt-6 bg-white absolute lg:static left-0 top-11 w-full lg:flex lg:justify-end lg:items-end lg:w-auto lg:block lg:mt-0 lg:bg-transparent'
+  },
+    variant: {
+    fixed: {
+      position: 'fixed'
+    },
+    sticky: {
+      position: 'sticky'
+    }
+  }
+  },
+  { variant: variant }
+) %}
+{#
+Attributes
+#}
+{% set attributes = attributes.merge(attributes_set.classes).merge(attributes_set.position) %}
+{% set wrapper_attributes = create_attribute().merge(attributes_set.wrapper_classes) %}
+{% set logo_attributes = create_attribute().merge(attributes_set.logo_classes) %}
+{% set hamburger_attributes = create_attribute().merge(attributes_set.hamburger_classes) %}
+{% set menu_attributes = create_attribute().merge(attributes_set.menu_classes) %}
+
+{#
+TEMPLATE
+#}
+<header {{ attributes }}>
+  {% embed 'wingsuit:container' with {
+    menu: menu,
+    language_select: language_select,
+    padding_bottom: 'none',
+    wrapper_attributes: wrapper_attributes,
+    logo_attributes: logo_attributes,
+    hamburger_attributes: hamburger_attributes,
+    menu_attributes: menu_attributes,
+    search_bar: search_bar
+  } only %}
+    {% block content %}
+      <div {{ wrapper_attributes }}>
+        <div {{ logo_attributes }}>
+          {% include 'wingsuit:logo' %}
+        </div>
+        <div {{ hamburger_attributes }}>
+          {% include 'wingsuit:hamburger' with {
+            size: 'default'
+          } only %}
+        </div>
+        <div class="flex items-center lg:gap-6 flex-row-reverse lg:flex-row">
+          <div {{ menu_attributes }} :class="{'block': menuIsOpen, 'hidden': !menuIsOpen}">
+            {{ menu }}
+          </div>
+          {{ search_bar }}
+        </div>
+      </div>
+    {% endblock %}
+  {% endembed %}
+</header>

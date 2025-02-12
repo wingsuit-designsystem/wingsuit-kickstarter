@@ -1,0 +1,38 @@
+{#
+/**
+ * @file
+ * Theme override for an 'input' #type form element.
+ *
+ * Available variables:
+ * - attributes: A list of HTML attributes for the input element.
+ * - children: Optional additional rendered elements.
+ *
+ * @see template_preprocess_input()
+ */
+#}
+{#
+Defaults
+#}
+{% set attributes = attributes|default(create_attribute()) %}
+
+{#
+Internal logic
+#}
+{% set active_key = attributes.hasAttribute('disabled') == false ? 'active' : 'disabled' %}
+{#
+Attributes
+#}
+{% set attributes_set = create_attributes_set(
+  {
+    default: {
+    wrapper: 'btn font-display flex items-center justify-center inline-flex font-bold focus:outline-yellow-500 focus:outline focus:outline-3 focus:outline-offset-2 focus:outline-yellow-400 py-3 px-4 tracking-[0.01em] rounded-[22px] w-full',
+    active: 'bg-teal-600 dark:bg-white hover:bg-purple-800 dark:bg-white dark:hover:bg-white text-white dark:text-purple-700',
+    disabled: 'bg-gray-300 text-gray-400',
+    }
+  },
+  {}
+) %}
+{#
+Template
+#}
+<input {{ attributes.merge(attributes_set.wrapper).merge(attributes_set[active_key]) }} />{{ children }}

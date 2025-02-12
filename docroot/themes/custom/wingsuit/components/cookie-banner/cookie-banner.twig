@@ -1,0 +1,184 @@
+{#
+/**
+ * @file
+ * This is a template file for a banner prompting user to give their consent for
+ * the website to set cookies.
+ *
+ * When overriding this template it is important to note that jQuery will use
+ * the following classes to assign actions to buttons:
+ *
+ * agree-button      - agree to setting cookies
+ * find-more-button  - link to an information page
+ *
+ * Variables available:
+ * - message:  Contains the text that will be display whithin the banner
+ * - agree_button: Label for the primary/agree button. Note that this is the
+ *   primary button. For backwards compatibility, the name remains agree_button.
+ * - disagree_button: Contains Cookie policy button title. (Note: for historical
+ *   reasons, this label is called "disagree" even though it just displays the
+ *   privacy policy.)
+ * - secondary_button_label: Contains the secondary button label. The current
+ *   action depends on whether you're running the module in Opt-out or Opt-in
+ *   mode.
+ * - primary_button_class: Contains class names for the primary button.
+ * - secondary_button_class: Contains class names for the secondary button
+ *   (if visible).
+ * - cookie_categories: Contains a array with cookie categories that can be
+ *   agreed or disagreed to separately.
+ * - save_preferences_button_label: Label text for a button to save the consent
+ *   preferences.
+ * - fix_first_cookie_category: Boolean value to indicate that the first consent
+ *   category cannot be unchecked.
+ * - privacy_settings_tab_label: Label text for the Privacy settings tab.
+ * - withdraw_button_on_info_popup: Show the withdraw button on this popup.
+ * - method: Chosen consent method.
+ */
+#}
+
+{#
+Defaults
+#}
+{% set attributes = attributes|default(create_attribute().addClass(classes)) %}
+
+
+{#
+CLASSES
+#}
+{% set classes = [
+  cookie_categories ? 'cookie-banner--with-categories',
+] %}
+
+{% set attributes_set = create_attributes_set(
+  {
+    default: {
+      wrapper: 'eu-cookie-compliance-banner eu-cookie-compliance-banner-info cookie-banner absolute w-[90%] h-[80%] md:h-auto overflow-auto max-w-2xl z-50 md:p-7 top-16 md:top-2/4 left-2/4 transform -translate-x-2/4 -translate-y-0 md:-translate-y-2/4 bg-white border-2 border-gray-500',
+      sliding_popup: 'sliding-popup-bottom fixed inset-y-0	bg-gray-800 bg-opacity-20 w-full h-auto text-left left-1/2 p-0 m-0 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-top',
+      popup_content: 'popup-content info cookie-banner__content p-7',
+      cookiebanner_message: 'cookie-banner__message mb-8 text-left',
+      more_button: 'find-more-button eu-cookie-compliance-more-button cookie-banner__more-button',
+      cookiebanner_categories_wrapper: 'cookie-banner__categories',
+      cookiebanner_categories: 'cookie-banner__category js-form-type-checkbox block lg:inline-block pr-10 text-lg font-medium',
+      category_description: 'eu-cookie-compliance-category-description',
+      popup_buttons_wrapper: 'flex flex-col md:flex-row flex-nowrap justify-center md:justify-start gap-y-6 gap-x-0 md:gap-y-0 md:gap-x-6',
+      button_preferences: 'flex-col button__preferences cursor-pointer',
+      button_agree: 'flex-col button__agree cursor-pointer',
+      button_decline: 'flex-col px-3.75',
+  }
+  },
+  {}
+) %}
+
+{#
+Attributes
+#}
+{% set attributes = attributes.merge(attributes_set.wrapper) %}
+{% set sliding_popup_attributes = create_attribute().merge(attributes_set.sliding_popup) %}
+{% set popup_content_attributes = create_attribute().merge(attributes_set.popup_content) %}
+{% set cookiebanner_message_attributes = create_attribute().merge(attributes_set.cookiebanner_message) %}
+{% set more_button_attributes = create_attribute().merge(attributes_set.more_button) %}
+{% set cookiebanner_categories_wrapper_attributes = create_attribute().merge(attributes_set.cookiebanner_categories_wrapper) %}
+{% set cookiebanner_categories_attributes = create_attribute().merge(attributes_set.cookiebanner_categories) %}
+{% set category_description_attributes = create_attribute().merge(attributes_set.category_description) %}
+{% set popup_buttons_wrapper_attributes = create_attribute().merge(attributes_set.popup_buttons_wrapper) %}
+{% set button_preferences_attributes= create_attribute().merge(attributes_set.button_preferences) %}
+{% set button_agree_attributes = create_attribute().merge(attributes_set.button_agree) %}
+{% set button_decline_attributes = create_attribute().merge(attributes_set.button_decline) %}
+
+{# TEMPLATE #}
+{% if privacy_settings_tab_label %}
+  <button type="button" class="eu-cookie-withdraw-tab">{{ privacy_settings_tab_label }}</button>
+{% endif %}
+{% if wrapper|default(0) %}
+  {# wingsuit wrapper #}
+<div id="sliding-popup" {{ sliding_popup_attributes.addClass('sliding-popup') }}>
+  {% endif %}
+
+  <div role="alertdialog" aria-labelledby="popup-text" {{ attributes }}>
+    <div {{ popup_content_attributes }}>
+      <div id="popup-text" {{ cookiebanner_message_attributes }}>
+        {% include 'wingsuit:rich-text' with {
+          text: message,
+        } only %}
+        {% if more_info_button %}
+          <button type="button" {{ more_button_attributes }}>
+            {% include 'wingsuit:rich-text' with {
+              text: more_info_button,
+            } only %}
+          </button>
+        {% endif %}
+      </div>
+
+      {% if cookie_categories %}
+        <div id="eu-cookie-compliance-categories" {{ cookiebanner_categories_wrapper_attributes }}>
+          {% for key, category in cookie_categories %}
+            <div {{ cookiebanner_categories_attributes }}>
+              {% set input_attributes = create_attribute().setAttribute("type", "checkbox").setAttribute("id", "cookie-category-"~key).setAttribute("cookie-categories", key) %}
+              {% if category.checkbox_default_state in ["checked", "required"] %}
+                {% set input_attributes = input_attributes.setAttribute("checked", "checked") %}
+              {% endif %}
+              {% if category.checkbox_default_state == 'required' %}
+                {% set input_attributes = input_attributes.setAttribute("disabled", "disabled") %}
+              {% endif %}
+{#              {% set checkbox %}#}
+{#                {% include 'wingsuit:form-checkbox' with {#}
+{#                  attributes: input_attributes,#}
+{#                } only %}#}
+{#              {% endset %}#}
+{#              {% include 'wingsuit:element' with {#}
+{#                label: category.label,#}
+{#                label_display: "after",#}
+{#                children: checkbox,#}
+{#                attributes: create_attribute().setAttribute("for", "cookie-category-" ~ key).addClass('cursor-pointer').addClass('[&>div>input]:mb-1.5')},#}
+{#                'checkbox',#}
+{#              } only %}#}
+              {% if category.description %}
+                <div {{ category_description_attributes }} >{{ category.description }}</div>
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+      <div id="popup-buttons" class="mt-6">
+        <div {{ popup_buttons_wrapper_attributes }}>
+          <div {{ button_preferences_attributes }}>
+            {% if save_preferences_button_label %}
+              {% include 'wingsuit:button' with {
+                tag_name: 'button',
+                extra_classes: "eu-cookie-compliance-save-preferences-button",
+                text: save_preferences_button_label,
+                attributes: create_attribute({"type": "button"}),
+                variant: "default"
+              } only %}
+            {% endif %}
+          </div>
+          {% if agree_button %}
+            <div {{ button_agree_attributes }}>
+              {% include 'wingsuit:button' with {
+                text: agree_button,
+                attributes: create_attribute({"type": "button"}),
+                tag_name: 'button',
+                extra_classes: primary_button_class|replace({"eu-cookie-compliance-default-button": ""}),
+                variant: "default"
+              } only %}
+            </div>
+          {% endif %}
+          {% if decline_button_label %}
+            <div {{ button_decline_attributes }}>
+              {% include 'wingsuit:button' with {
+                text: decline_button_label,
+                expanded: 1,
+                size: "medium",
+                attributes: create_attribute({"type": "button"}),
+                tag_name: 'button',
+                extra_classes: decline_button_class,
+                variant: "default"
+              } only %}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% if wrapper|default(0) %}
+</div>
+{% endif %}

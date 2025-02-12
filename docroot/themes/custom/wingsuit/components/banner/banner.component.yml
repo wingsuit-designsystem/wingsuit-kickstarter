@@ -1,0 +1,51 @@
+# This is so your IDE knows about the syntax for fixes and autocomplete.
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+# The human-readable name.
+name: Banner
+
+# Status can be: "experimental", "stable", "deprecated", "obsolete".
+status: stable
+
+# Schema for the props. We support www.json-schema.org. Learn more about the
+# syntax there.
+props:
+  type: object
+  properties:
+    teaser_dark:
+      type: boolean
+      title: Display teaser in dark mode.
+      default_value: true
+    position:
+      type: string
+      allow_token: true
+      allow_expose: true
+      enum:
+        - top_left
+        - top_center
+        - top_right
+        - center_left
+        - center_center
+        - center_right
+        - bottom
+      meta:enum:
+        top_left: Top left
+        top_center: Top center
+        top_right: Top right
+        center_left:  Center left
+        center_center: Center
+        center_right: Center right
+        bottom_left: Bottom left
+        bottom_center: Bottom center
+        bottom_right: Bottom right
+
+
+# Slots always hold arbitrary markup. We know that beforehand, so no need for
+# a schema for slots.
+slots:
+  # The key is the name of the slot. In your template you will use
+  # {% block content %}.
+    image:
+      title: Image
+    teaser:
+      title: Teaser

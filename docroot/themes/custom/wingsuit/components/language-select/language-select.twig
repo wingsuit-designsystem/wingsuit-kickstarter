@@ -1,0 +1,32 @@
+<div class="relative text-gray-600">
+  <div class="flex items-center cursor-pointer" @click="languageSwitcherOpen = !languageSwitcherOpen">
+    <div class="mr-2 uppercase">{{ language }}</div>
+    <div class="mr-2.5 w-6 h-6">
+      <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M21 12C21 16.9706 16.9706 21 12 21M21 12C21 7.02944 16.9706 3 12 3M21 12C21 13.6569 16.9706 15 12 15C7.02944 15 3 13.6569 3 12M21 12C21 10.3431 16.9706 9 12 9C7.02944 9 3 10.3431 3 12M12 21C7.02944 21 3 16.9706 3 12M12 21C10.3431 21 9 16.9706 9 12C9 7.02944 10.3431 3 12 3M12 21C13.6569 21 15 16.9706 15 12C15 7.02944 13.6569 3 12 3M3 12C3 7.02944 7.02944 3 12 3" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+    <div :class="{'rotate-90 transition duration-75 ease-in-out': languageSwitcherOpen, '': !languageSwitcherOpen}">
+      <svg width="19" height="11" viewBox="0 0 19 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M8.60156 10.3984C9.07031 10.9062 9.89062 10.9062 10.3594 10.3984L17.8594 2.89844C18.3672 2.42969 18.3672 1.60938 17.8594 1.14062C17.3906 0.632812 16.5703 0.632812 16.1016 1.14062L9.5 7.74219L2.85938 1.14062C2.39062 0.632812 1.57031 0.632812 1.10156 1.14062C0.59375 1.60938 0.59375 2.42969 1.10156 2.89844L8.60156 10.3984Z" fill="currentColor"/>
+      </svg>
+    </div>
+  </div>
+  <ul class="absolute left-0 p-4 top-10 border bg-gray-white box-shadow rounded hidden" :class="{'block': languageSwitcherOpen, 'hidden': !languageSwitcherOpen}">
+    {%- for key, item in links -%}
+      {%- if item.link and item.langcode != language -%}
+        <li class="last:mb-0 mb-4 group">
+          <span class="language-select-icon__text">
+            <a href="{{ item.path }}" class="flex items-center group-hover:text-yellow-500 transition-colors">
+{#              <span class="mr-4">#}
+{#                {{ pattern('icon', {icon: item.langcode }, 'spritemap' ) }}#}
+{#              </span>#}
+              <span>{{ item.text }}</span>
+            </a>
+          </span>
+        </li>
+      {%- endif -%}
+    {%- endfor -%}
+  </ul>
+</div>

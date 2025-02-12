@@ -1,0 +1,61 @@
+{#
+/**
+ * @file
+ * search-bar
+ *
+ * See search-bar.wingsuit.yaml for documentation.
+ */
+#}
+{#
+Defaults
+#}
+{% set attributes = attributes|default(create_attribute()) %}
+
+{#
+Attributes
+#}
+{% set inner_wrapper_attributes = inner_wrapper_attributes|default(create_attribute()) %}
+{% set first_icon_attributes = first_icon_attributes|default(create_attribute()) %}
+{% set second_icon_attributes = second_icon_attributes|default(create_attribute()) %}
+
+{% set attributes_set = create_attributes_set(
+  {
+    default: {
+      wrapper: 'relative w-full',
+      inner_wrapper: 'flex justify-end  items-center h-full',
+      first_icon: 'block p-2 bg-neutral-200 rounded-full m-[1px]',
+      second_icon: 'flex flex-1 items-center block mr-[10px] rounded-full w-[36px] h-[36px]'
+    }
+  },
+  {}
+) %}
+
+<div {{ attributes.merge(attributes_set.wrapper) }}>
+  <div class="hidden" :class="{'block': search, 'hidden': !search}">
+    {{ input }}
+  </div>
+  <div {{ inner_wrapper_attributes.merge(attributes_set.inner_wrapper) }}
+       :class="{'absolute top-0 right-0 flex-1': search}">
+    <div {{ first_icon_attributes.merge(attributes_set.first_icon) }}
+         :class="{'hidden': search}"
+         @click="search = !search;">
+      <div class="cursor-pointer">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M23 16.5C23 17.9375 22.5312 19.2812 21.75 20.3438L25.6875 24.3125C26.0938 24.6875 26.0938 25.3438 25.6875 25.7188C25.3125 26.125 24.6562 26.125 24.2812 25.7188L20.3125 21.75C19.25 22.5625 17.9062 23 16.5 23C12.9062 23 10 20.0938 10 16.5C10 12.9375 12.9062 10 16.5 10C20.0625 10 23 12.9375 23 16.5ZM16.5 21C18.9688 21 21 19 21 16.5C21 14.0312 18.9688 12 16.5 12C14 12 12 14.0312 12 16.5C12 19 14 21 16.5 21Z" fill="white"/>
+          <rect x="0.5" y="0.5" width="35" height="35" rx="17.5" stroke="#0F766E"/>
+        </svg>
+      </div>
+    </div>
+    <button {{ second_icon_attributes.merge(attributes_set.second_icon) }}
+            :class="{'w-[36px] h-[36px] block': search, 'hidden': !search}">
+      <div class="cursor-pointer">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M23 16.5C23 17.9375 22.5312 19.2812 21.75 20.3438L25.6875 24.3125C26.0938 24.6875 26.0938 25.3438 25.6875 25.7188C25.3125 26.125 24.6562 26.125 24.2812 25.7188L20.3125 21.75C19.25 22.5625 17.9062 23 16.5 23C12.9062 23 10 20.0938 10 16.5C10 12.9375 12.9062 10 16.5 10C20.0625 10 23 12.9375 23 16.5ZM16.5 21C18.9688 21 21 19 21 16.5C21 14.0312 18.9688 12 16.5 12C14 12 12 14.0312 12 16.5C12 19 14 21 16.5 21Z" fill="white"/>
+          <rect x="0.5" y="0.5" width="35" height="35" rx="17.5" stroke="#0F766E"/>
+        </svg>
+      </div>
+    </button>
+  </div>
+</div>
+
+

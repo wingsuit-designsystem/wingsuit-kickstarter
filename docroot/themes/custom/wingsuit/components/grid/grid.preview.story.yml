@@ -1,0 +1,20 @@
+name: Preview
+slots:
+  cells:
+    - type: component
+      component: "wingsuit:card"
+      story: preview
+      variant: "default"
+    - type: component
+      component: "wingsuit:card"
+      story: preview
+      variant: "default"
+    - type: component
+      component: "wingsuit:card"
+      story: preview
+      variant: "default"
+    - type: component
+      component: "wingsuit:card"
+      story: preview
+      variant: "default"
+

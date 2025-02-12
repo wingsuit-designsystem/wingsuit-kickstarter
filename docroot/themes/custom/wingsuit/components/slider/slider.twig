@@ -1,0 +1,36 @@
+{#
+/**
+* @file
+* slider
+*
+* See slider.wingsuit.yaml for documentation.
+*/
+#}
+
+<div class="splide overflow-hidden splide__pagination__spacing-default" data-slides-per-view="{{ slides_per_view }}" data-autoplay="{{ autoplay }}">
+  <div class="splide__track">
+    <ul class="splide__list flex">
+      {% for key, item in items %}
+        {%- set iterator -%}
+          {{- key -}}
+        {% endset %}
+        {% if iterator != "region_label" %}
+          <li class="splide__slide flex-shrink-0">{{ item }}</li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+
+  </div>
+  <div class="splide__arrows">
+    <div class="group">
+      <button class="splide__arrow splide__arrow--prev flex items-center justify-center absolute right-full mr-3 top-1/2 -translate-y-1/2 w-[42px] h-[42px] border border-2 rounded-full border-gray-900 dark:border-white dark:group-hover:border-blue-300 group-hover:border-blue-300">
+        <
+      </button>
+    </div>
+    <div class="group">
+      <button class="splide__arrow splide__arrow--next flex items-center justify-center absolute left-full ml-3 top-1/2 -translate-y-1/2 w-[42px] h-[42px] border border-2 rounded-full border-gray-900 dark:border-white dark:group-hover:border-blue-300 group-hover:border-blue-300">
+        >
+      </button>
+    </div>
+  </div>
+</div>

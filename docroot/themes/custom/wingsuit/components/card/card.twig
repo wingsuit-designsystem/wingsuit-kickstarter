@@ -1,0 +1,68 @@
+{#
+Defaults
+#}
+{% set attributes = attributes|default(create_attribute()) %}
+{% set image_attributes = image_attributes|default(create_attribute()) %}
+{% set element = element|default('article') %}
+
+{#
+  Internal Logic
+#}
+{% if url is not empty %}
+  {% set attributes = attributes.setAttribute('href', url) %}
+  {% set element = 'a' %}
+{% endif %}
+
+{#
+Attributes
+#}
+{#{% set attributes = attributes.addClass([#}
+{#  pattern_configuration('card', variant, 'classes')['wrapper'],#}
+{#  pattern_configuration('card', variant, 'direction')['flex'],#}
+{#  ] | sort | join(' ') | trim#}
+{#) %}#}
+
+{% set image_attributes = create_attribute().addClass([
+  _ui_patterns_preprocess_props('wingsuit:card', variant)['image'],
+    ] | sort | join(' ') | trim )
+%}
+
+{% set attributes_set = create_attributes_set(
+  {
+    default: {
+    wrapper: 'group-hover:shadow-lg flex flex-1 rounded-lg overflow-hidden w-full'
+  },
+    variant: {
+      default: {
+        direction: 'flex-col',
+        image: 'flex-0 aspect-[16/9] [&>*]:w-full'
+      },
+      horizontal: {
+        direction: 'flex-col md:flex-row',
+        image: 'w-full lg:w-60 aspect-[16/9] relative flex [&>*]:object-cover'
+    }
+    }
+  },
+  { variant: variant, direction: direction, image: image }
+) %}
+
+{#
+  Template
+#}
+<div class="flex flex-1 flex-col group hover:box-shadow shadow-sm">
+  <{{ element }} {{ attributes.merge(attributes_set.wrapper).merge(attributes_set.direction) }}>
+      <div {{ image_attributes.merge(attributes_set.image) }}>
+        {{ image }}
+      </div>
+    <div class="p-6 flex flex-1 bg-white">
+      {% include 'wingsuit:rich-snippet' with {
+        preheadline: preheadline,
+        headline: headline,
+        text: text,
+        action: action,
+        variant: 'default'
+      } only %}
+    </div>
+  </{{ element }}>
+</div>
+

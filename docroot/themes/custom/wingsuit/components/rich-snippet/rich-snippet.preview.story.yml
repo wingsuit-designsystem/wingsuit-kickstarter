@@ -1,0 +1,10 @@
+name: Preview
+slots:
+  preheadline: A short headline above the headline.
+  headline: The main headline.
+  text: A long text under the headline.
+  action: Action
+props:
+
+
+

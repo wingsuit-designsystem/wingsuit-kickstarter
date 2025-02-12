@@ -1,0 +1,5 @@
+name: Preview
+slots:
+  video: "Video title"
+  src: "sample.mp4"
+

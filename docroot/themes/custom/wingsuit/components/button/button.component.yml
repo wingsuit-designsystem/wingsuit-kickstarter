@@ -15,6 +15,8 @@ variants:
     description: "No 'btn' class added."
   outline:
     title: "Outline"
+  link:
+    title: "Link"
 props:
   type: object
   properties:
@@ -37,7 +39,7 @@ props:
         - small
         - medium
         - large
-      enumNames:
+      meta:enum:
         small: Small
         medium: Medium
         large: Large
@@ -47,6 +49,31 @@ props:
       $ref: "ui-patterns://url"
       example:
         - 'https://github.com/wingsuit-designsystem/wingsuit'
+    disabled:
+      type: boolean
+      title: Disabled
+      default: false
+    title:
+      type: string
+      title: Title
+      default: demo
+    target:
+      type: string
+      title: Target
+      default: _blank
+      enum:
+        - _blank
+        - _top
+      meta:enum:
+        _blank: Blank
+        _top: Top
+    expanded:
+      type: boolean
+      title: Expanded
+      default: false
+    extra_classes:
+      type: string
+      title: Extra classes
 
 
 # Slots always hold arbitrary markup. We know that beforehand, so no need for

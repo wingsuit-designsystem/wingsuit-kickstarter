@@ -11,3 +11,13 @@
 .x-clock {
   display: none;
 }
+
+.ui_patterns_component {
+  border-top: 1px solid;
+  padding: 20px;
+}
+
+.ui_patterns_component__title {
+  font-weight: bold;
+  font-size: 24px
+}

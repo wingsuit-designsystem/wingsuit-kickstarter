@@ -1,0 +1,13 @@
+name: Preview
+slots:
+  rows:
+    - cells: Value 1
+    - cells: Value 1
+    - cells: Value 1
+    - cells: Value 1
+  columns:
+    - heads: Cell 1
+    - heads: Cell 1
+    - heads: Cell 1
+    - heads: Cell 1
+

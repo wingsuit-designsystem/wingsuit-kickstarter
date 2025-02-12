@@ -1,0 +1,20 @@
+name: Preview
+slots:
+  links:
+    - text: Deutsch
+      link: "#"
+      langcode: de
+      icon: de-flag
+    - text: English
+      link: "#"
+      langcode: en
+      icon: en
+    - text: Français
+      link: "#"
+      langcode: fr
+      icon: fr-flag
+    - text: Italiano
+      link: "#"
+      icon: it-flag
+      langcode: it
+

@@ -1,0 +1,65 @@
+{#
+  Defaults
+#}
+{% set attributes = attributes|default(create_attribute()) %}
+{% set element = element|default('figure') %}
+
+{#
+Internal Logic
+#}
+{% if url is not empty %}
+  {% set attributes = attributes.setAttribute('href', url) %}
+  {% set element = 'a' %}
+{% endif %}
+
+{#
+  Attributes
+#}
+{% set attributes = attributes %}
+{% set image_attributes = image_attributes|default(create_attribute()) %}
+{% set content_wrapper_attributes = content_attributes|default(create_attribute()) %}
+{% set name_attributes = name_attributes|default(create_attribute()) %}
+{% set title_attributes = title_attributes|default(create_attribute()) %}
+
+{% set attributes_set = create_attributes_set(
+  {
+    default: {
+    wrapper: 'rounded-xl overflow-hidden p-8',
+    image: 'relative overflow-hidden flex-none w-[152px] h-[152px] lg:h-[168px] lg:w-[168px] rounded-full mx-auto aspect-[1/1]',
+    content_wrapper: 'mt-4 gap-y-4 flex-1 flex justify-center items-center flex-col',
+    name: 'text-xl font-bold text-center font-display',
+    title: 'text-center mt-1'
+  }
+  },
+  {}
+) %}
+
+{#
+  Template
+#}
+<{{ element }} {{ attributes.merge(attributes_set.wrapper) }}>
+  <div {{ image_attributes.merge(attributes_set.image) }}>
+    {{ image }}
+  </div>
+  <div {{ content_wrapper_attributes.merge(attributes_set.content_wrapper) }}>
+    <div>
+      <blockquote>
+        <div {{ name_attributes.merge(attributes_set.name) }}>
+          {{ full_name }}
+        </div>
+      </blockquote>
+      <figcaption>
+        <div {{ title_attributes.merge(attributes_set.title) }}>
+          {{ title }}
+        </div>
+      </figcaption>
+    </div>
+    <div>
+      {% include 'wingsuit:button' with {
+        text: 'Say hi!',
+        size: 'medium',
+        variant: 'outline'
+      } only %}
+    </div>
+  </div>
+</{{ element }}>

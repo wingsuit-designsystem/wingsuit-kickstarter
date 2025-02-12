@@ -1,0 +1,46 @@
+# This is so your IDE knows about the syntax for fixes and autocomplete.
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+# The human-readable name.
+name: Slider
+
+# Status can be: "experimental", "stable", "deprecated", "obsolete".
+status: stable
+
+# Schema for the props. We support www.json-schema.org. Learn more about the
+# syntax there.
+props:
+  type: object
+  properties:
+    slides_per_view:
+      type: string
+      title: Slides per view
+      enum:
+        - 1
+        - 2
+        - 3
+      meta:enum:
+        1: 1
+        2: 2
+        3: 3
+      default_value: 1
+    autoplay:
+      type: boolean
+      title: Autoplay
+      default_value: false
+
+# Slots always hold arbitrary markup. We know that beforehand, so no need for
+# a schema for slots.
+slots:
+  # The key is the name of the slot. In your template you will use
+  # {% block content %}.
+  text:
+    items:
+      title: Slider items
+
+libraryOverrides:
+  js:
+    js/slider.behavior.js: {}
+  dependencies:
+    - core/drupal
+    - core/once

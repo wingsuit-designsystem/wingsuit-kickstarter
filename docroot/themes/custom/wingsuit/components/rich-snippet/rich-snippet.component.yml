@@ -1,0 +1,45 @@
+# This is so your IDE knows about the syntax for fixes and autocomplete.
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+# The human readable name.
+name: Rich Snippet
+
+# Status can be: "experimental", "stable", "deprecated", "obsolete".
+status: stable
+
+variants:
+  small:
+    title: Small
+  default:
+    title: Default
+  large:
+    title: Large
+props:
+  type: object
+  properties:
+    headline_tag:
+      type: string
+      title: Headline Size
+      allow_expose: true
+      enum:
+        - h1
+        - h2
+        - h3
+        - h4
+      meta:enum:
+        h1: H1
+        h2: H2
+        h3: H3
+        h4: H4
+slots:
+  preheadline:
+    title: Preheadline
+    description: A short headline above the headline.
+  headline:
+    title: Headline
+    description: The main headline.
+  text:
+    title: Text
+    description: A long text under the headline.
+  action:
+    title: Action

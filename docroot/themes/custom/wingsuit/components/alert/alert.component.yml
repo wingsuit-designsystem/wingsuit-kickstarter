@@ -1,0 +1,36 @@
+# This is so your IDE knows about the syntax for fixes and autocomplete.
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+# The human readable name.
+name: Alert
+
+# Status can be: "experimental", "stable", "deprecated", "obsolete".
+status: stable
+
+# Schema for the props. We support www.json-schema.org. Learn more about the
+# syntax there.
+props:
+  type: object
+  properties:
+    buttons:
+      type: boolean
+      title: Buttons
+
+# Slots always hold arbitrary markup. We know that beforehand, so no need for
+# a schema for slots.
+slots:
+  # The key is the name of the slot. In your template you will use
+  # {% block content %}.
+  title_ids:
+    title: Title ID
+    description: A list of unique ids keyed by message type.
+  status_headings:
+    title: Status Heading
+    description: List of all status types.
+  message_list:
+    title: Message
+    description: List of messages to be displayed, grouped by type.
+  view_more:
+    title: View More
+  dismiss:
+    title: Dismiss

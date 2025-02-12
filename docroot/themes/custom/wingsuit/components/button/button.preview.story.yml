@@ -1,4 +1,7 @@
 name: Preview
 slots:
-  text: "Teaser headline Item #1"
+  text: "Button text"
+props:
+  disabled: false
+  url: "https://example.com"
 

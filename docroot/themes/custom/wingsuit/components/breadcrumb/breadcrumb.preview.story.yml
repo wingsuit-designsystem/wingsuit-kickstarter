@@ -1,0 +1,12 @@
+name: Preview
+slots:
+  links:
+    - text: 'Startseite'
+      url: '#'
+    - text: 'Produkte'
+      url: '#'
+    - text: 'Vibrationstraining'
+      url: '#'
+    - text: 'SONIC VITAL XTcoloR'
+      url: '#'
+

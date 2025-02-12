@@ -1,0 +1,18 @@
+name: Preview
+slots:
+  menu:
+    - type: component
+      component: "wingsuit:menu-primary"
+      story: preview
+  language_select:
+    - type: component
+      component: "wingsuit:language-select"
+      story: preview
+  breadcrumb:
+    - type: component
+      component: "wingsuit:breadcrumb"
+      story: preview
+  search_bar:
+    - type: component
+      component: "wingsuit:search-bar"
+      story: preview

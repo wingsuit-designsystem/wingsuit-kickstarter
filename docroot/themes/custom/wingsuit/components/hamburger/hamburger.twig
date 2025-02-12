@@ -1,0 +1,42 @@
+{#
+  Defaults
+#}
+{% set attributes = attributes|default(create_attribute()) %}
+{% set inner_attributes = inner_attributes|default(create_attribute()) %}
+{% set size = size|default('default') %}
+{% set active_behaviour = active_behaviour|default('squeeze') %}
+{#
+  Attributes
+#}
+
+{% set attributes_set = create_attributes_set(
+  {
+    default: {
+      color: 'bg-white',
+      inner_classes: 'before:',
+    },
+    size: {
+      small: 'tham-w-4',
+      default: 'tham-w-5',
+      large: 'tham-w-8',
+      large: 'tham-w-12',
+    },
+    active_behaviour: {
+      squeeze: 'tham-e-squeeze',
+      slide: 'tham-e-slider',
+      arrow: 'tham-e-arrow',
+      arrow_alt: 'tham-e-arrow-alt',
+      arrow_turn: 'tham-e-arrow-turn',
+      spin: 'tham-e-spin',
+    }
+  },
+  { size: size, active_behaviour: active_behaviour }
+) %}
+{#
+Template
+#}
+<div {{ attributes.addClass('tham').merge(attributes_set.size).merge(attributes_set.active_behaviour) }} @click="menuIsOpen = !menuIsOpen" :class="{ 'tham-active': menuIsOpen }">
+  <div class="tham-box">
+    <div {{ inner_attributes.addClass('tham-inner').merge(attributes_set.color) }}></div>
+  </div>
+</div>

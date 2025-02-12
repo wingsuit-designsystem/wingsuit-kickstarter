@@ -1,0 +1,58 @@
+{#
+/**
+ * @file
+ * accordion-item
+ *
+ * See accordion-item.wingsuit.yaml for documentation.
+ */
+#}
+{#
+  Default
+#}
+{% set attributes = attributes|default(create_attribute()) %}
+
+{#
+  Attributes
+#}
+{% set inner_wrapper_attributes = inner_wrapper_attributes|default(create_attribute()) %}
+{% set label_wrapper_attributes = label_wrapper_attributes|default(create_attribute()) %}
+{% set content_wrapper_attributes = content_wrapper_attributes|default(create_attribute()) %}
+{% set content_attributes = content_attributes|default(create_attribute()) %}
+{% set label_attributes = label_attributes|default(create_attribute()) %}
+{% set icon_attributes = icon_attributes|default(create_attribute()) %}
+
+{#
+  Template
+#}
+{% set attributes_set = create_attributes_set(
+  {
+    default: {
+    wrapper: 'relative border-b border-gray-200',
+    inner_wrapper: 'w-full py-6 px-4 text-left cursor-pointer foo',
+    label_wrapper: 'flex items-center gap-4 justify-between',
+    label: 'font-bold font-display text-xl',
+    icon: 'text-purple-600',
+    content_wrapper: 'relative overflow-hidden transition-all max-h-0 duration-700',
+    content: 'px-4 lg:pr-16 pb-6 bar',
+  }
+  },
+  {}
+) %}
+<div {{ attributes.merge(attributes_set.wrapper) }} x-data="{selected: false}">
+  <div type="button" {{ inner_wrapper_attributes.merge(attributes_set.inner_wrapper) }}
+       @click="selected == !selected">
+    <div {{ label_wrapper_attributes.merge(attributes_set.label_wrapper) }}>
+      <span {{ label_attributes.merge(attributes_set.label) }}">{{ label }}</span>
+      <div class="text-purple-600" x-cloak {{ icon_attributes.merge(attributes_set.label) }} :class="{ 'transform rotate-180 transition duration-400' : selected == true }">
+        <svg width="19" height="11" viewBox="0 0 19 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8.60156 10.3984C9.07031 10.9062 9.89062 10.9062 10.3594 10.3984L17.8594 2.89844C18.3672 2.42969 18.3672 1.60938 17.8594 1.14062C17.3906 0.632812 16.5703 0.632812 16.1016 1.14062L9.5 7.74219L2.85938 1.14062C2.39062 0.632812 1.57031 0.632812 1.10156 1.14062C0.59375 1.60938 0.59375 2.42969 1.10156 2.89844L8.60156 10.3984Z" fill="currentColor"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <div {{ content_wrapper_attributes.merge(attributes_set.content_wrapper) }} x-ref="container1" x-bind:style="selected == true ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''">
+    <div {{ content_attributes.merge(attributes_set.content) }}>
+      {{ content }}
+    </div>
+  </div>
+</div>
