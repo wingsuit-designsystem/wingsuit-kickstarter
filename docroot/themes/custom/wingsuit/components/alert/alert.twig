@@ -9,6 +9,7 @@
     {% set attributes = {} %}
     {% set is_message_with_title = status_headings[type] %}
     {% set attributes = attributes|default(create_attribute()) %}
+    {% set type = type|default('status') %}
     {% set button_view_classes = button_view_classes|default(create_attribute()) %}
 
     {#
@@ -20,35 +21,35 @@
         paddings: 'pt-4 px-4 pb-6 pl-12',
       },
         status: {
-        bg_color: 'bg-green-50',
-        heading_color: 'text-green-700',
-        message_color: 'text-green-600',
-        icon: 'circle-exclamation',
-        icon_color: 'text-green-400',
+          bg_color: 'bg-green-50',
+          heading_color: 'text-green-700',
+          message_color: 'text-green-600',
+          icon: 'circle-exclamation',
+          icon_color: 'text-green-400',
       },
         error: {
-        bg_color: 'bg-red-50',
-        heading_color: 'text-red-700',
-        message_color: 'text-red-600',
-        icon: 'circle-exclamation',
-        icon_color: 'text-red-400',
+          bg_color: 'bg-red-50',
+          heading_color: 'text-red-700',
+          message_color: 'text-red-600',
+          icon: 'circle-exclamation',
+          icon_color: 'text-red-400',
       },
         success: {
-        bg_color: 'bg-yellow-50',
-        heading_color: 'text-yellow-700',
-        message_color: 'text-yellow-600',
-        icon: 'circle-exclamation',
-        icon_color: 'text-yellow-400',
+          bg_color: 'bg-yellow-50',
+          heading_color: 'text-yellow-700',
+          message_color: 'text-yellow-600',
+          icon: 'circle-exclamation',
+          icon_color: 'text-yellow-400',
       },
         info: {
-        bg_color: 'bg-blue-50',
-        heading_color: 'text-blue-700',
-        message_color: 'text-blue-600',
-        icon: 'circle-info',
-        icon_color: 'text-blue-400',
+          bg_color: 'bg-blue-50',
+          heading_color: 'text-blue-700',
+          message_color: 'text-blue-600',
+          icon: 'circle-info',
+          icon_color: 'text-blue-400',
       }
       },
-      {info: info, success: success, error: error, status: status}
+      {info: type, success: type, error: type, status: type}
     ) %}
     <div role="contentinfo" aria-labelledby="{{ title_ids[type] }}"{{ attributes.merge(attributes_set.paddings).addClass(classes|sort|join(' ')|trim())|without('role', 'aria-label') }} x-data="{visible: true}" :class="{'hidden': !visible}">
       {% if type == 'error' %}

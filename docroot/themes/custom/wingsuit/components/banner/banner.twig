@@ -26,8 +26,7 @@
 {#
   Render Slots
 #}
-{% set headline %}{{- headline -}}{% endset %}
-{% set teaser %}{{- teaser -}}{% endset %}
+{% set content %}{{- content -}}{% endset %}
 
 {% set attributes_set = create_attributes_set(
   {
@@ -50,11 +49,9 @@
   {position: position}
 ) %}
 
-{% set text %}
+{% set content %}
   <div {{ slogan_position_classes.merge(attributes_set.position) }}>
-    {% include 'wingsuit:rich-text' with {
-      text: teaser,
-    } only %}
+    {{ content }}
   </div>
 {% endset %}
 {#
@@ -63,11 +60,18 @@
 <div {{ attributes.merge(attributes_set.wrapper) }}>
   <div class="[&>img]:w-full">{{ image }}</div>
   <div {{ slogan_wrapper_attributes.merge(attributes_set.slogan_wrapper) }}>
-    {% if teaser or headline %}
-      <div class="flex max-w-8xl mx-auto w-full">
-        {{ text }}
-      </div>
-{#      {{ pattern('container', {equal_height: true, content: text, classes: 'flex'}) }}#}
+    {% if content %}
+      {% embed 'wingsuit:container' with {
+        padding_bottom: 'none',
+        padding_top: 'none',
+        equal_height: true,
+        content: content,
+        classes: 'flex'
+      } only %}
+        {% block content %}
+          {{ content }}
+        {% endblock %}
+      {% endembed %}
     {% endif %}
   </div>
 </div>

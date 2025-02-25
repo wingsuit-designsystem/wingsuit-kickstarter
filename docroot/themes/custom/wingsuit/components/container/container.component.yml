@@ -50,66 +50,13 @@ props:
         teal_medium: Teal medium/#14b8a6
         gray_light: Light gray/#d1d5db
     padding_x:
-      type: string
-      title: Padding left/right
-      group: tab_spacing
-      default_value: default
-      enum:
-        - none
-        - default
-      meta:enum:
-        none: None
-        default: Default
+      $ref: theme://wingsuit/components/spacing.json#padding_x
     padding_top:
-      type: string
-      title: Padding Top
-      group: tab_spacing
-      default_value: auto
-      enum:
-        - auto
-        - none
-        - xxsmall
-        - xsmall
-        - small
-        - default
-      meta:enum:
-        auto: Auto
-        none: None
-        xxsmall: XXSmall
-        xsmall: XSmall
-        small: Small
-        default: Default
+      $ref: theme://wingsuit/components/spacing.json#padding_top
     padding_bottom:
-      type: string
-      title: Padding bottom
-      group: tab_spacing
-      default_value: auto
-      enum:
-        - auto
-        - none
-        - xxsmall
-        - xsmall
-        - small
-        - default
-      meta:enum:
-        auto: Auto
-        none: None
-        xxsmall: XXSmall
-        xsmall: XSmall
-        small: Small
-        default: Default
+      $ref: theme://wingsuit/components/spacing.json#padding_bottom
     width:
-      type: string
-      title: Width
-      default_value: default
-      enum:
-        - default
-        - full
-        - small
-      meta:enum:
-        default: Default
-        full: Full
-        small: Small
+      $ref: theme://wingsuit/components/spacing.json#width
 # Slots always hold arbitrary markup. We know that beforehand, so no need for
 # a schema for slots.
 slots:

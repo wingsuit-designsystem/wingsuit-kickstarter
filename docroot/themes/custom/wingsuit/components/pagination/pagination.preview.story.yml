@@ -1,6 +1,5 @@
 name: Preview
-slots:
-  heading_id: A short headline above the headline card.
+props:
   items:
     - title: 'First Page'
       href: '#'
@@ -43,4 +42,5 @@ slots:
     - title: 'Page 8'
       href: '#'
       attributes: 'foo'
-
+slot:
+  heading_id: A short headline above the headline card.

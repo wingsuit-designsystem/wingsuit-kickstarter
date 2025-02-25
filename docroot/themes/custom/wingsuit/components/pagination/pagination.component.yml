@@ -17,6 +17,9 @@ variants:
 props:
   type: object
   properties:
+    items:
+      title: Items
+      $ref: "ui-patterns://links"
     ellipses:
       type: boolean
       title: Ellipses
@@ -61,75 +64,3 @@ slots:
       type: text
       label: Heading Id
       description: Pagination heading ID.
-    items:
-      type: object
-      label: Items
-      description: |
-        Item list is keyed by the following elements:
-
-        'first': Item for the first page; not present on the first page of results
-
-        'previous':  Item for the previous page; not present on the first page of results
-
-        'next': Item for the next page; not present on the last page of results
-
-        'last': Item for the last page; not present on the last page of results
-
-        'pages': List of pages, keyed by page number
-
-        **'items.first', 'items.previous', 'items.next', 'items.last' & each item inside 'items.pages' contain the following elements:**
-
-        'href': URL with appropriate query parameters for the item
-
-        'attributes': A keyed list of HTML attributes for the item
-
-        'text': The visible text used for the item link, such as "‹ Previous" or "Next ›"
-      example:
-        first:
-          - title: 'First Page'
-            href: '#'
-            attributes: 'foo'
-            in_active_trail: false
-        previous:
-          - title: 'Previous Page'
-            href: '#'
-            attributes: 'foo'
-            in_active_trail: false
-        next:
-          - title: 'Next Page'
-            href: '#'
-            attributes: 'foo'
-            in_active_trail: false
-        last:
-          - title: 'Last Page'
-            href: '#'
-            attributes: 'foo'
-            in_active_trail: false
-        pages:
-          - title: 'Page 1'
-            href: '#'
-            attributes: 'foo'
-            in_active_trail: true
-          - title: 'Page 2'
-            href: '#'
-            attributes: 'foo'
-          - title: 'Page 3'
-            href: '#'
-            attributes: 'foo'
-          - title: 'Page 4'
-            href: '#'
-            attributes: 'foo'
-          - title: 'Page 5'
-            href: '#'
-            attributes: 'foo'
-          - title: 'Page 6'
-            href: '#'
-            attributes: 'foo'
-          - title: 'Page 7'
-            href: '#'
-            attributes: 'foo'
-          - title: 'Page 8'
-            href: '#'
-            attributes: 'foo'
-
-

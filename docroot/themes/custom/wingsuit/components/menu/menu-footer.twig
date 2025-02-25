@@ -5,12 +5,12 @@
 {% set attributes_set = create_attributes_set(
   {
     default: {
-    first_ul: "",
-    first_li: "",
-    first_a: "font-bold font-display dark:text-white text-lg block font-sans mb-2",
-    descendant_ul: "grid gap-1 lg:gap-2",
-    descendant_li: "",
-    descendant_a: "dark:text-white hover:underline",
+      first_ul: "",
+      first_li: "",
+      first_a: "font-bold font-display dark:text-white text-lg block font-sans mb-2",
+      descendant_ul: "grid gap-1 lg:gap-2",
+      descendant_li: "",
+      descendant_a: "dark:text-white hover:underline",
   }
   },
   { }
@@ -25,17 +25,16 @@
 {#
   Template
 #}
-{{ dump(items) }}
+
 {% set cells = [] %}
 {% for item in items %}
   {% set cell %}
     <ul role="menu" {{ first_ul_attributes }}>
       <li role="none" {{ first_li_attributes }}>
         {# -- Main parent item w/o link  -- #}
-        <a href="#" {{ first_a_attributes }}>
+        <a href="{{ item.url }}" {{ first_a_attributes }}>
           {{ item.title }}
         </a>
-
         {# -- Child items -- #}
         {% if item.below %}
           <ul role="menu" {{ descendant_ul_attributes }}>
@@ -51,10 +50,14 @@
       </li>
     </ul>
   {% endset %}
-{#  {% set cells = cells|merge([cell]) %}#}
+  {% set cells = cells|merge([cell]) %}
 {% endfor %}
 
 <nav aria-label="footer" class="w-full">
 {#  {{ pattern('grid', {cells:cells, gutter: 'footer'}, 'column_' ~ cells|length ) }}#}
-  {{ cells }}
+  {% include 'wingsuit:grid' with {
+    cells: cells,
+    gutter: 'footer',
+    variant: 'column_' ~ cells|length
+  } only %}
 </nav>

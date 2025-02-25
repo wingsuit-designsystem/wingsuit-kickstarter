@@ -4,6 +4,7 @@ Defaults
 {% set attributes = attributes|default(create_attribute()) %}
 {% set image_attributes = image_attributes|default(create_attribute()) %}
 {% set element = element|default('article') %}
+{% set variant = variant|default('default') %}
 
 {#
   Internal Logic
@@ -16,16 +17,6 @@ Defaults
 {#
 Attributes
 #}
-{#{% set attributes = attributes.addClass([#}
-{#  pattern_configuration('card', variant, 'classes')['wrapper'],#}
-{#  pattern_configuration('card', variant, 'direction')['flex'],#}
-{#  ] | sort | join(' ') | trim#}
-{#) %}#}
-
-{% set image_attributes = create_attribute().addClass([
-  _ui_patterns_preprocess_props('wingsuit:card', variant)['image'],
-    ] | sort | join(' ') | trim )
-%}
 
 {% set attributes_set = create_attributes_set(
   {
@@ -43,7 +34,7 @@ Attributes
     }
     }
   },
-  { variant: variant, direction: direction, image: image }
+  { variant: variant }
 ) %}
 
 {#

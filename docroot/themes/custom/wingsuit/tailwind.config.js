@@ -24,6 +24,7 @@ module.exports = {
   important: false,
   darkMode: 'class',
   content: ['./apps/**/*.twig', ...content],
+  safelist: ['absolute', 'bg-opacity-25', 'top-0', 'left-0', 'w-full', 'h-full', 'flex', 'w-5', 'mb-6'],
   theme: {
     boxShadow: {
       sm: '0px 1px 2px rgba(0, 0, 0, 0.05)',

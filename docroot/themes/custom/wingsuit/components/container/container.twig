@@ -6,56 +6,20 @@
  * See container.wingsuit.yaml for documentation.
  */
 #}
-{% set attributes_set = create_attributes_set(
-  {
-    color: {
-    transparent: "",
-    purple_dark: "dark bg-purple-900",
-    teal: "dark bg-teal-800",
-    teal_medium: "dark bg-teal-500",
-    gray_light: "bg-gray-300",
-  },
-    padding_x: {
-     none: "",
-     default: "px-4 md:px-8"
-  },
-    padding_top: {
-      none: "",
-      xxsmall: "pt-4 lg:pt-6",
-      xsmall: "pt-4 lg:pt-8",
-      small: "pt-8 lg:pt-16",
-      default: "pt-16 lg:pt-28",
-  },
-    padding_bottom: {
-      none: '',
-      xxsmall: "pb-4 lg:pb-6",
-      xsmall: "pb-4 lg:pb-8",
-      small: "pb-8 lg:pb-16",
-      default: "pb-16 lg:pb-28",
-  },
-    width: {
-      default: "max-w-8xl",
-      full:  "",
-      small: "max-w-7xl",
-  }
-  },
-  { color: color,
-    padding_x: padding_x,
-    padding_top: padding_top,
-    padding_bottom: padding_bottom,
-    width: width
-  }
-) %}
+
 {# Defaults #}
 {% set width = width|default('default') %}
 {% set bg_image %}{{- bg_image -}}{% endset %}
+{% set bg_color = bg_color|default('transparent') %}
 {#
   Padding x defaults:
   The container x padding is allways "default" for all widhts.
   Only width "full" removes the padding_x completly.
 #}
 {% set padding_x = width != 'full' ? padding_x|default('default') : '' %}
+{% set padding_x = padding_x|default('default') %}
 {% set attributes = attributes|default(create_attribute()) %}
+{% set bg_attributes = bg_attributes|default(create_attribute()) %}
 
 {#
   Padding top/bottom defaults:
@@ -77,12 +41,53 @@
   'mx-auto w-full'
 ] | sort | join(' ') | trim )%}
 
+{% set attributes_set = create_attributes_set(
+  {
+    bg_color: {
+      transparent: "",
+      purple_dark: "dark bg-purple-900",
+      teal: "dark bg-teal-800",
+      teal_medium: "dark bg-teal-500",
+      gray_light: "bg-gray-300",
+  },
+    padding_x: {
+    none: "",
+    default: "px-4 md:px-8"
+  },
+    padding_top: {
+    none: "",
+    xxsmall: "pt-4 lg:pt-6",
+    xsmall: "pt-4 lg:pt-8",
+    small: "pt-8 lg:pt-16",
+    default: "pt-16 lg:pt-28",
+  },
+    padding_bottom: {
+    none: '',
+    xxsmall: "pb-4 lg:pb-6",
+    xsmall: "pb-4 lg:pb-8",
+    small: "pb-8 lg:pb-16",
+    default: "pb-16 lg:pb-28",
+  },
+    width: {
+    default: "max-w-8xl",
+    full:  "",
+    small: "max-w-7xl",
+  }
+  },
+  { bg_color: bg_color,
+    padding_x: padding_x,
+    padding_top: padding_top,
+    padding_bottom: padding_bottom,
+    width: width
+  }
+) %}
+
 {# TEMPLATE #}
 {% if bg_color or bg_image %}
-<div {{ create_attribute().addClass(bg_classes).merge(attributes_set.bg_color) }}>
+<div {{ bg_attributes.addClass(bg_classes).merge(attributes_set.bg_color) }}>
   {{ bg_image }}
 {% endif %}
-  <div {{ attributes }}>
+  <div {{ attributes.addClass(classes).merge(attributes_set.width).merge(attributes_set.padding_bottom) }}>
     {% block content %}
       {{ content }}
     {% endblock %}

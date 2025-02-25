@@ -1,0 +1,48 @@
+{#
+/**
+ * @file
+ * Theme override for an 'input' #type form element.
+ *
+ * Available variables:
+ * - attributes: A list of HTML attributes for the input element.
+ * - children: Optional additional rendered elements.
+ *
+ * @see template_preprocess_input()
+ */
+#}
+
+{#
+Defaults
+#}
+{% set attributes = attributes|default(create_attribute()) %}
+{#
+Attributes
+#}
+{% set attributes = attributes.addClass([
+  'form-input',
+]) %}
+{% set overlay_attributes = create_attribute().addClass ([
+  'flex flex-col items-center justify-center py-5 bg-gray-100 rounded-sm cursor-pointer'
+])%}
+{% set headline_attributes = create_attribute().addClass ([
+  'py-2 text-sm font-bold'
+])%}
+{% set headline_link_attributes = create_attribute().addClass ([
+  'text-purple-600'
+])%}
+{% set text = create_attribute().addClass ([
+  'text-xs text-gray-500 font-normal'
+])%}
+{#
+Template
+#}
+<div for="drop-file" {{ overlay_attributes }}>
+  <img src="{{ file_url('ws-assets://images/upload.svg') }}">
+  <p {{ headline_attributes }}>
+    <span {{ headline_link_attributes }}>Upload File </span>
+    or drag and drop</p>
+  <p {{ text }}>PDF, PNG, JPG, GIF up to 5 MB</p>
+</div>
+<div class="hidden" id="drop-file">
+  <input {{ attributes }} />{{ children }}
+</div>

@@ -1,23 +1,15 @@
 name: Preview
 props:
   items:
-    - url: "#"
-      title: Active
-      link_attributes:
-        class:
-          - active
-    - title: Dropdown
+    - title: Products
       url: "#"
-      below:
-        - title: "Dropdown header"
-          link_attributes:
-            class:
-              - dropdown-header
-        - title: Action
-          url: "#"
-        - title: "Dropdown item text"
-        - title: "Another action"
-          url: "#"
-        - title: "Something else here"
-          url: "#"
+      in_active_trail: true
+    - title: Pricing
+      url: "#"
+    - title: Partner
+      url: "#"
+    - title: Article
+      url: "#"
+    - title: test
+      url: "#"
 

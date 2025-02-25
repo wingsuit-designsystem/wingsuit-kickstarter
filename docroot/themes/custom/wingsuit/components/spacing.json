@@ -1,0 +1,75 @@
+{
+  "padding_x": {
+    "type": "string",
+    "title": "Padding left/right",
+    "group": "tab_spacing",
+    "default_value": "default",
+    "enum": [
+      "none",
+      "default"
+    ],
+    "meta:enum": {
+      "none": "None",
+      "default": "Default"
+    }
+  },
+  "padding_top": {
+    "type": "string",
+    "title": "Padding Top",
+    "group": "tab_spacing",
+    "default_value": "auto",
+    "enum": [
+      "auto",
+      "none",
+      "xxsmall",
+      "xsmall",
+      "small",
+      "default"
+    ],
+    "meta:enum": {
+      "auto": "Auto",
+      "none": "None",
+      "xxsmall": "XXSmall",
+      "xsmall": "XSmall",
+      "small": "Small",
+      "default": "Default"
+    }
+  },
+  "padding_bottom": {
+    "type": "string",
+    "title": "Padding bottom",
+    "group": "tab_spacing",
+    "default_value": "auto",
+    "enum": [
+      "auto",
+      "none",
+      "xxsmall",
+      "xsmall",
+      "small",
+      "default"
+    ],
+    "meta:enum": {
+      "auto": "Auto",
+      "none": "None",
+      "xxsmall": "XXSmall",
+      "xsmall": "XSmall",
+      "small": "Small",
+      "default": "Default"
+    }
+  },
+  "width": {
+    "type": "string",
+    "title": "Width",
+    "default_value": "default",
+    "enum": [
+      "default",
+      "full",
+      "small"
+    ],
+    "meta:enum": {
+      "default": "Default",
+      "full": "Full",
+      "small": "Small"
+    }
+  }
+}

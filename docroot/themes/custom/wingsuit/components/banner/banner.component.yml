@@ -47,5 +47,5 @@ slots:
   # {% block content %}.
     image:
       title: Image
-    teaser:
-      title: Teaser
+    text:
+      title: Text

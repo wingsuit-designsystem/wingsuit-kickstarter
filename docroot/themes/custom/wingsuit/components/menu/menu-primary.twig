@@ -18,6 +18,7 @@
        :class="{'block': submenuIsOpen, 'hidden lg:group-hover:block': !submenuIsOpen, {% if menu_level > 1 %} 'lg:left-full': submenuDirection == 'right', 'lg:right-full': submenuDirection == 'left' {% endif %} }"
        data-menu="submenu">
     <div {{ menu_level == 2 ? 'class="lg:flex"' }}>
+      {% set items = items is iterable ? items : [items] %}
       {% set row_numbers = items|length/2 %}
       {% for row in items|batch(menu_level == 2 ? row_numbers : 100) %}
         <ul>
@@ -74,17 +75,6 @@
         <a href="{{ item.url }}" class="{{ link_classes }}">
           {{ item.title }}
         </a>
-        {% if item.below is not empty %}
-          <div class="w-[18px] h-5 {{
-              menu_level == 1
-                ? 'float-right center-origin transition duration-100 ease-in lg:-rotate-90'
-                : 'float-right center-origin transition duration-100 ease-in lg:group-hover:rotate-180 text-black lg:text-white lg:group-hover:text-teal-200'
-            }} cursor-pointer"
-            {% if item.below %} @click="submenuIsOpen = !submenuIsOpen;" {% endif %}
-            :class="{'rotate-180': submenuIsOpen, 'rotate-0': !submenuIsOpen}">
-            {{ pattern('icon', {icon: 'chevron-down' }, 'spritemap' ) }}
-          </div>
-        {% endif %}
       </div>
       {% if item.below %}
         {{ menus.dropdown_menu(item.below, menu_level + 1) }}

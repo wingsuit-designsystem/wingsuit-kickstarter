@@ -1,0 +1,12 @@
+name: Preview
+slots:
+  column_1:
+    - type: component
+      component: "wingsuit:card"
+      story: preview
+      variant: "default"
+  column_2:
+    - type: component
+      component: "wingsuit:card"
+      story: preview
+      variant: "default"

@@ -1,42 +1,40 @@
-{% set footer_content %}
-  <div class="flex gap-10 lg:gap-28 flex-col-reverse lg:flex-row py-10 lg:py-16 px-[15px] lg:px-0">
-    <div class="grid w-full max-w-[181px]">
-      <a class="lg:pr-8 block" href="{{ path('<front>') }}">
-        <div class="w-full max-w-7xl">
-          {{ logo }}
-        </div>
-      </a>
-      <div class="mt-3 dark:text-purple-300">
-        {{ "Lorem ipsum dolor sit amet consectetur. Mollis elit enim auctor."|t }}
-      </div>
-      <ul class="mt-3 lg:mt-6 flex items-center gap-5 dark:text-purple-300">
-        <li>
-          <a href="#">
-            {{ "Youtube icon" }}
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            {{ "Instagram icon" }}
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            {{ "Facebook icon" }}
-          </a>
-        </li>
-      </ul>
-    </div>
-    <div class="flex flex-1">{{ footer_menu }}</div>
-  </div>
-{% endset %}
-
+{% set footer_menu %}{{- footer_menu -}}{% endset %}
 <footer>
-  {% include 'wingsuit:container' with {
-    bg_color: 'purple-dark',
+  {% embed 'wingsuit:container' with {
+    bg_color: 'purple_dark',
     padding_top: 'none',
     padding_bottom: 'none',
     padding_x: 'none',
-    content: footer_content
+    footer_menu: footer_menu|striptags
   } only %}
+    {% block content %}
+      <div class="flex gap-10 lg:gap-28 flex-col-reverse lg:flex-row py-10 lg:py-16 px-[15px] lg:px-0">
+        <div class="grid w-full max-w-[181px]">
+          {% include 'wingsuit:logo' %}
+          <div class="mt-3 dark:text-purple-300">
+            {{ "Lorem ipsum dolor sit amet consectetur. Mollis elit enim auctor."|t }}
+          </div>
+          <ul class="mt-3 lg:mt-6 flex items-center gap-5 dark:text-purple-300">
+            <li>
+              <a href="#">
+                {{ "Youtube icon" }}
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                {{ "Instagram icon" }}
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                {{ "Facebook icon" }}
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex flex-1">{{ footer_menu }}</div>
+      </div>
+    {% endblock %}
+  {% endembed %}
 </footer>
+

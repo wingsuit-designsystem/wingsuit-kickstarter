@@ -1,4 +1,6 @@
 name: Preview
+variants:
+  - column_2
 slots:
   cells:
     - type: component

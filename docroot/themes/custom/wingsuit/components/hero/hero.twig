@@ -10,7 +10,8 @@
   Internal logic
 #}
 {% set direction_key = reverse == false ? 'forward' : 'reverse' %}
-
+{% set cell_left %}{{- cell_left -}}{% endset %}
+{% set cell_right %}{{- cell_right -}}{% endset %}
 
 {% set attributes_set = create_attributes_set(
   {
@@ -19,44 +20,27 @@
     cell_right: 'flex flex-1 items-center',
     image: 'relative z-20',
     base: 'absolute transform filter'
-  },
-    first_layer: {
-      forward: 'w-[435px] h-[434px] -rotate-[135deg] lg:rotate-0 lg:left-[232px] top-[-90px] lg:top-[73px] bg-gradient-to-b to-transparent from-[#00C2FF] blur-[70px] opacity-20',
-      reverse: 'w-[435px] h-[434px] -rotate-[135deg] top-[-90px] lg:top-0 lg:w-[543px] lg:h-[542px] bg-gradient-to-b to-transparent from-[#00C2FF] blur-[70px] transform -rotate-[135deg] opacity-20'
-  },
-    second_layer: {
-      forward: 'w-[435px] h-[434px] -rotate-[135deg] lg:rotate-0 lg:left-[232px] top-[-90px] lg:top-[73px] bg-gradient-to-t from-pink-500 to-transparent blur-[70px] opacity-70',
-      reverse: 'w-[435px] h-[434px] -rotate-[135deg] top-[-90px] lg:top-0 lg:w-[543px] lg:h-[542px] bg-gradient-to-b from-transparent to-pink-500 blur-[70px] opacity-70'
-  },
-    third_layer: {
-      forward: 'w-[209px] h-[296px] transform -rotate-[135deg] lg:rotate-0 top-[-190px] right-0 lg:right-auto lg:left-[345px] lg:top-[274px] bg-gradient-to-b from-transparent to-blue-700 opacity-70 blur-[70px]',
-      reverse: 'w-[209px] h-[296px] top-[-190px] right-0 lg:w-[261px] lg:h-[370px] lg:right-0 lg:top-0 bg-gradient-to-b from-transparent to-blue-700 opacity-70 blur-[70px] -rotate-[135deg]'
   }
   },
-  {first_layer: direction_key, second_layer: direction_key, third_layer: direction_key}
+  {}
 ) %}
 {#
   Attributes
 #}
 {% set cell_left_attributes = create_attribute().merge(attributes_set.cell_left) %}
 {% set cell_right_attributes = create_attribute().merge(attributes_set.cell_right) %}
-{% set gradiant_first_attributes = create_attribute().merge(attributes_set.base).merge(attributes_set.first_layer) %}
-{% set gradiant_second_attributes = create_attribute().merge(attributes_set.base).merge(attributes_set.second_layer) %}
-{% set gradiant_third_attributes = create_attribute().merge(attributes_set.base).merge(attributes_set.third_layer) %}
 {% set image_attributes = create_attribute().merge(attributes_set.image) %}
-{{ dump() }}
 {#
   TEMPLATE
 #}
+{{ dump(cell_right) }}
 <section>
   {% set cell_left %}
     <div {{ cell_left_attributes}}>
-      <div {{ gradiant_first_attributes }}></div>
-      <div {{ gradiant_second_attributes }}></div>
       <div {{ image_attributes }}>
+        xxx
          {{ image }}
       </div>
-      <div {{ gradiant_third_attributes }}></div>
     </div>
   {% endset %}
   {% set cell_right %}
@@ -64,13 +48,25 @@
       {% include 'wingsuit:rich-snippet' with {
         preheadline: preheadline,
         headline: headline,
-        text: text, action: action,
+        text: text,
+        action: action,
         headline_tag: headline_tag,
         variant: 'large'
       } only %}
     </div>
   {% endset %}
-  {{ cell_left }}
-  {{ cell_right }}
+  {% include 'wingsuit:grid' with {
+    cells: [cell_left, cell_right],
+    reverse: reverse,
+    flip_mobile: true,
+    vertical_center: true,
+    variant: 'column_2',
+    preheadline: preheadline,
+    headline: headline,
+    text: text,
+    action: action,
+    headline_tag: headline_tag,
+    image: image
+  } only %}
 </section>
 

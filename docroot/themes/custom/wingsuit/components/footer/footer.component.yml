@@ -15,6 +15,6 @@ slots:
   logo:
     title: Logo
   footer_menu:
-    title: Menu
+    title: Footer Menu
   privacy_menu:
-    title: Menu
+    title: Privacy Menu

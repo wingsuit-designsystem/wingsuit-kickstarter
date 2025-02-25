@@ -1,0 +1,63 @@
+# This is so your IDE knows about the syntax for fixes and autocomplete.
+$schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
+
+# The human-readable name.
+name: Columns section
+
+# Status can be: "experimental", "stable", "deprecated", "obsolete".
+status: stable
+
+# Schema for the props. We support www.json-schema.org. Learn more about the
+# syntax there.
+variants:
+  column_1:
+    title: One Column
+  column_2:
+    title: Two Columns
+  column_3:
+    title: Three Columns
+  column_4:
+    title: Four Columns
+  column_5:
+    title: Five Columns
+
+props:
+  type: object
+  properties:
+    display_header_region:
+      type: boolean
+      title: Display header region
+      weight: 30
+
+# Slots always hold arbitrary markup. We know that beforehand, so no need for
+# a schema for slots.
+slots:
+  header:
+    type: pattern
+    label: Section Header
+    description: Optional header
+  column_1:
+    type: text
+    label: First Column
+    preview:
+      faker: lorem.paragraph
+  column_2:
+    type: text
+    label: Second Column
+    preview:
+      faker: lorem.paragraph
+  column_3:
+    type: text
+    label: Third Column
+    preview:
+      faker: lorem.paragraph
+  column_4:
+    type: text
+    label: Fourth Column
+    preview:
+      faker: lorem.paragraph
+  column_5:
+    type: text
+    label: Five Column
+    preview:
+      faker: lorem.paragraph

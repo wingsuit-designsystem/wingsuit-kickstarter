@@ -1,99 +1,95 @@
-{##}
-{#/**#}
-{# * @file#}
-{# * Grid component#}
-{# *#}
-{# * See component.wingsuit.yml for usage.#}
-{# */#}
-{##}
-{#{% set columns_ary = variant|split('_') %}#}
-{#{% set columns = columns_ary[1]|number_format %}#}
-{#{% set grid_layout_setting = 'grid_layout_' ~ columns %}#}
-{#{% set grid_layout = grid_layout|default(_context[ grid_layout_setting ]|default('equal')) %}#}
+{#
+/**
+ * @file
+ * Grid component
+ *
+ * See component.wingsuit.yml for usage.
+ */
+#}
+{% set columns_ary = variant|split('_') %}
+{% set columns = columns_ary[1]|number_format %}
+{% set grid_layout = grid_layout|default('equal') %}
+{% set gutter_classes = gutter_classes|default('default') %}
 
-{#{% set attributes_set = create_attributes_set(#}
-{#  #}{#}#}
-{#    gutter: #}{#}#}
-{#      none: '',#}
-{#      footer: 'gap-4 lg:gap-7',#}
-{#      small: 'gap-5',#}
-{#      default: 'gap-7.5',#}
-{#      large: 'gap-5 lg:gap-36.25',#}
-{#  },#}
-{#    grid_layout_1: #}{#}#}
-{#      equal: 'grid grid-cols-1'#}
-{#  },#}
-{#    grid_layout_2: #}{#}#}
-{#      equal: 'grid grid-cols-1 md:grid-cols-2',#}
-{#      '66x33': 'grid grid-cols-1 lg:grid-cols-66/33',#}
-{#      '33x66': 'grid grid-cols-1 lg:grid-cols-33/66',#}
-{#      '75x25': 'grid grid-cols-1 md:grid-cols-75/25',#}
-{#      '25x75': 'grid grid-cols-1 md:grid-cols-66/33 lg:grid-cols-25/75',#}
-{#  },#}
-{#    grid_layout_3: #}{#}#}
-{#      equal: 'grid grid-cols-1 lg:grid-cols-3',#}
-{#      '25x50x25': 'grid grid-cols-1 lg:grid-cols-25/50/25',#}
-{#      '25x25x50': 'grid grid-cols-1 lg:grid-cols-25/25/50',#}
-{#  },#}
-{#    grid_layout_4: #}{#}#}
-{#      equal: 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4'#}
-{#  },#}
-{#    grid_layout_5: #}{#}#}
-{#      equal: 'grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5'#}
-{#  },#}
-{#  },#}
-{#  { gutter: gutter,#}
-{#    grid_layout_1: grid_layout_1,#}
-{#    grid_layout_2: grid_layout_2,#}
-{#    grid_layout_3: grid_layout_3,#}
-{#    grid_layout_4: grid_layout_4,#}
-{#    grid_layout_5: grid_layout_5#}
-{#  }#}
-{#) %}#}
-{##}
-{#  Defaults#}
-{##}
-{#{% set gutter = gutter|default('default') %}#}
-{#{% set vertical_center = vertical_center|default(false) %}#}
-{#{% set equal_height = vertical_center == true ? true: equal_height %}#}
-{#{% set reverse = reverse|default(false) %}#}
-{#{% set variant = variant|default('column_1') %}#}
-
+{#
+Defaults
+#}
+{% set gutter = gutter|default('default') %}
+{% set vertical_center = vertical_center|default(false) %}
+{% set equal_height = vertical_center == true ? true: equal_height %}
+{% set reverse = reverse|default(false) %}
+{% set variant = variant|default('column_2') %}
 {##}
 {#  Internal logic#}
 {##}
 
-{#{% set gutter_classes = pattern_configuration('grid', variant, 'gutter')[gutter] %}#}
-{#{% set layout_classes = pattern_configuration('grid', variant, grid_layout_setting)[grid_layout] %}#}
+{% set classes = ([
+  layout_classes,
+  layout_classes,
+]) | sort | join(' ') | trim %}
 
-{#{% set classes = ([#}
-{#  layout_classes,#}
-{#]) | sort | join(' ') | trim %}#}
+{% set attributes = attributes|default(create_attribute()).addClass(classes) %}
 
-{#{% set attributes = attributes|default(create_attribute()).addClass(classes) %}#}
 
+{% set attributes_set = create_attributes_set(
+  {
+    gutter: {
+      none: '',
+      footer: 'gap-4 lg:gap-7',
+      small: 'gap-5',
+      default: 'gap-7.5',
+      large: 'gap-5 lg:gap-36.25',
+  },
+    variant: {
+      column_1: {
+        equal: 'grid grid-cols-1'
+      },
+      column_2: {
+        equal: 'grid grid-cols-1 md:grid-cols-2',
+        '66x33': 'grid grid-cols-1 lg:grid-cols-66/33',
+        '33x66': 'grid grid-cols-1 lg:grid-cols-33/66',
+        '75x25': 'grid grid-cols-1 md:grid-cols-75/25',
+        '25x75': 'grid grid-cols-1 md:grid-cols-66/33 lg:grid-cols-25/75',
+      },
+      column_3: {
+        equal: 'grid grid-cols-1 lg:grid-cols-3',
+        '25x50x25': 'grid grid-cols-1 lg:grid-cols-25/50/25',
+        '25x25x50': 'grid grid-cols-1 lg:grid-cols-25/25/50',
+      },
+      column_4: {
+        equal: 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4'
+      },
+      column_5: {
+        equal: 'grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5'
+      }
+    }
+  },
+  { gutter: gutter,
+    variant: variant,
+  }
+) %}
+
+{#
+Template
+#}
 {##}
-{#  Template#}
-{##}
-{#<div {{ attributes }}>#}
-{#  {% block cells %}#}
-{#    {% for cell_counter, cell in cells %}#}
-{#      {% block cell_outer %}#}
-{#        {% set column_name = 'column_' ~ (cell_counter + 1) %}#}
-{#        {% set cell_classes = [#}
-{#          flip_mobile == '1' and cell_counter == '1' ? 'row-start-1 lg:row-start-auto',#}
-{#          equal_height == true ? 'flex flex-col',#}
-{#          vertical_center == true ? 'justify-center',#}
-{#          reverse == true and cell_counter == '1' ? 'order-first',#}
-{#        ]#}
-{#        %}#}
-{#        {% set cell_attributes = region_attributes[column_name]|default(create_attribute()).addClass(cell_classes | sort) %}#}
-{#        <div{{ cell_attributes }}>#}
-{#          {% block cell_inner %}#}
-{#            {{ cell }}#}
-{#          {% endblock %}#}
-{#        </div>#}
-{#      {% endblock %}#}
-{#    {%- endfor -%}#}
-{#  {% endblock %}#}
-{#</div>#}
+<div {{ attributes.merge(attributes_set.gutter).merge(attributes_set[grid_layout]) }}>
+  {% block cells %}
+    {% for cell_counter, cell in cells %}
+      {% block cell_outer %}
+        {% set column_name = 'column_' ~ (cell_counter + 1) %}
+        {% set cell_classes = [
+          flip_mobile == '1' and cell_counter == '1' ? 'row-start-1 lg:row-start-auto',
+          equal_height == true ? 'flex flex-col',
+          vertical_center == true ? 'justify-center',
+        ] %}
+        {% set cell_attributes = region_attributes[column_name]|default(create_attribute()).addClass(cell_classes | sort) %}
+        <div{{ cell_attributes }}>
+          {% block cell_inner %}
+            {{ cell }}
+          {% endblock %}
+        </div>
+      {% endblock %}
+    {%- endfor -%}
+  {% endblock %}
+</div>

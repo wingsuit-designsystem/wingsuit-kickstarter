@@ -1,37 +1,9 @@
 name: Preview
-slots:
+props:
   items:
     - title: Products
       url: "#"
       in_active_trail: true
-      below:
-        - title: Accounts
-          url: '#'
-        - title: Hosting
-          url: '#'
-        - title: Software
-          url: '#'
-          below:
-            105:
-              title: Drivers
-              url: '#'
-            106:
-              title: Apps
-              url: '#'
-            107:
-              title: FlyMeet
-              url: '#'
-            108:
-              title: FlySecurity
-              url: '#'
-        - title: CRM
-          url: '#'
-        - title: Devices
-          url: '#'
-        - title: Support
-          url: '#'
-        - title: Security
-          url: '#'
     - title: Pricing
       url: "#"
     - title: Partner

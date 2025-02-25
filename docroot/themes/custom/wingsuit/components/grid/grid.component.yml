@@ -2,7 +2,7 @@
 $schema: https://git.drupalcode.org/project/drupal/-/raw/HEAD/core/assets/schemas/v1/metadata.schema.json
 
 # The human readable name.
-name: Header
+name: Grid
 
 # Status can be: "experimental", "stable", "deprecated", "obsolete".
 status: stable
@@ -10,17 +10,16 @@ status: stable
 # Schema for the props. We support www.json-schema.org. Learn more about the
 # syntax there.
 variants:
-  variants:
-    column_1:
-      title: 1 Column
-    column_2:
-      title: 2 Column
-    column_3:
-      title: 3 Column
-    column_4:
-      title: 4 Column
-    column_5:
-      title: 5 Column
+  column_1:
+    title: 1 Column
+  column_2:
+    title: 2 Column
+  column_3:
+    title: 3 Column
+  column_4:
+    title: 4 Column
+  column_5:
+    title: 5 Column
 
 props:
   type: object
@@ -50,19 +49,6 @@ props:
       type: string
       label: Grid Layout
       description: Use "grid_layout" when you embed grid direct in code.
-    grid_layout_1:
-      type: string
-      label: Layout
-      states:
-        visible:
-          - variant: hidden
-      enum:
-        - equal
-      meta:enum:
-        equal: 'Equal'
-    grid_layout_2:
-      type: string
-      label: Layout
       states:
         visible:
           - variant: column_2
@@ -72,46 +58,16 @@ props:
         - 33x66
         - 75x25
         - 25x75
+        - 25x50x25
+        - 25x25x50
       meta:enum:
         equal: 'Equal'
         66x33: '66%/33%'
         33x66: '33%/66%'
         75x25: '75%/25%'
         25x75: '25%/75%'
-    grid_layout_3:
-      type: string
-      label: Layout
-      states:
-        visible:
-          - variant: column_3
-      enum:
-        - equal
-        - 25x50x25'
-        - 25x25x50'
-      meta:enum:
-        equal: 'Equal'
         25x50x25: '25x50x25'
         25x25x50: '25x25x50'
-    grid_layout_4:
-      type: string
-      label: Layout
-      states:
-        visible:
-          - variant: column_4
-      enum:
-        - equal
-      meta:enum:
-          equal: 'Equal'
-    grid_layout_5:
-      type: string
-      label: Layout
-      states:
-        visible:
-          - variant: column_5
-      enum:
-        - equal
-      meta:enum:
-        equal: 'Equal'
     flip_mobile:
       type: boolean
       default_value: false

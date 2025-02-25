@@ -1,0 +1,89 @@
+{#
+/**
+ * @file
+ * section
+ *
+ * See section.wingsuit.yaml for documentation.
+ */
+#}
+
+{#
+  Defaults
+#}
+{% set variant = variant|default('column_1') %}
+{% set region_attributes = region_attributes|default({header: create_attribute()}) %}
+{%- set column_1 -%}{%- block column_1 -%}{{ _context['column_1' ] }}{% endblock %}{% endset %}
+{%- set column_2 -%}{%- block column_2 -%}{{ _context['column_2' ] }}{% endblock %}{% endset %}
+{%- set column_3 -%}{%- block column_3 -%}{{ _context['column_3' ] }}{% endblock %}{% endset %}
+{%- set column_4 -%}{%- block column_4 -%}{{ _context['column_4' ] }}{% endblock %}{% endset %}
+{%- set column_5 -%}{%- block column_5 -%}{{ _context['column_5' ] }}{% endblock %}{% endset %}
+
+{#
+  Internal Logic
+#}
+{%- set header -%}{{ header }}{% endset %}
+{% set columns_ary = variant|split('_') %}
+{% set columns = columns_ary[1]|number_format %}
+{% set grid_layout_setting = 'grid_layout_' ~ columns %}
+{% set grid_layout = grid_layout|default(_context[ grid_layout_setting ]|default('equal')) %}
+
+{#
+  Header template
+#}
+{% set header %}
+  {% if header is not empty and display_header_region == true %}
+    <div{{ region_attributes.header.addClass(header_classes) }}>{{ header }}</div>
+  {% endif %}
+{% endset %}
+{#
+  Grid template
+#}
+{% set grid %}
+  {% set cells = [] %}
+  {%- for i in 1..columns -%}
+    {% set cells = cells|merge([_context['column_' ~ i ]]) %}
+  {% endfor %}
+  {% include 'wingsuit:grid' with {
+    attributes: create_attribute(),
+    cells: cells,
+    grid_layout: grid_layout,
+    region_attributes: region_attributes,
+    equal_height: equal_height,
+    gutter: gutter,
+    flip_mo: flip_mobile,
+    vertical_center: vertical_center,
+    reverse: reverse,
+    variant: variant
+  } only %}
+{% endset %}
+
+{% set attributes_set = create_attributes_set(
+  {
+    default: {
+      header: 'mb-5 md:mb-10'
+    }
+  },
+  {}
+) %}
+{#
+  Template
+#}
+{% embed 'wingsuit:container' with {
+  attributes: attributes,
+  content: grid,
+  width: width,
+  padding_x: padding_x,
+  padding_top: padding_top,
+  padding_bottom: padding_bottom,
+  bg: bg,
+  header: header,
+  region_attributes: region_attributes,
+  display_header_region: display_header_region,
+  bg_image: bg_image,
+  bg_color: bg_color
+} only %}
+  {% block content %}
+    {{ content }}
+  {% endblock %}
+{% endembed %}
+
